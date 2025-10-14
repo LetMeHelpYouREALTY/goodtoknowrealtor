@@ -58,13 +58,13 @@ export default function ContactPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
             {/* Phone */}
             <div className='bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300'>
-              <div className='w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6'>
+              <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6'>
                 <Image
-                  src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=48&h=48&q=80'
+                  src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80'
                   alt='Phone icon for direct contact with Dr. Janet Duffy'
-                  width={48}
-                  height={48}
-                  className='w-12 h-12'
+                  width={32}
+                  height={32}
+                  className='w-8 h-8'
                 />
               </div>
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
@@ -83,8 +83,8 @@ export default function ContactPage() {
 
             {/* Email */}
             <div className='bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300'>
-              <div className='w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6'>
-                <span className='text-3xl'>✉️</span>
+              <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6'>
+                <span className='text-xl'>✉️</span>
               </div>
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                 Send an Email
@@ -102,8 +102,8 @@ export default function ContactPage() {
 
             {/* Text Message */}
             <div className='bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300'>
-              <div className='w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6'>
-                <span className='text-3xl'>💬</span>
+              <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6'>
+                <span className='text-xl'>💬</span>
               </div>
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                 Text Message

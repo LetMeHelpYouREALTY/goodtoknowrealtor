@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { HomeBuyingJourney } from '@/components/Journey/HomeBuyingJourney';
 
 export default function BuyingPage() {
   return (
@@ -459,6 +460,22 @@ export default function BuyingPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Home Buying Journey Section */}
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
+              Your Home Buying Journey
+            </h2>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Navigate your home buying process with confidence. Track your progress, 
+              reflect on important decisions, and stay organized throughout your journey.
+            </p>
+          </div>
+          <HomeBuyingJourney />
         </div>
       </section>
 

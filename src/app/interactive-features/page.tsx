@@ -8,6 +8,8 @@ import { NeighborhoodMap } from '@/components/InteractiveMap/NeighborhoodMap';
 import { VirtualTourGallery } from '@/components/VirtualTours/VirtualTour';
 import { MarketVisualizations } from '@/components/MarketData/MarketVisualizations';
 import { EnhancedPropertyCard } from '@/components/PropertyCards/EnhancedPropertyCard';
+import { PropertyComparison as PropertyComparisonTool } from '@/components/DecisionTools/PropertyComparison';
+import { NeighborhoodDecision } from '@/components/DecisionTools/NeighborhoodDecision';
 
 // Sample property data
 const sampleProperties = [
@@ -290,6 +292,25 @@ export default function InteractiveFeaturesPage() {
               <p className="text-gray-600 text-sm">
                 Schedule showings, share properties, and connect with agents instantly
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Decision Tools Section */}
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Decision-Making Tools
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Make informed decisions with our interactive comparison tools and reflection prompts
+              </p>
+            </div>
+            
+            <div className="space-y-16">
+              <PropertyComparisonTool />
+              <NeighborhoodDecision />
             </div>
           </div>
         </section>

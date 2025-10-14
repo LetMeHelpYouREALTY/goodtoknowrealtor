@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { HomeSellingJourney } from '@/components/Journey/HomeSellingJourney';
 
 export default function SellingPage() {
   return (
@@ -499,6 +500,22 @@ export default function SellingPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Home Selling Journey Section */}
+      <section className='py-20 bg-white'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
+              Your Home Selling Journey
+            </h2>
+            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
+              Navigate your home selling process with confidence. Track your progress, 
+              reflect on important decisions, and maximize your home&apos;s value.
+            </p>
+          </div>
+          <HomeSellingJourney />
         </div>
       </section>
 
