@@ -44,6 +44,18 @@ Topics covered:
 
 **When to use:** Before every deployment and for monthly maintenance audits.
 
+### 4. [NATES_NEWSLETTER_INSIGHTS.md](../NATES_NEWSLETTER_INSIGHTS.md)
+**Industry insights from Nate's Newsletter on Vercel & AI infrastructure**
+
+Topics covered:
+- Vercel's agentic infrastructure approach (2026)
+- Infrastructure layers vs AI wrappers
+- Agent-ready architecture best practices
+- Platform thinking and defensibility
+- Future-proofing deployment strategies
+
+**When to use:** For strategic planning, understanding industry trends, and future-proofing architecture decisions.
+
 ## 🚀 Quick Start
 
 ### New Developer Setup
