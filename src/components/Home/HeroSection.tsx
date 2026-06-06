@@ -34,19 +34,19 @@ export function HeroSection() {
           {/* Trust Indicators */}
           <div className='flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 mb-8'>
             <div className='flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full'>
-              <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+              <div className='w-2 h-2 bg-green-500 rounded-full' aria-hidden='true'></div>
               <span className='font-medium'>500+ Happy Clients</span>
             </div>
             <div className='flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full'>
-              <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+              <div className='w-2 h-2 bg-green-500 rounded-full' aria-hidden='true'></div>
               <span className='font-medium'>$127M+ Sales Volume</span>
             </div>
             <div className='flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full'>
-              <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+              <div className='w-2 h-2 bg-green-500 rounded-full' aria-hidden='true'></div>
               <span className='font-medium'>15+ Years Experience</span>
             </div>
             <div className='flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full'>
-              <div className='w-2 h-2 bg-green-500 rounded-full'></div>
+              <div className='w-2 h-2 bg-green-500 rounded-full' aria-hidden='true'></div>
               <span className='font-medium'>98% Client Satisfaction</span>
             </div>
           </div>
@@ -72,7 +72,7 @@ export function HeroSection() {
                         : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border border-gray-200'
                     }`}
                   >
-                    <span className='text-xl'>{tab.icon}</span>
+                    <span className='text-xl' aria-hidden='true'>{tab.icon}</span>
                     <span>{tab.label}</span>
                   </button>
                 ))}
@@ -132,18 +132,18 @@ export function HeroSection() {
               href='tel:702-222-1964'
               className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3'
             >
-              <span className='text-xl'>📞</span>
+              <span className='text-xl' aria-hidden='true'>📞</span>
               Call (702) 222-1964
             </a>
             <a
               href='sms:702-222-1964'
               className='bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-3 border border-gray-200'
             >
-              <span className='text-xl'>💬</span>
+              <span className='text-xl' aria-hidden='true'>💬</span>
               Send Text
             </a>
           </div>
-          <p className='text-sm text-gray-500 mt-4'>
+          <p className='text-sm text-gray-600 mt-4'>
             Available 7 days a week • Free consultation • No obligation
           </p>
         </div>

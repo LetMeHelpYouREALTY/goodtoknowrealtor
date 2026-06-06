@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -85,7 +83,8 @@ export function NeighborhoodsSection() {
             <Link
               key={neighborhood.id}
               href={neighborhood.href}
-              className='group block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1'
+              className='group block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              aria-label={`${neighborhood.name} - ${neighborhood.description} - ${neighborhood.avgPrice} average price, ${neighborhood.propertiesCount} properties available`}
             >
               <div className='relative h-32'>
                 <Image

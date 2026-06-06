@@ -28,9 +28,9 @@ export function ContactCTA() {
         <h2 className='text-4xl lg:text-5xl font-bold mb-6'>
           Ready to Achieve Your Real Estate Goals?
         </h2>
-        <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
-          Stop dreaming about your ideal Las Vegas property and start making it happen. 
-          Get a personalized strategy session where we&apos;ll analyze your situation, 
+        <p className='text-xl text-white mb-8 max-w-3xl mx-auto'>
+          Stop dreaming about your ideal Las Vegas property and start making it happen.
+          Get a personalized strategy session where we&apos;ll analyze your situation,
           identify opportunities, and create an action plan to exceed your expectations.
         </p>
         
@@ -84,15 +84,15 @@ export function ContactCTA() {
         <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
           <div>
             <div className='text-3xl font-bold mb-2'>Nationally</div>
-            <div className='text-blue-200'>Recognized Expert</div>
+            <div className='text-blue-100'>Recognized Expert</div>
           </div>
           <div>
             <div className='text-3xl font-bold mb-2'>Premier</div>
-            <div className='text-blue-200'>Good To Know REALTOR®</div>
+            <div className='text-blue-100'>Good To Know REALTOR®</div>
           </div>
           <div>
             <div className='text-3xl font-bold mb-2'>Helps Agents</div>
-            <div className='text-blue-200'>Sell Homes Nationwide</div>
+            <div className='text-blue-100'>Sell Homes Nationwide</div>
           </div>
         </div>
       </div>
