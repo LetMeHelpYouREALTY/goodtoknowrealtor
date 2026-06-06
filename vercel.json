@@ -8,5 +8,12 @@
       "path": "/api/blog/sync",
       "schedule": "0 */6 * * *"
     }
-  ]
+  ],
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "cleanUrls": true,
+  "trailingSlash": false
 }
