@@ -28,22 +28,32 @@ export default function HomePage() {
     { name: 'Home', url: '/' },
   ]);
 
+  // Enhanced FAQs for AEO (Answer Engine Optimization)
+  // AI engines prioritize clear, factual, answer-ready content
   const faqs = generateFAQSchema([
     {
       question: 'Who is Dr. Jan Duffy?',
-      answer: 'Dr. Jan Duffy is a Top 1% Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She specializes in luxury properties, investment properties, and first-time home buyers.',
+      answer: 'Dr. Jan Duffy is a Top 1% Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She is a licensed REALTOR® with Berkshire Hathaway HomeServices and specializes in luxury properties, investment properties, and first-time home buyers throughout Las Vegas, Summerlin, Henderson, and surrounding areas.',
     },
     {
-      question: 'What areas does Dr. Jan Duffy serve?',
-      answer: 'Dr. Jan Duffy serves the greater Las Vegas area including Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, and Green Valley. She has extensive knowledge of all Las Vegas neighborhoods.',
+      question: 'What areas does Dr. Jan Duffy serve in Las Vegas?',
+      answer: 'Dr. Jan Duffy serves the greater Las Vegas metropolitan area including Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, Green Valley, The Lakes, Spring Valley, Paradise, Enterprise, and Winchester. She has extensive knowledge of all Las Vegas neighborhoods, luxury communities, and investment property markets.',
     },
     {
-      question: 'How can I contact Dr. Jan Duffy?',
-      answer: 'You can contact Dr. Jan Duffy by calling (702) 222-1964 or visiting the contact page on this website. She offers personalized consultations for all your Las Vegas real estate needs.',
+      question: 'How can I contact Dr. Jan Duffy for real estate services?',
+      answer: 'You can contact Dr. Jan Duffy by calling (702) 222-1964 or visiting the contact page at goodtoknowrealtor.com/contact. She offers free personalized consultations for all your Las Vegas real estate needs and is available 7 days a week from 8 AM to 8 PM.',
     },
     {
-      question: 'What services does Dr. Jan Duffy offer?',
-      answer: 'Dr. Jan Duffy offers comprehensive real estate services including buying homes, selling homes, luxury real estate, investment properties, home valuations, and real estate consulting throughout Las Vegas.',
+      question: 'What real estate services does Dr. Jan Duffy offer?',
+      answer: 'Dr. Jan Duffy offers comprehensive real estate services including: home buying assistance, home selling and marketing, luxury real estate transactions, investment property consulting, property valuations, market analysis, first-time buyer programs, relocation services, and real estate investment advisory throughout the Las Vegas area.',
+    },
+    {
+      question: 'How much does it cost to work with Dr. Jan Duffy?',
+      answer: 'For home sellers, Dr. Jan Duffy works on a commission basis with competitive rates. For home buyers, her services are typically paid by the seller, making buyer representation free for purchasers. Contact her at (702) 222-1964 for a detailed consultation and pricing information specific to your needs.',
+    },
+    {
+      question: 'What makes Dr. Jan Duffy a top Las Vegas real estate agent?',
+      answer: 'Dr. Jan Duffy ranks in the Top 1% of Las Vegas real estate agents with $127M+ in sales volume, 20+ years of experience, 500+ satisfied clients, a 98% client satisfaction rate, and membership in the Berkshire Hathaway Circle of Excellence. She provides white-glove concierge service and expert knowledge of the Las Vegas luxury and investment property markets.',
     },
   ]);
 

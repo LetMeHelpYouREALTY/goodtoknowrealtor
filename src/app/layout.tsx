@@ -11,6 +11,7 @@ import { MobileStickyCTA } from '@/components/ui/MobileStickyCTA';
 import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderAnnouncements';
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
 import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
+import { generateOrganizationSchema, generateLocalBusinessSchemaEnhanced } from '@/lib/seo-enhanced';
 
 // Font loaders must be called at module scope
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' });
@@ -130,6 +131,9 @@ export default function RootLayout({
   const localBusinessSchema = generateLocalBusinessSchema();
   const webSiteSchema = generateWebSiteSchema();
   const siteNavigationSchema = generateSiteNavigationElementSchema();
+  // Enhanced schemas for AEO and GEO (2025-2026 best practices)
+  const organizationSchema = generateOrganizationSchema();
+  const localBusinessEnhancedSchema = generateLocalBusinessSchemaEnhanced();
 
   return (
     <html lang='en' className={`h-full ${inter.variable} ${lora.variable}`}>
@@ -194,6 +198,19 @@ export default function RootLayout({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(siteNavigationSchema),
+          }}
+        />
+        {/* Enhanced schemas for AEO and GEO */}
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessEnhancedSchema),
           }}
         />
         {/* Google Analytics 4 */}
