@@ -10,7 +10,7 @@ import { Footer } from '@/components/Globals/Footer/Footer';
 import { MobileStickyCTA } from '@/components/ui/MobileStickyCTA';
 import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderAnnouncements';
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
-import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
+import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema, generateOrganizationSchema } from '@/lib/seo';
 
 // Font loaders must be called at module scope
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' });
@@ -70,6 +70,16 @@ export const metadata: Metadata = {
       'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || 'your-google-verification-code',
     },
   },
+  // GEO & AEO Optimization (2026 best practices)
+  other: {
+    'geo.region': 'US-NV',
+    'geo.placename': 'Las Vegas',
+    'geo.position': '36.1699;-115.1398',
+    'ICBM': '36.1699, -115.1398',
+    'locality': 'Las Vegas',
+    'region': 'Nevada',
+    'country-name': 'United States',
+  },
 };
 
 export default function RootLayout({
@@ -81,6 +91,7 @@ export default function RootLayout({
   const localBusinessSchema = generateLocalBusinessSchema();
   const webSiteSchema = generateWebSiteSchema();
   const siteNavigationSchema = generateSiteNavigationElementSchema();
+  const organizationSchema = generateOrganizationSchema();
 
   return (
     <html lang='en' className={`h-full ${inter.variable} ${lora.variable}`}>
@@ -145,6 +156,12 @@ export default function RootLayout({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(siteNavigationSchema),
+          }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
           }}
         />
         {/* Google Analytics 4 */}

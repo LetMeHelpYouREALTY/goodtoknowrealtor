@@ -52,14 +52,16 @@ export const SEO_CONFIG = {
   }
 };
 
-// Generate page-specific metadata
+// Generate page-specific metadata with AEO/GEO optimizations (2026 best practices)
 export function generatePageMetadata({
   title,
   description,
   keywords = [],
   image,
   url,
-  type = 'website'
+  type = 'website',
+  lastModified,
+  publishedTime
 }: {
   title?: string;
   description?: string;
@@ -67,11 +69,13 @@ export function generatePageMetadata({
   image?: string;
   url?: string;
   type?: 'website' | 'article';
+  lastModified?: string; // AEO: Freshness signal - 83% of AI citations from pages updated within 12 months
+  publishedTime?: string;
 }): Metadata {
-  const fullTitle = title 
+  const fullTitle = title
     ? `${title} | ${SEO_CONFIG.siteName}`
     : SEO_CONFIG.defaultTitle;
-    
+
   const fullDescription = description || SEO_CONFIG.defaultDescription;
   const allKeywords = [...SEO_CONFIG.keywords, ...keywords];
   const imageUrl = image ? `${SEO_CONFIG.siteUrl}${image}` : `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.default}`;
@@ -110,6 +114,8 @@ export function generatePageMetadata({
           alt: fullTitle,
         },
       ],
+      ...(publishedTime && { publishedTime }),
+      ...(lastModified && { modifiedTime: lastModified }),
     },
     twitter: {
       card: 'summary_large_image',
@@ -123,6 +129,14 @@ export function generatePageMetadata({
     },
     verification: {
       google: 'your-google-verification-code', // Add your actual Google verification code
+    },
+    other: {
+      // AEO: Additional freshness and authority signals
+      ...(lastModified && { 'last-modified': lastModified }),
+      'geo.region': 'US-NV',
+      'geo.placename': 'Las Vegas',
+      'geo.position': '36.1699;-115.1398',
+      'ICBM': '36.1699, -115.1398',
     },
   };
 }
@@ -434,7 +448,7 @@ export function generateReviewSchema(reviews: Array<{
   }));
 }
 
-// Generate Product schema for property listings
+// Generate RealEstateListing schema for property listings (2026 Schema.org update)
 export function generatePropertySchema(properties: Array<{
   name: string;
   description: string;
@@ -449,23 +463,23 @@ export function generatePropertySchema(properties: Array<{
   propertyType: string;
   listingStatus: string;
   mlsNumber?: string;
+  datePosted?: string;
+  virtualTourUrl?: string;
 }>) {
   return properties.map(property => ({
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'RealEstateListing',
     name: property.name,
     description: property.description,
     image: property.image,
-    brand: {
-      '@type': 'Brand',
-      name: 'Berkshire Hathaway HomeServices',
-    },
-    category: 'Real Estate',
+    datePosted: property.datePosted || new Date().toISOString().split('T')[0],
+    ...(property.virtualTourUrl && { virtualTour: property.virtualTourUrl }),
     offers: {
       '@type': 'Offer',
       price: property.price,
       priceCurrency: 'USD',
-      availability: property.listingStatus === 'For Sale' ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      availability: property.listingStatus === 'For Sale' ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
+      validFrom: property.datePosted || new Date().toISOString().split('T')[0],
       seller: {
         '@type': 'RealEstateAgent',
         name: 'Dr. Janet Duffy',
@@ -473,6 +487,22 @@ export function generatePropertySchema(properties: Array<{
         email: SEO_CONFIG.email,
       },
     },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: property.address,
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 36.1699,
+      longitude: -115.1398,
+    },
+    ...(property.bedrooms && { numberOfRooms: property.bedrooms }),
+    ...(property.bathrooms && { numberOfBathroomsTotal: property.bathrooms }),
+    ...(property.squareFeet && { floorSize: { '@type': 'QuantitativeValue', value: property.squareFeet, unitCode: 'SQF' } }),
+    ...(property.yearBuilt && { yearBuilt: property.yearBuilt }),
     additionalProperty: [
       ...(property.bedrooms ? [{
         '@type': 'PropertyValue',
@@ -486,18 +516,13 @@ export function generatePropertySchema(properties: Array<{
       }] : []),
       ...(property.squareFeet ? [{
         '@type': 'PropertyValue',
-        name: 'Square Feet',
-        value: property.squareFeet,
+        name: 'Living Space',
+        value: `${property.squareFeet} sq ft`,
       }] : []),
       ...(property.lotSize ? [{
         '@type': 'PropertyValue',
         name: 'Lot Size',
         value: property.lotSize,
-      }] : []),
-      ...(property.yearBuilt ? [{
-        '@type': 'PropertyValue',
-        name: 'Year Built',
-        value: property.yearBuilt,
       }] : []),
       {
         '@type': 'PropertyValue',
@@ -510,14 +535,62 @@ export function generatePropertySchema(properties: Array<{
         value: property.mlsNumber,
       }] : []),
     ],
+  }));
+}
+
+// Generate Organization schema (2026 Schema.org V30.0)
+export function generateOrganizationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SEO_CONFIG.siteUrl}#organization`,
+    name: 'Dr. Janet Duffy Real Estate',
+    url: SEO_CONFIG.siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.logo}`,
+      width: 300,
+      height: 80,
+    },
+    image: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.agent}`,
+    description: SEO_CONFIG.defaultDescription,
+    telephone: SEO_CONFIG.phone,
+    email: SEO_CONFIG.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: property.address,
-      addressLocality: 'Las Vegas',
-      addressRegion: 'Nevada',
-      addressCountry: 'United States',
+      streetAddress: SEO_CONFIG.address.street,
+      addressLocality: SEO_CONFIG.address.city,
+      addressRegion: SEO_CONFIG.address.state,
+      postalCode: SEO_CONFIG.address.zipCode,
+      addressCountry: SEO_CONFIG.address.country,
     },
-  }));
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 36.1699,
+      longitude: -115.1398,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Las Vegas', addressRegion: 'NV' },
+      { '@type': 'City', name: 'Henderson', addressRegion: 'NV' },
+      { '@type': 'City', name: 'Summerlin', addressRegion: 'NV' },
+      { '@type': 'City', name: 'North Las Vegas', addressRegion: 'NV' },
+    ],
+    sameAs: Object.values(SEO_CONFIG.social),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: SEO_CONFIG.phone,
+      contactType: 'Customer Service',
+      areaServed: 'US',
+      availableLanguage: ['English'],
+    },
+    knowsAbout: [
+      'Real Estate',
+      'Luxury Homes',
+      'Property Investment',
+      'Las Vegas Real Estate Market',
+    ],
+    slogan: 'Your Premier Good To Know REALTOR® in Las Vegas',
+  };
 }
 
 // Generate VideoObject schema for videos
@@ -820,5 +893,236 @@ export function generateSiteNavigationElementSchema() {
         url: `${SEO_CONFIG.siteUrl}/blog`
       }
     ]
+  };
+}
+
+// ============================================
+// 🤖 AEO/GEO Optimization Helpers (2026)
+// ============================================
+
+/**
+ * Generate AEO-optimized answer block
+ * Best practice: 40-60 words for LLM extraction
+ * Used at the top of pages for direct AI citation
+ */
+export function generateAnswerBlock(content: string): string {
+  const wordCount = content.split(' ').length;
+  if (wordCount < 40 || wordCount > 60) {
+    console.warn(`AEO Warning: Answer block should be 40-60 words (current: ${wordCount})`);
+  }
+  return content;
+}
+
+/**
+ * Generate QAPage schema for better GEO/AEO performance
+ * Alternative to FAQPage for single question-answer pairs
+ */
+export function generateQAPageSchema(question: string, answer: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'QAPage',
+    mainEntity: {
+      '@type': 'Question',
+      name: question,
+      text: question,
+      answerCount: 1,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+        dateCreated: new Date().toISOString(),
+        upvoteCount: 0,
+        author: {
+          '@type': 'Person',
+          name: 'Dr. Janet Duffy',
+        },
+      },
+    },
+  };
+}
+
+/**
+ * Generate Place schema for neighborhood/community pages (GEO optimization)
+ */
+export function generatePlaceSchema({
+  name,
+  description,
+  latitude,
+  longitude,
+  address,
+}: {
+  name: string;
+  description: string;
+  latitude: number;
+  longitude: number;
+  address: { city: string; state: string; zipCode?: string };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name,
+    description,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude,
+      longitude,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: address.city,
+      addressRegion: address.state,
+      ...(address.zipCode && { postalCode: address.zipCode }),
+      addressCountry: 'US',
+    },
+    containedInPlace: {
+      '@type': 'City',
+      name: 'Las Vegas',
+      addressRegion: 'Nevada',
+    },
+  };
+}
+
+/**
+ * Generate Article schema with enhanced E-E-A-T signals (2026 best practice)
+ */
+export function generateArticleSchema({
+  headline,
+  description,
+  datePublished,
+  dateModified,
+  image,
+  url,
+  keywords = [],
+}: {
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  image: string;
+  url: string;
+  keywords?: string[];
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    image: `${SEO_CONFIG.siteUrl}${image}`,
+    datePublished,
+    dateModified, // AEO: Freshness signal critical for AI citations
+    author: {
+      '@type': 'Person',
+      name: SEO_CONFIG.author,
+      url: SEO_CONFIG.siteUrl,
+      jobTitle: 'Real Estate Agent',
+      knowsAbout: [
+        'Real Estate',
+        'Las Vegas Market',
+        'Luxury Properties',
+        'Investment Properties',
+      ],
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SEO_CONFIG.siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.logo}`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SEO_CONFIG.siteUrl}${url}`,
+    },
+    ...(keywords.length > 0 && { keywords: keywords.join(', ') }),
+  };
+}
+
+/**
+ * Generate SpecialAnnouncement schema for market updates and urgent info
+ */
+export function generateSpecialAnnouncementSchema({
+  name,
+  text,
+  datePosted,
+  expires,
+  category = 'https://www.wikidata.org/wiki/Q1370468', // Real Estate
+}: {
+  name: string;
+  text: string;
+  datePosted: string;
+  expires?: string;
+  category?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SpecialAnnouncement',
+    name,
+    text,
+    datePosted,
+    ...(expires && { expires }),
+    category,
+    spatialCoverage: {
+      '@type': 'Place',
+      name: 'Las Vegas, Nevada',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SEO_CONFIG.siteName,
+      url: SEO_CONFIG.siteUrl,
+    },
+  };
+}
+
+/**
+ * Enhanced VideoObject schema with 2026 best practices
+ * Voice search prediction: 60%+ of home searches involve video by 2026
+ */
+export function generateEnhancedVideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration,
+  contentUrl,
+  embedUrl,
+  transcript,
+}: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration: string;
+  contentUrl: string;
+  embedUrl?: string;
+  transcript?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl,
+    uploadDate,
+    duration,
+    contentUrl,
+    ...(embedUrl && { embedUrl }),
+    ...(transcript && { transcript }), // AEO: Transcripts improve AI understanding
+    publisher: {
+      '@type': 'Organization',
+      name: SEO_CONFIG.siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.logo}`,
+      },
+    },
+    author: {
+      '@type': 'Person',
+      name: SEO_CONFIG.author,
+    },
+    interactionStatistic: {
+      '@type': 'InteractionCounter',
+      interactionType: 'https://schema.org/WatchAction',
+      userInteractionCount: 0,
+    },
   };
 }

@@ -19,6 +19,9 @@ export const metadata: Metadata = generatePageMetadata({
   keywords: PAGE_SEO.home.keywords,
   url: '/',
   image: '/images/dr-janet-duffy-homepage-og.jpg',
+  // AEO: Freshness signal - 83% of AI citations from pages updated within 12 months
+  lastModified: new Date().toISOString().split('T')[0],
+  publishedTime: '2024-01-01',
 });
 
 export default function HomePage() {
