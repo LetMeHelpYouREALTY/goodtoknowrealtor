@@ -1,0 +1,72 @@
+# 2026 SEO Optimized robots.txt for Las Vegas Real Estate
+# Updated for AI crawlers (ChatGPT, Claude, Perplexity) and traditional search engines
+
+# Allow all search engines and AI crawlers
+User-agent: *
+Allow: /
+
+# Google crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Google AI (Gemini, Bard, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# ChatGPT crawler
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude crawler
+User-agent: Claude-Web
+Allow: /
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Bing and Microsoft AI
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: BingPreview
+Allow: /
+
+# Facebook/Meta crawler
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter bot
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.goodtoknowrealtor.com/sitemap.xml
+Sitemap: https://www.goodtoknowrealtor.com/sitemap-0.xml
+
+# Host (preferred domain)
+Host: https://www.goodtoknowrealtor.com

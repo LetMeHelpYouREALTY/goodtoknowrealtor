@@ -11,7 +11,7 @@ import { HomeValueWidget } from '@/components/Home/HomeValueWidget';
 import { HomebotHomeowner } from '@/components/Home/HomebotHomeowner';
 import { HomebotBuyers } from '@/components/Home/HomebotBuyers';
 import { RealScoutListings } from '@/components/Home/RealScoutListings';
-import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema, generateFAQSchema, generateReviewSchema, generateServiceSchema } from '@/lib/seo';
+import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema, generateQAPageSchema, generateReviewSchema, generateServiceSchema } from '@/lib/seo';
 import { HomeIcon, MoneyIcon, CrownIcon } from '@/components/ui/Icons';
 
 export const metadata: Metadata = generatePageMetadata({
@@ -28,22 +28,32 @@ export default function HomePage() {
     { name: 'Home', url: '/' },
   ]);
 
-  const faqs = generateFAQSchema([
+  // 2026 AEO Update: Using QAPage schema for better AI citation (FAQ rich results deprecated May 2026)
+  const qaPage = generateQAPageSchema([
     {
       question: 'Who is Dr. Jan Duffy?',
-      answer: 'Dr. Jan Duffy is a Top 1% Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She specializes in luxury properties, investment properties, and first-time home buyers.',
+      answer: 'Dr. Jan Duffy is a Top 1% Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She specializes in luxury properties, investment properties, and first-time home buyers in the Las Vegas area.',
+      dateCreated: '2024-01-01',
     },
     {
-      question: 'What areas does Dr. Jan Duffy serve?',
-      answer: 'Dr. Jan Duffy serves the greater Las Vegas area including Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, and Green Valley. She has extensive knowledge of all Las Vegas neighborhoods.',
+      question: 'What areas does Dr. Jan Duffy serve in Las Vegas?',
+      answer: 'Dr. Jan Duffy serves the greater Las Vegas area including Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, Green Valley, Lake Las Vegas, The Ridges, and all surrounding communities. She has extensive knowledge of all Las Vegas neighborhoods and market conditions.',
+      dateCreated: '2024-01-01',
     },
     {
-      question: 'How can I contact Dr. Jan Duffy?',
-      answer: 'You can contact Dr. Jan Duffy by calling (702) 222-1964 or visiting the contact page on this website. She offers personalized consultations for all your Las Vegas real estate needs.',
+      question: 'How can I contact Dr. Jan Duffy for real estate services?',
+      answer: 'You can contact Dr. Jan Duffy by calling (702) 222-1964 for immediate assistance, or by visiting the contact page on this website to schedule a personalized consultation. She offers concierge service 7 days a week for all your Las Vegas real estate needs.',
+      dateCreated: '2024-01-01',
     },
     {
-      question: 'What services does Dr. Jan Duffy offer?',
-      answer: 'Dr. Jan Duffy offers comprehensive real estate services including buying homes, selling homes, luxury real estate, investment properties, home valuations, and real estate consulting throughout Las Vegas.',
+      question: 'What real estate services does Dr. Jan Duffy offer?',
+      answer: 'Dr. Jan Duffy offers comprehensive real estate services including luxury home buying and selling, investment property consultation, first-time home buyer assistance, property valuations, market analysis, and real estate consulting throughout the Las Vegas metropolitan area.',
+      dateCreated: '2024-01-01',
+    },
+    {
+      question: 'Why should I choose Dr. Jan Duffy as my Las Vegas realtor?',
+      answer: 'Dr. Jan Duffy is ranked in the Top 1% of Las Vegas realtors with $127M+ in career sales, 20+ years of local market experience, 98% client satisfaction rate, and 500+ happy clients. She provides white-glove concierge service, expert market knowledge, and proven negotiation skills to maximize value for both buyers and sellers.',
+      dateCreated: '2024-01-01',
     },
   ]);
 
@@ -88,7 +98,7 @@ export default function HomePage() {
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqs),
+          __html: JSON.stringify(qaPage),
         }}
       />
       {reviews.map((review, index) => (

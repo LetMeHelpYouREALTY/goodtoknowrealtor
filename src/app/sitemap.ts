@@ -1,6 +1,8 @@
+// 2026 SEO Optimization: Enhanced sitemap with GEO targeting and AEO support
 import { MetadataRoute } from 'next';
 import { getPostsWithCache } from '@/lib/blog/cache';
 import { blogCategories } from '@/lib/blog-categories';
+import { getAllNeighborhoods } from '@/lib/neighborhoods';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.goodtoknowrealtor.com';
@@ -23,6 +25,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
+  }));
+
+  // 2026 GEO Enhancement: Generate neighborhood URLs for hyperlocal SEO
+  const neighborhoods = getAllNeighborhoods();
+  const neighborhoodUrls = neighborhoods.map(neighborhood => ({
+    url: `${baseUrl}/communities/${neighborhood.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
   }));
 
   return [
@@ -245,6 +256,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Blog Posts - Dynamic from CMS
     ...blogPostUrls,
+
+    // 2026 GEO: Neighborhood pages for hyperlocal targeting
+    ...neighborhoodUrls,
 
     // Legal & Compliance Pages
     {

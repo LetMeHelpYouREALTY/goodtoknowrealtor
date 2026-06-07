@@ -10,7 +10,7 @@ import { Footer } from '@/components/Globals/Footer/Footer';
 import { MobileStickyCTA } from '@/components/ui/MobileStickyCTA';
 import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderAnnouncements';
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
-import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
+import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema, generatePersonSchema } from '@/lib/seo';
 
 // Font loaders must be called at module scope
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' });
@@ -130,6 +130,7 @@ export default function RootLayout({
   const localBusinessSchema = generateLocalBusinessSchema();
   const webSiteSchema = generateWebSiteSchema();
   const siteNavigationSchema = generateSiteNavigationElementSchema();
+  const personSchema = generatePersonSchema(); // 2026 AEO: E-E-A-T enhancement
 
   return (
     <html lang='en' className={`h-full ${inter.variable} ${lora.variable}`}>
@@ -194,6 +195,12 @@ export default function RootLayout({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(siteNavigationSchema),
+          }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
           }}
         />
         {/* Google Analytics 4 */}

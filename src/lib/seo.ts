@@ -380,20 +380,45 @@ export function generateBreadcrumbSchema(breadcrumbs: Array<{ name: string; url:
   };
 }
 
-// Generate FAQ schema
-export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
+// Generate QAPage schema (2026 Update - AEO Optimized)
+// Note: FAQ rich results deprecated May 2026, using QAPage for AEO instead
+export function generateQAPageSchema(questions: Array<{
+  question: string;
+  answer: string;
+  dateCreated?: string;
+  author?: string;
+}>) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
+    '@type': 'QAPage',
+    mainEntity: questions.map(qa => ({
       '@type': 'Question',
-      name: faq.question,
+      name: qa.question,
+      text: qa.question,
+      dateCreated: qa.dateCreated || new Date().toISOString(),
+      author: {
+        '@type': 'Person',
+        name: qa.author || 'Dr. Jan Duffy',
+      },
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer,
+        text: qa.answer,
+        dateCreated: qa.dateCreated || new Date().toISOString(),
+        author: {
+          '@type': 'Person',
+          name: qa.author || 'Dr. Jan Duffy',
+        },
+        upvoteCount: 1,
       },
+      answerCount: 1,
     })),
   };
+}
+
+// Keep old function for backward compatibility but mark as deprecated
+/** @deprecated Use generateQAPageSchema instead. FAQ rich results deprecated May 2026 */
+export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
+  return generateQAPageSchema(faqs);
 }
 
 // Generate Review schema for testimonials
@@ -434,7 +459,8 @@ export function generateReviewSchema(reviews: Array<{
   }));
 }
 
-// Generate Product schema for property listings
+// Generate RealEstateListing schema for property listings (2026 Update)
+// Note: Switched from Product to RealEstateListing per schema.org 2026 best practices
 export function generatePropertySchema(properties: Array<{
   name: string;
   description: string;
@@ -449,18 +475,15 @@ export function generatePropertySchema(properties: Array<{
   propertyType: string;
   listingStatus: string;
   mlsNumber?: string;
+  datePosted?: string;
 }>) {
   return properties.map(property => ({
     '@context': 'https://schema.org',
-    '@type': 'Product',
+    '@type': 'RealEstateListing',
     name: property.name,
     description: property.description,
     image: property.image,
-    brand: {
-      '@type': 'Brand',
-      name: 'Berkshire Hathaway HomeServices',
-    },
-    category: 'Real Estate',
+    datePosted: property.datePosted || new Date().toISOString(),
     offers: {
       '@type': 'Offer',
       price: property.price,
@@ -472,32 +495,29 @@ export function generatePropertySchema(properties: Array<{
         telephone: SEO_CONFIG.phone,
         email: SEO_CONFIG.email,
       },
+      validFrom: property.datePosted || new Date().toISOString(),
     },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: property.address,
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      addressCountry: 'US',
+    },
+    numberOfRooms: property.bedrooms,
+    numberOfBathroomsTotal: property.bathrooms,
+    floorSize: property.squareFeet ? {
+      '@type': 'QuantitativeValue',
+      value: property.squareFeet,
+      unitCode: 'FTK',
+      unitText: 'square feet',
+    } : undefined,
+    yearBuilt: property.yearBuilt,
     additionalProperty: [
-      ...(property.bedrooms ? [{
-        '@type': 'PropertyValue',
-        name: 'Bedrooms',
-        value: property.bedrooms,
-      }] : []),
-      ...(property.bathrooms ? [{
-        '@type': 'PropertyValue',
-        name: 'Bathrooms',
-        value: property.bathrooms,
-      }] : []),
-      ...(property.squareFeet ? [{
-        '@type': 'PropertyValue',
-        name: 'Square Feet',
-        value: property.squareFeet,
-      }] : []),
       ...(property.lotSize ? [{
         '@type': 'PropertyValue',
         name: 'Lot Size',
         value: property.lotSize,
-      }] : []),
-      ...(property.yearBuilt ? [{
-        '@type': 'PropertyValue',
-        name: 'Year Built',
-        value: property.yearBuilt,
       }] : []),
       {
         '@type': 'PropertyValue',
@@ -510,13 +530,6 @@ export function generatePropertySchema(properties: Array<{
         value: property.mlsNumber,
       }] : []),
     ],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: property.address,
-      addressLocality: 'Las Vegas',
-      addressRegion: 'Nevada',
-      addressCountry: 'United States',
-    },
   }));
 }
 
@@ -820,5 +833,226 @@ export function generateSiteNavigationElementSchema() {
         url: `${SEO_CONFIG.siteUrl}/blog`
       }
     ]
+  };
+}
+
+// 2026 AEO Enhancement: Person schema with E-E-A-T signals
+export function generatePersonSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Dr. Jan Duffy',
+    alternateName: 'Janet Duffy',
+    givenName: 'Janet',
+    familyName: 'Duffy',
+    honorificPrefix: 'Dr.',
+    jobTitle: 'Real Estate Agent',
+    description: 'Top 1% Las Vegas real estate agent with over 20 years of experience, specializing in luxury properties and personalized client service. $127M+ in career sales volume.',
+    url: SEO_CONFIG.siteUrl,
+    telephone: SEO_CONFIG.phone,
+    email: SEO_CONFIG.email,
+    image: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.agent}`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: SEO_CONFIG.address.city,
+      addressRegion: SEO_CONFIG.address.state,
+      addressCountry: SEO_CONFIG.address.country,
+    },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Premier Properties',
+    },
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Real Estate Agent',
+      occupationalCategory: {
+        '@type': 'CategoryCode',
+        inCodeSet: {
+          '@type': 'CategoryCodeSet',
+          name: 'O*NET-SOC',
+          dateModified: '2019',
+          url: 'https://www.onetonline.org/',
+        },
+        codeValue: '41-9021.00',
+        name: 'Real Estate Brokers',
+      },
+      estimatedSalary: {
+        '@type': 'MonetaryAmountDistribution',
+        name: 'base',
+        currency: 'USD',
+        percentile10: 50000,
+        percentile25: 75000,
+        median: 150000,
+        percentile75: 250000,
+        percentile90: 500000,
+      },
+      responsibilities: 'Provide expert real estate services including property buying, selling, market analysis, and client consultation for Las Vegas area properties.',
+    },
+    knowsAbout: [
+      'Las Vegas Real Estate Market',
+      'Luxury Home Sales',
+      'Property Investment',
+      'Real Estate Negotiation',
+      'Market Analysis',
+      'Client Relations',
+      'Property Valuation',
+      'Las Vegas Neighborhoods',
+    ],
+    award: [
+      'Top 1% of Las Vegas Realtors',
+      'Berkshire Hathaway Circle of Excellence',
+      '5-Star Client Rating Average',
+    ],
+    sameAs: Object.values(SEO_CONFIG.social),
+  };
+}
+
+// 2026 GEO Enhancement: Place schema for neighborhoods
+export function generatePlaceSchema(places: Array<{
+  name: string;
+  description: string;
+  address?: string;
+  geo?: { latitude: number; longitude: number };
+  containedInPlace?: string;
+}>) {
+  return places.map(place => ({
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: place.name,
+    description: place.description,
+    address: place.address ? {
+      '@type': 'PostalAddress',
+      addressLocality: place.address,
+      addressRegion: 'Nevada',
+      addressCountry: 'US',
+    } : undefined,
+    geo: place.geo ? {
+      '@type': 'GeoCoordinates',
+      latitude: place.geo.latitude,
+      longitude: place.geo.longitude,
+    } : undefined,
+    containedInPlace: place.containedInPlace ? {
+      '@type': 'City',
+      name: place.containedInPlace,
+      addressRegion: 'Nevada',
+    } : undefined,
+  }));
+}
+
+// 2026 AEO Enhancement: Article schema for blog posts with E-E-A-T
+export function generateArticleSchema({
+  headline,
+  description,
+  image,
+  datePublished,
+  dateModified,
+  author = 'Dr. Jan Duffy',
+  url,
+}: {
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+  url: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    image: `${SEO_CONFIG.siteUrl}${image}`,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      '@type': 'Person',
+      name: author,
+      url: SEO_CONFIG.siteUrl,
+      jobTitle: 'Real Estate Agent',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Berkshire Hathaway HomeServices',
+      },
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SEO_CONFIG.siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.logo}`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${SEO_CONFIG.siteUrl}${url}`,
+    },
+    isAccessibleForFree: true,
+    inLanguage: 'en-US',
+  };
+}
+
+// 2026 Real Estate Enhancement: Event schema for open houses
+export function generateOpenHouseSchema({
+  name,
+  description,
+  startDate,
+  endDate,
+  location,
+  image,
+  url,
+}: {
+  name: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  location: {
+    name: string;
+    address: string;
+    geo?: { latitude: number; longitude: number };
+  };
+  image?: string;
+  url?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name,
+    description,
+    startDate,
+    endDate,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: {
+      '@type': 'Place',
+      name: location.name,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: location.address,
+        addressLocality: 'Las Vegas',
+        addressRegion: 'NV',
+        addressCountry: 'US',
+      },
+      geo: location.geo ? {
+        '@type': 'GeoCoordinates',
+        latitude: location.geo.latitude,
+        longitude: location.geo.longitude,
+      } : undefined,
+    },
+    image: image ? `${SEO_CONFIG.siteUrl}${image}` : undefined,
+    url: url ? `${SEO_CONFIG.siteUrl}${url}` : undefined,
+    organizer: {
+      '@type': 'RealEstateAgent',
+      name: 'Dr. Jan Duffy',
+      telephone: SEO_CONFIG.phone,
+      email: SEO_CONFIG.email,
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: url ? `${SEO_CONFIG.siteUrl}${url}` : SEO_CONFIG.siteUrl,
+    },
   };
 }
