@@ -1,5 +1,16 @@
 # AEO/GEO Quick Start Guide
 
+## 💡 The AI Search Revolution (Nate's Newsletter)
+
+**Critical Insight**: *"AI is eating your search traffic. Google clicks down 15% YoY. LLM attention > human attention."*
+
+**What This Means**:
+- Traditional SEO = Getting ranked in a list
+- AI-era SEO = Getting **named in the answer**
+- You're competing for "parameter space" in AI models, not just page ranks
+
+**Our Strategy**: Make Dr. Jan Duffy's brand so clear, consistent, and authoritative that when ChatGPT/Perplexity/Google SGE answers "Who's the best Las Vegas realtor?", we're in the response.
+
 ## 🚀 Quick Implementation Checklist
 
 ### For Every New Page

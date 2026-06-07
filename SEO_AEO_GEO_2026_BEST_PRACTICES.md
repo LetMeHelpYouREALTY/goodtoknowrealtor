@@ -4,6 +4,17 @@
 
 This document outlines the comprehensive SEO, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization) implementations for Dr. Jan Duffy's Las Vegas real estate website, following 2026 industry best practices.
 
+### Nate's Newsletter: AI-Era SEO Philosophy
+
+**Key Insight from Nate's Newsletter**: *"AI is eating your search traffic, but not the way you think. Overall Google clicks are down 15% YoY. We are seeing a world where LLM attention > human attention on the web."*
+
+**Core Strategy**: Rather than traditional SEO optimization focused solely on clicks, Nate emphasizes:
+- **Parameter Space Competition**: Ensure your brand is embedded as a clear, consistent, and authoritative signal within AI model parameters
+- **Computational Understanding**: Structure content for clarity, consistency, and AI comprehension
+- **Avoiding Digital Obscurity**: Build strong signals that AI models can't ignore when generating responses
+
+This implementation follows Nate's framework by optimizing for **LLM attention** through structured data, clear answer blocks, and authoritative signals that AI models prioritize when generating responses.
+
 ## 📊 Key Statistics & Research
 
 ### AEO Performance Data (2026)
@@ -22,6 +33,24 @@ This document outlines the comprehensive SEO, AEO (Answer Engine Optimization), 
 - Domains with profiles on Trustpilot, G2, Capterra, Sitejabber, Yelp have **3x higher** chances for ChatGPT citations
 
 ## 🚀 Implemented Optimizations
+
+### 0. Parameter Space Optimization (Nate's Framework)
+
+**Philosophy**: Compete for "parameter space" within AI models rather than just search rankings.
+
+**Implementation Strategy**:
+1. **Brand Consistency** - "Dr. Jan Duffy" appears consistently across all schema types (RealEstateAgent, Organization, Article, Review)
+2. **Clear Authority Signals** - Structured credentials, awards, and expertise in every schema
+3. **Computational Clarity** - Clean, structured data that AI models can easily parse and understand
+4. **Topical Authority** - Deep coverage of Las Vegas real estate with interconnected schemas
+
+**Why This Matters**: When ChatGPT, Perplexity, or Google SGE needs to recommend a Las Vegas realtor, our consistent, structured brand signals compete for inclusion in the AI-generated response. Traditional SEO gets you ranked in a list; parameter space optimization gets you **named in the answer**.
+
+**Measurement**: Track mentions in AI-generated responses:
+- ChatGPT queries about "Las Vegas realtor"
+- Perplexity searches for "best real estate agent Summerlin"
+- Google AI Overview citations
+- Claude, Gemini, and other LLM recommendations
 
 ### 1. Answer Engine Optimization (AEO)
 
@@ -436,6 +465,16 @@ https://pagespeed.web.dev/
 
 ## 📚 Resources & References
 
+### AI-Era SEO Thought Leadership
+- [Nate's Newsletter - Beyond SEO: Winning Visibility in the AI Search Era](https://natesnewsletter.substack.com/p/beyond-seo-winning-visibility-in) - Parameter space optimization
+- [Nate's Newsletter on Substack](https://natesnewsletter.substack.com/) - Weekly AI search insights
+
+**Key Concepts from Nate's Newsletter**:
+- **LLM Attention > Human Attention**: Google clicks down 15% YoY, AI responses up
+- **Parameter Space**: Your brand's representation within AI model parameters
+- **Computational Understanding**: Structure content for AI comprehension, not just human readers
+- **Consistency is Authority**: AI models reward clear, consistent brand signals across the web
+
 ### Official Documentation
 - [Schema.org V30.0](https://schema.org/) - Latest schema types
 - [Google Search Central](https://developers.google.com/search) - SEO guidelines
@@ -446,6 +485,7 @@ https://pagespeed.web.dev/
 - [AEO Best Practices - CXL](https://cxl.com/blog/answer-engine-optimization-aeo-the-comprehensive-guide/)
 - [GEO for Real Estate - First Page Sage](https://firstpagesage.com/seo-blog/the-top-real-estate-geo-aeo-agencies/)
 - [Schema Markup for Real Estate - 618 Media](https://618media.com/en/blog/schema-markup-for-real-estate-websites/)
+- [Author Schema Markup - Positional](https://www.positional.com/blog/author-schema) - By Nate Matherson
 
 ### Tools
 - [Google Rich Results Test](https://search.google.com/test/rich-results)
