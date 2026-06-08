@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Sold Listings | Dr. Jan Duffy - Recent Sales Success Stories',
@@ -193,6 +194,8 @@ export default function SoldListingsPage() {
             </div>
           </div>
         </section>
+      <RealScoutOfficeWidget compact />
+
 
         {/* Sales Stats */}
         <section className="py-16 bg-white">

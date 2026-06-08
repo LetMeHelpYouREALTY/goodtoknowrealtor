@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Speaking Engagements | Dr. Jan Duffy Real Estate Expert | Las Vegas',
@@ -44,6 +45,8 @@ export default function SpeakingEngagementsPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Speaking Topics */}
       <section className='py-20 bg-white'>

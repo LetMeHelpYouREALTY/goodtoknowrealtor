@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { RealScoutSearch } from '@/components/PropertySearch/RealScoutSearch';
-import { RealScoutListings } from '@/components/Home/RealScoutListings';
 import { PageHero } from '@/components/ui/PageHero';
 import { ConsultationCTA } from '@/components/ui/ConsultationCTA';
 import { TrustBadges } from '@/components/Globals/TrustBadges/TrustBadges';
@@ -183,9 +182,6 @@ export default function ListingsPage() {
           </div>
         </div>
       </section>
-
-      {/* Live MLS Listings */}
-      <RealScoutListings />
 
       {/* Featured Properties */}
       <section className='py-20'>

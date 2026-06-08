@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { HeroSection } from '@/components/Home/HeroSection';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 import { HeroTestimonialCarousel } from '@/components/Home/HeroTestimonialCarousel';
 import { WhyBerkshireSection } from '@/components/Home/WhyBerkshireSection';
 import { MarketSnapshotSection } from '@/components/Home/MarketSnapshotSection';
@@ -107,6 +108,7 @@ export default function HomePage() {
 
       {/* 1. Hero */}
       <HeroSection />
+      <RealScoutOfficeWidget compact />
       <HeroTestimonialCarousel />
 
       {/* 2. Why Choose Berkshire Hathaway HomeServices */}

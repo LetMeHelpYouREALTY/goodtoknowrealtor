@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { RealScoutListings } from '@/components/Home/RealScoutListings';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Luxury Rental Properties Las Vegas | Premium Rentals | Dr. Jan Duffy',
@@ -45,6 +45,8 @@ export default function LuxuryRentalsPage() {
           </div>
         </div>
       </section>
+
+      <RealScoutOfficeWidget compact />
 
       {/* Rental Benefits */}
       <section className='py-20 bg-white'>
@@ -119,7 +121,6 @@ export default function LuxuryRentalsPage() {
               </p>
             </div>
 
-            <RealScoutListings />
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Las Vegas Real Estate Investment Opportunities 2025 | Dr. Jan Duffy Guide',
@@ -177,6 +178,8 @@ export default function LasVegasInvestmentOpportunities2025Page() {
             </div>
           </div>
         </section>
+      <RealScoutOfficeWidget compact />
+
 
         {/* Article Content */}
         <article className="py-16 bg-white">

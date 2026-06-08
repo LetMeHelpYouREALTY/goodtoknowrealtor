@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Luxury Estate Management Las Vegas | Property Management Services | Dr. Jan Duffy',
@@ -44,6 +45,8 @@ export default function EstateManagementPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Estate Management Benefits */}
       <section className='py-20 bg-white'>

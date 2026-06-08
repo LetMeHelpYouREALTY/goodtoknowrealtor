@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { RealScoutListings } from '@/components/Home/RealScoutListings';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Luxury Land for Sale Las Vegas | Premium Land Lots | Dr. Jan Duffy',
@@ -45,6 +45,8 @@ export default function LuxuryLandPage() {
           </div>
         </div>
       </section>
+
+      <RealScoutOfficeWidget compact />
 
       {/* Land Investment Benefits */}
       <section className='py-20 bg-white'>
@@ -118,7 +120,6 @@ export default function LuxuryLandPage() {
               </p>
             </div>
 
-            <RealScoutListings />
           </div>
         </div>
       </section>

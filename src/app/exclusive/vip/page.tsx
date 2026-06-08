@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'VIP Client Services Las Vegas | Luxury Real Estate Concierge | Dr. Jan Duffy',
@@ -44,6 +45,8 @@ export default function VIPServicesPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* VIP Benefits */}
       <section className='py-20 bg-white'>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Cash Offer Program | Dr. Jan Duffy - Las Vegas Real Estate Expert',
@@ -41,6 +42,8 @@ export default function CashOfferPage() {
             </div>
           </div>
         </section>
+      <RealScoutOfficeWidget compact />
+
 
         {/* Why Cash Offers Section */}
         <section className='py-16 bg-gray-50'>

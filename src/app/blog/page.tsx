@@ -8,6 +8,7 @@ import { fetchMarketInsights } from '@/lib/rss-fetcher';
 import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { getFeaturedCategories, getCategoryColorClass } from '@/lib/blog-categories';
 import { AssessmentCTA } from '@/components/blog/AssessmentCTA';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 import { SEO_CONFIG } from '@/lib/seo';
 
@@ -93,6 +94,8 @@ export default async function BlogPage() {
         </div>
       </div>
 
+      <RealScoutOfficeWidget compact />
+
       {/* Category Navigation */}
       <section className='py-12 bg-white border-b border-gray-200'>
         <div className='container'>
@@ -122,6 +125,8 @@ export default async function BlogPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Blog Content */}
       <div className='container py-8 lg:py-12'>

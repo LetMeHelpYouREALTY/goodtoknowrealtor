@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { RealScoutListings } from '@/components/Home/RealScoutListings';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Off-Market Properties Las Vegas | Exclusive Listings | Dr. Jan Duffy',
@@ -45,6 +45,8 @@ export default function OffMarketPage() {
           </div>
         </div>
       </section>
+
+      <RealScoutOfficeWidget compact />
 
       {/* Off-Market Benefits */}
       <section className='py-20 bg-white'>
@@ -119,7 +121,6 @@ export default function OffMarketPage() {
               </p>
             </div>
 
-            <RealScoutListings />
           </div>
         </div>
       </section>

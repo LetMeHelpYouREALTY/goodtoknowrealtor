@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { RealScoutSearch } from '@/components/PropertySearch/RealScoutSearch';
 import { HomeValueWidget } from '@/components/Home/HomeValueWidget';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Exclusive Access | Off-Market Properties Las Vegas | Dr. Jan Duffy',
@@ -46,6 +47,8 @@ export default function ExclusivePage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Exclusive Services Section */}
       <section className='py-20 bg-white'>

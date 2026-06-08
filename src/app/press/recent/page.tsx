@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Recent Press | Dr. Jan Duffy Media Coverage | Las Vegas Real Estate Expert',
@@ -44,6 +45,8 @@ export default function RecentPressPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Recent Press Articles */}
       <section className='py-20 bg-white'>

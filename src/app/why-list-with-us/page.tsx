@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Why List With Dr. Jan Duffy | Top 1% Las Vegas Real Estate Agent',
@@ -158,6 +159,8 @@ export default function WhyListWithUsPage() {
             </div>
           </div>
         </section>
+      <RealScoutOfficeWidget compact />
+
 
         {/* Key Advantages */}
         <section className="py-16 bg-white">

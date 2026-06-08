@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { SellerReadinessQuiz } from '@/components/assessments/SellerReadinessQuiz';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Vegas Home Seller Readiness Assessment | Dr. Jan Duffy',
@@ -108,6 +109,8 @@ export default function SellerReadinessPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Assessment Component */}
       <section className="py-16 bg-white">

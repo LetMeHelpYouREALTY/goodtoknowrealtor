@@ -43,6 +43,7 @@ export default function MarketInsightsFullPage() {
         <PageHero
           title='Las Vegas Real Estate Market Insights'
           subtitle='Comprehensive market analysis, trends, and data-driven insights from Dr. Jan Duffy, your Premier Good To Know REALTOR®'
+          showOfficeListings={false}
         />
 
         {/* Breadcrumbs */}

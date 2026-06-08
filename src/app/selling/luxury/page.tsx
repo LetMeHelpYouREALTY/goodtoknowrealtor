@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HomeValueWidget } from '@/components/Home/HomeValueWidget';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Sell My Luxury House Las Vegas | Luxury Home Sales | Dr. Jan Duffy',
@@ -45,6 +46,8 @@ export default function SellingLuxuryPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Luxury Selling Benefits */}
       <section className='py-20 bg-white'>

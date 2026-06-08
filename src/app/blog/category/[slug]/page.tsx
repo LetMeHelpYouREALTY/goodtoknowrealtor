@@ -6,6 +6,7 @@ import { getCategoryBySlug, getCategoryColorClass } from '@/lib/blog-categories'
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { AssessmentCTA } from '@/components/blog/AssessmentCTA';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 interface CategoryPageProps {
   params: {
@@ -205,6 +206,8 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           </div>
         </div>
       </section>
+
+      <RealScoutOfficeWidget compact />
 
       {/* Intro copy for SEO uniqueness */}
       <section className="py-8 bg-white">

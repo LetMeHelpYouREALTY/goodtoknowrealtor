@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Private Showings Las Vegas | Exclusive Property Tours | Dr. Jan Duffy',
@@ -44,6 +45,8 @@ export default function PrivateShowingsPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Private Showing Benefits */}
       <section className='py-20 bg-white'>

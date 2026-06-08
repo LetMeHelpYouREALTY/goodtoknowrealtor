@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { AssessmentForm } from '@/components/ui/AssessmentForm';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Buyer Readiness Assessment | Dr. Jan Duffy - Free Las Vegas Home Buyer Quiz',
@@ -54,6 +55,8 @@ export default function BuyerReadinessAssessmentPage() {
             </div>
           </div>
         </section>
+      <RealScoutOfficeWidget compact />
+
 
         {/* Assessment Section */}
         <section className="py-16 bg-white">

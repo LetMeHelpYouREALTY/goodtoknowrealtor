@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Our Team | Las Vegas Real Estate Professionals | Dr. Jan Duffy',
@@ -44,6 +45,8 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Team Overview */}
       <section className='py-20 bg-white'>

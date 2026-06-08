@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { fetchBlogPost, getPostsWithCache } from '@/lib/blog/cache';
 import { generatePageMetadata, generateBreadcrumbSchema, generateArticleSchema, SEO_CONFIG } from '@/lib/seo';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -162,6 +163,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               )}
             </div>
           </div>
+
+          <RealScoutOfficeWidget compact />
 
           {/* Local editorial context for Las Vegas search relevance */}
           <div className='mb-8 rounded-xl border border-amber-200 bg-amber-50 p-6 text-gray-700'>

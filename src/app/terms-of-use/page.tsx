@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Terms of Use | Dr. Jan Duffy',
@@ -11,6 +12,8 @@ export default function TermsOfUsePage() {
       <div className='container mx-auto px-4 py-16'>
         <div className='max-w-4xl mx-auto'>
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>Terms of Use</h1>
+
+          <RealScoutOfficeWidget compact />
           
           <div className='bg-white rounded-lg shadow-sm p-8'>
             <p className='text-gray-600 mb-6'>Last updated: January 2025</p>

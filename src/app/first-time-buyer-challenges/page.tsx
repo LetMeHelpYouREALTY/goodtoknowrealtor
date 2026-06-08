@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Las Vegas First-Time Buyer Challenges & Solutions | Dr. Jan Duffy',
@@ -43,6 +44,8 @@ export default function FirstTimeBuyerChallengesPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Challenges Overview */}
       <section className="py-20 bg-white">

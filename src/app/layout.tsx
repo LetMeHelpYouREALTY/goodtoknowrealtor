@@ -102,8 +102,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
             realscout-office-listings {
-              --rs-listing-divider-color: #0e64c8;
-              width: 100%;
+              --rs-listing-divider-color: #c9a962;
+              display: block;
+              width: 100% !important;
+              max-width: 100% !important;
             }
             realscout-advanced-search {
               --rs-as-button-text-color: #ffffff;

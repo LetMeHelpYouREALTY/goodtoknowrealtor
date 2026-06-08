@@ -9,6 +9,7 @@ import { VirtualTourGallery } from '@/components/VirtualTours/VirtualTour';
 import { MarketVisualizations } from '@/components/MarketData/MarketVisualizations';
 import { EnhancedPropertyCard } from '@/components/PropertyCards/EnhancedPropertyCard';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 // Sample property data
 const sampleProperties = [
@@ -111,6 +112,8 @@ export default function InteractiveFeaturesPage() {
           </div>
         </div>
       </section>
+      <RealScoutOfficeWidget compact />
+
 
       {/* Features Overview */}
       <section className="py-16 bg-white">

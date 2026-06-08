@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { RealScoutListings } from '@/components/Home/RealScoutListings';
+import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
   title: 'Luxury Virtual Tours Las Vegas | 360° Property Tours | Dr. Jan Duffy',
@@ -45,6 +45,8 @@ export default function LuxuryVirtualToursPage() {
           </div>
         </div>
       </section>
+
+      <RealScoutOfficeWidget compact />
 
       {/* Virtual Tour Benefits */}
       <section className='py-20 bg-white'>
@@ -119,7 +121,6 @@ export default function LuxuryVirtualToursPage() {
               </p>
             </div>
 
-            <RealScoutListings />
           </div>
         </div>
       </section>
