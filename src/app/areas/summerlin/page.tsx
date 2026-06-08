@@ -1,10 +1,10 @@
-import { PageHero } from '@/components/ui/PageHero';
-import { SEO_CONFIG } from '@/lib/seo';
 import { Metadata } from 'next';
+import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import { SummerlinListings } from '@/components/Home/SummerlinListings';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
 
 // Declare RealScout custom elements
 declare global {
@@ -15,19 +15,20 @@ declare global {
   }
 }
 
-export const metadata: Metadata = {
-  title: 'Summerlin Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Find your dream home in Summerlin, Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Summerlin luxury homes, condos, and investment properties.',
-  keywords: 'Summerlin real estate, Summerlin homes for sale, Summerlin luxury homes, Las Vegas real estate, Dr. Jan Duffy',
-  openGraph: {
-    title: 'Summerlin Real Estate | Dr. Jan Duffy',
-    description: 'Find your dream home in Summerlin, Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy.',
-    images: ['/images/summerlin-real-estate-og.jpg'],
-  },
-  alternates: {
-    canonical: `${SEO_CONFIG.siteUrl}/areas/summerlin`,
-  },
-};
+export const metadata: Metadata = generatePrimaryAreaMetadata({
+  areaName: 'Summerlin',
+  slug: 'summerlin',
+  description:
+    'Find your dream home in Summerlin, Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Summerlin luxury homes, condos, and investment properties.',
+  keywords: [
+    'Summerlin real estate',
+    'Summerlin homes for sale',
+    'Summerlin luxury homes',
+    'Las Vegas real estate',
+    'Dr. Jan Duffy',
+  ],
+  ogImage: '/images/summerlin-real-estate-og.jpg',
+});
 
 export default function SummerlinPage() {
   return (

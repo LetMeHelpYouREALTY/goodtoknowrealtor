@@ -1,22 +1,22 @@
 import { Metadata } from 'next';
-import { SEO_CONFIG } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
 
-export const metadata: Metadata = {
-  title: 'Downtown Las Vegas Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Find your dream home in Downtown Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Downtown Las Vegas condos, lofts, and urban living properties.',
-  keywords: 'Downtown Las Vegas real estate, Downtown Las Vegas condos, Las Vegas urban living, Dr. Jan Duffy',
-  openGraph: {
-    title: 'Downtown Las Vegas Real Estate | Dr. Jan Duffy',
-    description: 'Find your dream home in Downtown Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy.',
-    images: ['/images/downtown-las-vegas-real-estate-og.jpg'],
-  },
-  alternates: {
-    canonical: `${SEO_CONFIG.siteUrl}/areas/downtown`,
-  },
-};
+export const metadata: Metadata = generatePrimaryAreaMetadata({
+  areaName: 'Downtown Las Vegas',
+  slug: 'downtown',
+  description:
+    'Find your dream home in Downtown Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Downtown Las Vegas condos, lofts, and urban living properties.',
+  keywords: [
+    'Downtown Las Vegas real estate',
+    'Downtown Las Vegas condos',
+    'Las Vegas urban living',
+    'Dr. Jan Duffy',
+  ],
+  ogImage: '/images/downtown-las-vegas-real-estate-og.jpg',
+});
 
 export default function DowntownPage() {
   return (

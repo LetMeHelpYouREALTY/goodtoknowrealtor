@@ -8,6 +8,7 @@ import {
   STATIC_BLOG_SLUGS,
   dedupeSitemapEntries,
 } from '@/lib/sitemap-routes';
+import { PRIMARY_AREA_SLUGS } from '@/lib/primary-areas';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SEO_CONFIG.siteUrl;
@@ -50,8 +51,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: slug === 'summerlin' || slug === 'henderson' ? 0.8 : 0.7,
   }));
 
+  const primaryAreaUrls = PRIMARY_AREA_SLUGS.map((slug) => ({
+    url: `${baseUrl}/areas/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: slug === 'summerlin' || slug === 'henderson' ? 0.85 : 0.8,
+  }));
+
   return dedupeSitemapEntries([
     ...staticUrls,
+    ...primaryAreaUrls,
     ...neighborhoodUrls,
     ...blogCategoryUrls,
     ...blogPostUrls,

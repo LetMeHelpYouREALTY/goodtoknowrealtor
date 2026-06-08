@@ -95,6 +95,22 @@ These URLs are **expected** and **correct** — they should not be indexed:
 
 Redirects are enforced in middleware, `next.config.js`, and `vercel.json`.
 
+### “Duplicate without user-selected canonical”
+
+Google crawled the URL but treats it as a duplicate of another page and did not accept a clear canonical signal.
+
+| URL | Cause | Fix |
+|-----|--------|-----|
+| `/reports` | Thin duplicate of `/market-insights`; no canonical tag | **301 redirect** to `/market-insights`; removed from sitemap; internal links updated |
+| `/areas/north-las-vegas` | Manual metadata missing full `generatePageMetadata()` signals; not in sitemap | **`generatePrimaryAreaMetadata()`** + WebPage/breadcrumb JSON-LD; added to sitemap via `PRIMARY_AREA_SLUGS` |
+
+After deploy:
+
+1. Confirm `/reports` returns **301** → `/market-insights`.
+2. View source on `/areas/north-las-vegas` and confirm `<link rel="canonical" href="https://www.goodtoknowrealtor.com/areas/north-las-vegas" />`.
+3. In GSC → **Page indexing → Duplicate without user-selected canonical** → **Validate fix**.
+4. Optionally request indexing for `/areas/north-las-vegas` in URL Inspection.
+
 ## 6. NAP and local SEO
 
 - Keep NAP consistent with the [NAP/GBP audit](NAP-GBP-AUDIT.md).

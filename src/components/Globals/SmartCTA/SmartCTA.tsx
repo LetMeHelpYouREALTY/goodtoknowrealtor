@@ -53,7 +53,7 @@ const ctaContent: Record<SmartCTAProps['location'], Record<string, CTAConfig>> =
     },
     marketReport: {
       text: 'Get Market Report',
-      href: '/reports',
+      href: '/market-insights',
       icon: '📊'
     },
     homeValue: {

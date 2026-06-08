@@ -357,7 +357,7 @@ export default function BuyingUpdatesPage() {
                 Detailed monthly market analysis and neighborhood reports
               </p>
               <Link
-                href='/reports'
+                href='/market-insights'
                 className='inline-flex items-center text-amber-600 font-semibold hover:text-amber-700 transition-colors'
               >
                 View Reports →

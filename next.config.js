@@ -221,6 +221,11 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/reports',
+        destination: '/market-insights',
+        permanent: true,
+      },
     ];
   },
 

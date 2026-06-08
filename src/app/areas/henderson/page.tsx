@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
-import { SEO_CONFIG } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
 
 // Declare RealScout custom elements
 declare global {
@@ -14,19 +14,20 @@ declare global {
   }
 }
 
-export const metadata: Metadata = {
-  title: 'Henderson Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Find your dream home in Henderson, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Henderson luxury homes, family communities, and investment properties.',
-  keywords: 'Henderson real estate, Henderson homes for sale, Henderson luxury homes, Nevada real estate, Dr. Jan Duffy',
-  openGraph: {
-    title: 'Henderson Real Estate | Dr. Jan Duffy',
-    description: 'Find your dream home in Henderson, Nevada with Premier Good To Know REALTOR® Dr. Jan Duffy.',
-    images: ['/images/henderson-real-estate-og.jpg'],
-  },
-  alternates: {
-    canonical: `${SEO_CONFIG.siteUrl}/areas/henderson`,
-  },
-};
+export const metadata: Metadata = generatePrimaryAreaMetadata({
+  areaName: 'Henderson',
+  slug: 'henderson',
+  description:
+    'Find your dream home in Henderson, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Henderson luxury homes, family communities, and investment properties.',
+  keywords: [
+    'Henderson real estate',
+    'Henderson homes for sale',
+    'Henderson luxury homes',
+    'Nevada real estate',
+    'Dr. Jan Duffy',
+  ],
+  ogImage: '/images/henderson-real-estate-og.jpg',
+});
 
 export default function HendersonPage() {
   return (

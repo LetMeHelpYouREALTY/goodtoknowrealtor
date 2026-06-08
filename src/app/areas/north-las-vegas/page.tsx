@@ -1,153 +1,190 @@
 import { Metadata } from 'next';
-import { SEO_CONFIG } from '@/lib/seo';
+import Link from 'next/link';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import {
+  generatePrimaryAreaMetadata,
+  generatePrimaryAreaSchemas,
+} from '@/lib/primary-areas';
 
-export const metadata: Metadata = {
-  title: 'North Las Vegas Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Find your dream home in North Las Vegas, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in North Las Vegas homes, new construction, and investment properties.',
-  keywords: 'North Las Vegas real estate, North Las Vegas homes for sale, Nevada real estate, Dr. Jan Duffy',
-  openGraph: {
-    title: 'North Las Vegas Real Estate | Dr. Jan Duffy',
-    description: 'Find your dream home in North Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy.',
-    images: ['/images/north-las-vegas-real-estate-og.jpg'],
-  },
-  alternates: {
-    canonical: `${SEO_CONFIG.siteUrl}/areas/north-las-vegas`,
-  },
-};
+const AREA_NAME = 'North Las Vegas';
+const SLUG = 'north-las-vegas' as const;
+const DESCRIPTION =
+  'Find your dream home in North Las Vegas, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in North Las Vegas homes, new construction, and investment properties.';
+
+export const metadata: Metadata = generatePrimaryAreaMetadata({
+  areaName: AREA_NAME,
+  slug: SLUG,
+  description: DESCRIPTION,
+  keywords: [
+    'North Las Vegas real estate',
+    'North Las Vegas homes for sale',
+    'Nevada real estate',
+    'new construction North Las Vegas',
+    'Dr. Jan Duffy',
+  ],
+  ogImage: '/images/north-las-vegas-real-estate-og.jpg',
+});
 
 export default function NorthLasVegasPage() {
+  const schemas = generatePrimaryAreaSchemas({
+    areaName: AREA_NAME,
+    slug: SLUG,
+    description: DESCRIPTION,
+  });
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <PageHero
-        title='North Las Vegas Real Estate'
-        subtitle='Discover affordable living and new construction in North Las Vegas'
-        gradientFromClassName='from-blue-900'
-        gradientToClassName='to-blue-800'
-      >
-        <a 
-          href='/listings#advanced-search' 
-          className='bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors duration-200 shadow-lg'
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webPage) }}
+      />
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <PageHero
+          title="North Las Vegas Real Estate"
+          subtitle="Discover affordable living and new construction in North Las Vegas"
+          gradientFromClassName="from-blue-900"
+          gradientToClassName="to-blue-800"
         >
-          View North Las Vegas Listings
-        </a>
-        <a 
-          href='/contact' 
-          className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-800 transition-colors duration-200'
-        >
-          Get Free Consultation
-        </a>
-      </PageHero>
+          <Link
+            href="/listings#advanced-search"
+            className="bg-white text-blue-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors duration-200 shadow-lg"
+          >
+            View North Las Vegas Listings
+          </Link>
+          <Link
+            href="/contact"
+            className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-800 transition-colors duration-200"
+          >
+            Get Free Consultation
+          </Link>
+        </PageHero>
 
-      {/* About North Las Vegas */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Why Choose North Las Vegas?
+        {/* About North Las Vegas */}
+        <section className="py-20 bg-white">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                  Why Choose North Las Vegas?
+                </h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  North Las Vegas offers excellent value with new construction communities,
+                  affordable housing options, and convenient access to the Las Vegas Strip.
+                  As the Premier Good To Know REALTOR®, Dr. Jan Duffy helps buyers find great
+                  deals and investment opportunities in Aliante, Skye Canyon, and other
+                  North Las Vegas master-planned communities.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-center">
+                    <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
+                    <span className="text-gray-700">New construction communities and master-planned developments</span>
+                  </li>
+                  <li className="flex items-center">
+                    <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
+                    <span className="text-gray-700">Affordable housing options for first-time buyers</span>
+                  </li>
+                  <li className="flex items-center">
+                    <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
+                    <span className="text-gray-700">Close proximity to Las Vegas Strip and entertainment</span>
+                  </li>
+                  <li className="flex items-center">
+                    <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
+                    <span className="text-gray-700">Growing job market and business opportunities</span>
+                  </li>
+                </ul>
+                <p className="mt-6 text-gray-600">
+                  Browse{' '}
+                  <Link href="/communities" className="text-blue-600 font-semibold hover:underline">
+                    all Las Vegas communities
+                  </Link>{' '}
+                  or read the latest{' '}
+                  <Link href="/market-insights" className="text-blue-600 font-semibold hover:underline">
+                    North Las Vegas market insights
+                  </Link>
+                  .
+                </p>
+              </div>
+              <div className="relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+                  alt="North Las Vegas new construction homes for sale"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Market Stats */}
+        <section className="py-20 bg-gray-50">
+          <div className="container">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                North Las Vegas Market Overview
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                North Las Vegas offers excellent value with new construction communities, 
-                affordable housing options, and convenient access to the Las Vegas Strip. 
-                As the Premier Good To Know REALTOR®, I help buyers find great deals and 
-                investment opportunities in this growing area.
+              <p className="text-xl text-gray-600">
+                Current market insights for North Las Vegas real estate
               </p>
-              <ul className="space-y-4">
-                <li className="flex items-center">
-                  <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Benefit' />
-                  <span className="text-gray-700">New construction communities and master-planned developments</span>
-                </li>
-                <li className="flex items-center">
-                  <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Benefit' />
-                  <span className="text-gray-700">Affordable housing options for first-time buyers</span>
-                </li>
-                <li className="flex items-center">
-                  <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Benefit' />
-                  <span className="text-gray-700">Close proximity to Las Vegas Strip and entertainment</span>
-                </li>
-                <li className="flex items-center">
-                  <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Benefit' />
-                  <span className="text-gray-700">Growing job market and business opportunities</span>
-                </li>
-              </ul>
             </div>
-            <div className="relative">
-              <Image
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
-                alt="North Las Vegas new construction homes"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-xl"
-              />
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">$420K</div>
+                <div className="text-gray-600">Median Home Price</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">32</div>
+                <div className="text-gray-600">Days on Market</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">195</div>
+                <div className="text-gray-600">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">97%</div>
+                <div className="text-gray-600">List to Sale Price</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Market Stats */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              North Las Vegas Market Overview
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Find Your North Las Vegas Home?
             </h2>
-            <p className="text-xl text-gray-600">
-              Current market insights for North Las Vegas real estate
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Let Dr. Jan Duffy, the Premier Good To Know REALTOR®, help you find
+              your perfect home in North Las Vegas. With expertise in new construction
+              and investment properties, she&apos;ll help you make the right choice.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">$420K</div>
-              <div className="text-gray-600">Median Home Price</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">32</div>
-              <div className="text-gray-600">Days on Market</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">195</div>
-              <div className="text-gray-600">Active Listings</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">97%</div>
-              <div className="text-gray-600">List to Sale Price</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:702-222-1964"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
+              >
+                Call (702) 222-1964
+              </a>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Schedule Consultation
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Find Your North Las Vegas Home?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let Dr. Jan Duffy, the Premier Good To Know REALTOR®, help you find 
-            your perfect home in North Las Vegas. With expertise in new construction 
-            and investment properties, I&apos;ll help you make the right choice.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:702-222-1964" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
-            >
-              Call (702) 222-1964
-            </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
-              Schedule Consultation
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

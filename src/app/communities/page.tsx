@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { SEO_CONFIG } from '@/lib/seo';
 import Link from 'next/link';
 import Image from 'next/image';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
@@ -16,8 +15,6 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export const revalidate = 86400;
-
-export const alternates = { canonical: `${SEO_CONFIG.siteUrl}/communities` } as const;
 
 export default function CommunitiesPage() {
   const breadcrumbs = generateBreadcrumbSchema([
