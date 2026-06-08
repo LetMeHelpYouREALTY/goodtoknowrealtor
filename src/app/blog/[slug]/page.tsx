@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { fetchBlogPost, getPostsWithCache } from '@/lib/blog/cache';
-import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import { generatePageMetadata, generateBreadcrumbSchema, generateArticleSchema } from '@/lib/seo';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -72,6 +72,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     { name: post.title, url: `/blog/${slug}` },
   ]);
 
+  const articleSchema = generateArticleSchema({
+    title: post.title,
+    description: post.excerpt || `Las Vegas real estate insights from Dr. Jan Duffy: ${post.title}`,
+    url: `/blog/${slug}`,
+    image: post.image,
+    datePublished: post.date,
+    author: post.author || 'Dr. Jan Duffy',
+  });
+
   return (
     <>
       {/* JSON-LD Structured Data */}
@@ -79,6 +88,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbs),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
         }}
       />
     <div className='min-h-screen bg-gradient-to-br from-amber-50 to-yellow-50'>
@@ -137,6 +152,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               )}
             </div>
+          </div>
+
+          {/* Local editorial context for Las Vegas search relevance */}
+          <div className='mb-8 rounded-xl border border-amber-200 bg-amber-50 p-6 text-gray-700'>
+            <p className='leading-relaxed'>
+              <strong>Las Vegas perspective from Dr. Jan Duffy:</strong>{' '}
+              This article is curated for buyers, sellers, and investors in the Las Vegas Valley —
+              including Summerlin, Henderson, Green Valley, and North Las Vegas. For neighborhood-specific
+              guidance, explore our{' '}
+              <Link href='/communities' className='text-amber-700 font-semibold hover:text-amber-800'>
+                communities hub
+              </Link>{' '}
+              or call{' '}
+              <a href='tel:702-222-1964' className='text-amber-700 font-semibold hover:text-amber-800'>
+                702-222-1964
+              </a>
+              .
+            </p>
           </div>
 
           {/* Featured Image */}

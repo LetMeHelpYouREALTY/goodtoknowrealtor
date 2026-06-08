@@ -61,6 +61,20 @@ After verification:
 - **Mobile usability:** Confirm no mobile errors.
 - **Structured data:** Use **Enhancements** to confirm FAQ, Review, and other schema; fix any errors (schema is in `src/lib/seo.ts` and page-level JSON-LD).
 
+### “Crawled – currently not indexed”
+
+Google crawled the URL but chose not to index it. Common causes on this site and fixes:
+
+| URL pattern | Action |
+|-------------|--------|
+| `/listings?q=…` or `/listings?neighborhood=…` | **Expected noindex** — filtered MLS views; canonical is `/listings`. Removed broken SearchAction schema that caused `/listings?q={search_term_string}` crawls. |
+| `/&` | **301 redirect** to `/` |
+| `/market-insights/full` | **noindex** — iframe embed; canonical points to `/market-insights` |
+| Blog posts / guides / categories | **Improve** — Article schema, canonical tags, local Las Vegas editorial intro; request indexing in URL Inspection after deploy |
+| `/interactive-features` | **Improve** — server-rendered intro copy and internal links added |
+
+After deploying fixes: use **URL Inspection → Request indexing** on priority URLs (homepage, `/listings`, `/buyer-guide`, `/seller-guide`, top blog posts).
+
 ## 6. NAP and local SEO
 
 - Keep NAP consistent with the [NAP/GBP audit](NAP-GBP-AUDIT.md).

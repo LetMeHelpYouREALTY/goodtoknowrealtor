@@ -11,6 +11,7 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/listings?', '/&'],
       },
       // ── AI Retrieval Bots (power AI search results) ──
       {

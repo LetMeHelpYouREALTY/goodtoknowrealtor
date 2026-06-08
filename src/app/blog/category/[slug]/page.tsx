@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getCategoryBySlug, getCategoryColorClass } from '@/lib/blog-categories';
-import { SEO_CONFIG } from '@/lib/seo';
+import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { AssessmentCTA } from '@/components/blog/AssessmentCTA';
 
@@ -23,17 +23,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   return {
-    title: category.seo.title,
-    description: category.seo.description,
-    keywords: category.seo.keywords.join(', '),
-    openGraph: {
+    ...generatePageMetadata({
       title: category.seo.title,
       description: category.seo.description,
-      images: [`/images/blog-category-${category.slug}-og.jpg`],
-    },
-    alternates: {
-      canonical: `${SEO_CONFIG.siteUrl}/blog/category/${params.slug}`,
-    },
+      keywords: category.seo.keywords,
+      url: `/blog/category/${params.slug}`,
+      image: `/images/blog-category-${category.slug}-og.jpg`,
+    }),
   };
 }
 

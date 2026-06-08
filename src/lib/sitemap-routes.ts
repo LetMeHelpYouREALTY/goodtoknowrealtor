@@ -45,7 +45,6 @@ export const STATIC_SITEMAP_ROUTES: readonly StaticRouteConfig[] = [
   { path: '/assessments/seller-readiness', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/blog', changeFrequency: 'daily', priority: 0.8 },
   { path: '/market-insights', changeFrequency: 'weekly', priority: 0.8 },
-  { path: '/market-insights/full', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/reports', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/resources', changeFrequency: 'weekly', priority: 0.6 },
   { path: '/testimonials', changeFrequency: 'monthly', priority: 0.7 },

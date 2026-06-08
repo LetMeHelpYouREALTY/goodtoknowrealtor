@@ -776,19 +776,62 @@ export function generateWebSiteSchema() {
     name: SEO_CONFIG.siteName,
     url: SEO_CONFIG.siteUrl,
     description: SEO_CONFIG.defaultDescription,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SEO_CONFIG.siteUrl}/listings?q={search_term_string}`
-      },
-      'query-input': 'required name=search_term_string'
+    publisher: {
+      '@type': 'Organization',
+      name: SEO_CONFIG.siteName,
+      url: SEO_CONFIG.siteUrl,
+    },
+  };
+}
+
+export function generateArticleSchema({
+  title,
+  description,
+  url,
+  image,
+  datePublished,
+  dateModified,
+  author = SEO_CONFIG.author,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+}) {
+  const pageUrl = `${SEO_CONFIG.siteUrl}${url}`;
+  const imageUrl = image
+    ? image.startsWith('http')
+      ? image
+      : `${SEO_CONFIG.siteUrl}${image}`
+    : `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.default}`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    image: imageUrl,
+    datePublished,
+    dateModified: dateModified || datePublished,
+    author: {
+      '@type': 'Person',
+      name: author,
     },
     publisher: {
       '@type': 'Organization',
       name: SEO_CONFIG.siteName,
-      url: SEO_CONFIG.siteUrl
-    }
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.logo}`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
   };
 }
 

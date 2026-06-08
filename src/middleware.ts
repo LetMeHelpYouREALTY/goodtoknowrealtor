@@ -3,6 +3,12 @@ import {
   getGoogleSiteVerificationCode,
   getGoogleVerificationHtmlBody,
 } from '@/lib/google-search-console';
+import {
+  applyNoindexResponseHeaders,
+  isNoindexPath,
+  shouldNoindexListingsSearch,
+  shouldNoindexMalformedPath,
+} from '@/lib/indexing';
 import { securityHeaders, checkRateLimit, rateLimitConfig } from '@/lib/security';
 
 function googleSearchConsoleHtmlVerification(request: NextRequest): NextResponse | null {
@@ -23,11 +29,23 @@ function googleSearchConsoleHtmlVerification(request: NextRequest): NextResponse
 }
 
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  // Malformed legacy URLs → homepage
+  if (pathname === '/&' || pathname === '/$' || shouldNoindexMalformedPath(pathname)) {
+    return NextResponse.redirect(new URL('/', request.url), 301);
+  }
+
   const gscResponse = googleSearchConsoleHtmlVerification(request);
   if (gscResponse) return gscResponse;
 
   const response = NextResponse.next();
   
+  // Block indexing of filtered listing views and utility noindex pages
+  if (shouldNoindexListingsSearch(request.nextUrl) || isNoindexPath(pathname)) {
+    applyNoindexResponseHeaders(response);
+  }
+
   // Add security headers
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value);

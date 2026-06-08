@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { PageHero } from '@/components/ui/PageHero';
+import { generatePageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'Home Seller Guide | Dr. Jan Duffy - Premier Good To Know REALTOR®',
   description: 'Complete guide for selling your home in Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy provides expert tips, pricing strategies, and step-by-step guidance.',
-  keywords: 'home seller guide, Las Vegas home selling, home selling tips, Dr. Jan Duffy',
-  openGraph: {
-    title: 'Home Seller Guide | Dr. Jan Duffy',
-    description: 'Complete guide for selling your home in Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy.',
-    images: ['/images/seller-guide-og.jpg'],
-  },
-};
+  keywords: ['home seller guide', 'Las Vegas home selling', 'home selling tips', 'Dr. Jan Duffy'],
+  url: '/seller-guide',
+  image: '/images/seller-guide-og.jpg',
+});
 
 export default function SellerGuidePage() {
   return (

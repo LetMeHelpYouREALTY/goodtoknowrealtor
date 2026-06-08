@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { PageHero } from '@/components/ui/PageHero';
+import { generatePageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: 'First-Time Home Buyer Guide | Dr. Jan Duffy - Premier Good To Know REALTOR®',
   description: 'Complete guide for first-time home buyers in Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy provides expert tips, financing options, and step-by-step guidance.',
-  keywords: 'first-time home buyer guide, Las Vegas home buying, home buyer tips, Dr. Jan Duffy',
-  openGraph: {
-    title: 'First-Time Home Buyer Guide | Dr. Jan Duffy',
-    description: 'Complete guide for first-time home buyers in Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy.',
-    images: ['/images/buyer-guide-og.jpg'],
-  },
-};
+  keywords: ['first-time home buyer guide', 'Las Vegas home buying', 'home buyer tips', 'Dr. Jan Duffy'],
+  url: '/buyer-guide',
+  image: '/images/buyer-guide-og.jpg',
+});
 
 export default function BuyerGuidePage() {
   return (

@@ -2,17 +2,24 @@ import Link from 'next/link';
 import { PageHero } from '@/components/ui/PageHero';
 import { MarketInsightsSection } from '@/components/MarketInsights/MarketInsightsSection';
 import { MarketVisualizations } from '@/components/MarketData/MarketVisualizations';
-import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import { generatePageMetadata, generateBreadcrumbSchema, SEO_CONFIG } from '@/lib/seo';
+import { NOINDEX_ROBOTS } from '@/lib/indexing';
 import { Metadata } from 'next';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: 'Las Vegas Market Insights | Dr. Jan Duffy - Real Estate Expert',
-  description: 'Comprehensive Las Vegas real estate market insights, trends, and analysis from Dr. Jan Duffy, your Premier Good To Know REALTOR®',
-  keywords: ['Las Vegas market insights', 'real estate trends', 'market analysis', 'Dr. Jan Duffy', 'Las Vegas real estate news'],
-  url: '/market-insights/full',
-  image: '/images/market-insights-og.jpg',
-});
+export const metadata: Metadata = {
+  ...generatePageMetadata({
+    title: 'Las Vegas Market Insights | Dr. Jan Duffy - Real Estate Expert',
+    description: 'Comprehensive Las Vegas real estate market insights, trends, and analysis from Dr. Jan Duffy, your Premier Good To Know REALTOR®',
+    keywords: ['Las Vegas market insights', 'real estate trends', 'market analysis', 'Dr. Jan Duffy', 'Las Vegas real estate news'],
+    url: '/market-insights/full',
+    image: '/images/market-insights-og.jpg',
+  }),
+  robots: NOINDEX_ROBOTS,
+  alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/market-insights`,
+  },
+};
 
 export default function MarketInsightsFullPage() {
   const breadcrumbs = generateBreadcrumbSchema([
