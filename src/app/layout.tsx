@@ -10,6 +10,7 @@ import { Footer } from '@/components/Globals/Footer/Footer';
 import { MobileStickyCTA } from '@/components/ui/MobileStickyCTA';
 import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderAnnouncements';
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
+import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
 import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
 
 // Font loaders must be called at module scope
@@ -64,12 +65,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SEO_CONFIG.siteUrl,
   },
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || 'your-google-verification-code',
-    other: {
-      'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || 'your-google-verification-code',
-    },
-  },
+  manifest: '/site.webmanifest',
+  ...getGoogleVerificationMetadata(),
 };
 
 export default function RootLayout({

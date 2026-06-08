@@ -72,4 +72,10 @@ After verification:
 |----------|---------|
 | `GOOGLE_SITE_VERIFICATION` | Meta tag and HTML-file verification code for Search Console |
 
+### After setting the variable
+
+1. Redeploy production on Vercel.
+2. Confirm the meta tag on the homepage (View Source → search for `google-site-verification`).
+3. For HTML file verification, the site serves `https://www.goodtoknowrealtor.com/google{code}.html` automatically when the env var matches the filename.
+
 Canonical site URL is set in code: `src/lib/seo.ts` → `SEO_CONFIG.siteUrl` (`https://www.goodtoknowrealtor.com`). Keep this in sync with the property URL you add in GSC.

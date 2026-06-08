@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
 
 // Base configuration for Dr. Jan Duffy's Las Vegas real estate business
 export const SEO_CONFIG = {
@@ -122,9 +123,7 @@ export function generatePageMetadata({
     alternates: {
       canonical: pageUrl,
     },
-    verification: {
-      google: 'your-google-verification-code', // Add your actual Google verification code
-    },
+    ...getGoogleVerificationMetadata(),
   };
 }
 

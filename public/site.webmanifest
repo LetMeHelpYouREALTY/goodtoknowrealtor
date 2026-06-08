@@ -1,0 +1,17 @@
+{
+  "name": "Dr. Jan Duffy — Good To Know REALTOR®",
+  "short_name": "Good To Know REALTOR®",
+  "description": "Las Vegas and Henderson real estate expert Dr. Jan Duffy. Buy, sell, and invest with local market expertise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0e64c8",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

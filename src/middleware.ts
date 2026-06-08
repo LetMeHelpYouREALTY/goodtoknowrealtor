@@ -1,7 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  getGoogleSiteVerificationCode,
+  getGoogleVerificationHtmlBody,
+} from '@/lib/google-search-console';
 import { securityHeaders, checkRateLimit, rateLimitConfig } from '@/lib/security';
 
+function googleSearchConsoleHtmlVerification(request: NextRequest): NextResponse | null {
+  const match = request.nextUrl.pathname.match(/^\/google([a-zA-Z0-9_-]+)\.html$/);
+  if (!match) return null;
+
+  const verificationCode = getGoogleSiteVerificationCode();
+  if (!verificationCode || match[1] !== verificationCode) {
+    return new NextResponse('Not Found', { status: 404 });
+  }
+
+  return new NextResponse(getGoogleVerificationHtmlBody(verificationCode), {
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400',
+    },
+  });
+}
+
 export function middleware(request: NextRequest) {
+  const gscResponse = googleSearchConsoleHtmlVerification(request);
+  if (gscResponse) return gscResponse;
+
   const response = NextResponse.next();
   
   // Add security headers
