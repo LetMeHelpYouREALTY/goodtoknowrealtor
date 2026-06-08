@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { fetchBlogPost, getPostsWithCache } from '@/lib/blog/cache';
-import { generatePageMetadata, generateBreadcrumbSchema, generateArticleSchema } from '@/lib/seo';
+import { generatePageMetadata, generateBreadcrumbSchema, generateArticleSchema, SEO_CONFIG } from '@/lib/seo';
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -52,6 +52,15 @@ export const revalidate = 21600;
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
+
+  if (/^\d+$/.test(slug)) {
+    const legacyPost = await fetchBlogPost(slug);
+    if (legacyPost?.slug && legacyPost.slug !== slug) {
+      permanentRedirect(`/blog/${legacyPost.slug}`);
+    }
+    notFound();
+  }
+
   const post = await fetchBlogPost(slug);
 
   if (!post) {
@@ -295,7 +304,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 export async function generateStaticParams() {
   const posts = await getPostsWithCache();
 
-  return posts.slice(0, 10).map(post => ({
+  return posts.map((post) => ({
     slug: post.slug,
   }));
 }

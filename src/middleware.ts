@@ -9,6 +9,10 @@ import {
   shouldNoindexListingsSearch,
   shouldNoindexMalformedPath,
 } from '@/lib/indexing';
+import {
+  buildCanonicalRedirectUrl,
+  needsCanonicalRedirect,
+} from '@/lib/canonical-url';
 import { securityHeaders, checkRateLimit, rateLimitConfig } from '@/lib/security';
 
 function googleSearchConsoleHtmlVerification(request: NextRequest): NextResponse | null {
@@ -29,7 +33,30 @@ function googleSearchConsoleHtmlVerification(request: NextRequest): NextResponse
 }
 
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, search } = request.nextUrl;
+  const host = request.headers.get('host') ?? request.nextUrl.host;
+  const protocol =
+    request.headers.get('x-forwarded-proto') ??
+    request.nextUrl.protocol.replace(':', '');
+
+  // 301 → https://www.goodtoknowrealtor.com (fixes GSC "Page with redirect" variants)
+  if (
+    needsCanonicalRedirect({
+      host,
+      protocol,
+    })
+  ) {
+    const destination = buildCanonicalRedirectUrl(pathname, search);
+    return NextResponse.redirect(destination, 301);
+  }
+
+  // Cloudflare email-protection artifact — not a real page
+  if (pathname.startsWith('/cdn-cgi/')) {
+    return new NextResponse('Gone', {
+      status: 410,
+      headers: { 'X-Robots-Tag': 'noindex, nofollow' },
+    });
+  }
 
   // Malformed legacy URLs → homepage
   if (pathname === '/&' || pathname === '/$' || shouldNoindexMalformedPath(pathname)) {

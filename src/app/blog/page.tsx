@@ -9,13 +9,22 @@ import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema } from '@/lib/
 import { getFeaturedCategories, getCategoryColorClass } from '@/lib/blog-categories';
 import { AssessmentCTA } from '@/components/blog/AssessmentCTA';
 
-export const metadata: Metadata = generatePageMetadata({
-  title: PAGE_SEO.blog.title,
-  description: PAGE_SEO.blog.description,
-  keywords: PAGE_SEO.blog.keywords,
-  url: '/blog',
-  image: '/images/dr-janet-duffy-blog-og.jpg',
-});
+import { SEO_CONFIG } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  ...generatePageMetadata({
+    title: PAGE_SEO.blog.title,
+    description: PAGE_SEO.blog.description,
+    keywords: PAGE_SEO.blog.keywords,
+    url: '/blog',
+    image: '/images/dr-janet-duffy-blog-og.jpg',
+  }),
+  alternates: {
+    types: {
+      'application/rss+xml': `${SEO_CONFIG.siteUrl}/blog/rss.xml`,
+    },
+  },
+};
 
 // Enable ISR with 6-hour revalidation
 export const revalidate = 21600;

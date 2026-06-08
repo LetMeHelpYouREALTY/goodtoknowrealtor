@@ -3,6 +3,14 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "goodtoknowrealtor.com" }],
+      "destination": "https://www.goodtoknowrealtor.com/:path*",
+      "statusCode": 301
+    }
+  ],
   "crons": [
     {
       "path": "/api/blog/sync",

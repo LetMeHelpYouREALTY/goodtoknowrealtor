@@ -166,7 +166,7 @@ const nextConfig = {
       // Redirect HTTP to HTTPS in production
       ...(process.env.NODE_ENV === 'production' ? [
         {
-          source: '/((?!$).*)',
+          source: '/:path*',
           has: [
             {
               type: 'header',
@@ -185,6 +185,16 @@ const nextConfig = {
               type: 'host',
               value: 'goodtoknowrealtor.com',
             },
+          ],
+          destination: 'https://www.goodtoknowrealtor.com/:path*',
+          permanent: true,
+        },
+        // HTTP non-www → canonical www HTTPS
+        {
+          source: '/:path*',
+          has: [
+            { type: 'host', value: 'goodtoknowrealtor.com' },
+            { type: 'header', key: 'x-forwarded-proto', value: 'http' },
           ],
           destination: 'https://www.goodtoknowrealtor.com/:path*',
           permanent: true,

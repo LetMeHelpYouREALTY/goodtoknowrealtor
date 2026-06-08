@@ -1,0 +1,157 @@
+/**
+ * Luxury real estate design system
+ * Dr. Jan Duffy — Good To Know REALTOR®
+ */
+@theme {
+  --color-luxury-navy: #0f1419;
+  --color-luxury-navy-light: #1a2332;
+  --color-luxury-navy-muted: #2a3544;
+  --color-luxury-gold: #c9a962;
+  --color-luxury-gold-light: #dfc07a;
+  --color-luxury-gold-pale: #e8d5a8;
+  --color-luxury-champagne: #f5f0e8;
+  --color-luxury-ivory: #faf8f5;
+  --color-luxury-charcoal: #2c2c2c;
+
+  --font-display: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  --font-body: var(--font-sans), 'DM Sans', system-ui, sans-serif;
+}
+
+:root {
+  --luxury-navy: #0f1419;
+  --luxury-navy-light: #1a2332;
+  --luxury-gold: #c9a962;
+  --luxury-gold-light: #dfc07a;
+  --luxury-champagne: #f5f0e8;
+  --luxury-ivory: #faf8f5;
+  --luxury-shadow: 0 4px 24px rgba(15, 20, 25, 0.08);
+  --luxury-shadow-lg: 0 12px 40px rgba(15, 20, 25, 0.14);
+}
+
+/* Typography */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+/* Luxury surfaces */
+.luxury-surface {
+  background-color: var(--luxury-ivory);
+}
+
+.luxury-surface-dark {
+  background-color: var(--luxury-navy);
+  color: #fff;
+}
+
+.luxury-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--luxury-gold) 20%,
+    var(--luxury-gold) 80%,
+    transparent
+  );
+  opacity: 0.4;
+}
+
+.luxury-accent-line {
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: var(--luxury-gold);
+  margin-bottom: 1rem;
+}
+
+/* Buttons — override legacy .btn when combined */
+@layer components {
+  .btn-luxury-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.75rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--luxury-navy);
+    background: linear-gradient(135deg, var(--luxury-gold) 0%, var(--luxury-gold-light) 100%);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 14px rgba(201, 169, 98, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-luxury-primary:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 6px 20px rgba(201, 169, 98, 0.45);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .btn-luxury-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.75rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(201, 169, 98, 0.7);
+    border-radius: 0.25rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-luxury-outline:hover {
+    background: rgba(201, 169, 98, 0.12);
+    border-color: var(--luxury-gold);
+    text-decoration: none;
+  }
+
+  .card-luxury {
+    background: #fff;
+    border: 1px solid rgba(201, 169, 98, 0.15);
+    border-radius: 0.5rem;
+    box-shadow: var(--luxury-shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card-luxury:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--luxury-shadow-lg);
+  }
+
+  .luxury-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 1rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--luxury-gold-light);
+    background: rgba(201, 169, 98, 0.12);
+    border: 1px solid rgba(201, 169, 98, 0.25);
+    border-radius: 9999px;
+  }
+}

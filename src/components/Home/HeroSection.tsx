@@ -32,29 +32,33 @@ const HERO_TESTIMONIAL = {
 
 export function HeroSection() {
   return (
-    <section className='relative overflow-hidden bg-blue-900 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white'>
+    <section className='relative overflow-hidden bg-[#0f1419] bg-gradient-to-br from-[#0a0e14] via-[#0f1419] to-[#1a2332] text-white'>
       {/* Background overlays */}
       <div className='pointer-events-none absolute inset-0 opacity-70 mix-blend-screen'>
-        <div className='absolute -left-32 top-0 h-[480px] w-[480px] rounded-full bg-amber-500/40 blur-[160px]' />
-        <div className='absolute right-[-180px] top-1/2 h-[520px] w-[520px] rounded-full bg-blue-500/40 blur-[160px]' />
+        <div className='absolute -left-32 top-0 h-[480px] w-[480px] rounded-full bg-[#c9a962]/25 blur-[160px]' />
+        <div className='absolute right-[-180px] top-1/2 h-[520px] w-[520px] rounded-full bg-[#1a2332]/60 blur-[160px]' />
       </div>
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.14),_transparent_55%)]' />
-      <div className='absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.12),_rgba(255,255,255,0)_60%)]' />
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(201,169,98,0.14),_transparent_55%)]' />
+      <div className='absolute inset-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.06),_rgba(255,255,255,0)_60%)]' />
 
-      <div className='container relative z-10 mx-auto px-4 py-16 sm:py-20 lg:py-24'>
+      <div className='container relative z-10 mx-auto px-4 py-16 sm:py-20 lg:py-28'>
         <div className='grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]'>
           {/* Left rail */}
           <div className='space-y-8 text-center lg:text-left'>
-            <div className='inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 backdrop-blur-lg shadow-lg shadow-blue-900/30'>
-              <IconSymbol symbol='🏆' className='h-4 w-4 text-amber-300' ariaLabel='Award icon' />
+            <div className='luxury-badge mx-auto lg:mx-0'>
+              <IconSymbol symbol='🏆' className='h-4 w-4 text-[#dfc07a]' ariaLabel='Award icon' />
               <span>Top 1% • Berkshire Hathaway Premier</span>
             </div>
 
             <div className='space-y-5'>
-              <h1 className='text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl'>
-                Concierge real estate for <span className='bg-gradient-to-r from-amber-300 via-white to-amber-200 bg-clip-text text-transparent'>Las Vegas luxury</span> buyers, sellers, & investors.
+              <h1 className='font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight'>
+                Concierge real estate for{' '}
+                <span className='bg-gradient-to-r from-[#dfc07a] via-[#f5f0e8] to-[#c9a962] bg-clip-text text-transparent'>
+                  Las Vegas luxury
+                </span>{' '}
+                buyers, sellers, & investors.
               </h1>
-              <p className='mx-auto max-w-2xl text-base text-blue-100 sm:text-lg lg:text-xl'>
+              <p className='mx-auto max-w-2xl text-base text-[#e8d5a8]/80 sm:text-lg lg:text-xl font-light leading-relaxed'>
                 Unlock private inventory, command $50K–$125K over asking, and build wealth with the only Las Vegas advisor who combines doctoral market research with 20+ years of negotiation mastery.
               </p>
             </div>
@@ -64,13 +68,13 @@ export function HeroSection() {
               {HIGHLIGHT_STATS.map((stat) => (
                 <div
                   key={stat.label}
-                  className='rounded-2xl border border-white/10 bg-white/5 p-4 text-left shadow-lg shadow-blue-900/10 backdrop-blur-lg'
+                  className='rounded-sm border border-[#c9a962]/20 bg-white/5 p-4 text-left shadow-lg backdrop-blur-lg'
                 >
-                  <dd className='text-2xl font-semibold text-amber-200 sm:text-3xl'>{stat.value}</dd>
+                  <dd className='font-display text-2xl font-semibold text-[#dfc07a] sm:text-3xl'>{stat.value}</dd>
                   <dt className='mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70'>
                     {stat.label}
                   </dt>
-                  <p className='mt-2 text-[11px] text-blue-100/80'>{stat.helper}</p>
+                  <p className='mt-2 text-[11px] text-[#e8d5a8]/70'>{stat.helper}</p>
                 </div>
               ))}
             </dl>
@@ -79,16 +83,13 @@ export function HeroSection() {
             <div className='flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-start'>
               <a
                 href='tel:702-222-1964'
-                className='group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 px-6 py-4 text-base font-semibold text-white shadow-xl shadow-emerald-600/40 transition-all duration-300 hover:translate-y-[-2px] hover:from-green-600 hover:to-emerald-700 sm:w-auto'
+                className='btn-luxury-primary inline-flex w-full sm:w-auto gap-2'
               >
                 <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
                 Call (702) 222-1964
               </a>
-              <Link
-                href='/contact'
-                className='inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-blue-900/30 backdrop-blur transition-all duration-300 hover:border-white/40 hover:bg-white/20 sm:w-auto'
-              >
-                <IconSymbol symbol='🛡️' className='h-5 w-5 text-amber-200' ariaLabel='Shield icon' />
+              <Link href='/contact' className='btn-luxury-outline inline-flex w-full sm:w-auto gap-2'>
+                <IconSymbol symbol='🛡️' className='h-5 w-5 text-[#dfc07a]' ariaLabel='Shield icon' />
                 Schedule Consultation
               </Link>
             </div>

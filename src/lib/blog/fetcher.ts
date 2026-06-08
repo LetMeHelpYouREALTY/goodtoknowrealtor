@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio';
 import { BlogPost, WordPressPost, BlogConfig } from '@/types/blog';
+import { mergeEvergreenPosts } from './merge-posts';
 
 const BLOG_CONFIG: BlogConfig = {
   sourceUrl: 'https://www.bhhscp.com/blog',
@@ -851,19 +852,37 @@ function generateSampleBlogPosts(): BlogPost[] {
  * Main function to fetch blog posts with fallback
  */
 export async function fetchBlogPosts(): Promise<BlogPost[]> {
+  const evergreen = generateSampleBlogPosts();
+
   try {
-    // Try WordPress API first
-    return await fetchWordPressPosts();
+    return mergeEvergreenPosts(await fetchWordPressPosts(), evergreen);
   } catch {
-    // WordPress API failed, falling back to scraping
     try {
-      // Fall back to scraping
-      return await fetchPostsViaScraping();
+      return mergeEvergreenPosts(await fetchPostsViaScraping(), evergreen);
     } catch {
-      // Both WordPress API and scraping failed
-      // Return sample blog posts for demonstration
-      return generateSampleBlogPosts();
+      return evergreen;
     }
+  }
+}
+
+/**
+ * Fetch a WordPress post by numeric ID (legacy URLs like /blog/12).
+ */
+export async function fetchWordPressPostById(id: string): Promise<BlogPost | null> {
+  try {
+    const response = await fetch(`${BLOG_CONFIG.apiUrl}/posts/${id}?_embed`, {
+      next: { revalidate: BLOG_CONFIG.revalidateInterval },
+      headers: {
+        'User-Agent': 'BHHS-Blog-Sync/1.0',
+      },
+    });
+
+    if (!response.ok) return null;
+
+    const post: WordPressPost = await response.json();
+    return normalizeWordPressPost(post);
+  } catch {
+    return null;
   }
 }
 
@@ -872,7 +891,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
  */
 export async function fetchBlogPost(slug: string): Promise<BlogPost | null> {
   const posts = await fetchBlogPosts();
-  return posts.find(post => post.slug === slug) || null;
+  return posts.find((post) => post.slug === slug) || null;
 }
 
 /**

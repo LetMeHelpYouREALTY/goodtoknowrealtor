@@ -9,10 +9,11 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export function Footer() {
   const [isConsultModalOpen, setIsConsultModalOpen] = useState(false);
   return (
-    <footer className='bg-gray-50 text-gray-900' role='contentinfo' aria-label='Site footer'>
+    <footer className='bg-[#0f1419] text-white' role='contentinfo' aria-label='Site footer'>
+      <div className='luxury-divider' aria-hidden='true' />
       <div className='container mx-auto px-4'>
         {/* Main Footer Content */}
-        <div className='border-t border-gray-200 py-8'>
+        <div className='border-t border-[#c9a962]/20 py-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {/* Logo and Branding */}
             <div className='flex flex-col'>
@@ -21,9 +22,9 @@ export function Footer() {
                 alt='Berkshire Hathaway HomeServices Premier Properties'
                 width={192}
                 height={48}
-                className='mb-2'
+                className='mb-2 brightness-0 invert'
               />
-              <p className='text-sm text-gray-600'>
+              <p className='text-sm text-white/60'>
                 Dr. Jan Duffy, REALTOR®
                 <br />
                 Top 1% Las Vegas Agent
@@ -31,17 +32,17 @@ export function Footer() {
                 Premier Properties Las Vegas
               </p>
               <div className='mt-4'>
-                <p className='text-sm font-semibold text-gray-900 mb-2'>Contact</p>
+                <p className='text-sm font-semibold text-[#dfc07a] mb-2 uppercase tracking-wider'>Contact</p>
                 <div className='flex flex-col space-y-2'>
                   <Link
                     href='tel:702-222-1964'
-                    className='text-sm text-gray-600 hover:text-blue-600 transition-colors min-h-[44px] flex items-center'
+                    className='text-sm text-white/70 hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
                   >
                     (702) 222-1964
                   </Link>
                   <Link
                     href='sms:702-222-1964'
-                    className='text-sm text-gray-600 hover:text-blue-600 transition-colors min-h-[44px] flex items-center'
+                    className='text-sm text-white/70 hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
                   >
                     Send Text
                   </Link>
@@ -56,7 +57,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/buying'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Buying
                     </Link>
@@ -64,7 +65,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/selling'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Selling
                     </Link>
@@ -72,7 +73,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/luxury'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Luxury Properties
                     </Link>
@@ -80,7 +81,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/services'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Services
                     </Link>
@@ -88,7 +89,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/about'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       About
                     </Link>
@@ -96,7 +97,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/contact'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Contact
                     </Link>
@@ -109,7 +110,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/press'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Press & Media
                     </Link>
@@ -117,7 +118,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/vendors'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Preferred Vendors
                     </Link>
@@ -125,7 +126,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/investing'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Investment Properties
                     </Link>
@@ -133,7 +134,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/blog'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Market Insights
                     </Link>
@@ -144,7 +145,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/privacy-policy'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Privacy Policy
                     </Link>
@@ -152,7 +153,7 @@ export function Footer() {
                   <li>
                     <Link
                       href='/terms-of-use'
-                      className='text-gray-600 hover:text-amber-600 transition-colors'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
                       Terms of Use
                     </Link>

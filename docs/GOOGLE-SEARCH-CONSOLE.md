@@ -75,6 +75,26 @@ Google crawled the URL but chose not to index it. Common causes on this site and
 
 After deploying fixes: use **URL Inspection → Request indexing** on priority URLs (homepage, `/listings`, `/buyer-guide`, `/seller-guide`, top blog posts).
 
+### “Page with redirect” (HTTP / non-www variants)
+
+These URLs are **expected** and **correct** — they should not be indexed:
+
+| URL | Resolves to |
+|-----|-------------|
+| `http://www.goodtoknowrealtor.com/` | `https://www.goodtoknowrealtor.com/` (301) |
+| `http://goodtoknowrealtor.com/` | `https://www.goodtoknowrealtor.com/` (301) |
+| `https://goodtoknowrealtor.com/` | `https://www.goodtoknowrealtor.com/` (301) |
+
+**What to do in GSC:**
+
+1. Use **only one property**: `https://www.goodtoknowrealtor.com` (URL prefix).
+2. Do **not** add separate properties for bare domain or HTTP unless you need redirect monitoring.
+3. After deploy, open each URL in [httpstatus.io](https://httpstatus.io) and confirm **301** → `https://www.goodtoknowrealtor.com/`.
+4. In GSC → **Page indexing → Page with redirect** → click **Validate fix**.
+5. Ensure Google Business Profile website field is `https://www.goodtoknowrealtor.com` (with `www`).
+
+Redirects are enforced in middleware, `next.config.js`, and `vercel.json`.
+
 ## 6. NAP and local SEO
 
 - Keep NAP consistent with the [NAP/GBP audit](NAP-GBP-AUDIT.md).

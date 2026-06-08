@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import '@/app/globals.css';
-import { Inter, Lora } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 
 import { Navigation } from '@/components/Globals/Navigation/Navigation';
 import { Footer } from '@/components/Globals/Footer/Footer';
@@ -14,8 +14,19 @@ import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
 import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
 
 // Font loaders must be called at module scope
-const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' });
-const lora = Lora({ subsets: ['latin'], display: 'swap', variable: '--font-serif' });
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+  weight: ['400', '500', '600', '700'],
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif',
+  weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SEO_CONFIG.siteUrl),
@@ -80,7 +91,7 @@ export default function RootLayout({
   const siteNavigationSchema = generateSiteNavigationElementSchema();
 
   return (
-    <html lang='en' className={`h-full ${inter.variable} ${lora.variable}`}>
+    <html lang='en' className={`h-full ${dmSans.variable} ${cormorant.variable}`}>
       <head>
         <script
           src='https://em.realscout.com/widgets/realscout-web-components.umd.js'

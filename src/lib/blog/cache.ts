@@ -1,5 +1,5 @@
 import { BlogPost, SyncStatus } from '@/types/blog';
-import { fetchBlogPosts } from './fetcher';
+import { fetchBlogPosts, fetchWordPressPostById } from './fetcher';
 
 // In-memory cache for development
 // In production, consider using Redis or similar
@@ -40,7 +40,17 @@ export function updateCache(posts: BlogPost[]): void {
  */
 export async function fetchBlogPost(slug: string): Promise<BlogPost | null> {
   const posts = await getPostsWithCache();
-  return posts.find(post => post.slug === slug) || null;
+  const bySlug = posts.find((post) => post.slug === slug);
+  if (bySlug) return bySlug;
+
+  if (/^\d+$/.test(slug)) {
+    const wpPost = await fetchWordPressPostById(slug);
+    if (wpPost) return wpPost;
+
+    return posts.find((post) => post.id === slug) ?? null;
+  }
+
+  return null;
 }
 
 /**

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+@import "../styles/luxury-theme.css";
 
 /* Basic CSS Reset and Styles */
 * {
@@ -63,8 +65,8 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #111827; /* darker for contrast */
+  background-color: var(--luxury-ivory, #faf8f5);
+  color: #1a2332;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -431,12 +433,17 @@ textarea,
 }
 
 .btn-primary {
-  background-color: #2563eb;
-  color: white;
+  background: linear-gradient(135deg, var(--luxury-gold, #c9a962) 0%, var(--luxury-gold-light, #dfc07a) 100%);
+  color: var(--luxury-navy, #0f1419);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 14px rgba(201, 169, 98, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: #1d4ed8;
+  filter: brightness(1.05);
+  box-shadow: 0 6px 18px rgba(201, 169, 98, 0.4);
 }
 
 .btn-secondary {
@@ -581,12 +588,12 @@ textarea,
 /* Card hover utility for engagement */
 .card {
   background: #fff;
-  border: 1px solid #eef2f7;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  border: 1px solid rgba(201, 169, 98, 0.12);
+  border-radius: 0.5rem;
+  box-shadow: var(--luxury-shadow, 0 4px 24px rgba(15, 20, 25, 0.08));
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
-.card:hover { transform: translateY(-2px); box-shadow: 0 12px 22px rgba(0,0,0,0.08); }
+.card:hover { transform: translateY(-3px); box-shadow: var(--luxury-shadow-lg, 0 12px 40px rgba(15, 20, 25, 0.14)); }
 
 .bg-white {
   background-color: #ffffff;

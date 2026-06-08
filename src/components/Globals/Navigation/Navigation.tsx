@@ -183,7 +183,7 @@ interface DropdownMenuProps {
 function DropdownMenu({ children, isOpen }: DropdownMenuProps) {
   if (!isOpen) return null;
   return (
-    <div className='absolute top-full left-1/2 mt-3 w-[640px] max-w-[90vw] -translate-x-1/2 bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 transition-all duration-300 opacity-100 visible translate-y-0'>
+    <div className='absolute top-full left-1/2 mt-3 w-[640px] max-w-[90vw] -translate-x-1/2 bg-[#faf8f5] rounded-sm shadow-2xl border border-[#c9a962]/20 z-50 transition-all duration-300 opacity-100 visible translate-y-0'>
       {children}
     </div>
   );
@@ -296,9 +296,11 @@ export function Navigation() {
     }
   };
 
-  const navPadding = isScrolled ? 'py-3' : 'py-5';
-  const navClasses = `sticky top-0 z-50 border-b backdrop-blur-md supports-[backdrop-filter]:bg-white/70 transition-all duration-300 ${
-    isScrolled ? 'bg-white/90 shadow-md border-white/40' : 'bg-white shadow-lg/20 border-white/30'
+  const navPadding = isScrolled ? 'py-3' : 'py-4';
+  const navClasses = `sticky top-0 z-50 border-b backdrop-blur-md transition-all duration-300 ${
+    isScrolled
+      ? 'bg-[#0f1419]/97 shadow-[0_4px_30px_rgba(15,20,25,0.35)] border-[#c9a962]/20'
+      : 'bg-[#0f1419]/95 border-[#c9a962]/10'
   }`;
 
   const activeDropdownItem = menuItems.find((item) => item.label === activeDropdown);
@@ -318,12 +320,17 @@ export function Navigation() {
           >
             {/* Logo */}
             <div className='flex-shrink-0'>
-              <Link href='/' className='flex items-center gap-3 rounded-lg px-2 py-1 hover:bg-blue-50/60 transition-colors'>
-                <div className='flex items-center justify-center w-8 h-8 bg-blue-600 rounded text-white text-sm font-bold shadow-md shadow-blue-500/20'>
+              <Link href='/' className='flex items-center gap-3 rounded-lg px-2 py-1 hover:bg-white/5 transition-colors'>
+                <div className='flex items-center justify-center w-9 h-9 bg-[#c9a962] rounded-sm text-[#0f1419] text-xs font-bold tracking-wider shadow-md'>
                   BHHS
                 </div>
-                <div className='hidden sm:block text-lg font-bold text-amber-600 tracking-wide'>
-                  Dr. Jan Duffy
+                <div className='hidden sm:block'>
+                  <div className='font-display text-lg font-semibold text-[#dfc07a] tracking-wide leading-tight'>
+                    Dr. Jan Duffy
+                  </div>
+                  <div className='text-[10px] uppercase tracking-[0.2em] text-white/50'>
+                    Luxury Real Estate
+                  </div>
                 </div>
               </Link>
             </div>
@@ -342,7 +349,7 @@ export function Navigation() {
                   >
                     <Link
                       href={item.href}
-                      className='flex min-w-max items-center gap-2 text-gray-700 hover:text-gray-900 font-semibold transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2 whitespace-nowrap text-sm tracking-wide'
+                      className='flex min-w-max items-center gap-2 text-white/80 hover:text-[#dfc07a] font-medium transition-colors duration-200 px-3 py-2 rounded-sm hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#c9a962] focus-visible:outline-offset-2 whitespace-nowrap text-sm tracking-wide'
                       aria-haspopup={item.children ? 'true' : undefined}
                       aria-expanded={item.children ? activeDropdown === item.label : undefined}
                       data-track='menu_click'
@@ -359,7 +366,7 @@ export function Navigation() {
                       }}
                       onKeyDown={(event: ReactKeyboardEvent<HTMLAnchorElement>) => handleKeyDown(event, item)}
                     >
-                      <IconSymbol symbol={item.icon} className='h-4 w-4 text-blue-500' ariaLabel={`${item.label} icon`} />
+                      <IconSymbol symbol={item.icon} className='h-4 w-4 text-[#c9a962]' ariaLabel={`${item.label} icon`} />
                       {item.label}
                     </Link>
                     {item.children && isDesktop && (
