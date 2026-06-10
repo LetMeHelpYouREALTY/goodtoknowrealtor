@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  VERCEL_ORG_ID: team_EIbjFXaDDtGMTweb5Hvo3CG3
+  VERCEL_PROJECT_ID: prj_VsnnIVuurymbRNscHwU4xh8u6xYE
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -21,19 +25,16 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
-          # Tailwind v4 native binding — npm optional-deps bug on Linux CI runners
           npm install --no-save @tailwindcss/oxide-linux-x64-gnu
 
-      - name: Build project
-        run: npm run build
+      - name: Install Vercel CLI
+        run: npm install -g vercel@latest
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
-          working-directory: '.'
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      - name: Pull Vercel environment
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build with Vercel
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy to Vercel production
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
