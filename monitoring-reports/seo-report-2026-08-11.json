@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-08-11T21:52:22.446Z",
+  "schemaValid": true,
+  "contentFreshness": {
+    "lastUpdated": "2026-06-07T00:00:00.000Z",
+    "daysOld": 65,
+    "needsUpdate": true
+  },
+  "errors": [],
+  "warnings": [
+    "Content is 65 days old - consider updating"
+  ]
+}

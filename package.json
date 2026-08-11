@@ -19,7 +19,12 @@
     "test:all": "npm run test && npm run test:e2e",
     "analyze": "ANALYZE=true npm run build",
     "clean": "rm -rf .next dist coverage test-results playwright-report",
-    "prepare": "echo 'Skipping husky install in production'"
+    "prepare": "echo 'Skipping husky install in production'",
+    "seo:monitor": "npx ts-node scripts/seo-monitoring.ts",
+    "seo:update-freshness": "npx ts-node scripts/content-freshness-updater.ts",
+    "seo:generate-sitemap": "npx ts-node scripts/sitemap-generator.ts",
+    "seo:check-performance": "npx ts-node scripts/performance-monitor.ts",
+    "seo:automate": "bash scripts/run-automation.sh"
   },
   "dependencies": {
     "@types/cheerio": "^0.22.35",
