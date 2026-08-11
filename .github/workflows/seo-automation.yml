@@ -1,0 +1,75 @@
+# GitHub Actions Workflow for Automated SEO Monitoring
+# Runs daily to check schema, update content, and monitor performance
+
+name: SEO/GEO/AEO Automation
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/lib/seo*.ts'
+      - 'src/app/page.tsx'
+      - 'scripts/**'
+
+jobs:
+  automate-seo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Schema Validation
+        run: npx ts-node scripts/seo-monitoring.ts
+
+      - name: Update Content Freshness
+        run: npx ts-node scripts/content-freshness-updater.ts
+
+      - name: Generate Sitemap
+        run: npx ts-node scripts/sitemap-generator.ts
+
+      - name: Check Performance
+        run: npx ts-node scripts/performance-monitor.ts
+
+      - name: Create monitoring report
+        run: |
+          mkdir -p monitoring-reports
+          DATE=$(date +%Y-%m-%d)
+          echo "SEO/GEO/AEO Automation Report - $DATE" > monitoring-reports/report-$DATE.txt
+          echo "All checks completed successfully" >> monitoring-reports/report-$DATE.txt
+
+      - name: Upload monitoring reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitoring-reports
+          path: monitoring-reports/
+          retention-days: 30
+
+      - name: Commit updated timestamps (if changed)
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: automated SEO content freshness update [skip ci]"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

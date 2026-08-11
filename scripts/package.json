@@ -1,0 +1,13 @@
+{
+  "name": "seo-automation",
+  "version": "1.0.0",
+  "description": "Automated SEO, GEO, and AEO monitoring and maintenance",
+  "scripts": {
+    "monitor": "ts-node scripts/seo-monitoring.ts",
+    "update-freshness": "ts-node scripts/content-freshness-updater.ts",
+    "generate-sitemap": "ts-node scripts/sitemap-generator.ts",
+    "check-performance": "ts-node scripts/performance-monitor.ts",
+    "automate-all": "bash scripts/run-automation.sh",
+    "automate:daily": "npm run monitor && npm run update-freshness && npm run generate-sitemap && npm run check-performance"
+  }
+}
