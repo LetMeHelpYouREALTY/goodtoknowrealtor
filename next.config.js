@@ -53,14 +53,30 @@ const nextConfig = {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
 
-  // Image optimization security
+  // Image optimization - Next.js 15 best practices
   images: {
+    // Allowed image domains
     domains: [
       'images.unsplash.com',
       'via.placeholder.com'
     ],
+
+    // Modern image formats (AVIF first for best compression, WebP fallback)
+    formats: ['image/avif', 'image/webp'],
+
+    // Responsive breakpoints optimized for real estate images
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+
+    // Cache optimized images for 60 days
+    minimumCacheTTL: 5184000,
+
+    // Security settings
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+
+    // Enable optimization (explicit for clarity)
+    unoptimized: false,
   },
 
   // External packages configuration
