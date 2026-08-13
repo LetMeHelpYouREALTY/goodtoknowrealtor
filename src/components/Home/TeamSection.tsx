@@ -66,7 +66,7 @@ export function TeamSection() {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          {teamMembers.map((member) => (
+          {teamMembers.map((member, index) => (
             <div key={member.id} className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
               <div className='relative h-64'>
                 <Image
@@ -74,6 +74,7 @@ export function TeamSection() {
                   alt={member.name}
                   fill
                   className='object-cover'
+                  priority={index === 0}
                 />
               </div>
               
