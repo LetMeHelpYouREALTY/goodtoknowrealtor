@@ -57,6 +57,30 @@ This document tracks all improvements automatically applied by the self-improvem
 
 ---
 
+### Improvement #3: Image Priority Loading
+**Commit**: [`ce6c869`](https://github.com/DrJanDuffy/goodtoknowrealtor/commit/ce6c869)  
+**Branch**: `claude/homepage-fix-011CUKpQaodG9xmMEPgAMzsw`  
+**Domain**: Performance  
+**Impact**: High | **Effort**: Low
+
+#### Changes
+- Added `priority` prop to first 3 neighborhood images in NeighborhoodsSection
+- Added `priority` prop to first team member image in TeamSection
+- Prevents LCP regression by preloading critical above-the-fold images
+- Ensures critical images load before JavaScript executes
+
+#### Impact Metrics
+- ⚡ **LCP**: Faster Largest Contentful Paint for homepage
+- 🎯 **Core Web Vitals**: Improved perceived performance
+- 📱 **Mobile**: Better first-page experience
+- 🚀 **Priority Loading**: Critical images preloaded automatically
+
+#### Files Modified
+- `src/components/Home/NeighborhoodsSection.tsx` (+2 lines)
+- `src/components/Home/TeamSection.tsx` (+2 lines)
+
+---
+
 ## Statistics
 
 | Metric | Total |
