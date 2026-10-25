@@ -6,8 +6,8 @@ import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Why List With Dr. Jan Duffy | Top 1% Las Vegas Real Estate Agent',
-  description: 'Discover why Dr. Jan Duffy is the premier choice for selling your Las Vegas home. $127M+ sales volume, 98% client satisfaction, proven results.',
+  title: 'Why List With Dr. Jan Duffy | Las Vegas Real Estate Agent',
+  description: 'Discover why Dr. Jan Duffy is the premier choice for selling your Las Vegas home. $127M+ in Dr. Duffy Group career sales, 98% client satisfaction, proven results.',
   keywords: ['why list with us', 'Las Vegas real estate agent', 'Dr. Jan Duffy', 'sell home Las Vegas', 'top realtor', 'premier agent'],
   url: '/why-list-with-us',
   image: '/images/why-list-with-us-og.jpg',
@@ -22,15 +22,15 @@ export default function WhyListWithUsPage() {
   const advantages = [
     {
       title: 'Proven Track Record',
-      description: '$127M+ in sales volume with 500+ successful transactions',
+      description: '$127M+ in Dr. Duffy Group career sales with 500+ team sales',
       icon: '🏆',
-      stats: '$127M+ Sales Volume',
+      stats: '$127M+ Team Career Sales',
     },
     {
       title: 'Market Expertise',
-      description: '20+ years of Las Vegas real estate experience and market knowledge',
+      description: '18 years of Las Vegas real estate experience and market knowledge',
       icon: '📊',
-      stats: '20+ Years Experience',
+      stats: '18 Years Experience',
     },
     {
       title: 'Client Satisfaction',
@@ -140,7 +140,7 @@ export default function WhyListWithUsPage() {
                 Why List With Dr. Jan Duffy?
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed mb-8">
-                Join 500+ successful sellers who chose Las Vegas's Top 1% real estate agent for exceptional results and unmatched service
+                Join 500+ successful sellers who chose Las Vegas's real estate agent for exceptional results and unmatched service
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -170,7 +170,7 @@ export default function WhyListWithUsPage() {
                 Why Dr. Jan Duffy Delivers Exceptional Results
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                As a Top 1% Las Vegas real estate agent, Dr. Jan Duffy combines market expertise, proven strategies, and exceptional service to deliver outstanding results for every client.
+                As a Las Vegas real estate agent, Dr. Jan Duffy combines market expertise, proven strategies, and exceptional service to deliver outstanding results for every client.
               </p>
             </div>
 
@@ -255,7 +255,7 @@ export default function WhyListWithUsPage() {
                   Deep Las Vegas Market Knowledge
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  With 20+ years of experience in the Las Vegas real estate market, Dr. Jan Duffy understands the unique dynamics of each neighborhood, market trends, and buyer preferences that drive successful sales.
+                  With 18 years of experience in the Las Vegas real estate market, Dr. Jan Duffy understands the unique dynamics of each neighborhood, market trends, and buyer preferences that drive successful sales.
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">

@@ -111,7 +111,7 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
             Wait! Don't Miss Out on Your Dream Home
           </h2>
           <p className="text-gray-600">
-            Get exclusive access to off-market properties and expert guidance from Las Vegas's Top 1% agent
+            Get exclusive access to off-market properties and expert guidance from an experienced Las Vegas agent
           </p>
         </div>
 
@@ -203,7 +203,7 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
             </span>
           </div>
           <p className="text-xs text-gray-400 mt-2">
-            Dr. Jan Duffy • Top 1% Las Vegas Agent • $127M+ Sales Volume
+            Dr. Jan Duffy • Las Vegas Agent • $127M+ Team Career Sales
           </p>
         </div>
       </div>

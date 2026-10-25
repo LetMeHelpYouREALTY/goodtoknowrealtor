@@ -6,11 +6,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Sell My Luxury House Las Vegas | Luxury Home Sales | Dr. Jan Duffy',
-  description: 'Sell your luxury house in Las Vegas with Dr. Jan Duffy, Top 1% Real Estate Agent. Premium marketing, exclusive networks, and maximum value for luxury properties.',
+  description: 'Sell your luxury house in Las Vegas with Dr. Jan Duffy, Real Estate Agent. Premium marketing, exclusive networks, and maximum value for luxury properties.',
   keywords: 'sell luxury house Las Vegas, luxury home sales, luxury property marketing, high-end real estate sales',
   openGraph: {
     title: 'Sell My Luxury House Las Vegas | Luxury Home Sales | Dr. Jan Duffy',
-    description: 'Sell your luxury house in Las Vegas with Dr. Jan Duffy, Top 1% Real Estate Agent. Premium marketing, exclusive networks, and maximum value for luxury properties.',
+    description: 'Sell your luxury house in Las Vegas with Dr. Jan Duffy, Real Estate Agent. Premium marketing, exclusive networks, and maximum value for luxury properties.',
     type: 'website',
   },
 };
@@ -58,7 +58,7 @@ export default function SellingLuxuryPage() {
                 Why Choose Dr. Jan Duffy for Luxury Home Sales?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                As a Top 1% Las Vegas real estate agent, Dr. Jan Duffy provides 
+                As a Las Vegas real estate agent, Dr. Jan Duffy provides 
                 unparalleled expertise in luxury property marketing and sales.
               </p>
             </div>

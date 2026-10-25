@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Press & Media | Dr. Jan Duffy Real Estate | Las Vegas Real Estate Expert',
-  description: 'Press coverage, media appearances, and speaking engagements featuring Dr. Jan Duffy, Top 1% Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
+  description: 'Press coverage, media appearances, and speaking engagements featuring Dr. Jan Duffy, Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
   keywords: 'Dr. Jan Duffy press, real estate media, Las Vegas real estate expert, luxury real estate news, real estate speaking',
   openGraph: {
     title: 'Press & Media | Dr. Jan Duffy Real Estate | Las Vegas Real Estate Expert',
-    description: 'Press coverage, media appearances, and speaking engagements featuring Dr. Jan Duffy, Top 1% Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
+    description: 'Press coverage, media appearances, and speaking engagements featuring Dr. Jan Duffy, Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
     type: 'website',
   },
 };
@@ -374,7 +374,7 @@ export default function PressPage() {
                 <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg'></div>
                 <div className='absolute bottom-6 left-6 text-white'>
                   <h4 className='text-xl font-semibold mb-2'>Dr. Jan Duffy</h4>
-                  <p className='text-sm opacity-90'>Top 1% Las Vegas Real Estate Agent</p>
+                  <p className='text-sm opacity-90'>Las Vegas Real Estate Agent</p>
                 </div>
               </div>
             </div>

@@ -15,7 +15,7 @@ const CARDS: { title: string; description: string; icon: IconSymbolKey }[] = [
   },
   {
     title: 'Market Expertise',
-    description: 'Serving Las Vegas since 2008, $127M+ in closed transactions.',
+    description: 'Serving Las Vegas since 2008, $127M+ in Dr. Duffy Group career sales.',
     icon: '📊',
   },
   {

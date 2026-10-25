@@ -119,7 +119,7 @@ export default function AboutPage() {
               </h3>
               <ul className='space-y-2 text-gray-600'>
                 <li>• Top 1% of Las Vegas Realtors (2023, 2024)</li>
-                <li>• $127M+ in Total Sales Volume</li>
+                <li>• $127M+ in Team Career Sales</li>
                 <li>• Berkshire Hathaway Circle of Excellence</li>
                 <li>• Luxury Property Specialist (LPS)</li>
                 <li>• 5-Star Client Rating Average</li>

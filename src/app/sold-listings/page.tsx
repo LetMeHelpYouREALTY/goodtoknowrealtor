@@ -8,7 +8,7 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Sold Listings | Dr. Jan Duffy - Recent Sales Success Stories',
-  description: 'View Dr. Jan Duffy\'s recent sold listings and success stories. $127M+ in sales volume with exceptional results across Las Vegas.',
+  description: 'View Dr. Jan Duffy\'s recent sold listings and success stories. $127M+ in Dr. Duffy Group career sales with exceptional results across Las Vegas.',
   keywords: ['sold listings Las Vegas', 'recent sales', 'Dr. Jan Duffy sales', 'Las Vegas real estate sales', 'success stories'],
   url: '/sold-listings',
   image: '/images/sold-listings-og.jpg',

@@ -24,8 +24,8 @@ Based on proven multi-million dollar lead generation systems, our assessment-bas
 - Lifestyle Fit (pools, HOAs, desert living)
 
 **Credibility Section**:
-- Dr. Janet Duffy's 20+ years experience
-- 500+ families helped in Las Vegas
+- Dr. Janet Duffy's 18 years experience
+- 500+ team sales in Las Vegas
 - Market research: "85% of first-time buyers underestimate costs by 15-20%"
 - "Premier Good To Know REALTOR®" brand positioning
 
@@ -190,7 +190,7 @@ Based on proven multi-million dollar lead generation systems, our assessment-bas
 
 1. **Proven System**: Based on multi-million dollar lead generation strategies
 2. **Hyperlocal Focus**: Las Vegas-specific content and insights
-3. **Expert Credibility**: Dr. Janet Duffy's 20+ years experience
+3. **Expert Credibility**: Dr. Janet Duffy's 18 years experience
 4. **Comprehensive Data**: 15 data points per lead for better qualification
 5. **Automated Segmentation**: Leads automatically routed to appropriate next steps
 6. **Multi-Assessment Platform**: Buyer, seller, neighborhood, and investment assessments

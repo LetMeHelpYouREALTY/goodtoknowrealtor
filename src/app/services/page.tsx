@@ -75,7 +75,7 @@ export default function ServicesPage() {
         {/* Hero Section */}
         <PageHero
           title='Comprehensive Real Estate Services in Las Vegas'
-          subtitle='Dr. Jan Duffy delivers exceptional real estate solutions with $127M+ in sales volume and 20+ years of Las Vegas market expertise'
+          subtitle='Dr. Jan Duffy delivers exceptional real estate solutions with $127M+ in Dr. Duffy Group career sales and 18 years of Las Vegas market expertise'
         />
 
         {/* Services Overview */}
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                 Why Choose Dr. Jan Duffy for Your Real Estate Needs?
               </h2>
               <p className='text-xl text-gray-600 leading-relaxed'>
-                As a Top 1% Las Vegas real estate agent with over 500 successful transactions, Dr. Jan Duffy provides comprehensive services tailored to your unique needs. Whether you're buying your first home, selling a luxury estate, or building an investment portfolio, our expertise ensures exceptional results.
+                As a Las Vegas real estate agent with 500+ team sales, Dr. Jan Duffy provides comprehensive services tailored to your unique needs. Whether you're buying your first home, selling a luxury estate, or building an investment portfolio, our expertise ensures exceptional results.
               </p>
             </div>
 
@@ -366,7 +366,7 @@ export default function ServicesPage() {
               Ready to Experience Exceptional Real Estate Service?
             </h2>
             <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
-              Contact Dr. Jan Duffy today for personalized real estate services in Las Vegas. With $127M+ in sales volume and 20+ years of experience, we deliver results that exceed expectations.
+              Contact Dr. Jan Duffy today for personalized real estate services in Las Vegas. With $127M+ in Dr. Duffy Group career sales and 18 years of experience, we deliver results that exceed expectations.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link

@@ -110,7 +110,7 @@ export default function LasVegasMarketTrends2025Page() {
                 Expert analysis of Las Vegas housing market trends, price movements, and investment opportunities from Dr. Jan Duffy
               </p>
               <div className="flex items-center justify-center text-blue-200">
-                <span className="text-sm">By Dr. Jan Duffy • Top 1% Las Vegas Agent</span>
+                <span className="text-sm">By Dr. Jan Duffy • Las Vegas Agent</span>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function LasVegasMarketTrends2025Page() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  As we move through 2025, the Las Vegas real estate market continues to demonstrate remarkable resilience and growth. With 20+ years of experience in this dynamic market, I'm excited to share my analysis of the key trends shaping Las Vegas real estate this year.
+                  As we move through 2025, the Las Vegas real estate market continues to demonstrate remarkable resilience and growth. With 18 years of experience in this dynamic market, I'm excited to share my analysis of the key trends shaping Las Vegas real estate this year.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   The Las Vegas market has evolved significantly, with new opportunities emerging for buyers, sellers, and investors alike. Whether you're considering your first home purchase, planning to sell your current property, or looking to build an investment portfolio, understanding these trends is crucial for making informed decisions.
@@ -344,7 +344,7 @@ export default function LasVegasMarketTrends2025Page() {
               Ready to Navigate the Las Vegas Market?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Get personalized market insights and expert guidance from Dr. Jan Duffy, Las Vegas's Top 1% real estate agent with $127M+ in sales volume.
+              Get personalized market insights and expert guidance from Dr. Jan Duffy, Las Vegas's real estate agent with $127M+ in Dr. Duffy Group career sales.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

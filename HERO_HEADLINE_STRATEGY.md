@@ -344,14 +344,14 @@ Sample Size: Minimum 500 visitors per variant
 ## 5. TRUST ELEMENT RECOMMENDATIONS
 
 ### Current Trust Badge:
-**"20+ Years | $127M+ Sales | 500+ Happy Families"**
+**"20+ Years | $127M+ Team Career Sales | 500+ Team Sales"**
 
 ### Enhanced Options:
 
 #### Option 传达 (Recommended):
 **"Trusted by 500+ Vegas families to sell for $50K+ over estimate"**
 - Specific outcome (PK differential)
-- Social proof (500+ families)
+- Social proof (500+ team sales)
 - Local (Vegas)
 - Benefit-focused
 
@@ -364,7 +364,7 @@ Sample Size: Minimum 500 visitors per variant
 ---
 
 #### Option B:
-**"20+ years. $127M+ in sales. Average $75K+ over online estimates."**
+**"20+ years. $127M+ in Dr. Duffy Group career sales. Average $75K+ over online estimates."**
 - Experience + volume + specific outcome
 - Quantifies the value proposition
 - Builds credibility with proof
@@ -372,7 +372,7 @@ Sample Size: Minimum 500 visitors per variant
 ---
 
 #### Option C:
-**"Las Vegas Top 1% Agent | Average $100K+ Over Estimates"**
+**"Las Vegas Agent | Average $100K+ Over Estimates"**
 - Status (Top 1%) = exclusivity
 - Specific outcome ($100K+)
 - Market-specific
@@ -380,7 +380,7 @@ Sample Size: Minimum 500 visitors per variant
 ---
 
 #### Option D (Simplified):
-**"500+ Successful Transactions | $127M+ Sales Volume"**
+**"500+ Team Sales | $127M+ Team Career Sales"**
 - Focus on volume (social proof)
 - Financial credibility
 - Clean, professional
@@ -402,7 +402,7 @@ Sample Size: Minimum 500 visitors per variant
    - Quantifies investor benefit
 
 4. **Award/Certification:**
-   - "Top 1% Berkshire Hathaway Agent"
+   - "Berkshire Hathaway Agent"
    - Visual badge/logo
 
 ---

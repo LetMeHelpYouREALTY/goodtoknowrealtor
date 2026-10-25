@@ -111,7 +111,7 @@ const menuItems: MenuItem[] = [
       {
         label: 'Why List With Us',
         href: '/why-list-with-us',
-        description: 'See the proven approach behind $127M+ in sales volume.',
+        description: 'See the proven approach behind $127M+ in Dr. Duffy Group career sales.',
       },
     ],
   },

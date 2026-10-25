@@ -13,7 +13,7 @@ interface LeadCaptureFormProps {
 
 export function LeadCaptureForm({ 
   title = "Get Your Free Consultation",
-  subtitle = "Expert guidance from Las Vegas's Top 1% real estate agent",
+  subtitle = "Expert guidance from Las Vegas's real estate agent",
   source = "general",
   className = ""
 }: LeadCaptureFormProps) {
@@ -236,7 +236,7 @@ export function LeadCaptureForm({
           <span>✓ Expert Guidance</span>
         </div>
         <p className="text-xs text-gray-400">
-          Dr. Jan Duffy • Top 1% Las Vegas Agent • $127M+ Sales Volume
+          Dr. Jan Duffy • Las Vegas Agent • $127M+ Team Career Sales
         </p>
       </div>
     </div>

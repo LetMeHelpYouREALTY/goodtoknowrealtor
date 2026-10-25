@@ -27,7 +27,7 @@ export function Footer() {
               <p className='text-sm text-white/60'>
                 Dr. Jan Duffy, REALTOR®
                 <br />
-                Top 1% Las Vegas Agent
+                Las Vegas Agent
                 <br />
                 Premier Properties Las Vegas
               </p>
@@ -201,7 +201,7 @@ export function Footer() {
               Ready to Start Your Real Estate Journey?
             </h3>
             <p className='text-blue-100 mb-6 max-w-2xl mx-auto'>
-              Schedule a free consultation with Dr. Jan Duffy, Las Vegas&apos;s Top 1% real estate agent. 
+              Schedule a free consultation with Dr. Jan Duffy, Las Vegas&apos;s real estate agent. 
               Get expert guidance tailored to your goals.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>

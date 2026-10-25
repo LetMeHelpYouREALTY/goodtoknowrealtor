@@ -147,7 +147,7 @@ export default function InvestingPage() {
         {/* Hero Section */}
         <PageHero
           title='Las Vegas Real Estate Investment'
-          subtitle='Build wealth through strategic real estate investments with Dr. Jan Duffy, Top 1% Las Vegas agent with proven investment expertise'
+          subtitle='Build wealth through strategic real estate investments with Dr. Jan Duffy, Las Vegas agent with proven investment expertise'
           gradientFromClassName='from-green-900'
           gradientToClassName='to-emerald-800'
         >
@@ -472,7 +472,7 @@ export default function InvestingPage() {
               Ready to Start Your Real Estate Investment Journey?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Contact Dr. Jan Duffy today for personalized investment guidance in Las Vegas. With $127M+ in sales volume and investment expertise, we help you build wealth through real estate.
+              Contact Dr. Jan Duffy today for personalized investment guidance in Las Vegas. With $127M+ in Dr. Duffy Group career sales and investment expertise, we help you build wealth through real estate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

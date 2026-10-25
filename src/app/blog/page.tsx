@@ -215,7 +215,7 @@ export default async function BlogPage() {
               Ready to Make Your Real Estate Move?
             </h2>
             <p className='text-lg text-blue-100 mb-6 max-w-2xl mx-auto'>
-              Dr. Jan Duffy has helped hundreds of families find their dream
+              Dr. Jan Duffy has helped hundreds of clients find their dream
               homes in Las Vegas. Let her expertise guide your next real estate
               decision.
             </p>

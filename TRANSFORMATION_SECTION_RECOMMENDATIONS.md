@@ -56,7 +56,7 @@ All 6 cards have been rewritten using the transformation template. Each follows 
 ### **Card 5: Luxury Market Specialization (High-Net-Worth Advantage)**
 - **Headline:** "Luxury Market Expertise That Pays"
 - **Benefit:** "20+ years specializing in high-end sales. Clients access The Ridges, Lake Las Vegas, knob & tube properties"
-- **Proof:** "$127M+ in luxury sales"
+- **Proof:** "$127M+ in Dr. Duffy Group career sales"
 - **Testimonial:** "Dr. Jan's connections gave us access to off-market properties in The Ridges we never saw on Zillow."
 - **CTA:** "View Luxury Properties" → `/luxury`
 
@@ -106,7 +106,7 @@ All 6 cards have been rewritten using the transformation template. Each follows 
 - ✅ "$125K over asking in 6 days" (specific, measurable)
 - ✅ "22 days vs. 38 days market average" (quantified comparison)
 - ✅ "$2.3M portfolio, 340% cash flow increase" (concrete outcome)
-- ❌ Avoid: "Top 1% agent" (meaningless without context)
+- ❌ Avoid: "agent" (meaningless without context)
 
 ### **Best Practices:**
 - Always include a metric (number + context)
@@ -149,13 +149,13 @@ All 6 cards have been rewritten using the transformation template. Each follows 
 ### **KEEP (Specific & Meaningful):**
 - ✅ **"22 days to sell vs. 38 days market average"** - Quantified benefit with comparison
 - ✅ **"Average $125K over asking"** - Specific premium (verify this number is accurate)
-- ✅ **"$127M+ in luxury sales"** - Credible volume in specific niche
+- ✅ **"$127M+ in Dr. Duffy Group career sales"** - Credible volume in specific niche
 - ✅ **"340% cash flow increase"** - Transformation concession for investors
 
 ### **REMOVE or REPLACE (Too Generic):**
-- ❌ **"500+ Happy Families"** - Too generic, no differentiation
+- ❌ **"500+ Team Sales"** - Too generic, no differentiation
 - ❌ **"98% Client Satisfaction"** - Better to show specific results
-- ❌ **"Top 1% Agent"** - Meaningless without context
+- ❌ **"Agent"** - Meaningless without context
 
 ### **BETTER METRICS to Consider:**
 - ✅ **"Average $12K-50K saved per transaction"** (if verified)
@@ -169,9 +169,9 @@ All 6 cards have been rewritten using the transformation template. Each follows 
 ## 7. TONE ADJUSTMENT
 
 ### **OLD TONE (Feature-Focused):**
-- ❌ "Top 1% Las Vegas Agent (verified by Berkshire Hathaway)"
-- ❌ "15+ Years Experience (licensed REALTOR)"
-- ❌ "500+ Happy Families (client testimonials available)"
+- ❌ "Las Vegas Agent (verified by Berkshire Hathaway)"
+- ❌ "18 Years Licensed (licensed REALTOR)"
+- ❌ "500+ Team Sales (client testimonials available)"
 
 **Problems:** Credentials, no benefit, generic language
 

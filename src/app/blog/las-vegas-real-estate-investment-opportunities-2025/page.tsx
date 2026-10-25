@@ -173,7 +173,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
                 Expert analysis of Las Vegas investment strategies, market trends, and profit potential from Dr. Jan Duffy
               </p>
               <div className="flex items-center justify-center text-purple-200">
-                <span className="text-sm">By Dr. Jan Duffy • Top 1% Las Vegas Agent</span>
+                <span className="text-sm">By Dr. Jan Duffy • Las Vegas Agent</span>
               </div>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  Las Vegas continues to be one of the most attractive real estate investment markets in the United States. With 20+ years of experience helping investors build successful portfolios, I'm excited to share the current opportunities and strategies that are working in 2025.
+                  Las Vegas continues to be one of the most attractive real estate investment markets in the United States. With 18 years of experience helping investors build successful portfolios, I'm excited to share the current opportunities and strategies that are working in 2025.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   The Las Vegas market offers unique advantages for investors: no state income tax, strong population growth, diverse economy, and robust rental demand. Whether you're looking for rental properties, fix & flip opportunities, or luxury investments, Las Vegas provides compelling options for every investment strategy.
@@ -456,7 +456,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
               Ready to Start Your Investment Journey?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Get personalized investment guidance from Dr. Jan Duffy, Las Vegas's Top 1% real estate agent with $127M+ in sales volume and investment expertise.
+              Get personalized investment guidance from Dr. Jan Duffy, Las Vegas's real estate agent with $127M+ in Dr. Duffy Group career sales and investment expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

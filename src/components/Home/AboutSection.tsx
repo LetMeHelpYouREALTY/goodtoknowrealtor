@@ -12,12 +12,12 @@ export function AboutSection() {
             </h2>
             <p className="text-xl text-gray-600 mb-6">
               As a top-performing agent at Berkshire Hathaway HomeServices Premier Properties, 
-              Dr. Jan Duffy has facilitated over $127 million in real estate transactions across Las Vegas.
+              Dr. Jan Duffy leads the Dr. Duffy Group, which has closed $127M+ over its career, across Las Vegas.
             </p>
             <p className="text-lg text-gray-600 mb-8">
               With deep expertise in luxury properties, investment real estate, and first-time home buying, 
               Dr. Duffy delivers results that consistently exceed expectations. Her data-driven approach, 
-              combined with personalized service, has helped hundreds of families achieve their real estate goals 
+              combined with personalized service, has helped hundreds of clients achieve their real estate goals 
               while building wealth through strategic property investments.
             </p>
             
@@ -28,8 +28,8 @@ export function AboutSection() {
                   <span className="text-blue-600 text-xl">✓</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Top 1% Producer</h4>
-                  <p className="text-sm text-gray-600">$127M+ Sales Volume</p>
+                  <h4 className="font-semibold text-gray-900">Producer</h4>
+                  <p className="text-sm text-gray-600">$127M+ Team Career Sales</p>
                 </div>
               </div>
               
