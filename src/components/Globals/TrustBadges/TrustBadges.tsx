@@ -13,21 +13,21 @@ interface TrustBadge {
 const trustBadges: TrustBadge[] = [
   {
     id: '1',
-    title: 'Top 1% Luxury Agent',
+    title: 'Luxury Agent',
     description: 'Premier luxury real estate specialist with exclusive market access',
     icon: '🏆',
     verification: 'Verified by Berkshire Hathaway'
   },
   {
     id: '2',
-    title: '20+ Years Experience',
+    title: '18 Years Experience',
     description: 'Expert knowledge of luxury Las Vegas market and exclusive communities',
     icon: '⭐',
     verification: 'Licensed REALTOR®'
   },
   {
     id: '3',
-    title: '$127M+ Luxury Sales',
+    title: '$127M+ Team Career Sales',
     description: 'Proven track record in high-end properties and exclusive listings',
     icon: '💰',
     verification: 'MLS verified statistics'

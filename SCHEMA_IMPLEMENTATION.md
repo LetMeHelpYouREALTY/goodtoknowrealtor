@@ -193,7 +193,7 @@ The website implements multiple Schema.org types to enhance search engine unders
       "name": "Who is Dr. Janet Duffy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dr. Janet Duffy is a Top 1% Las Vegas real estate agent..."
+        "text": "Dr. Janet Duffy is a Las Vegas real estate agent..."
       }
     }
   ]

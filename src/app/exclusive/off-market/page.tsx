@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Off-Market Properties Las Vegas | Exclusive Listings | Dr. Jan Duffy',
-  description: 'Access exclusive off-market properties in Las Vegas. Private listings, pre-market opportunities, and exclusive real estate deals with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Access exclusive off-market properties in Las Vegas. Private listings, pre-market opportunities, and exclusive real estate deals with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'off-market properties Las Vegas, exclusive listings, private real estate, pre-market properties, exclusive deals',
   openGraph: {
     title: 'Off-Market Properties Las Vegas | Exclusive Listings | Dr. Jan Duffy',
-    description: 'Access exclusive off-market properties in Las Vegas. Private listings, pre-market opportunities, and exclusive real estate deals with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Access exclusive off-market properties in Las Vegas. Private listings, pre-market opportunities, and exclusive real estate deals with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };

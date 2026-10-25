@@ -47,7 +47,7 @@ export function HeroSection() {
           <div className='space-y-8 text-center lg:text-left'>
             <div className='luxury-badge mx-auto lg:mx-0'>
               <IconSymbol symbol='🏆' className='h-4 w-4 text-[#dfc07a]' ariaLabel='Award icon' />
-              <span>Top 1% • Berkshire Hathaway Premier</span>
+              <span>Berkshire Hathaway Premier</span>
             </div>
 
             <div className='space-y-5'>
@@ -59,7 +59,7 @@ export function HeroSection() {
                 buyers, sellers, & investors.
               </h1>
               <p className='mx-auto max-w-2xl text-base text-[#e8d5a8]/80 sm:text-lg lg:text-xl font-light leading-relaxed'>
-                Unlock private inventory, command $50K–$125K over asking, and build wealth with the only Las Vegas advisor who combines doctoral market research with 20+ years of negotiation mastery.
+                Unlock private inventory, command $50K–$125K over asking, and build wealth with the only Las Vegas advisor who combines doctoral market research with 18 years of negotiation mastery.
               </p>
             </div>
 

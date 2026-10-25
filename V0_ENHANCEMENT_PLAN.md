@@ -33,8 +33,8 @@ File: `src/app/assessments/buyer-readiness/page.tsx`
 
 3. **Credibility Section**:
 
-   - Dr. Janet Duffy's bio and 20+ years experience
-   - Recent success stats: "Helped 500+ families buy in Vegas"
+   - Dr. Janet Duffy's bio and 18 years experience
+   - Recent success stats: "Helped 500+ team sales buy in Vegas"
    - Market research: "85% of first-time buyers underestimate costs by 15-20%"
    - "Good To Know REALTOR®" brand positioning
 

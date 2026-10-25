@@ -89,7 +89,7 @@ export default function SellerReadinessPage() {
                 </div>
               </div>
               <p className="text-green-100">
-                <strong>Dr. Jan Duffy</strong>, Premier Good To Know REALTOR®, has helped hundreds of families 
+                <strong>Dr. Jan Duffy</strong>, Premier Good To Know REALTOR®, has helped hundreds of clients 
                 maximize their home's value in Las Vegas. Her strategic approach helps sellers achieve 
                 98% of list price on average.
               </p>

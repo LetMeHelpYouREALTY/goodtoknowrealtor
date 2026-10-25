@@ -229,7 +229,7 @@ export default function FirstTimeBuyerGuide2025Page() {
                 Everything you need to know about buying your first home in Las Vegas, from financing to closing
               </p>
               <div className="flex items-center justify-center text-green-200">
-                <span className="text-sm">By Dr. Jan Duffy • Top 1% Las Vegas Agent</span>
+                <span className="text-sm">By Dr. Jan Duffy • Las Vegas Agent</span>
               </div>
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function FirstTimeBuyerGuide2025Page() {
               {/* Introduction */}
               <div className="mb-12">
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  Buying your first home in Las Vegas is an exciting milestone, but it can also feel overwhelming. With 20+ years of experience helping first-time buyers achieve their homeownership dreams, I've created this comprehensive guide to walk you through every step of the process.
+                  Buying your first home in Las Vegas is an exciting milestone, but it can also feel overwhelming. With 18 years of experience helping first-time buyers achieve their homeownership dreams, I've created this comprehensive guide to walk you through every step of the process.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Las Vegas offers incredible opportunities for first-time buyers, from affordable starter homes to luxury properties. The key to success is understanding the process, being prepared, and working with experienced professionals who can guide you through this important decision.
@@ -516,7 +516,7 @@ export default function FirstTimeBuyerGuide2025Page() {
               Ready to Start Your Home Buying Journey?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Get personalized guidance from Dr. Jan Duffy, Las Vegas's Top 1% real estate agent. Take our free buyer readiness assessment to determine your next steps.
+              Get personalized guidance from Dr. Jan Duffy, Las Vegas's real estate agent. Take our free buyer readiness assessment to determine your next steps.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

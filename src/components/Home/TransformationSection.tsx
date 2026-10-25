@@ -39,7 +39,7 @@ const personas: PersonaCard[] = [
     persona: 'buyers',
     headline: 'Stop Losing Homes to Higher Offers',
     painPoint: 'I searched 3 homes but lost every offer to higher bids. I kept getting outbid, paying above asking, or watching my dream home go to cash buyers. I was stuck in bidding wars with no advantage.',
-    approach: 'Dr. Jan leverages her Top 1% agent network to give you access to off-market properties that never hit public listings. She uses insider market knowledge to craft winning offers without overpaying. Her negotiation strategy helps clients secure homes at asking price—not above it.',
+    approach: 'Dr. Jan leverages her agent network to give you access to off-market properties that never hit public listings. She uses insider market knowledge to craft winning offers without overpaying. Her negotiation strategy helps clients secure homes at asking price—not above it.',
     result: {
       headline: 'First offer accepted, $850K home in Summerlin, 18 days to closing—UNDER asking price.',
       details: '$850K Purchase | 18 Days to Close'

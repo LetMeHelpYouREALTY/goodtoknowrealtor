@@ -104,7 +104,7 @@ export function ChatWidget() {
           <div className='bg-blue-600 text-white p-4 rounded-t-lg flex items-center justify-between'>
             <div>
               <h3 className='font-semibold'>Dr. Jan Duffy</h3>
-              <p className='text-xs text-blue-100'>Top 1% Las Vegas Agent</p>
+              <p className='text-xs text-blue-100'>Las Vegas Agent</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}

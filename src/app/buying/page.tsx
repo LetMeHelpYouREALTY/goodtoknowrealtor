@@ -11,7 +11,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Buy Luxury Las Vegas Homes | Dr. Jan Duffy - Expert Buyer Agent',
-  description: 'Buy your dream Las Vegas home with Top 1% agent Dr. Jan Duffy. Exclusive access to off-market properties, skip bidding wars, and get expert guidance. $127M+ sales volume expertise.',
+  description: 'Buy your dream Las Vegas home with agent Dr. Jan Duffy. Exclusive access to off-market properties, skip bidding wars, and get expert guidance. $127M+ in Dr. Duffy Group career sales expertise.',
   keywords: ['Las Vegas home buying', 'buy Las Vegas homes', 'Las Vegas buyer agent', 'off-market properties Las Vegas', 'Las Vegas luxury homes', 'first-time home buyer Las Vegas'],
   url: '/buying',
   image: '/images/buying-las-vegas-homes-og.jpg',
@@ -30,7 +30,7 @@ export default function BuyingPage() {
       {/* Hero Section */}
       <PageHero
         title='Buy Your Luxury Las Vegas Home with Expert Guidance'
-        subtitle='Exclusive access to premier properties, off-market opportunities, and personalized service from Top 1% agent Dr. Jan Duffy. Navigate today&apos;s competitive market with confidence.'
+        subtitle='Exclusive access to premier properties, off-market opportunities, and personalized service from agent Dr. Jan Duffy. Navigate today&apos;s competitive market with confidence.'
         gradientFromClassName='from-amber-600'
         gradientToClassName='to-yellow-600'
       >
@@ -477,7 +477,7 @@ export default function BuyingPage() {
                   Exclusive Access to Off-Market Properties
                 </h2>
                 <p className='text-lg text-gray-700'>
-                  In today&apos;s competitive market, the best properties often sell before hitting public listings. As a Top 1% agent, I provide exclusive access to:
+                  In today&apos;s competitive market, the best properties often sell before hitting public listings. As an agent, I provide exclusive access to:
                 </p>
               </div>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>

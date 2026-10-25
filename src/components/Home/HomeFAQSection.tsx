@@ -21,7 +21,7 @@ const FAQ_ITEMS: { question: string; answer: string }[] = [
   {
     question: 'What makes you different from other real estate agents?',
     answer:
-      'Dr. Jan Duffy combines Top 1% performance with doctoral-level market research, 20+ years of experience, and the Berkshire Hathaway HomeServices network. You get white-glove service and proven results.',
+      'Dr. Jan Duffy combines proven results with doctoral-level market research, 18 years of experience, and the Berkshire Hathaway HomeServices network. You get white-glove service and proven results.',
   },
   {
     question: 'Can you help with investment properties?',

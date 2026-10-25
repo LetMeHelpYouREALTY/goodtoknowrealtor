@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Luxury Developments Las Vegas | New Construction | Dr. Jan Duffy',
-  description: 'Discover luxury new construction developments in Las Vegas. Premium master-planned communities, custom homes, and exclusive developments with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Discover luxury new construction developments in Las Vegas. Premium master-planned communities, custom homes, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury developments Las Vegas, new construction, master-planned communities, custom homes, luxury developments',
   openGraph: {
     title: 'Luxury Developments Las Vegas | New Construction | Dr. Jan Duffy',
-    description: 'Discover luxury new construction developments in Las Vegas. Premium master-planned communities, custom homes, and exclusive developments with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Discover luxury new construction developments in Las Vegas. Premium master-planned communities, custom homes, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };

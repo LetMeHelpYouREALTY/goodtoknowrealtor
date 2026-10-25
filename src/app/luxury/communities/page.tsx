@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Luxury Communities Las Vegas | Premium Master-Planned Communities | Dr. Jan Duffy',
-  description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury communities Las Vegas, master-planned communities, premium neighborhoods, luxury developments',
   openGraph: {
     title: 'Luxury Communities Las Vegas | Premium Master-Planned Communities | Dr. Jan Duffy',
-    description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };

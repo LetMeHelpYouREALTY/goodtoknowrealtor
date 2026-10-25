@@ -26,7 +26,7 @@ export default function SellingPage() {
       {/* Hero Section */}
       <PageHero
         title='Sell Your Luxury Las Vegas Home for Maximum Value'
-        subtitle={'Discreet marketing, luxury staging expertise, and strategic negotiation to maximize your property&apos;s value in today&apos;s market. White-glove service from $127M+ sales expert.'}
+        subtitle={'Discreet marketing, luxury staging expertise, and strategic negotiation to maximize your property&apos;s value in today&apos;s market. White-glove service from $127M+ in Dr. Duffy Group career sales expert.'}
         gradientFromClassName='from-amber-600'
         gradientToClassName='to-yellow-600'
       >
