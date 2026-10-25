@@ -462,7 +462,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         <p>The community offers a wide range of housing options to suit every lifestyle:</p>
         <ul>
           <li>Luxury custom homes and estates</li>
-          <li>Family-friendly single-family homes</li>
+          <li>Single-family homes</li>
           <li>Modern condominiums and townhomes</li>
           <li>Active adult communities</li>
         </ul>
@@ -479,7 +479,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         <h3>Why Choose Summerlin?</h3>
         <p>Residents enjoy:</p>
         <ul>
-          <li>Excellent schools and family amenities</li>
+          <li>Excellent schools and community amenities</li>
           <li>Low crime rates and safe neighborhoods</li>
           <li>Easy access to the Las Vegas Strip and downtown</li>
           <li>Beautiful mountain views and natural landscapes</li>
@@ -538,7 +538,7 @@ function generateSampleBlogPosts(): BlogPost[] {
             <p>Prime investment locations include:</p>
             <ul>
               <li><strong>Downtown Las Vegas</strong>: Urban revitalization and development</li>
-              <li><strong>Henderson</strong>: Family-oriented, stable neighborhoods</li>
+              <li><strong>Henderson</strong>: Amenity-focused, stable neighborhoods</li>
               <li><strong>North Las Vegas</strong>: Emerging growth areas</li>
               <li><strong>Southwest Valley</strong>: New construction and master-planned communities</li>
             </ul>

@@ -94,7 +94,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 5,
     shortQuote: "First-time seller, terrified of pricing wrong. Dr. Jan's marketing strategy: $95K above target, closed in 14 days—upgrade to our dream family home.",
-    fullQuote: "As a first-time seller, I feared pricing too low and leaving money on the table—or pricing too high and sitting for months. Dr. Jan's comparative market analysis pinpointed the sweet spot, and her professional photography + 3D virtual tours attracted 12 showings from California buyers in the first week. We accepted an offer $95K above our original target, closed in 14 days, and used the proceeds to upgrade to a larger home for our growing family.",
+    fullQuote: "As a first-time seller, I feared pricing too low and leaving money on the table—or pricing too high and sitting for months. Dr. Jan's comparative market analysis pinpointed the sweet spot, and her professional photography + 3D virtual tours attracted 12 showings from California buyers in the first week. We accepted an offer $95K above our original target, closed in 14 days, and used the proceeds to upgrade to a larger home.",
     author: "Maria Rodriguez",
     location: "First-Time Seller",
     community: "North Las Vegas - $95K Over Target",

@@ -100,7 +100,7 @@ export default function BuyingUpdatesPage() {
       trend: 'Growing',
       avgDaysOnMarket: 22,
       inventory: 'Moderate',
-      highlight: 'Family-friendly demand strong'
+      highlight: 'Move-up buyer demand strong'
     },
     {
       name: 'North Las Vegas',

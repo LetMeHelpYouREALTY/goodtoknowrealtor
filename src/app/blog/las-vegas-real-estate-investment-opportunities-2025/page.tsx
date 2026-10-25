@@ -121,7 +121,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
       avgPrice: '$520K',
       rentalYield: '6-10%',
       growth: '+9% YoY',
-      highlights: ['Family-friendly', 'Tech sector growth', 'Stable market', 'Good schools'],
+      highlights: ['Community amenities', 'Tech sector growth', 'Stable market', 'Good schools'],
       investmentType: 'Long-term Rentals',
     },
     {

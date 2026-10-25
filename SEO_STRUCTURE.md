@@ -76,7 +76,7 @@ The Good To Know REALTOR® website follows a hub-and-spoke SEO structure designe
 ### Communities Hub (`/communities`)
 **Spoke Pages:**
 - `/areas/summerlin` - Luxury community focus
-- `/areas/henderson` - Family-friendly focus
+- `/areas/henderson` - Master-planned focus
 - `/areas/north-las-vegas` - Growth area focus
 - `/areas/downtown` - Urban living focus
 - `/areas/green-valley` - Established community focus

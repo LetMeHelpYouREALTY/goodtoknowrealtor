@@ -18,7 +18,7 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Henderson',
   slug: 'henderson',
   description:
-    'Find your dream home in Henderson, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Henderson luxury homes, family communities, and investment properties.',
+    'Find your dream home in Henderson, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Henderson luxury homes, master-planned communities, and investment properties.',
   keywords: [
     'Henderson real estate',
     'Henderson homes for sale',
@@ -35,7 +35,7 @@ export default function HendersonPage() {
       {/* Hero Section */}
       <PageHero
         title='Henderson Real Estate'
-        subtitle={"Discover family-friendly living in Henderson, Nevada's second-largest city"}
+        subtitle={"Discover master-planned living in Henderson, Nevada's second-largest city"}
         gradientFromClassName='from-blue-900'
         gradientToClassName='to-blue-800'
       >
@@ -90,7 +90,7 @@ export default function HendersonPage() {
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Top-rated schools and family-friendly neighborhoods</span>
+                  <span className="text-gray-700">Top-rated schools and park-rich neighborhoods</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />

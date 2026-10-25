@@ -170,12 +170,12 @@ export default function FirstTimeBuyerGuide2025Page() {
       highlights: ['New construction', 'Affordable entry point', 'Growing job market'],
       schools: 'Good',
       commute: '15-25 minutes to Strip',
-      bestFor: 'First-time buyers, young families',
+      bestFor: 'First-time buyers, move-up buyers',
     },
     {
       name: 'Henderson',
       priceRange: '$400K - $700K',
-      highlights: ['Family-friendly', 'Top-rated schools', 'Parks and recreation'],
+      highlights: ['Community amenities', 'Top-rated schools', 'Parks and recreation'],
       schools: 'Excellent',
       commute: '20-30 minutes to Strip',
       bestFor: 'Families with children',
@@ -194,7 +194,7 @@ export default function FirstTimeBuyerGuide2025Page() {
       highlights: ['Established community', 'Shopping centers', 'Good schools'],
       schools: 'Good',
       commute: '20-30 minutes to Strip',
-      bestFor: 'Established families, professionals',
+      bestFor: 'Move-up buyers, professionals',
     },
   ];
 

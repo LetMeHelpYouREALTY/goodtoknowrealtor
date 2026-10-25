@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!name) return { title: 'Not Found' };
 
   const title = `${name} Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®`;
-  const description = `Find your dream home in ${name}, Las Vegas Valley. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in ${name} homes for sale, luxury properties, and family communities.`;
+  const description = `Find your dream home in ${name}, Las Vegas Valley. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in ${name} homes for sale, luxury properties, and master-planned communities.`;
   const canonical = `${SEO_CONFIG.siteUrl}/areas/${slug}`;
 
   return {
@@ -120,7 +120,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
                     ariaLabel="Highlight"
                   />
                   <span className="text-gray-700">
-                    Luxury homes and family-friendly neighborhoods
+                    Luxury homes and park-rich neighborhoods
                   </span>
                 </li>
               </ul>
