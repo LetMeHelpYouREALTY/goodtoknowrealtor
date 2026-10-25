@@ -60,7 +60,7 @@ export default function LasVegasMarketTrends2025Page() {
       name: 'Henderson',
       priceRange: '$400K - $1.2M',
       trend: 'Steady Appreciation',
-      highlights: ['Family-friendly', 'Growing tech sector', 'Lake communities', 'Recreation facilities'],
+      highlights: ['Community amenities', 'Growing tech sector', 'Lake communities', 'Recreation facilities'],
       growth: '+9%',
     },
     {

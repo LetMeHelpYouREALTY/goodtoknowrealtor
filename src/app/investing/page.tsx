@@ -105,7 +105,7 @@ export default function InvestingPage() {
     },
     {
       name: 'Henderson',
-      description: 'Family-friendly area with stable rental market and appreciation',
+      description: 'Master-planned area with stable rental market and appreciation',
       avgPrice: '$400K - $800K',
       rentalYield: '6-10%',
       growth: 'Moderate',

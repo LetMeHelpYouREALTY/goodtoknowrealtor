@@ -8,7 +8,7 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Green Valley',
   slug: 'green-valley',
   description:
-    'Find your dream home in Green Valley, Henderson. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Green Valley luxury homes, golf course properties, and family communities.',
+    'Find your dream home in Green Valley, Henderson. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Green Valley luxury homes, golf course properties, and master-planned communities.',
   keywords: [
     'Green Valley real estate',
     'Green Valley homes for sale',
@@ -68,7 +68,7 @@ export default function GreenValleyPage() {
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Top-rated schools and family-friendly amenities</span>
+                  <span className="text-gray-700">Top-rated schools and parks, pools, and community amenities</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />

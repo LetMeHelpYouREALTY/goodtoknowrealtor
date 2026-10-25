@@ -48,10 +48,10 @@ export default function CommunitiesPage() {
       name: 'Henderson',
       href: '/areas/henderson',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Family-friendly community with excellent schools and recreational facilities.',
+      description: 'Master-planned community with excellent schools and recreational facilities.',
       avgPrice: '$525,000',
       propertiesCount: 1100,
-      highlights: ['Lake Mead Access', 'Family Amenities', 'Growing Tech Sector']
+      highlights: ['Lake Mead Access', 'Community Amenities', 'Growing Tech Sector']
     },
     {
       id: 'north-las-vegas',
@@ -105,7 +105,7 @@ export default function CommunitiesPage() {
         {/* Hero Section */}
         <PageHero
           title='Las Vegas Communities'
-          subtitle='Discover the perfect Las Vegas neighborhood for your lifestyle. From luxury Summerlin to family-friendly Henderson.'
+          subtitle='Discover the perfect Las Vegas neighborhood for your lifestyle. From luxury Summerlin to master-planned Henderson.'
         />
 
         {/* Communities Grid */}
