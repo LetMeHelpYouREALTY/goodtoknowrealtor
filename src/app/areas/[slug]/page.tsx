@@ -110,7 +110,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
                     ariaLabel="Highlight"
                   />
                   <span className="text-gray-700">
-                    Top-rated schools and community amenities
+                    CCSD schools and community amenities
                   </span>
                 </li>
                 <li className="flex items-center">

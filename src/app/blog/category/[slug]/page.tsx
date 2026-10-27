@@ -120,7 +120,7 @@ const mockPosts = {
   'lifestyle': [
     {
       id: '10',
-      title: 'Best Las Vegas Neighborhoods for Families: School Districts & Safety',
+      title: 'Las Vegas Neighborhoods by Parks, Square Footage, and CCSD School Zones',
       excerpt: 'Comprehensive guide to Las Vegas neighborhoods by parks, school names, and commute times.',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       date: '2025-01-17',

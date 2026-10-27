@@ -60,7 +60,7 @@ const sampleProperties = [
     propertyType: 'Single Family',
     features: ['Master Suite', 'Garden', 'Garage', 'Updated Bathrooms', 'Open Floor Plan'],
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
-    description: 'Perfect family home in Henderson with excellent schools and community amenities nearby.',
+    description: 'Single-family home in Henderson near CCSD schools and community amenities.',
     mlsNumber: 'MLS345678',
     status: 'For Sale' as const
   }

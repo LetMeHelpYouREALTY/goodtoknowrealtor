@@ -83,14 +83,14 @@ export default function HendersonPage() {
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Henderson offers the perfect blend of suburban tranquility and urban convenience. 
-                As Nevada&apos;s second-largest city, it provides excellent schools, beautiful parks, 
+                As Nevada&apos;s second-largest city, it provides 60+ city parks, 
                 and a strong sense of community. As the Premier Good To Know REALTOR®, I help 
                 families and investors find their ideal properties in this thriving city.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Top-rated schools and park-rich neighborhoods</span>
+                  <span className="text-gray-700">CCSD schools and park-rich neighborhoods</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />

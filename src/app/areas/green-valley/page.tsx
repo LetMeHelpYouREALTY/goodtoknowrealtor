@@ -68,7 +68,7 @@ export default function GreenValleyPage() {
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Top-rated schools and parks, pools, and community amenities</span>
+                  <span className="text-gray-700">CCSD schools, parks, pools, and community amenities</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
