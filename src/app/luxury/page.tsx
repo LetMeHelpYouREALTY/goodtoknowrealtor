@@ -31,7 +31,7 @@ export default function LuxuryPage() {
       description: 'Premier master-planned community with luxury estates',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$800K - $5M+',
-      features: ['Golf course communities', 'Mountain views', 'Private amenities', 'Top-rated schools'],
+      features: ['Golf course communities', 'Mountain views', 'Private amenities', 'CCSD schools'],
     },
     {
       name: 'Henderson',

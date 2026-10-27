@@ -175,7 +175,7 @@ export default function FirstTimeBuyerGuide2025Page() {
     {
       name: 'Henderson',
       priceRange: '$400K - $700K',
-      highlights: ['Community amenities', 'Top-rated schools', 'Parks and recreation'],
+      highlights: ['Community amenities', 'CCSD schools', 'Parks and recreation'],
       schools: 'Excellent',
       commute: '20-30 minutes to Strip',
       bestFor: 'Families with children',
@@ -191,7 +191,7 @@ export default function FirstTimeBuyerGuide2025Page() {
     {
       name: 'Green Valley',
       priceRange: '$350K - $600K',
-      highlights: ['Established community', 'Shopping centers', 'Good schools'],
+      highlights: ['Established community', 'Shopping centers', 'CCSD schools'],
       schools: 'Good',
       commute: '20-30 minutes to Strip',
       bestFor: 'Move-up buyers, professionals',

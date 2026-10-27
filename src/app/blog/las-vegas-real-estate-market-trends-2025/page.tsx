@@ -53,7 +53,7 @@ export default function LasVegasMarketTrends2025Page() {
       name: 'Summerlin',
       priceRange: '$650K - $2.5M',
       trend: 'Strong Growth',
-      highlights: ['Master-planned community', 'Top-rated schools', 'Golf course access', 'Luxury amenities'],
+      highlights: ['Master-planned community', 'CCSD schools', 'Golf course access', 'Luxury amenities'],
       growth: '+12%',
     },
     {

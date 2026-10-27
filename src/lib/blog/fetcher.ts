@@ -454,7 +454,7 @@ function generateSampleBlogPosts(): BlogPost[] {
           <li>40+ parks and recreational facilities</li>
           <li>150+ miles of trails and walking paths</li>
           <li>Multiple golf courses and country clubs</li>
-          <li>Top-rated schools and educational facilities</li>
+          <li>CCSD schools, zoned by address</li>
           <li>Diverse dining and shopping options</li>
         </ul>
         
@@ -479,8 +479,8 @@ function generateSampleBlogPosts(): BlogPost[] {
         <h3>Why Choose Summerlin?</h3>
         <p>Residents enjoy:</p>
         <ul>
-          <li>Excellent schools and community amenities</li>
-          <li>Low crime rates and safe neighborhoods</li>
+          <li>CCSD schools, zoned by address, and community amenities</li>
+          <li>Parks, trails, and community centers</li>
           <li>Easy access to the Las Vegas Strip and downtown</li>
           <li>Beautiful mountain views and natural landscapes</li>
           <li>Active community associations and events</li>
@@ -489,7 +489,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         <p>Interested in making Summerlin your home? Contact Dr. Jan Duffy at (702) 222-1964 to explore available properties and learn more about this exceptional community.</p>
       `,
       excerpt:
-        "Explore Summerlin, Las Vegas's premier master-planned community, featuring top-rated amenities, excellent schools, and diverse housing options.",
+        "Explore Summerlin, Las Vegas's premier master-planned community, featuring 150+ parks, Palo Verde High School, and housing from condos to estates.",
       date: '2025-01-08T16:45:00Z',
       author: 'Dr. Jan Duffy',
       image:
