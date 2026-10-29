@@ -99,7 +99,7 @@ Score-Based Content:
   - Speedometer shows "green zone"
   - Message: "Congratulations! You're ready to start your home search"
   - 3 Insights: Strengths + recommended neighborhoods based on answers
-  - Next Step: "Schedule One-on-One Property Tour with Dr. Jan - Call 702-222-1964"
+  - Next Step: "Schedule One-on-One Property Tour with Dr. Jan - Call 702-500-1955"
 
 Contact info footer with social links
 
@@ -216,7 +216,7 @@ Following industry standards for realtor websites to improve user experience and
      - Mortgage Calculator
    
    - **Column 4**: Contact & Social
-     - Phone: (702) 222-1964
+     - Phone: (702) 500-1955
      - Email: Contact form
      - Office address
      - Social media links

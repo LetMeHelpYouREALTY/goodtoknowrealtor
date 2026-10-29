@@ -38,7 +38,7 @@ export async function GET(request: Request) {
     .slice(0, 3)
     .map((item) => clampText(item, 60));
 
-  const phone = clampText(searchParams.get('phone')?.trim() || '(702) 222-1964', 20);
+  const phone = clampText(searchParams.get('phone')?.trim() || '(702) 500-1955', 20);
   const urlText = clampText(searchParams.get('url')?.trim() || 'www.goodtoknowrealtor.com', 60);
 
   return new ImageResponse(

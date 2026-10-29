@@ -71,7 +71,7 @@ export default async function BlogPage() {
             </p>
             <div className='mt-6 flex flex-col sm:flex-row gap-3 justify-center items-center'>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='bg-white text-blue-800 px-6 py-2 rounded-lg font-semibold text-base hover:bg-blue-50 transition-colors duration-200 shadow-lg'
               >
                 <Image
@@ -81,7 +81,7 @@ export default async function BlogPage() {
                   height={20}
                   className='inline-block w-5 h-5 mr-2'
                 />{' '}
-                (702) 222-1964
+                (702) 500-1955
               </Link>
               <Link
                 href='/contact'
@@ -221,7 +221,7 @@ export default async function BlogPage() {
             </p>
             <div className='flex flex-col sm:flex-row gap-3 justify-center items-center'>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='bg-white text-blue-800 px-6 py-3 rounded-lg font-semibold text-base hover:bg-blue-50 transition-colors duration-200 shadow-lg'
               >
                 <Image
@@ -231,7 +231,7 @@ export default async function BlogPage() {
                   height={20}
                   className='inline-block w-5 h-5 mr-2'
                 />{' '}
-                Call (702) 222-1964
+                Call (702) 500-1955
               </Link>
               <Link
                 href='/contact'

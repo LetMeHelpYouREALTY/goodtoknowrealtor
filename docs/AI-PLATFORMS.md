@@ -13,7 +13,7 @@ This doc describes how the site is set up for AI crawlers, AI search (e.g. Perpl
 The file includes:
 
 - **H1 + blockquote:** Site name and one-line description (Dr. Jan Duffy, Top 1%, Las Vegas/Henderson expertise).
-- **About & contact:** Home, About, Contact with clear CTA (702-222-1964).
+- **About & contact:** Home, About, Contact with clear CTA (702-500-1955).
 - **Services & listings:** Listings, Luxury, Services, Home value.
 - **Areas & neighborhoods:** Communities index, key area pages (Summerlin, Henderson, Green Valley), and a short note that 120+ expert neighborhoods have pages under `/areas/[slug]`.
 - **Guides & tools:** Buyer/seller guides, assessments, Why list with us.

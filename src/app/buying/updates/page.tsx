@@ -415,7 +415,7 @@ export default function BuyingUpdatesPage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
             <Link
-              href='tel:702-222-1964'
+              href='tel:702-500-1955'
               className='bg-white text-amber-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors duration-200 shadow-lg'
             >
               <Image
@@ -425,7 +425,7 @@ export default function BuyingUpdatesPage() {
                 height={24}
                 className='inline-block w-6 h-6 mr-2'
               />{' '}
-              Call (702) 222-1964
+              Call (702) 500-1955
             </Link>
             <Link
               href='/contact'

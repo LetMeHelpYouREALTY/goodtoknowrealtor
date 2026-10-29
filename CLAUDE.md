@@ -11,7 +11,7 @@ Real estate site for **Dr. Jan Duffy** (Good To Know REALTOR®), Berkshire Hatha
 - **Name:** Dr. Jan Duffy (NEVER "Janet")
 - **License:** S.0197614.LLC
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
-- **CTA:** Call/Text **702-222-1964** — use `tel:702-222-1964` and `sms:702-222-1964`; verify number for this site only
+- **CTA:** Call/Text **702-500-1955** — use `tel:702-500-1955` and `sms:702-500-1955`; verify number for this site only
 - **NAP:** Match Google Business Profile on every page (visible + JSON-LD). Audit monthly.
 
 ## Stack

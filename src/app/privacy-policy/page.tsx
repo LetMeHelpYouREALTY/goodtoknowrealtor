@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className='bg-gray-50 p-4 rounded-lg'>
                 <p className='text-gray-700'>Dr. Jan Duffy</p>
-                <p className='text-gray-700'>Phone: (702) 222-1964</p>
+                <p className='text-gray-700'>Phone: (702) 500-1955</p>
                 <p className='text-gray-700'>Email: info@drjanduffy.com</p>
               </div>
             </div>

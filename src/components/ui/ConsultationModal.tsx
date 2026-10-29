@@ -184,7 +184,7 @@ export function ConsultationModal({ isOpen, onClose, source = 'header' }: Consul
       }
     } catch (error) {
       console.error('Error submitting consultation:', error);
-      setSubmitError('There was an error submitting your consultation request. Please try again or call (702) 222-1964 directly.');
+      setSubmitError('There was an error submitting your consultation request. Please try again or call (702) 500-1955 directly.');
       
       // Track error
       if (typeof window !== 'undefined' && window.gtag) {
@@ -270,11 +270,11 @@ export function ConsultationModal({ isOpen, onClose, source = 'header' }: Consul
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:702-222-1964"
+                  href="tel:702-500-1955"
                   className="btn btn-primary inline-flex items-center justify-center gap-2"
                 >
                   <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                  Call (702) 222-1964
+                  Call (702) 500-1955
                 </a>
                 <button
                   onClick={onClose}

@@ -67,10 +67,10 @@ export default function ContactPage() {
                 For immediate assistance or urgent questions, call me directly.
               </p>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='btn btn-primary'
               >
-                (702) 222-1964
+                (702) 500-1955
               </Link>
             </div>
 
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 Quick questions? Send me a text message for fast responses.
               </p>
               <Link
-                href='sms:702-222-1964'
+                href='sms:702-500-1955'
                 className='btn btn-primary'
               >
                 Send Text
@@ -349,7 +349,7 @@ export default function ContactPage() {
                   />
                     <div>
                       <p className='font-semibold text-gray-900'>Contact</p>
-                      <p className='text-gray-600'>Phone: (702) 222-1964</p>
+                      <p className='text-gray-600'>Phone: (702) 500-1955</p>
                       <p className='text-gray-600'>
                         Email: janet@goodtoknowrealtor.com
                       </p>
@@ -489,7 +489,7 @@ export default function ContactPage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
             <Link
-              href='tel:702-222-1964'
+              href='tel:702-500-1955'
               className='bg-white text-amber-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors duration-200 shadow-lg'
             >
               <Image
@@ -499,10 +499,10 @@ export default function ContactPage() {
                 height={24}
                 className='inline-block w-6 h-6 mr-2'
               />{' '}
-              Call (702) 222-1964
+              Call (702) 500-1955
             </Link>
             <Link
-              href='sms:702-222-1964'
+              href='sms:702-500-1955'
               className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-amber-800 transition-colors duration-200'
             >
               <span className='inline-flex items-center gap-2'>

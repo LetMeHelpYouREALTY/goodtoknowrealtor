@@ -10,7 +10,7 @@ Use when working on this real estate site: persona, Las Vegas/Henderson hyperloc
 | **License** | S.0197614.LLC |
 | **Brokerage** | Berkshire Hathaway HomeServices Nevada Properties |
 | **Market** | Las Vegas / Henderson, NV |
-| **Primary CTA** | Call/Text **702-222-1964** — `tel:702-222-1964`, `sms:702-222-1964` (verify for this site only) |
+| **Primary CTA** | Call/Text **702-500-1955** — `tel:702-500-1955`, `sms:702-500-1955` (verify for this site only) |
 | **NAP** | Must exactly match Google Business Profile on every page (visible text + JSON-LD). Audit monthly. |
 
 ## Tech stack

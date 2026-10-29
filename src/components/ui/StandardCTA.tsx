@@ -14,8 +14,8 @@ interface StandardCTAProps {
 /**
  * StandardCTA - Standardized call-to-action buttons used site-wide
  * 
- * PRIMARY: Green button - "Call (702) 222-1964"
- * SECONDARY: White with border - "Text (702) 222-1964"
+ * PRIMARY: Green button - "Call (702) 500-1955"
+ * SECONDARY: White with border - "Text (702) 500-1955"
  * 
  * Usage:
  * <StandardCTA variant="primary" />
@@ -28,7 +28,7 @@ export function StandardCTA({
   layout = 'horizontal',
   className = '',
   showIcon = true,
-  phoneNumber = '702-222-1964'
+  phoneNumber = '702-500-1955'
 }: StandardCTAProps) {
   
   const sizeClasses = {
@@ -50,7 +50,7 @@ export function StandardCTA({
   };
 
   const currentSize = sizeClasses[size];
-  const displayPhone = `(702) 222-1964`;
+  const displayPhone = `(702) 500-1955`;
 
   // Primary CTA Button Styles
   const primaryButtonClasses = `

@@ -133,7 +133,7 @@ All 6 cards have been rewritten using the transformation template. Each follows 
 2. **Main CTA Bar:** Bottom of section
    - Gradient background (blue-600 to indigo-700)
    - Headline: "Ready to Get These Results for Yourself?"
-   - Two buttons: "Schedule Consultation" (primary) + "Call (702) 222-1964" (secondary)
+   - Two buttons: "Schedule Consultation" (primary) + "Call (702) 500-1955" (secondary)
 
 ### **CTA Text Guidelines:**
 - ✅ Use action verbs: "See", "Get", "Explore", "Schedule"

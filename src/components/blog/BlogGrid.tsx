@@ -71,7 +71,7 @@ export function BlogGrid({ posts }: BlogGridProps) {
                   Read Full Article
                 </a>
                 <a
-                  href='tel:702-222-1964'
+                  href='tel:702-500-1955'
                   className='text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 text-sm'
                 >
                   <Image
@@ -81,7 +81,7 @@ export function BlogGrid({ posts }: BlogGridProps) {
                     height={20}
                     className='inline-block w-5 h-5 mr-1'
                   />{' '}
-                  (702) 222-1964
+                  (702) 500-1955
                 </a>
               </div>
             </div>

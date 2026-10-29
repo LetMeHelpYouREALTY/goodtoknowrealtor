@@ -369,7 +369,7 @@ export function PersonalizedForm({ persona, onBack, onSuccess }: PersonalizedFor
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setErrors({ submit: 'There was an error submitting your form. Please call (702) 222-1964 directly.' });
+      setErrors({ submit: 'There was an error submitting your form. Please call (702) 500-1955 directly.' });
     } finally {
       setIsSubmitting(false);
     }
@@ -421,10 +421,10 @@ export function PersonalizedForm({ persona, onBack, onSuccess }: PersonalizedFor
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:702-222-1964"
+              href="tel:702-500-1955"
               className="btn btn-primary px-8 py-3"
             >
-              Call (702) 222-1964
+              Call (702) 500-1955
             </a>
             <button
               onClick={onBack}

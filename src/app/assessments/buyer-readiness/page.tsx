@@ -110,10 +110,10 @@ export default function BuyerReadinessAssessmentPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="btn btn-primary"
               >
-                Call (702) 222-1964
+                Call (702) 500-1955
               </a>
               <a
                 href="mailto:jan@goodtoknowrealtor.com"

@@ -15,7 +15,7 @@ A Next.js 15 application that automatically fetches and displays blog posts from
 
 - **Las Vegas Real Estate Focus**: Customized for local market insights
 - **Professional Design**: Gold/amber color scheme with real estate aesthetics
-- **Contact Integration**: Prominent phone number (702-222-1964) and consultation CTAs
+- **Contact Integration**: Prominent phone number (702-500-1955) and consultation CTAs
 - **Attribution**: Proper credit to original BHHS source content
 
 ### Technical Excellence
@@ -232,7 +232,7 @@ This application properly attributes content to the original source:
 
 For questions about this implementation:
 
-- **Real Estate Services**: Contact Dr. Janet Duffy at (702) 222-1964
+- **Real Estate Services**: Contact Dr. Janet Duffy at (702) 500-1955
 - **Technical Issues**: Create an issue in this repository
 
 ## 📄 License

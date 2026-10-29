@@ -42,12 +42,12 @@ export default async function MarketInsightsPage() {
           subtitle={'Stay ahead with data-driven insights, trends, and analysis from Dr. Jan Duffy, your Premier Good To Know REALTOR®'}
         >
           <Link
-            href='tel:702-222-1964'
+            href='tel:702-500-1955'
             className='btn btn-primary'
           >
             <span className='inline-flex items-center gap-2'>
               <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-              Call (702) 222-1964
+              Call (702) 500-1955
             </span>
           </Link>
           <Link
@@ -127,11 +127,11 @@ export default async function MarketInsightsPage() {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-200 shadow-lg flex items-center justify-center gap-2'
               >
                 <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                Call (702) 222-1964
+                Call (702) 500-1955
               </Link>
               <Link
                 href='/contact'

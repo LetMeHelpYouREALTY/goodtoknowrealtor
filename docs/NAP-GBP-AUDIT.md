@@ -9,7 +9,7 @@ Use this checklist each month so NAP, CTAs, and schema stay aligned with the Goo
 
 ## 2. Single source of truth (this repo)
 
-- [ ] **Phone:** Matches GBP exactly. Primary CTA: **702-222-1964**; use `tel:702-222-1964` and `sms:702-222-1964` in links.
+- [ ] **Phone:** Matches GBP exactly. Primary CTA: **702-500-1955**; use `tel:702-500-1955` and `sms:702-500-1955` in links.
 - [ ] **Name:** Dr. Jan Duffy (never "Janet") everywhere — copy, meta, OG, schema, image filenames/alt text. To find "Janet" references: `rg -i "janet" --type-add 'web:*.{tsx,ts,jsx,js}' -t web src` and fix to "Jan".
 - [ ] **Address:** Matches GBP in visible NAP blocks and in JSON-LD (e.g. `src/lib/seo.ts` and any schema helpers).
 - [ ] **Hours:** If you expose hours on the site, they match GBP.
@@ -22,7 +22,7 @@ Check at least:
 
 ## 3. CTA consistency
 
-- [ ] All click-to-call / click-to-text use **702-222-1964** (no other numbers unless intentionally different, e.g. office).
+- [ ] All click-to-call / click-to-text use **702-500-1955** (no other numbers unless intentionally different, e.g. office).
 - [ ] No hardcoded alternate numbers in components unless documented.
 
 Quick check from repo root:
@@ -31,7 +31,7 @@ Quick check from repo root:
 rg "tel:|sms:|702-" --type-add 'web:*.{tsx,ts,jsx,js}' -t web src
 ```
 
-Confirm every number is 702-222-1964 (or an approved exception).
+Confirm every number is 702-500-1955 (or an approved exception).
 
 ## 4. Schema (JSON-LD)
 
@@ -43,7 +43,7 @@ Confirm every number is 702-222-1964 (or an approved exception).
 
 ## 5. Key pages spot-check
 
-- [ ] Homepage: NAP in visible text and in schema; primary CTA is 702-222-1964.
+- [ ] Homepage: NAP in visible text and in schema; primary CTA is 702-500-1955.
 - [ ] Contact page: NAP, map, Call/Directions/Reviews; schema present.
 - [ ] Area/community pages: Correct agent name and CTA; schema present.
 - [ ] Any page with FAQ: FAQ schema if you use it.
@@ -62,7 +62,7 @@ Run from repo root to verify NAP/CTA and naming consistency:
 # Find any "Janet" (should be "Jan") in src
 rg -i "janet" --type-add 'web:*.{tsx,ts,jsx,js}' -t web src
 
-# List all tel/sms and 702-* usages (confirm 702-222-1964 only)
+# List all tel/sms and 702-* usages (confirm 702-500-1955 only)
 rg "tel:|sms:|702-" --type-add 'web:*.{tsx,ts,jsx,js}' -t web src
 
 # Confirm RealEstateAgent / LocalBusiness in schema

@@ -12,6 +12,7 @@ import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderA
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
 import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
 import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
+import WidgetTracker from './widget-tracker'
 
 // Font loaders must be called at module scope
 const dmSans = DM_Sans({
@@ -246,6 +247,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         </ScreenReaderAnnouncementsProvider>
+        <WidgetTracker />
       </body>
     </html>
   );

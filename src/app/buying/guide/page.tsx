@@ -84,7 +84,7 @@ export default function BuyingGuidePage() {
 
             <p>
               Ready for personalized guidance? Call or text{' '}
-              <a href="tel:702-222-1964">702-222-1964</a> or{' '}
+              <a href="tel:702-500-1955">702-500-1955</a> or{' '}
               <Link href="/contact">schedule a consultation</Link>.
             </p>
           </div>
