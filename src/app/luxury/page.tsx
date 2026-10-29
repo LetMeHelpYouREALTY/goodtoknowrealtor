@@ -11,7 +11,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Luxury Real Estate Las Vegas | Dr. Jan Duffy - Premier Luxury Agent',
-  description: 'Discover exceptional luxury properties in Las Vegas with Dr. Jan Duffy, Top 1% agent specializing in high-end homes, estates, and exclusive communities.',
+  description: 'Discover exceptional luxury properties in Las Vegas with Dr. Jan Duffy, Top 1% agent specializing in high-end homes, estates, and luxury communities.',
   keywords: ['luxury real estate Las Vegas', 'luxury homes Las Vegas', 'high-end properties', 'Dr. Jan Duffy', 'luxury realtor Las Vegas', 'Summerlin luxury', 'Henderson luxury', 'Lake Las Vegas'],
   url: '/luxury',
   image: '/images/luxury-real-estate-og.jpg',
@@ -31,11 +31,11 @@ export default function LuxuryPage() {
       description: 'Premier master-planned community with luxury estates',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$800K - $5M+',
-      features: ['Golf course communities', 'Mountain views', 'Private amenities', 'Top-rated schools'],
+      features: ['Golf course communities', 'Mountain views', 'Private amenities', 'Nearby public schools'],
     },
     {
       name: 'Henderson',
-      description: 'Exclusive neighborhoods with stunning mountain views',
+      description: 'Luxury neighborhoods with stunning mountain views',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$600K - $3M+',
       features: ['Resort-style living', 'Lake communities', 'Hiking trails', 'Shopping centers'],
@@ -114,7 +114,7 @@ export default function LuxuryPage() {
         {/* Hero Section */}
         <PageHero
           title='Luxury Real Estate in Las Vegas'
-          subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Top 1% Las Vegas agent specializing in high-end homes, estates, and exclusive communities'
+          subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Top 1% Las Vegas agent specializing in high-end homes, estates, and luxury communities'
           gradientFromClassName='from-amber-900'
           gradientToClassName='to-amber-800'
           backgroundImageUrl='https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1973&q=80'
@@ -166,7 +166,7 @@ export default function LuxuryPage() {
                 Premier Luxury Communities in Las Vegas
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Explore Las Vegas's most exclusive neighborhoods, each offering unique luxury amenities and lifestyle experiences
+                Explore Las Vegas's most luxury neighborhoods, each offering unique luxury amenities and lifestyle experiences
               </p>
             </div>
 

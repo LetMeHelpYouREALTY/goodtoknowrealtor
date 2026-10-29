@@ -53,14 +53,14 @@ export default function LasVegasMarketTrends2025Page() {
       name: 'Summerlin',
       priceRange: '$650K - $2.5M',
       trend: 'Strong Growth',
-      highlights: ['Master-planned community', 'Top-rated schools', 'Golf course access', 'Luxury amenities'],
+      highlights: ['Master-planned community', 'Nearby public schools', 'Golf course access', 'Luxury amenities'],
       growth: '+12%',
     },
     {
       name: 'Henderson',
       priceRange: '$400K - $1.2M',
       trend: 'Steady Appreciation',
-      highlights: ['Family-friendly', 'Growing tech sector', 'Lake communities', 'Recreation facilities'],
+      highlights: ['Parks', 'Growing tech sector', 'Lake communities', 'Recreation facilities'],
       growth: '+9%',
     },
     {
@@ -74,7 +74,7 @@ export default function LasVegasMarketTrends2025Page() {
       name: 'The Ridges',
       priceRange: '$1.5M - $8M',
       trend: 'Luxury Market Leader',
-      highlights: ['Strip views', 'Custom estates', 'Exclusive community', 'High-end amenities'],
+      highlights: ['Strip views', 'Custom estates', 'Luxury community', 'High-end amenities'],
       growth: '+18%',
     },
   ];

@@ -55,7 +55,7 @@ export default function GreenValleyPage() {
                 Green Valley is Henderson&apos;s premier master-planned community, offering luxury 
                 living with world-class golf courses, upscale shopping, and beautiful homes. 
                 As the Premier Good To Know REALTOR®, I specialize in helping clients find 
-                their perfect home in this exclusive community.
+                their perfect home in this luxury community.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center">
@@ -68,7 +68,7 @@ export default function GreenValleyPage() {
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Top-rated schools and family-friendly amenities</span>
+                  <span className="text-gray-700">Nearby schools and community amenities</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />

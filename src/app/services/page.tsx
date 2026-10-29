@@ -44,7 +44,7 @@ export default function ServicesPage() {
       description: 'Premium real estate services for luxury homes and estates.',
       href: '/luxury',
       icon: '👑',
-      details: 'Specialized expertise in high-end properties with discreet marketing, luxury staging, and connections to qualified buyers. Experience with estates, custom homes, and exclusive communities.',
+      details: 'Specialized expertise in high-end properties with discreet marketing, luxury staging, and connections to qualified buyers. Experience with estates, custom homes, and luxury communities.',
     },
     {
       title: 'Investment Properties',

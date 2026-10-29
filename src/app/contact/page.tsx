@@ -431,7 +431,7 @@ export default function ContactPage() {
               <h3 className='text-xl font-bold text-gray-900 mb-2'>
                 Henderson
               </h3>
-              <p className='text-gray-600'>Family-friendly neighborhoods</p>
+              <p className='text-gray-600'>Neighborhoods</p>
             </div>
 
             <div className='text-center'>
