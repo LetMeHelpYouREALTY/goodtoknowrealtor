@@ -454,7 +454,7 @@ function generateSampleBlogPosts(): BlogPost[] {
           <li>40+ parks and recreational facilities</li>
           <li>150+ miles of trails and walking paths</li>
           <li>Multiple golf courses and country clubs</li>
-          <li>Top-rated schools and educational facilities</li>
+          <li>Nearby public schools and educational facilities</li>
           <li>Diverse dining and shopping options</li>
         </ul>
         
@@ -462,7 +462,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         <p>The community offers a wide range of housing options to suit every lifestyle:</p>
         <ul>
           <li>Luxury custom homes and estates</li>
-          <li>Family-friendly single-family homes</li>
+          <li>Single-family homes</li>
           <li>Modern condominiums and townhomes</li>
           <li>Active adult communities</li>
         </ul>
@@ -479,8 +479,8 @@ function generateSampleBlogPosts(): BlogPost[] {
         <h3>Why Choose Summerlin?</h3>
         <p>Residents enjoy:</p>
         <ul>
-          <li>Excellent schools and family amenities</li>
-          <li>Low crime rates and safe neighborhoods</li>
+          <li>Nearby public schools and family amenities</li>
+          <li>Crime data available on the LVMPD online crime map</li>
           <li>Easy access to the Las Vegas Strip and downtown</li>
           <li>Beautiful mountain views and natural landscapes</li>
           <li>Active community associations and events</li>
@@ -489,7 +489,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         <p>Interested in making Summerlin your home? Contact Dr. Jan Duffy at (702) 222-1964 to explore available properties and learn more about this exceptional community.</p>
       `,
       excerpt:
-        "Explore Summerlin, Las Vegas's premier master-planned community, featuring top-rated amenities, excellent schools, and diverse housing options.",
+        "Explore Summerlin, Las Vegas's premier master-planned community, featuring top-rated amenities, nearby public schools, and diverse housing options.",
       date: '2025-01-08T16:45:00Z',
       author: 'Dr. Jan Duffy',
       image:
@@ -538,7 +538,7 @@ function generateSampleBlogPosts(): BlogPost[] {
             <p>Prime investment locations include:</p>
             <ul>
               <li><strong>Downtown Las Vegas</strong>: Urban revitalization and development</li>
-              <li><strong>Henderson</strong>: Family-oriented, stable neighborhoods</li>
+              <li><strong>Henderson</strong>: Stable neighborhoods</li>
               <li><strong>North Las Vegas</strong>: Emerging growth areas</li>
               <li><strong>Southwest Valley</strong>: New construction and master-planned communities</li>
             </ul>
@@ -664,7 +664,7 @@ function generateSampleBlogPosts(): BlogPost[] {
               <li><strong>Smart Home Technology</strong>: State-of-the-art automation and security systems</li>
             </ul>
             
-            <h3>Exclusive Neighborhoods</h3>
+            <h3>Luxury Neighborhoods</h3>
             <p>Las Vegas luxury is concentrated in several prestigious areas:</p>
             <ul>
               <li><strong>The Ridges</strong>: Mountain-top estates with panoramic views</li>
@@ -689,7 +689,7 @@ function generateSampleBlogPosts(): BlogPost[] {
             <p>Las Vegas luxury real estate offers strong investment opportunities:</p>
             <ul>
               <li>Consistent appreciation in premier locations</li>
-              <li>Limited inventory in exclusive communities</li>
+              <li>Limited inventory in communities</li>
               <li>International buyer interest</li>
               <li>No state income tax advantage</li>
               <li>Growing luxury market demand</li>
@@ -708,7 +708,7 @@ function generateSampleBlogPosts(): BlogPost[] {
             <p>Interested in Las Vegas luxury real estate? Contact Dr. Jan Duffy at (702) 222-1964 for a private consultation.</p>
           `,
       excerpt:
-        'Explore Las Vegas luxury real estate market featuring world-class amenities, exclusive neighborhoods, and exceptional investment potential.',
+        'Explore Las Vegas luxury real estate market featuring world-class amenities, luxury neighborhoods, and exceptional investment potential.',
       date: '2025-01-01T10:30:00Z',
       author: 'Dr. Jan Duffy',
       image:
@@ -721,7 +721,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         'luxury real estate',
         'las vegas',
         'high-end properties',
-        'exclusive communities',
+        'communities',
       ],
       readingTime: 6,
     },
@@ -818,7 +818,7 @@ function generateSampleBlogPosts(): BlogPost[] {
               <li>Maintain property values and neighborhood aesthetics</li>
               <li>Ensure consistent community standards</li>
               <li>Prevent incompatible land uses</li>
-              <li>Protect the character of established neighborhoods</li>
+              <li>Protect the character of older neighborhoods</li>
             </ul>
             
             <h3>Important Considerations for Buyers</h3>

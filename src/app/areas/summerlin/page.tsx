@@ -84,7 +84,7 @@ export default function SummerlinPage() {
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 Summerlin is Las Vegas&apos;s premier master-planned community, offering luxury living 
-                with world-class amenities, top-rated schools, and stunning mountain views. I 
+                with world-class amenities, nearby public schools, and stunning mountain views. I 
                 specialize in helping clients find their perfect home in this exceptional community.
               </p>
               <ul className="space-y-4">
@@ -94,7 +94,7 @@ export default function SummerlinPage() {
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Included' />
-                  <span className="text-gray-700">Top-rated schools and family-friendly amenities</span>
+                  <span className="text-gray-700">Nearby schools and community amenities</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Included' />

@@ -32,7 +32,7 @@ Dr. Jan Duffy (never "Janet") is a Nevada-licensed REALTOR® (S.0197614.LLC). Pr
 
 - [Communities](${baseUrl}/communities): All Las Vegas Valley neighborhoods (full expert list and area pages)
 - [Summerlin](${baseUrl}/areas/summerlin): Premier master-planned area
-- [Henderson](${baseUrl}/areas/henderson): Family-friendly and luxury
+- [Henderson](${baseUrl}/areas/henderson): Luxury
 - [Green Valley](${baseUrl}/areas/green-valley): Henderson golf and family communities
 
 Expert neighborhoods include Aliante, Anthem, Cadence, Green Valley Ranch, Inspirada, Lake Las Vegas, MacDonald Ranch, Mountains Edge, Southern Highlands, Summerlin (and Summerlin Hills/North/South/West), The Ridges, and 100+ others. Each has a dedicated page under /areas/[slug].

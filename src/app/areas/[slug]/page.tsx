@@ -110,7 +110,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
                     ariaLabel="Highlight"
                   />
                   <span className="text-gray-700">
-                    Top-rated schools and community amenities
+                    Nearby public schools and community amenities
                   </span>
                 </li>
                 <li className="flex items-center">
@@ -120,7 +120,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
                     ariaLabel="Highlight"
                   />
                   <span className="text-gray-700">
-                    Luxury homes and family-friendly neighborhoods
+                    Luxury homes and neighborhoods
                   </span>
                 </li>
               </ul>

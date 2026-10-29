@@ -121,7 +121,7 @@ const mockPosts = {
     {
       id: '10',
       title: 'Best Las Vegas Neighborhoods for Families: School Districts & Safety',
-      excerpt: 'Comprehensive guide to family-friendly neighborhoods in Las Vegas with top-rated schools.',
+      excerpt: 'Comprehensive guide to master-planned neighborhoods in Las Vegas with nearby schools.',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       date: '2025-01-17',
       readTime: '9 min read'

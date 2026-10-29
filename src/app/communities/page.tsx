@@ -41,14 +41,14 @@ export default function CommunitiesPage() {
       description: 'Premier master-planned community with luxury homes and world-class amenities.',
       avgPrice: '$750,000',
       propertiesCount: 890,
-      highlights: ['Red Rock Canyon Views', 'Top-Rated Schools', 'Golf Courses']
+      highlights: ['Red Rock Canyon Views', 'Nearby Public Schools', 'Golf Courses']
     },
     {
       id: 'henderson',
       name: 'Henderson',
       href: '/areas/henderson',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Family-friendly community with excellent schools and recreational facilities.',
+      description: 'Community with nearby schools and recreational facilities.',
       avgPrice: '$525,000',
       propertiesCount: 1100,
       highlights: ['Lake Mead Access', 'Family Amenities', 'Growing Tech Sector']
@@ -78,10 +78,10 @@ export default function CommunitiesPage() {
       name: 'Green Valley',
       href: '/areas/green-valley',
       image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Established neighborhood in Henderson with mature trees and community amenities.',
+      description: 'Older neighborhood in Henderson with mature trees and community amenities.',
       avgPrice: '$600,000',
       propertiesCount: 680,
-      highlights: ['Mature Neighborhoods', 'Community Parks', 'Established Schools']
+      highlights: ['Older Neighborhoods', 'Community Parks', 'Established Schools']
     }
   ];
 
@@ -105,7 +105,7 @@ export default function CommunitiesPage() {
         {/* Hero Section */}
         <PageHero
           title='Las Vegas Communities'
-          subtitle='Discover the perfect Las Vegas neighborhood for your lifestyle. From luxury Summerlin to family-friendly Henderson.'
+          subtitle='Discover the perfect Las Vegas neighborhood for your lifestyle. From luxury Summerlin to Henderson.'
         />
 
         {/* Communities Grid */}

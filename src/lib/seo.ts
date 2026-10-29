@@ -673,7 +673,7 @@ export const PAGE_SEO = {
   },
   luxury: {
     title: 'Luxury Real Estate in Las Vegas | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-    description: 'Premium luxury real estate services in Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy. Summerlin, Henderson, and exclusive neighborhoods.',
+    description: 'Premium luxury real estate services in Las Vegas with Premier Good To Know REALTOR® Dr. Jan Duffy. Summerlin, Henderson, and luxury neighborhoods.',
     keywords: ['luxury homes Las Vegas', 'Summerlin luxury homes', 'Henderson luxury homes', 'Las Vegas luxury real estate'],
   },
   investing: {

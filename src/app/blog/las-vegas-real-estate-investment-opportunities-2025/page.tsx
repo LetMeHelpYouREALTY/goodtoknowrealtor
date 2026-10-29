@@ -121,7 +121,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
       avgPrice: '$520K',
       rentalYield: '6-10%',
       growth: '+9% YoY',
-      highlights: ['Family-friendly', 'Tech sector growth', 'Stable market', 'Good schools'],
+      highlights: ['Parks', 'Tech sector growth', 'Stable market', 'Nearby schools'],
       investmentType: 'Long-term Rentals',
     },
     {
@@ -129,7 +129,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
       avgPrice: '$280K',
       rentalYield: '10-15%',
       growth: '+12% YoY',
-      highlights: ['Urban renewal', 'Entertainment district', 'Young professionals', 'Fix & flip opportunities'],
+      highlights: ['Urban renewal', 'Entertainment district', 'Professionals', 'Fix & flip opportunities'],
       investmentType: 'Fix & Flip',
     },
     {
