@@ -21,7 +21,7 @@ const trustBadges: TrustBadge[] = [
   {
     id: '2',
     title: '20+ Years Experience',
-    description: 'Expert knowledge of luxury Las Vegas market and exclusive communities',
+    description: 'Expert knowledge of luxury Las Vegas market and luxury communities',
     icon: '⭐',
     verification: 'Licensed REALTOR®'
   },

@@ -403,7 +403,7 @@ export default function BuyingPage() {
                   Henderson
                 </h3>
                 <p className='text-gray-600 mb-4'>
-                  Family-friendly with excellent schools
+                  Parks and nearby schools
                 </p>
                 <div className='flex items-center justify-between'>
                   <span className='text-lg font-semibold text-amber-600'>

@@ -170,15 +170,15 @@ export default function FirstTimeBuyerGuide2025Page() {
       highlights: ['New construction', 'Affordable entry point', 'Growing job market'],
       schools: 'Good',
       commute: '15-25 minutes to Strip',
-      bestFor: 'First-time buyers, young families',
+      bestFor: 'First-time buyers, move-up buyers',
     },
     {
       name: 'Henderson',
       priceRange: '$400K - $700K',
-      highlights: ['Family-friendly', 'Top-rated schools', 'Parks and recreation'],
+      highlights: ['Parks', 'Nearby schools', 'Recreation'],
       schools: 'Excellent',
       commute: '20-30 minutes to Strip',
-      bestFor: 'Families with children',
+      bestFor: 'Buyers who want more bedrooms',
     },
     {
       name: 'Summerlin',
@@ -191,7 +191,7 @@ export default function FirstTimeBuyerGuide2025Page() {
     {
       name: 'Green Valley',
       priceRange: '$350K - $600K',
-      highlights: ['Established community', 'Shopping centers', 'Good schools'],
+      highlights: ['Older community', 'Shopping centers', 'Nearby schools'],
       schools: 'Good',
       commute: '20-30 minutes to Strip',
       bestFor: 'Established families, professionals',

@@ -86,12 +86,12 @@ export default function TeamPage() {
       title: 'Luxury Property Specialist',
       credentials: 'REALTOR®, Luxury Specialist',
       experience: '10+ Years',
-      specialties: ['Luxury Estates', 'High-End Condos', 'Golf Course Homes', 'Exclusive Communities'],
-      bio: 'Jennifer specializes in luxury properties and exclusive communities. Her discretion and market knowledge serve high-net-worth clients throughout Las Vegas.',
+      specialties: ['Luxury Estates', 'High-End Condos', 'Golf Course Homes', 'Communities'],
+      bio: 'Jennifer specializes in luxury properties and luxury communities. Her discretion and market knowledge serve high-net-worth clients throughout Las Vegas.',
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80',
       achievements: [
         'Luxury Property Expert',
-        'Exclusive Community Specialist',
+        'Luxury community Specialist',
         'High-Net-Worth Client Advisor',
         'Discretion & Privacy Certified'
       ],
