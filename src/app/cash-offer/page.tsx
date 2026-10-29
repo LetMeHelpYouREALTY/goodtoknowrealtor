@@ -53,7 +53,7 @@ export default function CashOfferPage() {
                 Why Choose Dr. Jan Duffy's Cash Offer Program?
               </h2>
               <p className='text-xl text-gray-600 mb-12 text-center leading-relaxed'>
-                As a Top 1% Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy offers a unique cash offer program that provides homeowners with a fast, hassle-free alternative to traditional home selling.
+                As a Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy offers a unique cash offer program that provides homeowners with a fast, hassle-free alternative to traditional home selling.
               </p>
               
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>

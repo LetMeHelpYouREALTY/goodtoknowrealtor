@@ -389,7 +389,7 @@ export default function ResourcesPage() {
               Need Personalized Guidance?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              While our resources provide valuable information, nothing beats personalized guidance from Las Vegas's Top 1% real estate agent. Get expert consultation tailored to your specific situation.
+              While our resources provide valuable information, nothing beats personalized guidance from Las Vegas real estate agent. Get expert consultation tailored to your specific situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

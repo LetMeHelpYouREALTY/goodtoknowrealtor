@@ -11,7 +11,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Luxury Real Estate Las Vegas | Dr. Jan Duffy - Premier Luxury Agent',
-  description: 'Discover exceptional luxury properties in Las Vegas with Dr. Jan Duffy, Top 1% agent specializing in high-end homes, estates, and luxury communities.',
+  description: 'Discover exceptional luxury properties in Las Vegas with Dr. Jan Duffy, agent specializing in high-end homes, estates, and luxury communities.',
   keywords: ['luxury real estate Las Vegas', 'luxury homes Las Vegas', 'high-end properties', 'Dr. Jan Duffy', 'luxury realtor Las Vegas', 'Summerlin luxury', 'Henderson luxury', 'Lake Las Vegas'],
   url: '/luxury',
   image: '/images/luxury-real-estate-og.jpg',
@@ -114,7 +114,7 @@ export default function LuxuryPage() {
         {/* Hero Section */}
         <PageHero
           title='Luxury Real Estate in Las Vegas'
-          subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Top 1% Las Vegas agent specializing in high-end homes, estates, and luxury communities'
+          subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Las Vegas agent specializing in high-end homes, estates, and luxury communities'
           gradientFromClassName='from-amber-900'
           gradientToClassName='to-amber-800'
           backgroundImageUrl='https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1973&q=80'
@@ -142,7 +142,7 @@ export default function LuxuryPage() {
                 Why Choose Dr. Jan Duffy for Luxury Real Estate?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                As a Top 1% Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy brings unparalleled expertise to luxury property transactions. Her deep understanding of high-end markets, discretion, and attention to detail ensures exceptional results for discerning clients.
+                As a Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy brings unparalleled expertise to luxury property transactions. Her deep understanding of high-end markets, discretion, and attention to detail ensures exceptional results for discerning clients.
               </p>
             </div>
 

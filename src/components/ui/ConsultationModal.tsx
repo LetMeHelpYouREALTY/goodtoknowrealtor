@@ -533,7 +533,7 @@ export function ConsultationModal({ isOpen, onClose, source = 'header' }: Consul
                   <span>✓ Expert Guidance</span>
                 </div>
                 <p className="text-xs text-gray-400">
-                  Dr. Jan Duffy • Top 1% Las Vegas Agent • $127M+ Sales Volume
+                  Dr. Jan Duffy • Las Vegas Agent • $127M+ Sales Volume
                 </p>
               </div>
             </>

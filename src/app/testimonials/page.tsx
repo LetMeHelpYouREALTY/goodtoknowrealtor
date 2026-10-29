@@ -209,8 +209,8 @@ export default function TestimonialsPage() {
                   <div className='text-gray-600'>Client Satisfaction</div>
                 </div>
                 <div className='text-center'>
-                  <div className='text-3xl font-bold text-blue-600 mb-2'>Top 1%</div>
-                  <div className='text-gray-600'>Las Vegas Agents</div>
+                  <div className='text-3xl font-bold text-blue-600 mb-2'>5.0★</div>
+                  <div className='text-gray-600'>Realtor.com (50 reviews)</div>
                 </div>
               </div>
             </div>

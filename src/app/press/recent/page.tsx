@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Recent Press | Dr. Jan Duffy Media Coverage | Las Vegas Real Estate Expert',
-  description: 'Recent press coverage and media appearances featuring Dr. Jan Duffy, Top 1% Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
+  description: 'Recent press coverage and media appearances featuring Dr. Jan Duffy, Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
   keywords: 'Dr. Jan Duffy recent press, Las Vegas real estate news, luxury real estate expert, media coverage',
   openGraph: {
     title: 'Recent Press | Dr. Jan Duffy Media Coverage | Las Vegas Real Estate Expert',
-    description: 'Recent press coverage and media appearances featuring Dr. Jan Duffy, Top 1% Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
+    description: 'Recent press coverage and media appearances featuring Dr. Jan Duffy, Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
     type: 'website',
   },
 };

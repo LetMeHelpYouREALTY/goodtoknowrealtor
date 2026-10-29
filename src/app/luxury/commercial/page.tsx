@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Luxury Commercial Properties Las Vegas | Premium Commercial Real Estate | Dr. Jan Duffy',
-  description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury commercial properties Las Vegas, commercial real estate, office buildings, retail spaces, commercial investment',
   openGraph: {
     title: 'Luxury Commercial Properties Las Vegas | Premium Commercial Real Estate | Dr. Jan Duffy',
-    description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };

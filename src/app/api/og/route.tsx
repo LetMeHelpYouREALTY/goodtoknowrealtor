@@ -32,7 +32,7 @@ export async function GET(request: Request) {
 
   const highlightParams = searchParams.getAll('highlight');
   const highlights = (highlightParams.length ? highlightParams : [
-    'Top 1% Las Vegas REALTOR®',
+    'Las Vegas REALTOR®',
     '$127M+ Sales Volume',
   ])
     .slice(0, 3)

@@ -50,7 +50,7 @@ export default function BuyerReadinessAssessmentPage() {
                 Discover if you're ready to buy a home in Las Vegas and get personalized recommendations
               </p>
               <div className="flex items-center justify-center text-green-200">
-                <span className="text-sm">By Dr. Jan Duffy • Top 1% Las Vegas Agent</span>
+                <span className="text-sm">By Dr. Jan Duffy • Las Vegas Agent</span>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ export default function BuyerReadinessAssessmentPage() {
               Ready to Start Your Home Buying Journey?
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Take the assessment above to get personalized guidance from Dr. Jan Duffy, Las Vegas's Top 1% real estate agent.
+              Take the assessment above to get personalized guidance from Dr. Jan Duffy, Las Vegas real estate agent.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

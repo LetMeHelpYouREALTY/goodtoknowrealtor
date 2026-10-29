@@ -5,7 +5,7 @@ import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
 export const SEO_CONFIG = {
   siteName: 'Dr. Jan Duffy - Las Vegas Real Estate Expert',
   siteUrl: 'https://www.goodtoknowrealtor.com',
-  defaultTitle: 'Dr. Jan Duffy - Las Vegas Real Estate Expert | Top 1% Agent',
+  defaultTitle: 'Dr. Jan Duffy - Las Vegas Real Estate Expert | 5.0★ on Realtor.com',
   defaultDescription: 'Top-performing Las Vegas real estate agent Dr. Jan Duffy delivers exceptional results with $127M+ in sales volume. Expert guidance for buying, selling, and investing in Las Vegas properties.',
   keywords: [
     'Las Vegas real estate',
@@ -134,7 +134,7 @@ export function generateRealEstateAgentSchema() {
     '@type': 'RealEstateAgent',
     name: 'Dr. Jan Duffy',
     alternateName: 'Las Vegas Real Estate Expert',
-    description: 'Top 1% Las Vegas real estate agent Dr. Jan Duffy delivers exceptional results with $127M+ in sales volume. Expert guidance for buying, selling, and investing in Las Vegas properties.',
+    description: 'Las Vegas real estate agent Dr. Jan Duffy delivers exceptional results with $127M+ in sales volume. Expert guidance for buying, selling, and investing in Las Vegas properties.',
     url: SEO_CONFIG.siteUrl,
     telephone: SEO_CONFIG.phone,
     email: SEO_CONFIG.email,
@@ -219,7 +219,7 @@ export function generateRealEstateAgentSchema() {
       },
     ],
     award: [
-      'Top 1% of Las Vegas Realtors (2023, 2024)',
+      '5.0★ from 50 Realtor.com reviews',
       'Berkshire Hathaway Circle of Excellence',
       '5-Star Client Rating Average',
     ],
@@ -321,7 +321,7 @@ export function generateLocalBusinessSchema() {
     employee: {
       '@type': 'RealEstateAgent',
       name: 'Dr. Jan Duffy',
-      jobTitle: 'Top 1% Las Vegas Real Estate Agent',
+      jobTitle: 'Las Vegas Real Estate Agent',
       telephone: SEO_CONFIG.phone,
       email: SEO_CONFIG.email,
     },

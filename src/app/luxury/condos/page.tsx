@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Luxury Condos Las Vegas | High-Rise Condos | Dr. Jan Duffy',
-  description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury condos Las Vegas, high-rise condos, luxury condominiums, Las Vegas condos, premium condos, luxury high-rise',
   openGraph: {
     title: 'Luxury Condos Las Vegas | High-Rise Condos | Dr. Jan Duffy',
-    description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };
