@@ -35,13 +35,13 @@ export function Footer() {
                 <p className='text-sm font-semibold text-[#dfc07a] mb-2 uppercase tracking-wider'>Contact</p>
                 <div className='flex flex-col space-y-2'>
                   <Link
-                    href='tel:702-222-1964'
+                    href='tel:702-500-1955'
                     className='text-sm text-white/70 hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
                   >
-                    (702) 222-1964
+                    (702) 500-1955
                   </Link>
                   <Link
-                    href='sms:702-222-1964'
+                    href='sms:702-500-1955'
                     className='text-sm text-white/70 hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
                   >
                     Send Text
@@ -212,10 +212,10 @@ export function Footer() {
                 Schedule Your Free Consultation
               </button>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='btn btn-outline border-2 border-white text-white hover:bg-white hover:text-blue-600'
               >
-                Call (702) 222-1964
+                Call (702) 500-1955
               </Link>
             </div>
             <div className='mt-6 flex items-center justify-center space-x-6 text-sm text-blue-100'>

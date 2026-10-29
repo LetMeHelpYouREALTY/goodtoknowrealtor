@@ -127,10 +127,10 @@ export default function AssessmentsPage() {
             <div className="mt-12 text-center">
               <p className="text-gray-600 mb-4">Questions about your results?</p>
               <Link
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="inline-flex items-center text-lg font-semibold text-emerald-700 hover:text-emerald-800"
               >
-                Call or text 702-222-1964
+                Call or text 702-500-1955
               </Link>
             </div>
           </div>

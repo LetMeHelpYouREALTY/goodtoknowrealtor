@@ -37,11 +37,11 @@ export function StickyHeader() {
           {/* Contact Info */}
           <div className='flex items-center space-x-4 text-sm'>
             <Link
-              href='tel:702-222-1964'
+              href='tel:702-500-1955'
               className='flex items-center space-x-1 text-blue-600 hover:text-blue-700 transition-colors min-h-[44px] px-3'
             >
               <IconSymbol symbol='📞' className='h-4 w-4' ariaLabel='Phone' />
-              <span className='hidden sm:inline'>(702) 222-1964</span>
+              <span className='hidden sm:inline'>(702) 500-1955</span>
             </Link>
             
             <Link

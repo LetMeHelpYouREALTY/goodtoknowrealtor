@@ -424,9 +424,9 @@ export function Navigation() {
             {/* Quick Actions */}
             <div className='flex items-center gap-2 sm:gap-3'>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='flex lg:hidden items-center justify-center gap-2 bg-amber-600 text-white px-3 py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors text-xs uppercase tracking-wide shadow-md shadow-amber-500/20'
-                aria-label='Call (702) 222-1964'
+                aria-label='Call (702) 500-1955'
               >
                 <IconSymbol symbol='phone' className='h-4 w-4' ariaLabel='Phone icon' />
                 <span className='hidden sm:inline'>Call</span>
@@ -440,17 +440,17 @@ export function Navigation() {
                   Schedule Consultation
                 </button>
                 <Link
-                  href='tel:702-222-1964'
+                  href='tel:702-500-1955'
                   className='flex items-center justify-center gap-2 bg-amber-600 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors text-xs sm:text-sm whitespace-nowrap tracking-wide shadow-md hover:shadow-lg shadow-amber-500/20'
-                  aria-label='Call (702) 222-1964'
+                  aria-label='Call (702) 500-1955'
                 >
                   <IconSymbol symbol='phone' className='h-4 w-4' ariaLabel='Phone icon' />
                   <span className='hidden sm:inline'>Call</span>
                 </Link>
                 <Link
-                  href='sms:702-222-1964'
+                  href='sms:702-500-1955'
                   className='flex items-center justify-center gap-2 bg-white text-gray-900 px-4 sm:px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-xs sm:text-sm whitespace-nowrap tracking-wide border-2 border-gray-300 shadow-md hover:shadow-lg'
-                  aria-label='Send Text to (702) 222-1964'
+                  aria-label='Send Text to (702) 500-1955'
                 >
                   <IconSymbol symbol='chat' className='h-4 w-4' ariaLabel='Text icon' />
                   <span className='hidden sm:inline'>Text</span>

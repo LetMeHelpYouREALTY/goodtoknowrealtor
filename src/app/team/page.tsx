@@ -39,7 +39,7 @@ export default function TeamPage() {
         '98% Client Satisfaction Rate'
       ],
       contact: {
-        phone: '(702) 222-1964',
+        phone: '(702) 500-1955',
         email: 'jan@goodtoknowrealtor.com'
       }
     },
@@ -180,10 +180,10 @@ export default function TeamPage() {
             Work With Our Team
           </Link>
           <Link
-            href='tel:702-222-1964'
+            href='tel:702-500-1955'
             className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors'
           >
-            Call (702) 222-1964
+            Call (702) 500-1955
           </Link>
         </PageHero>
 
@@ -380,10 +380,10 @@ export default function TeamPage() {
                 Contact Our Team
               </Link>
               <Link
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Call (702) 222-1964
+                Call (702) 500-1955
               </Link>
             </div>
           </div>

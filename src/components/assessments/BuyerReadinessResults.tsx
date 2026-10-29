@@ -108,7 +108,7 @@ export function BuyerReadinessResults({
             <div className="flex flex-col sm:flex-row gap-4">
               {resultsData.ctaPhone ? (
                 <Link
-                  href="tel:702-222-1964"
+                  href="tel:702-500-1955"
                   className={`flex-1 text-center px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 ${
                     resultsData.urgent
                       ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg'
@@ -191,12 +191,12 @@ export function BuyerReadinessResults({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors"
               >
                 <span className='inline-flex items-center gap-2'>
                   <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                  Call (702) 222-1964
+                  Call (702) 500-1955
                 </span>
               </Link>
               <Link

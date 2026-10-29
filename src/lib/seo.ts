@@ -31,7 +31,7 @@ export const SEO_CONFIG = {
     'property valuation tool'
   ],
   author: 'Dr. Jan Duffy',
-  phone: '(702) 222-1964',
+  phone: '(702) 500-1955',
   email: 'info@drjanduffy.com',
   address: {
     street: 'Las Vegas, Nevada',
@@ -653,7 +653,7 @@ export const PAGE_SEO = {
   },
   contact: {
     title: 'Contact Dr. Jan Duffy - Premier Good To Know REALTOR® | Las Vegas Real Estate',
-    description: 'Contact Premier Good To Know REALTOR® Dr. Jan Duffy for expert Las Vegas real estate services. Call (702) 222-1964 for personalized assistance.',
+    description: 'Contact Premier Good To Know REALTOR® Dr. Jan Duffy for expert Las Vegas real estate services. Call (702) 500-1955 for personalized assistance.',
     keywords: ['contact Dr. Jan Duffy', 'Las Vegas real estate contact', 'Premier Good To Know REALTOR contact', 'Las Vegas realtor phone'],
   },
   services: {

@@ -19,7 +19,7 @@ Dr. Jan Duffy (never "Janet") is a Nevada-licensed REALTOR® (S.0197614.LLC). Pr
 
 - [Home](${baseUrl}/): Main site and hero
 - [About](${baseUrl}/about): Dr. Jan Duffy bio, credentials, and experience
-- [Contact](${baseUrl}/contact): Phone 702-222-1964, form, and NAP
+- [Contact](${baseUrl}/contact): Phone 702-500-1955, form, and NAP
 
 ## Services & listings
 

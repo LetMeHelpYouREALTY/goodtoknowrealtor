@@ -370,7 +370,7 @@ function generateSampleBlogPosts(): BlogPost[] {
           <li>USDA loans for rural areas</li>
         </ul>
         
-        <p>Ready to start your home buying journey? Contact me at (702) 222-1964 for a personalized consultation.</p>
+        <p>Ready to start your home buying journey? Contact me at (702) 500-1955 for a personalized consultation.</p>
       `,
       excerpt:
         'Complete guide for first-time home buyers in Las Vegas, covering everything from financial preparation to available assistance programs.',
@@ -425,7 +425,7 @@ function generateSampleBlogPosts(): BlogPost[] {
         <h3>5. Professional Photography and Marketing</h3>
         <p>High-quality photos and comprehensive marketing are essential in today's digital market. I ensure your home is presented professionally across all platforms to reach the maximum number of qualified buyers.</p>
         
-        <p>Ready to sell your Las Vegas home for maximum value? Contact Dr. Jan Duffy at (702) 222-1964 for a free home valuation and selling strategy consultation.</p>
+        <p>Ready to sell your Las Vegas home for maximum value? Contact Dr. Jan Duffy at (702) 500-1955 for a free home valuation and selling strategy consultation.</p>
       `,
       excerpt:
         "Five essential tips for selling your Las Vegas home to achieve maximum value and a quick sale in today's competitive market.",
@@ -486,7 +486,7 @@ function generateSampleBlogPosts(): BlogPost[] {
           <li>Active community associations and events</li>
         </ul>
         
-        <p>Interested in making Summerlin your home? Contact Dr. Jan Duffy at (702) 222-1964 to explore available properties and learn more about this exceptional community.</p>
+        <p>Interested in making Summerlin your home? Contact Dr. Jan Duffy at (702) 500-1955 to explore available properties and learn more about this exceptional community.</p>
       `,
       excerpt:
         "Explore Summerlin, Las Vegas's premier master-planned community, featuring top-rated amenities, nearby public schools, and diverse housing options.",
@@ -563,7 +563,7 @@ function generateSampleBlogPosts(): BlogPost[] {
               <li>Ongoing portfolio management support</li>
             </ul>
             
-            <p>Ready to explore Las Vegas real estate investment opportunities? Contact Dr. Jan Duffy at (702) 222-1964 for a personalized investment consultation.</p>
+            <p>Ready to explore Las Vegas real estate investment opportunities? Contact Dr. Jan Duffy at (702) 500-1955 for a personalized investment consultation.</p>
           `,
       excerpt:
         'Discover why Las Vegas is a prime market for real estate investment, featuring strong fundamentals, diverse opportunities, and growing potential.',
@@ -626,7 +626,7 @@ function generateSampleBlogPosts(): BlogPost[] {
             <h3>Your Success is Our Priority</h3>
             <p>At Berkshire Hathaway HomeServices California Properties, we measure our success by your satisfaction. Our team of experienced professionals is dedicated to helping you achieve your real estate goals with integrity, expertise, and personalized attention.</p>
             
-            <p>Ready to experience the Berkshire Hathaway difference? Contact Dr. Jan Duffy at (702) 222-1964 to discuss your real estate needs.</p>
+            <p>Ready to experience the Berkshire Hathaway difference? Contact Dr. Jan Duffy at (702) 500-1955 to discuss your real estate needs.</p>
           `,
       excerpt:
         'Learn why Berkshire Hathaway HomeServices California Properties is the premier choice for Las Vegas real estate services.',
@@ -768,7 +768,7 @@ function generateSampleBlogPosts(): BlogPost[] {
               <li>Future market potential</li>
             </ul>
             
-            <p>Ready to navigate the Las Vegas market? Contact Dr. Jan Duffy at (702) 222-1964 for expert guidance on timing your home purchase.</p>
+            <p>Ready to navigate the Las Vegas market? Contact Dr. Jan Duffy at (702) 500-1955 for expert guidance on timing your home purchase.</p>
           `,
       excerpt:
         'Learn how to navigate different real estate market conditions and make informed decisions about when to buy your home.',
@@ -831,7 +831,7 @@ function generateSampleBlogPosts(): BlogPost[] {
               <li>Check for any pending violations</li>
             </ul>
             
-            <p>Need help understanding deed restrictions on a Las Vegas property? Contact Dr. Jan Duffy at (702) 222-1964 for expert guidance.</p>
+            <p>Need help understanding deed restrictions on a Las Vegas property? Contact Dr. Jan Duffy at (702) 500-1955 for expert guidance.</p>
           `,
       excerpt:
         'Learn about deed restrictions, their purpose, and what they mean for property ownership and use.',

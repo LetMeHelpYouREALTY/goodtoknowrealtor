@@ -177,8 +177,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 communities hub
               </Link>{' '}
               or call{' '}
-              <a href='tel:702-222-1964' className='text-amber-700 font-semibold hover:text-amber-800'>
-                702-222-1964
+              <a href='tel:702-500-1955' className='text-amber-700 font-semibold hover:text-amber-800'>
+                702-500-1955
               </a>
               .
             </p>
@@ -236,7 +236,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <a
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='bg-white text-amber-800 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors duration-200 shadow-lg'
               >
                 <Image
@@ -246,7 +246,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   height={24}
                   className='inline-block w-6 h-6 mr-2'
                 />{' '}
-                Call (702) 222-1964
+                Call (702) 500-1955
               </a>
               <Link
                 href='/contact'

@@ -40,7 +40,7 @@ export default function NotFound() {
             Contact Dr. Jan Duffy for assistance with your real estate needs.
           </p>
           <a
-            href='tel:702-222-1964'
+            href='tel:702-500-1955'
             className='inline-flex items-center bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors duration-200'
           >
             <Image
@@ -50,7 +50,7 @@ export default function NotFound() {
               height={24}
               className='inline-block w-6 h-6 mr-2'
             />{' '}
-            Call (702) 222-1964
+            Call (702) 500-1955
           </a>
         </div>
       </div>

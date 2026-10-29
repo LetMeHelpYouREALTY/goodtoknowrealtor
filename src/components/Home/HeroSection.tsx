@@ -82,11 +82,11 @@ export function HeroSection() {
             {/* CTAs */}
             <div className='flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-start'>
               <a
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='btn-luxury-primary inline-flex w-full sm:w-auto gap-2'
               >
                 <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                Call (702) 222-1964
+                Call (702) 500-1955
               </a>
               <Link href='/contact' className='btn-luxury-outline inline-flex w-full sm:w-auto gap-2'>
                 <IconSymbol symbol='🛡️' className='h-5 w-5 text-[#dfc07a]' ariaLabel='Shield icon' />

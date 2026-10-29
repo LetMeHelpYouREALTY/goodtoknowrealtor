@@ -233,7 +233,7 @@ export function AssessmentForm({ type }: AssessmentFormProps) {
         <div className="space-y-2 text-sm text-green-600">
           <p className='flex items-center justify-center gap-2'>
             <IconSymbol symbol='📞' className='h-4 w-4' ariaLabel='Phone icon' />
-            Call (702) 222-1964 for immediate assistance
+            Call (702) 500-1955 for immediate assistance
           </p>
           <p className='flex items-center justify-center gap-2'>
             <IconSymbol symbol='📧' className='h-4 w-4' ariaLabel='Email icon' />

@@ -248,10 +248,10 @@ export function TransformationSection() {
               Schedule Consultation
             </Link>
             <a
-              href='tel:7022221964'
+              href='tel:7025001955'
               className='bg-white text-amber-600 border-2 border-amber-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors shadow-lg hover:shadow-xl'
             >
-              Call (702) 222-1964
+              Call (702) 500-1955
             </a>
           </div>
         </div>

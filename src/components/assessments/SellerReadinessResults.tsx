@@ -164,12 +164,12 @@ export function SellerReadinessResults({ score }: SellerReadinessResultsProps) {
               </Link>
               
               <Link
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="flex-1 text-center px-8 py-4 rounded-lg font-bold text-lg border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors duration-200"
               >
                 <span className='inline-flex items-center gap-2'>
                   <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                  Call (702) 222-1964
+                  Call (702) 500-1955
                 </span>
               </Link>
             </div>
@@ -228,12 +228,12 @@ export function SellerReadinessResults({ score }: SellerReadinessResultsProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
               >
                 <span className='inline-flex items-center gap-2'>
                   <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                  Call (702) 222-1964
+                  Call (702) 500-1955
                 </span>
               </Link>
               <Link

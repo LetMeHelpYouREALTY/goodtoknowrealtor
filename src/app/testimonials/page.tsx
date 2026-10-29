@@ -234,10 +234,10 @@ export default function TestimonialsPage() {
                 Get Started Today
               </Link>
               <Link
-                href='tel:702-222-1964'
+                href='tel:702-500-1955'
                 className='btn btn-outline'
               >
-                Call (702) 222-1964
+                Call (702) 500-1955
               </Link>
             </div>
           </div>

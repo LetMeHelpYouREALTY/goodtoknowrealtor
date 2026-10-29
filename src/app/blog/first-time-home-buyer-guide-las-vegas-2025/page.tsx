@@ -526,10 +526,10 @@ export default function FirstTimeBuyerGuide2025Page() {
                 Take Buyer Assessment
               </Link>
               <Link
-                href="tel:702-222-1964"
+                href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
               >
-                Call (702) 222-1964
+                Call (702) 500-1955
               </Link>
             </div>
           </div>

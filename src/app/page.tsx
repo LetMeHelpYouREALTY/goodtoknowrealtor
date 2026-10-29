@@ -38,7 +38,7 @@ export default function HomePage() {
     },
     {
       question: 'How can I contact Dr. Jan Duffy?',
-      answer: 'You can contact Dr. Jan Duffy by calling (702) 222-1964 or visiting the contact page on this website. She offers personalized consultations for all your Las Vegas real estate needs.',
+      answer: 'You can contact Dr. Jan Duffy by calling (702) 500-1955 or visiting the contact page on this website. She offers personalized consultations for all your Las Vegas real estate needs.',
     },
     {
       question: 'What services does Dr. Jan Duffy offer?',
@@ -258,10 +258,10 @@ export default function HomePage() {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <Link
-              href='tel:702-222-1964'
+              href='tel:702-500-1955'
               className='bg-white text-amber-900 px-10 py-5 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors shadow-xl'
             >
-              Call (702) 222-1964
+              Call (702) 500-1955
             </Link>
             <Link
               href='/contact'
