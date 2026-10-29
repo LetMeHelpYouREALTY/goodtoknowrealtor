@@ -551,7 +551,7 @@ export function PersonalizedForm({ persona, onBack, onSuccess }: PersonalizedFor
             <span className="font-semibold">Free consultation</span> • No obligations • Expert guidance
           </p>
           <p className="text-xs text-gray-400 mt-2">
-            Dr. Jan Duffy • Top 1% Las Vegas Agent • $127M+ Sales Volume
+            Dr. Jan Duffy • Las Vegas Agent • $127M+ Sales Volume
           </p>
         </div>
       </form>

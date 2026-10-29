@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'VIP Client Services Las Vegas | Luxury Real Estate Concierge | Dr. Jan Duffy',
-  description: 'VIP client services for Las Vegas luxury real estate. Personalized concierge services, exclusive access, and white-glove treatment with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'VIP client services for Las Vegas luxury real estate. Personalized concierge services, exclusive access, and white-glove treatment with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'VIP client services Las Vegas, luxury real estate concierge, white-glove service, exclusive real estate services',
   openGraph: {
     title: 'VIP Client Services Las Vegas | Luxury Real Estate Concierge | Dr. Jan Duffy',
-    description: 'VIP client services for Las Vegas luxury real estate. Personalized concierge services, exclusive access, and white-glove treatment with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'VIP client services for Las Vegas luxury real estate. Personalized concierge services, exclusive access, and white-glove treatment with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };

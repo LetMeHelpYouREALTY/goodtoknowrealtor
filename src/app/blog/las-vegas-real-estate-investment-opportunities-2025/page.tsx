@@ -173,7 +173,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
                 Expert analysis of Las Vegas investment strategies, market trends, and profit potential from Dr. Jan Duffy
               </p>
               <div className="flex items-center justify-center text-purple-200">
-                <span className="text-sm">By Dr. Jan Duffy • Top 1% Las Vegas Agent</span>
+                <span className="text-sm">By Dr. Jan Duffy • Las Vegas Agent</span>
               </div>
             </div>
           </div>
@@ -456,7 +456,7 @@ export default function LasVegasInvestmentOpportunities2025Page() {
               Ready to Start Your Investment Journey?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Get personalized investment guidance from Dr. Jan Duffy, Las Vegas's Top 1% real estate agent with $127M+ in sales volume and investment expertise.
+              Get personalized investment guidance from Dr. Jan Duffy, Las Vegas real estate agent with $127M+ in sales volume and investment expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

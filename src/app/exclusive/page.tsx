@@ -7,11 +7,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Exclusive Access | Off-Market Properties Las Vegas | Dr. Jan Duffy',
-  description: 'Get exclusive access to off-market properties, pre-market listings, and VIP client services in Las Vegas with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Get exclusive access to off-market properties, pre-market listings, and VIP client services in Las Vegas with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'exclusive properties Las Vegas, off-market homes, pre-market listings, VIP real estate service, luxury properties, private showings',
   openGraph: {
     title: 'Exclusive Access | Off-Market Properties Las Vegas | Dr. Jan Duffy',
-    description: 'Get exclusive access to off-market properties, pre-market listings, and VIP client services in Las Vegas with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Get exclusive access to off-market properties, pre-market listings, and VIP client services in Las Vegas with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };
@@ -59,7 +59,7 @@ export default function ExclusivePage() {
                 Why Choose Our Exclusive Access Program?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                As a Top 1% Las Vegas real estate agent, Dr. Jan Duffy provides 
+                As a Las Vegas real estate agent, Dr. Jan Duffy provides 
                 unparalleled access to properties that never hit the public market.
               </p>
             </div>

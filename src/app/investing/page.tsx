@@ -147,7 +147,7 @@ export default function InvestingPage() {
         {/* Hero Section */}
         <PageHero
           title='Las Vegas Real Estate Investment'
-          subtitle='Build wealth through strategic real estate investments with Dr. Jan Duffy, Top 1% Las Vegas agent with proven investment expertise'
+          subtitle='Build wealth through strategic real estate investments with Dr. Jan Duffy, Las Vegas agent with proven investment expertise'
           gradientFromClassName='from-green-900'
           gradientToClassName='to-emerald-800'
         >

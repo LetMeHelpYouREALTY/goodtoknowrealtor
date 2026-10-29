@@ -110,7 +110,7 @@ export default function LasVegasMarketTrends2025Page() {
                 Expert analysis of Las Vegas housing market trends, price movements, and investment opportunities from Dr. Jan Duffy
               </p>
               <div className="flex items-center justify-center text-blue-200">
-                <span className="text-sm">By Dr. Jan Duffy • Top 1% Las Vegas Agent</span>
+                <span className="text-sm">By Dr. Jan Duffy • Las Vegas Agent</span>
               </div>
             </div>
           </div>
@@ -344,7 +344,7 @@ export default function LasVegasMarketTrends2025Page() {
               Ready to Navigate the Las Vegas Market?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Get personalized market insights and expert guidance from Dr. Jan Duffy, Las Vegas's Top 1% real estate agent with $127M+ in sales volume.
+              Get personalized market insights and expert guidance from Dr. Jan Duffy, Las Vegas real estate agent with $127M+ in sales volume.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

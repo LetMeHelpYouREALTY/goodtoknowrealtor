@@ -86,7 +86,7 @@ export default function ServicesPage() {
                 Why Choose Dr. Jan Duffy for Your Real Estate Needs?
               </h2>
               <p className='text-xl text-gray-600 leading-relaxed'>
-                As a Top 1% Las Vegas real estate agent with over 500 successful transactions, Dr. Jan Duffy provides comprehensive services tailored to your unique needs. Whether you're buying your first home, selling a luxury estate, or building an investment portfolio, our expertise ensures exceptional results.
+                As a Las Vegas real estate agent with over 500 successful transactions, Dr. Jan Duffy provides comprehensive services tailored to your unique needs. Whether you're buying your first home, selling a luxury estate, or building an investment portfolio, our expertise ensures exceptional results.
               </p>
             </div>
 

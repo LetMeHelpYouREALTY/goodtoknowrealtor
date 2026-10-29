@@ -6,7 +6,7 @@ import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Why List With Dr. Jan Duffy | Top 1% Las Vegas Real Estate Agent',
+  title: 'Why List With Dr. Jan Duffy | Las Vegas Real Estate Agent',
   description: 'Discover why Dr. Jan Duffy is the premier choice for selling your Las Vegas home. $127M+ sales volume, 98% client satisfaction, proven results.',
   keywords: ['why list with us', 'Las Vegas real estate agent', 'Dr. Jan Duffy', 'sell home Las Vegas', 'top realtor', 'premier agent'],
   url: '/why-list-with-us',
@@ -140,7 +140,7 @@ export default function WhyListWithUsPage() {
                 Why List With Dr. Jan Duffy?
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed mb-8">
-                Join 500+ successful sellers who chose Las Vegas's Top 1% real estate agent for exceptional results and unmatched service
+                Join 500+ successful sellers who chose Las Vegas real estate agent for exceptional results and unmatched service
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -170,7 +170,7 @@ export default function WhyListWithUsPage() {
                 Why Dr. Jan Duffy Delivers Exceptional Results
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                As a Top 1% Las Vegas real estate agent, Dr. Jan Duffy combines market expertise, proven strategies, and exceptional service to deliver outstanding results for every client.
+                As a Las Vegas real estate agent, Dr. Jan Duffy combines market expertise, proven strategies, and exceptional service to deliver outstanding results for every client.
               </p>
             </div>
 

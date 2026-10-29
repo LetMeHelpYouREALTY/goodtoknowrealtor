@@ -30,7 +30,7 @@ export default function HomePage() {
   const faqs = generateFAQSchema([
     {
       question: 'Who is Dr. Jan Duffy?',
-      answer: 'Dr. Jan Duffy is a Top 1% Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She specializes in luxury properties, investment properties, and first-time home buyers.',
+      answer: 'Dr. Jan Duffy is a Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She specializes in luxury properties, investment properties, and first-time home buyers.',
     },
     {
       question: 'What areas does Dr. Jan Duffy serve?',

@@ -13,7 +13,7 @@ interface TrustBadge {
 const trustBadges: TrustBadge[] = [
   {
     id: '1',
-    title: 'Top 1% Luxury Agent',
+    title: '5.0★ on Realtor.com',
     description: 'Premier luxury real estate specialist with exclusive market access',
     icon: '🏆',
     verification: 'Verified by Berkshire Hathaway'

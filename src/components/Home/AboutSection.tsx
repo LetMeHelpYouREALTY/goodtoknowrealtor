@@ -28,7 +28,7 @@ export function AboutSection() {
                   <span className="text-blue-600 text-xl">✓</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900">Top 1% Producer</h4>
+                  <h4 className="font-semibold text-gray-900">5.0★ on Realtor.com</h4>
                   <p className="text-sm text-gray-600">$127M+ Sales Volume</p>
                 </div>
               </div>

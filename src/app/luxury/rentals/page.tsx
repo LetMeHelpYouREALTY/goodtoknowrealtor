@@ -5,11 +5,11 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   title: 'Luxury Rental Properties Las Vegas | Premium Rentals | Dr. Jan Duffy',
-  description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+  description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury rental properties Las Vegas, vacation rentals, executive housing, premium rentals, luxury rentals',
   openGraph: {
     title: 'Luxury Rental Properties Las Vegas | Premium Rentals | Dr. Jan Duffy',
-    description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Top 1% Real Estate Agent.',
+    description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Real Estate Agent.',
     type: 'website',
   },
 };

@@ -8,8 +8,8 @@ import { PageHero } from '@/components/ui/PageHero';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Meet Our Team | Dr. Jan Duffy - Top 1% Las Vegas Real Estate Team',
-  description: 'Meet Dr. Jan Duffy and her expert real estate team. Top 1% Las Vegas agents with $127M+ sales volume and 20+ years of experience.',
+  title: 'Meet Our Team | Dr. Jan Duffy - Las Vegas Real Estate Team',
+  description: 'Meet Dr. Jan Duffy and her expert real estate team. Las Vegas agents with $127M+ sales volume and 20+ years of experience.',
   keywords: ['Las Vegas real estate team', 'Dr. Jan Duffy team', 'top real estate agents', 'Las Vegas realtors', 'premier properties team'],
   url: '/team',
   image: '/images/team-og.jpg',
@@ -27,13 +27,13 @@ export default function TeamPage() {
     {
       name: 'Dr. Jan Duffy',
       title: 'Principal Agent & Team Leader',
-      credentials: 'REALTOR®, Top 1% Agent',
+      credentials: 'REALTOR®, 5.0★ on Realtor.com',
       experience: '20+ Years',
       specialties: ['Luxury Properties', 'Investment Real Estate', 'First-Time Buyers', 'Market Analysis'],
       bio: 'Dr. Jan Duffy leads Las Vegas\'s premier real estate team with $127M+ in sales volume and 500+ successful transactions. Her expertise spans luxury properties, investment real estate, and first-time buyer guidance.',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80',
       achievements: [
-        'Top 1% Las Vegas Real Estate Agent',
+        'Las Vegas Real Estate Agent',
         '$127M+ Total Sales Volume',
         '500+ Successful Transactions',
         '98% Client Satisfaction Rate'

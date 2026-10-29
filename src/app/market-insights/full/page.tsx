@@ -155,7 +155,7 @@ export default function MarketInsightsFullPage() {
                   <div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <IconSymbol symbol='🏆' className='text-green-600 text-2xl' ariaLabel='Awards icon' />
                   </div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>Top 1% Agent</h3>
+                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>5.0★ on Realtor.com</h3>
                   <p className='text-gray-600'>
                     $127M+ in sales volume with 20+ years of Las Vegas experience
                   </p>

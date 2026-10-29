@@ -47,7 +47,7 @@ export function HeroSection() {
           <div className='space-y-8 text-center lg:text-left'>
             <div className='luxury-badge mx-auto lg:mx-0'>
               <IconSymbol symbol='🏆' className='h-4 w-4 text-[#dfc07a]' ariaLabel='Award icon' />
-              <span>Top 1% • Berkshire Hathaway Premier</span>
+              <span>Berkshire Hathaway HomeServices</span>
             </div>
 
             <div className='space-y-5'>
