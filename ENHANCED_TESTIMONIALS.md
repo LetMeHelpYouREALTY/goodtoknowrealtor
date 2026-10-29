@@ -138,10 +138,10 @@
 "Sold our North Las Vegas home for $95K above our target price in January 2024. Dr. Duffy's marketing strategy included professional photography and virtual tours that attracted buyers from California. Closed in 14 days."
 
 ### ENHANCED (Full Version)
-"As a first-time seller, I feared pricing too low and leaving money on the table—or pricing too high and sitting for months. Dr. Jan's comparative market analysis pinpointed the sweet spot, and her professional photography + 3D virtual tours attracted 12 showings from California buyers in the first week. We accepted an offer $95K above our original target, closed in 14 days, and used the proceeds to upgrade to a larger home for our growing family."
+"As a first-time seller, I feared pricing too low and leaving money on the table—or pricing too high and sitting for months. Dr. Jan's comparative market analysis pinpointed the sweet spot, and her professional photography + 3D virtual tours attracted 12 showings from California buyers in the first week. We accepted an offer $95K above our original target and closed in 14 days."
 
 ### CAROUSEL VERSION (Short)
-"First-time seller, terrified of pricing wrong. Dr. Jan's marketing strategy: $95K above target, closed in 14 days—upgrade to our dream family home."
+"First-time seller, terrified of pricing wrong. Dr. Jan's marketing strategy: $95K above target, closed in 14 days."
 
 ### KEY STATS TO HIGHLIGHT
 - **Above Target**: $95K
