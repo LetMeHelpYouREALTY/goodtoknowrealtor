@@ -78,7 +78,7 @@ import { PrimaryPhoneCTA, SecondaryTextCTA } from '@/components/ui/StandardCTA';
 ## 🎯 Key Standards
 
 ### Primary CTA
-- **Text:** Always "Call (702) 500-1955"
+- **Text:** Always "Call (702) 222-1964"
 - **Color:** Green gradient (from-green-500 to-emerald-600)
 - **Icon:** Phone icon on left
 

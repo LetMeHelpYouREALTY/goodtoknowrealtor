@@ -705,7 +705,7 @@ function generateSampleBlogPosts(): BlogPost[] {
               <li>White-glove service throughout the process</li>
             </ul>
             
-            <p>Interested in Las Vegas luxury real estate? Contact Dr. Jan Duffy at (702) 500-1955 for a private consultation.</p>
+            <p>Interested in Las Vegas luxury real estate? Contact Dr. Jan Duffy at (702) 222-1964 for a private consultation.</p>
           `,
       excerpt:
         'Explore Las Vegas luxury real estate market featuring world-class amenities, luxury neighborhoods, and exceptional investment potential.',

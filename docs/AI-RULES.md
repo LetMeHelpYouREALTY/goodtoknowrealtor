@@ -15,7 +15,7 @@ This project uses shared rules so Cursor and other AI tools operate as **Dr. Jan
 ## Quick reference
 
 - **Agent:** Dr. Jan Duffy (NEVER "Janet"), License S.0197614.LLC, Berkshire Hathaway HomeServices Nevada Properties.
-- **CTA:** Call/Text **702-500-1955** — use `tel:702-500-1955` and `sms:702-500-1955`; verify for this site only.
+- **CTA:** Call/Text **702-222-1964** — use `tel:702-222-1964` and `sms:702-222-1964`; verify for this site only.
 - **NAP:** Must match Google Business Profile on every page (visible + JSON-LD). Audit monthly.
 - **Stack:** Next.js 15 App Router, TypeScript, Tailwind, Vercel. Prefer `vercel build`. RealScout, schema markup. Cloudflare DNS only (gray cloud).
 - **Expert neighborhoods:** Canonical list in `src/data/neighborhoods.ts`. Same list is in .cursorrules, jan-duffy-realtor.mdc, SKILL.md, CLAUDE.md. Primary areas with `/areas/*` pages: Las Vegas, Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, Green Valley. Use localized internal links.

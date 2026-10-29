@@ -80,8 +80,8 @@ When hamburger opens:
 │    Contact                              │
 │                                         │
 │  ┌──────────────────────────────┐     │
-│  │  Call: (702) 500-1955       │     │
-│  │  Text: (702) 500-1955       │     │
+│  │  Call: (702) 222-1964       │     │
+│  │  Text: (702) 222-1964       │     │
 │  └──────────────────────────────┘     │
 └─────────────────────────────────────────┘
 ```
@@ -109,11 +109,11 @@ When hamburger opens:
 ```tsx
 <div className='fixed bottom-0 left-0 right-0 h-14 bg-white border-t border-gray-200 shadow-lg z-50 lg:hidden'>
   <div className='flex items-center justify-around h-full'>
-    <Link href='tel:702-500-1955' className='flex-1 flex items-center justify-center h-full'>
+    <Link href='tel:702-222-1964' className='flex-1 flex items-center justify-center h-full'>
       <PhoneIcon size={24} />
     </Link>
     <div className='w-px h-8 bg-gray-300' />
-    <Link href='sms:702-500-1955' className='flex-1 flex items-center justify-center h-full'>
+    <Link href='sms:702-222-1964' className='flex-1 flex items-center justify-center h-full'>
       <MessageIcon size={24} />
     </Link>
   </div>

@@ -85,7 +85,7 @@ flowchart TB
 | Concern | Where it lives |
 |---------|----------------|
 | **NAP (visible)** | Footer (`src/components/Globals/Footer/Footer.tsx`), Contact page, any NAP blocks in content. |
-| **Primary CTA (702-500-1955)** | `SEO_CONFIG.phone` in `src/lib/seo.ts`; `MobileStickyCTA`, `StandardCTA`, `ConsultationCTA`, Navigation, Footer, and page-level CTAs. Use `tel:702-500-1955` and `sms:702-500-1955`. |
+| **Primary CTA (702-222-1964)** | `SEO_CONFIG.phone` in `src/lib/seo.ts`; `MobileStickyCTA`, `StandardCTA`, `ConsultationCTA`, Navigation, Footer, and page-level CTAs. Use `tel:702-222-1964` and `sms:702-222-1964`. |
 | **Schema (JSON-LD)** | Root layout: RealEstateAgent, LocalBusiness, WebSite, SiteNavigationElement. Page-level breadcrumbs/FAQ via `generateBreadcrumbSchema()` and page-specific schema where used. |
 | **RealScout** | Script loaded once in `layout.tsx` (`em.realscout.com/widgets/...`). Widgets: `RealScoutListings`, `PropertyListingsSection`, `SummerlinListings`, `HomeValueWidget` (realscout-home-value, realscout-office-listings, etc.). |
 

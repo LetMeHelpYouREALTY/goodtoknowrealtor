@@ -200,7 +200,7 @@
 
 **CTA Connection:**
 - Headline creates urgency → "Call now to see how much you're leaving behind"
-- Button text: "Get Your True Home Value" (secondary) or "Call (702) 500-1955" (primary)
+- Button text: "Get Your True Home Value" (secondary) or "Call (702) 222-1964" (primary)
 - Next step: Free consultation reveals the gap
 
 ---
@@ -225,7 +225,7 @@
 
 **CTA Connection:**
 - Positive framing → "Let's make it happen"
-- Button: "Call (702) 500-1955" works well
+- Button: "Call (702) 222-1964" works well
 - Conversation-focused next step
 
 ---
@@ -424,7 +424,7 @@ Sample Size: Minimum 500 visitors per variant
    - "Trusted by 500+ Vegas families to sell for $50K+ over estimate"
    - More benefit-focused than generic stats
 
-4. **Primary CTA:** "Call (702) 500-1955" (keep green button)
+4. **Primary CTA:** "Call (702) 222-1964" (keep green button)
 5. **Secondary CTA:** "Send Text Message" (keep white button)
 
 ### For Persona-Specific Pages:

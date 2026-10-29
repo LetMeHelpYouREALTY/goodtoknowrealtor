@@ -36,7 +36,7 @@
 | # | Current / gap | Desired | File / area |
 |---|----------------|---------|--------------|
 | 3.1 | Semantic HTML | Use `<main>`, `<nav>`, `<section>`, `<article>`, headings in order (h1 → h2 → h3) | All pages and layouts |
-| 3.2 | ARIA | Buttons/links that are icon-only or ambiguous have `aria-label`; CTAs: e.g. "Call Dr. Jan Duffy (702) 500-1955" | `MobileStickyCTA`, `StandardCTA`, Navigation, Footer |
+| 3.2 | ARIA | Buttons/links that are icon-only or ambiguous have `aria-label`; CTAs: e.g. "Call Dr. Jan Duffy (702) 222-1964" | `MobileStickyCTA`, `StandardCTA`, Navigation, Footer |
 | 3.3 | Focus | Visible focus styles; no focus traps; skip link to main content where applicable | `globals.css`, layout, Navigation |
 | 3.4 | Contrast | Text meets WCAG AA (4.5:1 normal, 3:1 large); avoid low-contrast gray on gray | Tailwind classes, `globals.css` |
 | 3.5 | Form labels | Every form field has a visible `<label>` or `aria-label`; errors associated with `aria-describedby` | Forms in `src/components`, contact/seller forms |
@@ -48,7 +48,7 @@
 
 | # | Current / gap | Desired | File / area |
 |---|----------------|---------|--------------|
-| 4.1 | Primary CTA | All primary CTAs: Call/Text **702-500-1955**; use `tel:702-500-1955` and `sms:702-500-1955` | Site-wide; `SEO_CONFIG.phone` |
+| 4.1 | Primary CTA | All primary CTAs: Call/Text **702-222-1964**; use `tel:702-222-1964` and `sms:702-222-1964` | Site-wide; `SEO_CONFIG.phone` |
 | 4.2 | Above-the-fold | Hero clearly states value prop and primary CTA; minimal clutter | `PageHero`, homepage, key landing pages |
 | 4.3 | Mobile CTAs | Sticky or prominent Call/Text on mobile (e.g. MobileStickyCTA); tap targets ≥44px | `MobileStickyCTA`, Navigation |
 | 4.4 | Trust signals | Testimonials, credentials, GBP link, review schema where appropriate | Homepage, Contact, Footer |

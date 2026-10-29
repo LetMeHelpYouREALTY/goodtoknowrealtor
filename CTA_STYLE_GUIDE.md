@@ -8,11 +8,11 @@ This guide standardizes all Call-to-Action (CTA) buttons across the website to e
 
 ### PRIMARY CTA: Phone Call
 **Purpose:** Direct phone call to Dr. Janet Duffy  
-**Action:** `tel:702-500-1955`
+**Action:** `tel:702-222-1964`
 
 ### SECONDARY CTA: Text Message
 **Purpose:** Send text message to Dr. Janet Duffy  
-**Action:** `sms:702-500-1955`
+**Action:** `sms:702-222-1964`
 
 ---
 
@@ -21,7 +21,7 @@ This guide standardizes all Call-to-Action (CTA) buttons across the website to e
 ### Specifications
 
 #### Text
-**Always:** `"Call (702) 500-1955"`  
+**Always:** `"Call (702) 222-1964"`  
 **No variations.** The text never changes based on context.
 
 #### Color
@@ -226,7 +226,7 @@ Transition: 300ms (duration-300)
 - Any context-specific text
 
 ### ✅ ALWAYS USE
-**Primary CTA:** `"Call (702) 500-1955"`  
+**Primary CTA:** `"Call (702) 222-1964"`  
 **Secondary CTA:** `"Send Text"`
 
 **Why?** Consistency builds trust. Users recognize the same CTAs throughout the site, reducing cognitive load and decision paralysis.
@@ -236,7 +236,7 @@ Transition: 300ms (duration-300)
 ## 6. Brand Voice Alignment
 
 ### Recommended Text Tone
-**"Call (702) 500-1955"** matches the **friendly expert neighbor** tone because:
+**"Call (702) 222-1964"** matches the **friendly expert neighbor** tone because:
 - Direct and action-oriented (not pushy)
 - Professional (includes area code)
 - Personal (shows accessibility)
@@ -360,8 +360,8 @@ import {
 ## 10. Accessibility
 
 ### ARIA Labels
-- Primary: `aria-label="Call Dr. Janet Duffy at (702) 500-1955"`
-- Secondary: `aria-label="Send text message to Dr. Janet Duffy at (702) 500-1955"`
+- Primary: `aria-label="Call Dr. Janet Duffy at (702) 222-1964"`
+- Secondary: `aria-label="Send text message to Dr. Janet Duffy at (702) 222-1964"`
 
 ### Keyboard Navigation
 - Both buttons are focusable
@@ -380,7 +380,7 @@ import {
 When adding CTAs to a new section:
 
 - [ ] Use `PrimaryPhoneCTA` or `CTAPair` component
-- [ ] Text is exactly "Call (702) 500-1955" (no variations)
+- [ ] Text is exactly "Call (702) 222-1964" (no variations)
 - [ ] Secondary button text is exactly "Send Text"
 - [ ] Green gradient for primary, white with border for secondary
 - [ ] Buttons are 56px minimum height

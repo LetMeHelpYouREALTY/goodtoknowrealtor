@@ -83,7 +83,7 @@ Based on proven multi-million dollar lead generation systems, our assessment-bas
 - Speedometer shows "green zone"
 - Message: "Congratulations! You're ready to start your home search"
 - 3 Insights: Strengths + recommended neighborhoods based on answers
-- Next Step: "Schedule One-on-One Property Tour with Dr. Jan - Call 702-500-1955"
+- Next Step: "Schedule One-on-One Property Tour with Dr. Jan - Call 702-222-1964"
 
 ## Traffic Generation Strategy
 
