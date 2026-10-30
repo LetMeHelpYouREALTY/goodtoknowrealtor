@@ -99,7 +99,7 @@ export function NeighborhoodsSection() {
                   fill
                   className='object-cover group-hover:scale-105 transition-transform duration-300'
                 />
-                <div className='absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300'></div>
+                <div className='absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300'></div>
               </div>
               
               <div className='p-4 text-center'>
