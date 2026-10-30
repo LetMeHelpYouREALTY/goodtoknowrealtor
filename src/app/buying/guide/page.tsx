@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -85,7 +86,7 @@ export default function BuyingGuidePage() {
             <p>
               Ready for personalized guidance? Call or text{' '}
               <a href="tel:702-500-1955">702-500-1955</a> or{' '}
-              <Link href="/contact">schedule a consultation</Link>.
+              <CalendlyButton event='buyer'>schedule a consultation</CalendlyButton>.
             </p>
           </div>
         </section>

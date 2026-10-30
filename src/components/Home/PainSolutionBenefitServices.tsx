@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Link from 'next/link';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
@@ -152,12 +153,9 @@ export function PainSolutionBenefitServices() {
               <p className='text-xs text-gray-600 italic mb-1'>Available 7 days a week. Discreet service for executives, celebrities, and high-profile clients.</p>
             </div>
             
-            <Link 
-              href='/contact' 
-              className='block w-full text-center bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors mt-auto'
-            >
+            <CalendlyButton event='general' className='block w-full text-center bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors mt-auto'>
               Schedule Consultation
-            </Link>
+            </CalendlyButton>
           </div>
 
           {/* Service 4: First-Time Home Buyers */}

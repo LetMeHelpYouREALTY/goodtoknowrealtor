@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { PageHero } from '@/components/ui/PageHero';
 import { MarketInsightsSection } from '@/components/MarketInsights/MarketInsightsSection';
 import { MarketVisualizations } from '@/components/MarketData/MarketVisualizations';
@@ -107,12 +107,9 @@ export default function MarketInsightsFullPage() {
                   <p className='text-gray-600 mb-4'>
                     Get a personalized market analysis for your specific area and property type
                   </p>
-                  <a 
-                    href='/contact'
-                    className='inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
-                  >
+                  <CalendlyButton event='strategy' className='inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
                     Schedule Consultation
-                  </a>
+                  </CalendlyButton>
                 </div>
                 
                 <div className='bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6'>

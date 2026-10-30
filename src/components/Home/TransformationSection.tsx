@@ -1,5 +1,6 @@
 'use client';
 
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -241,12 +242,9 @@ export function TransformationSection() {
             Whether you're buying, selling, or investing, Dr. Jan Duffy delivers results that exceed expectations.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              href='/contact'
-              className='bg-amber-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-700 transition-colors shadow-lg hover:shadow-xl'
-            >
+            <CalendlyButton event='general' className='bg-amber-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-700 transition-colors shadow-lg hover:shadow-xl'>
               Schedule Consultation
-            </Link>
+            </CalendlyButton>
             <a
               href='tel:7025001955'
               className='bg-white text-amber-600 border-2 border-amber-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-50 transition-colors shadow-lg hover:shadow-xl'

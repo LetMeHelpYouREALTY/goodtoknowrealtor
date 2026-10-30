@@ -1,3 +1,5 @@
+import CalendlyInline from '@/components/Calendly/CalendlyInline';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -331,12 +333,9 @@ export default function BuyingPage() {
                   <span>Common Challenges & Solutions</span>
                   <IconSymbol symbol='→' className='h-3 w-3 ml-2 text-amber-500' ariaLabel='Arrow right' />
                 </Link>
-                <Link
-                  href='/contact'
-                  className='btn btn-outline'
-                >
+                <CalendlyButton event='buyer' className='btn btn-outline'>
                   Get Started →
-                </Link>
+                </CalendlyButton>
               </div>
             </div>
           </div>
@@ -525,6 +524,7 @@ export default function BuyingPage() {
           </div>
         </div>
       </section>
+      <CalendlyInline event='buyer' title='Book your buyer consultation' subtitle='30 minutes on what you want, what is selling now, and your next step.' />
     </div>
   );
 }
