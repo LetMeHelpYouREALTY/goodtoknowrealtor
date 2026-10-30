@@ -1,3 +1,4 @@
+import RelatedLinks from '@/components/SEO/RelatedLinks';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -252,6 +253,7 @@ window.widgetTracker("send", "pageview");`,
           </a>
         <Navigation />
         <main id="main-content" className='flex-1 content-flow'>{children}</main>
+        <RelatedLinks />
         <Footer />
         <MobileStickyCTA />
         <WebVitalsMonitor />

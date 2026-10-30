@@ -1,3 +1,4 @@
+import { autoLinkHtml } from '@/data/internalLinks';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -204,7 +205,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <div className='prose prose-lg max-w-none'>
             <div
               className='text-gray-700 leading-relaxed'
-              dangerouslySetInnerHTML={{ __html: post.content || post.excerpt }}
+              dangerouslySetInnerHTML={{ __html: autoLinkHtml(post.content || post.excerpt, `/blog/${post.slug}`) }}
             />
           </div>
 

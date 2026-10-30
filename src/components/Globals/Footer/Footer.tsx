@@ -51,7 +51,7 @@ export function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               <div>
                 <ul className='space-y-2'>
                   <li>
@@ -105,7 +105,68 @@ export function Footer() {
                 </ul>
               </div>
               <div>
-                <p className='font-semibold text-gray-900 mb-3'>Resources</p>
+                <p className='font-semibold text-white mb-3'>Neighborhoods</p>
+                <ul className='space-y-2'>
+                  <li>
+                    <Link
+                      href='/areas/summerlin'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Summerlin Homes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/areas/henderson'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Henderson Homes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/areas/green-valley'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Green Valley Homes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/areas/north-las-vegas'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      North Las Vegas Homes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/areas/downtown'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Downtown Las Vegas
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/luxury/communities'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Luxury Communities
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/communities'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      All Communities
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p className='font-semibold text-white mb-3'>Resources</p>
                 <ul className='space-y-2 mb-6'>
                   <li>
                     <Link
@@ -136,11 +197,51 @@ export function Footer() {
                       href='/blog'
                       className='text-white/60 hover:text-[#dfc07a] transition-colors'
                     >
+                      Real Estate Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/sold-listings'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Recently Sold
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/home-value'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Home Value Estimate
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/cash-offer'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Cash Offer Program
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href='/market-insights'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
                       Market Insights
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href='/resources'
+                      className='text-white/60 hover:text-[#dfc07a] transition-colors'
+                    >
+                      Buyer & Seller Resources
+                    </Link>
+                  </li>
                 </ul>
-                <p className='font-semibold text-gray-900 mb-3'>Legal</p>
+                <p className='font-semibold text-white mb-3'>Legal</p>
                 <ul className='space-y-2'>
                   <li>
                     <Link
