@@ -424,9 +424,9 @@ export default function InvestingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-xl p-6">
-                <div className="flex items-center mb-4 text-yellow-400">
+                <div className="flex items-center mb-4 text-[#c9a962]">
                   {[...Array(5)].map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4' ariaLabel='Star rating' />
+                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 fill-[#c9a962]' ariaLabel='Star rating' />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 italic">
@@ -437,9 +437,9 @@ export default function InvestingPage() {
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
-                <div className="flex items-center mb-4 text-yellow-400">
+                <div className="flex items-center mb-4 text-[#c9a962]">
                   {[...Array(5)].map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4' ariaLabel='Star rating' />
+                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 fill-[#c9a962]' ariaLabel='Star rating' />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 italic">
@@ -450,9 +450,9 @@ export default function InvestingPage() {
               </div>
 
               <div className="bg-gray-50 rounded-xl p-6">
-                <div className="flex items-center mb-4 text-yellow-400">
+                <div className="flex items-center mb-4 text-[#c9a962]">
                   {[...Array(5)].map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4' ariaLabel='Star rating' />
+                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 fill-[#c9a962]' ariaLabel='Star rating' />
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4 italic">

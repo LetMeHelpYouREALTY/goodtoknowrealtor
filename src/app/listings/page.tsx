@@ -308,7 +308,7 @@ export default function ListingsPage() {
             <div className='card overflow-hidden'>
               <div className='relative h-64'>
                 <Image
-                  src='https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+                  src='https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
                   alt='Investment property in North Las Vegas'
                   fill
                   style={{ objectFit: 'cover' }}

@@ -67,7 +67,7 @@ export default function CommunitiesPage() {
       id: 'downtown',
       name: 'Downtown Las Vegas',
       href: '/areas/downtown',
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       description: 'Urban living in the city center with modern condos and historic charm.',
       avgPrice: '$400,000',
       propertiesCount: 450,
@@ -77,7 +77,7 @@ export default function CommunitiesPage() {
       id: 'green-valley',
       name: 'Green Valley',
       href: '/areas/green-valley',
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       description: 'Older neighborhood in Henderson with mature trees and community amenities.',
       avgPrice: '$600,000',
       propertiesCount: 680,
@@ -130,7 +130,7 @@ export default function CommunitiesPage() {
                         fill
                         className='object-cover group-hover:scale-105 transition-transform duration-300'
                       />
-                      <div className='absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300'></div>
+                      <div className='absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300'></div>
                       <div className='absolute top-4 left-4'>
                         <span className='bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold'>
                           {community.propertiesCount} Properties

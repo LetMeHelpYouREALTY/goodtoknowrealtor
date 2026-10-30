@@ -69,7 +69,7 @@ export function HeroTestimonialCarousel() {
                   {/* Star Rating */}
                   <div className="flex items-center gap-1">
                     {[...Array(currentTestimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-amber-400 text-lg">★</span>
+                      <span key={i} className="text-[#c9a962] text-lg">★</span>
                     ))}
                   </div>
                 </div>

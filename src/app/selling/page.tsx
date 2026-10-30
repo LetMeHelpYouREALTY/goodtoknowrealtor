@@ -378,9 +378,9 @@ export default function SellingPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <div className='bg-white rounded-2xl p-8 shadow-lg'>
               <div className='flex items-center mb-4'>
-                <div className='flex text-amber-400'>
+                <div className='flex text-[#c9a962]'>
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='text-lg text-yellow-400' ariaLabel='Star rating' />
+                    <IconSymbol key={i} symbol='⭐' className='text-lg text-[#c9a962] fill-[#c9a962]' ariaLabel='Star rating' />
                   ))}
                 </div>
               </div>
@@ -404,9 +404,9 @@ export default function SellingPage() {
 
             <div className='bg-white rounded-2xl p-8 shadow-lg'>
               <div className='flex items-center mb-4'>
-                <div className='flex text-amber-400'>
+                <div className='flex text-[#c9a962]'>
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='text-lg text-yellow-400' ariaLabel='Star rating' />
+                    <IconSymbol key={i} symbol='⭐' className='text-lg text-[#c9a962] fill-[#c9a962]' ariaLabel='Star rating' />
                   ))}
                 </div>
               </div>
@@ -430,9 +430,9 @@ export default function SellingPage() {
 
             <div className='bg-white rounded-2xl p-8 shadow-lg'>
               <div className='flex items-center mb-4'>
-                <div className='flex text-amber-400'>
+                <div className='flex text-[#c9a962]'>
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='text-lg text-yellow-400' ariaLabel='Star rating' />
+                    <IconSymbol key={i} symbol='⭐' className='text-lg text-[#c9a962] fill-[#c9a962]' ariaLabel='Star rating' />
                   ))}
                 </div>
               </div>
