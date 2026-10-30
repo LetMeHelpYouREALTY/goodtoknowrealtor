@@ -268,25 +268,25 @@ export function Footer() {
               <div className='flex space-x-4 mb-4'>
                 <Link
                   href='http://www.facebook.com/bhhsrealestate'
-                  className='text-gray-600 hover:text-blue-600 transition-colors'
+                  className='text-white/70 hover:text-[#dfc07a] transition-colors'
                 >
                   Facebook
                 </Link>
                 <Link
                   href='http://www.instagram.com/bhhsrealestate'
-                  className='text-gray-600 hover:text-blue-600 transition-colors'
+                  className='text-white/70 hover:text-[#dfc07a] transition-colors'
                 >
                   Instagram
                 </Link>
                 <Link
                   href='https://www.linkedin.com/company/berkshire-hathaway-homeservices'
-                  className='text-gray-600 hover:text-blue-600 transition-colors'
+                  className='text-white/70 hover:text-[#dfc07a] transition-colors'
                 >
                   LinkedIn
                 </Link>
                 <Link
                   href='https://www.youtube.com/channel/UCrBKUuQDrkCNFjy4wF5ZWXw'
-                  className='text-gray-600 hover:text-blue-600 transition-colors'
+                  className='text-white/70 hover:text-[#dfc07a] transition-colors'
                 >
                   YouTube
                 </Link>
@@ -337,12 +337,15 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom */}
-        <div className='border-t border-gray-200 py-6'>
+        <div className='border-t border-white/15 py-6'>
           <div className='text-center'>
-            <p className='text-gray-700 text-base mb-2 font-medium'>
-              © 2025 BHH Affiliates, LLC.
+            <p className='text-white text-base mb-1 font-semibold'>
+              Dr. Jan Duffy · Nevada License S.0197614.LLC
             </p>
-            <p className='text-gray-700 text-base mb-4 leading-relaxed max-w-4xl mx-auto'>
+            <p className='text-white/75 text-base mb-2 font-medium'>
+              © {new Date().getFullYear()} BHH Affiliates, LLC.
+            </p>
+            <p className='text-white/75 text-base mb-4 leading-relaxed max-w-4xl mx-auto'>
               Real Estate Brokerage Services are offered through the network
               member franchisees of BHH Affiliates, LLC. Most franchisees are
               independently owned and operated. Berkshire Hathaway HomeServices
@@ -350,24 +353,24 @@ export function Footer() {
               marks of Columbia Insurance Company, a Berkshire Hathaway
               affiliate.
             </p>
-            <p className='text-gray-700 text-base flex items-center justify-center font-medium'>
+            <p className='text-white/75 text-base flex items-center justify-center font-medium'>
               Equal Housing Opportunity
             </p>
           </div>
         </div>
 
         {/* Company Info */}
-        <div className='border-t border-gray-200 py-4'>
+        <div className='border-t border-white/15 py-4'>
           <div className='text-center'>
-            <p className='text-gray-700 text-base mb-2 leading-relaxed max-w-4xl mx-auto'>
+            <p className='text-white/75 text-base mb-2 leading-relaxed max-w-4xl mx-auto'>
               BHH Affiliates, LLC is a Delaware limited liability company. Its
               principal office is located at 18500 Von Karman Ave, Suite 400,
               Irvine, California 92612 USA.
             </p>
-            <p className='text-gray-700 text-base'>
+            <p className='text-white/75 text-base'>
               <Link
                 href='/do-not-sell'
-                className='text-blue-600 hover:text-blue-800 transition-colors font-medium'
+                className='text-[#dfc07a] hover:text-white underline transition-colors font-medium'
               >
                 Do Not Sell My Personal Information
               </Link>

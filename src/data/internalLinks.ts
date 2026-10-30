@@ -175,7 +175,7 @@ const RELATED_BY_SECTION: Record<string, InternalLink[]> = {
   '/communities': [L.summerlin, L.henderson, L.greenValley, L.northLV, L.downtown, L.luxuryCommunities],
   '/areas': [L.communities, L.listings, L.homeValue, L.market, L.sold],
   '/listings': [L.communities, L.buyerGuide, L.preMarket, L.offMarket, L.market],
-  '/about': [L.team, L.partners, L.testimonials, L.sold, L.press],
+  '/about': [L.partners, L.testimonials, L.sold, L.press, L.contact],
   '/team': [L.about, L.partners, L.testimonials, L.contact],
   '/testimonials': [L.sold, L.about, L.why, L.homeValue],
   '/press': [L.about, L.testimonials, L.sold, L.blog],
