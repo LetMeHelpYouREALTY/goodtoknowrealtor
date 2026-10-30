@@ -1,59 +1,58 @@
-/**
- * Branded monogram badge for client reviews.
- * Real clients' reviews never get a stock or AI-generated face: a stranger's photo
- * next to a named client's quote implies that's the client. Initials + a home mark
- * look polished and stay truthful.
- */
-const PALETTES = [
-  { bg: '#0f1419', fg: '#dfc07a' }, // navy / gold
-  { bg: '#b45309', fg: '#fff7ed' }, // amber / cream
-  { bg: '#1e3a5f', fg: '#e8d5a8' }, // deep blue / sand
-  { bg: '#3f4d3a', fg: '#f1e6c8' }, // sage / parchment
-];
+import { useId } from 'react';
 
+/**
+ * Luxury monogram badge for client reviews.
+ * Real clients' reviews never get a stock or AI-generated face: a stranger's photo
+ * next to a named client's quote implies that's the client. A restrained navy-and-gold
+ * monogram (serif initials, fine double ring) matches the site's luxury styling and
+ * stays truthful.
+ */
 function initialsOf(name: string): string {
   // "Jennifer & Luis Rodriguez" -> "JL"; "Sarah M." -> "SM"; "The Johnson Family" -> "JF"
-  const words = name
-    .split(/[\s&,.]+/)
-    .filter((w) => w && !/^(the|and)$/i.test(w));
+  const words = name.split(/[\s&,.]+/).filter((w) => w && !/^(the|and)$/i.test(w));
   const letters = words.map((w) => w[0]!.toUpperCase());
-  return (letters.length >= 2 ? letters[0]! + letters[1]! : (letters[0] ?? '★')).slice(0, 2);
-}
-
-function paletteFor(name: string) {
-  let h = 0;
-  for (const c of name) h = (h * 31 + c.charCodeAt(0)) >>> 0;
-  return PALETTES[h % PALETTES.length]!;
+  return letters.length >= 2 ? letters[0]! + letters[1]! : (letters[0] ?? '');
 }
 
 export default function ReviewAvatar({ name, size = 48 }: { name: string; size?: number }) {
-  const { bg, fg } = paletteFor(name);
+  const id = useId().replace(/:/g, '');
   const initials = initialsOf(name);
   return (
     <svg
       width={size}
       height={size}
-      viewBox='0 0 48 48'
+      viewBox='0 0 64 64'
       role='img'
-      aria-label={`${name} — client review`}
+      aria-label={`${name}, client`}
       className='flex-shrink-0 rounded-full'
     >
-      <circle cx='24' cy='24' r='24' fill={bg} />
-      <circle cx='24' cy='24' r='21.5' fill='none' stroke={fg} strokeOpacity='0.35' strokeWidth='1' />
+      <defs>
+        <radialGradient id={`bg-${id}`} cx='35%' cy='30%' r='75%'>
+          <stop offset='0%' stopColor='#1c2a3d' />
+          <stop offset='100%' stopColor='#0b1118' />
+        </radialGradient>
+        <linearGradient id={`gold-${id}`} x1='0' y1='0' x2='1' y2='1'>
+          <stop offset='0%' stopColor='#f3e2b3' />
+          <stop offset='45%' stopColor='#c9a962' />
+          <stop offset='100%' stopColor='#9c7a3c' />
+        </linearGradient>
+      </defs>
+      <circle cx='32' cy='32' r='32' fill={`url(#bg-${id})`} />
+      <circle cx='32' cy='32' r='29.5' fill='none' stroke={`url(#gold-${id})`} strokeWidth='1.25' />
+      <circle cx='32' cy='32' r='27' fill='none' stroke={`url(#gold-${id})`} strokeOpacity='0.45' strokeWidth='0.5' />
       <text
-        x='24'
-        y='27'
+        x='32'
+        y='32'
+        dominantBaseline='central'
         textAnchor='middle'
-        fontFamily='Georgia, "Times New Roman", serif'
-        fontSize={initials.length > 1 ? 16 : 18}
-        fontWeight='600'
-        letterSpacing='0.5'
-        fill={fg}
+        fontFamily='var(--font-serif), "Cormorant Garamond", Georgia, serif'
+        fontSize={initials.length > 1 ? 24 : 28}
+        fontWeight='500'
+        letterSpacing='1'
+        fill={`url(#gold-${id})`}
       >
         {initials}
       </text>
-      {/* small home mark */}
-      <path d='M20 38.5 L24 35 L28 38.5 V42 H20 Z' fill={fg} fillOpacity='0.85' />
     </svg>
   );
 }
