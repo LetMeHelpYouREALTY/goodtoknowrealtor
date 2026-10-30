@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import NearbyNeighborhoods from '@/components/SEO/NearbyNeighborhoods';
 import { notFound } from 'next/navigation';
 import { SEO_CONFIG } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
@@ -192,6 +193,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      <NearbyNeighborhoods name={name} />
     </div>
   );
 }
