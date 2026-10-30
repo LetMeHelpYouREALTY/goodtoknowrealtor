@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 import Link from 'next/link';
 import { useState } from 'react';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
@@ -177,14 +177,7 @@ export function TransformationSection() {
               {/* Client Proof */}
               <div className='mb-6 p-4 bg-gray-50 rounded-lg'>
                 <div className='flex items-start gap-4 mb-3'>
-                  <div className='relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0'>
-                    <Image
-                      src={persona.client.image}
-                      alt={persona.client.name}
-                      fill
-                      className='object-cover'
-                    />
-                  </div>
+                  <ReviewAvatar name={persona.client.name} size={48} />
                   <div className='flex-1'>
                     <h4 className='font-bold text-gray-900'>{persona.client.name}</h4>
                     <p className='text-sm text-gray-600'>{persona.client.location}</p>

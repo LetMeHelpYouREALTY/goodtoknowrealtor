@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 import { useState } from 'react';
 import { testimonials } from '@/data/testimonials';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -99,14 +99,7 @@ export function TestimonialsSection() {
 
               <div className="flex items-center mb-6">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  {testimonial.image && (
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      fill
-                      className="object-cover"
-                    />
-                  )}
+                  <ReviewAvatar name={testimonial.author} size={48} />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">{testimonial.author}</h4>

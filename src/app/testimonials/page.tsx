@@ -1,6 +1,6 @@
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 
@@ -145,14 +145,7 @@ export default function TestimonialsPage() {
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {testimonials.map((testimonial) => (
                   <div key={testimonial.id} className='card p-8 flex flex-col items-center text-center'>
-                    <div className='relative w-16 h-16 rounded-full overflow-hidden mb-4'>
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        fill
-                        className='object-cover'
-                      />
-                    </div>
+                    <div className='mb-4'><ReviewAvatar name={testimonial.author} size={64} /></div>
                     
                     <div className='flex mb-4'>
                       {[...Array(testimonial.rating)].map((_, i) => (
