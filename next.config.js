@@ -44,6 +44,7 @@ const nextConfig = {
             value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
           },
           {
+            // NOTE: src/middleware.ts sets the CSP from src/lib/security.ts on every response and overrides this one. Edit both.
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
