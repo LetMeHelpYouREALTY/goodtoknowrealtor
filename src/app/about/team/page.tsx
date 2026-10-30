@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  // Hidden from search: placeholder team page (Dr. Jan works solo). 2026-10-29
+  robots: { index: false, follow: true },
   title: 'Our Team | Las Vegas Real Estate Professionals | Dr. Jan Duffy',
   description: 'Meet Dr. Jan Duffy\'s professional real estate team in Las Vegas. Experienced agents, support staff, and industry experts dedicated to your success.',
   keywords: 'Las Vegas real estate team, Dr. Jan Duffy team, real estate professionals, Las Vegas agents',

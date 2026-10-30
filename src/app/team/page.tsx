@@ -7,13 +7,17 @@ import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export const metadata: Metadata = generatePageMetadata({
+export const metadata: Metadata = {
+  ...generatePageMetadata({
   title: 'Meet Our Team | Dr. Jan Duffy - Las Vegas Real Estate Team',
   description: 'Meet Dr. Jan Duffy and her expert real estate team. Las Vegas agents with $127M+ sales volume and 20+ years of experience.',
   keywords: ['Las Vegas real estate team', 'Dr. Jan Duffy team', 'top real estate agents', 'Las Vegas realtors', 'premier properties team'],
   url: '/team',
   image: '/images/team-og.jpg',
-});
+  }),
+  // Hidden from search: placeholder team with stock photos (Dr. Jan works solo). 2026-10-29
+  robots: { index: false, follow: true },
+};
 
 export const alternates = { canonical: `${SEO_CONFIG.siteUrl}/team` } as const;
 
