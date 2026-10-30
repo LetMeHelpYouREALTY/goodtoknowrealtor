@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { PageHero } from '@/components/ui/PageHero';
@@ -163,12 +164,9 @@ export default function SellerGuidePage() {
             >
               Call (702) 500-1955
             </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
+            <CalendlyButton event='listing' className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors">
               Get Free Home Valuation
-            </a>
+            </CalendlyButton>
           </div>
         </div>
       </section>

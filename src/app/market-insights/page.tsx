@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { MarketInsightsGrid } from '@/components/MarketInsights/MarketInsightsGrid';
@@ -133,12 +134,9 @@ export default async function MarketInsightsPage() {
                 <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
                 Call (702) 500-1955
               </Link>
-              <Link
-                href='/contact'
-                className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors duration-200'
-              >
+              <CalendlyButton event='strategy' className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors duration-200'>
                 Schedule Market Consultation
-              </Link>
+              </CalendlyButton>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -227,12 +228,9 @@ export default function TestimonialsPage() {
               Join hundreds of satisfied clients who chose Dr. Jan Duffy Group for their Las Vegas real estate needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='btn btn-primary'
-              >
+              <CalendlyButton event='general' className='btn btn-primary'>
                 Get Started Today
-              </Link>
+              </CalendlyButton>
               <Link
                 href='tel:702-500-1955'
                 className='btn btn-outline'

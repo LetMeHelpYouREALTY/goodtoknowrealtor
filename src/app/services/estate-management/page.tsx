@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,12 +30,9 @@ export default function EstateManagementPage() {
               ensuring your investment is protected and maintained to the highest standards.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors'
-              >
+              <CalendlyButton event='strategy' className='bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors'>
                 Request Management Services
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/services'
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors'
@@ -206,12 +204,9 @@ export default function EstateManagementPage() {
               Las Vegas luxury property is properly maintained and protected.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
-              >
+              <CalendlyButton event='strategy' className='bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
                 Request Management Services
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/services'
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors'
