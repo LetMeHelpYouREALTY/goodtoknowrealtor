@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,12 +30,9 @@ export default function OffMarketPage() {
               Private listings available only to Dr. Jan Duffy&apos;s VIP clients.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors'
-              >
+              <CalendlyButton event='buyer' className='bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors'>
                 Request Off-Market Access
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/exclusive'
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors'
@@ -239,12 +237,9 @@ export default function OffMarketPage() {
                     High-end estates requiring privacy and discretion 
                     in their sale process.
                   </p>
-                  <Link
-                    href='/contact'
-                    className='text-amber-600 font-semibold hover:text-amber-700'
-                  >
+                  <CalendlyButton event='buyer' className='text-amber-600 font-semibold hover:text-amber-700'>
                     Request Access →
-                  </Link>
+                  </CalendlyButton>
                 </div>
               </div>
 
@@ -262,12 +257,9 @@ export default function OffMarketPage() {
                     Commercial and multi-family properties available 
                     to qualified investors only.
                   </p>
-                  <Link
-                    href='/contact'
-                    className='text-amber-600 font-semibold hover:text-amber-700'
-                  >
+                  <CalendlyButton event='buyer' className='text-amber-600 font-semibold hover:text-amber-700'>
                     Request Access →
-                  </Link>
+                  </CalendlyButton>
                 </div>
               </div>
 
@@ -285,12 +277,9 @@ export default function OffMarketPage() {
                     Properties requiring quick sale or special 
                     handling due to unique circumstances.
                   </p>
-                  <Link
-                    href='/contact'
-                    className='text-amber-600 font-semibold hover:text-amber-700'
-                  >
+                  <CalendlyButton event='buyer' className='text-amber-600 font-semibold hover:text-amber-700'>
                     Request Access →
-                  </Link>
+                  </CalendlyButton>
                 </div>
               </div>
             </div>
@@ -310,12 +299,9 @@ export default function OffMarketPage() {
               available only to Dr. Jan Duffy&apos;s VIP clients.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
-              >
+              <CalendlyButton event='buyer' className='bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
                 Request VIP Access
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/exclusive'
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors'

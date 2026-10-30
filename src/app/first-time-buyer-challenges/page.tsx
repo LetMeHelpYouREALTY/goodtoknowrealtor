@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -431,12 +432,9 @@ export default function FirstTimeBuyerChallengesPage() {
               <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
               Call (702) 500-1955
             </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-800 transition-colors duration-200"
-            >
+            <CalendlyButton event='buyer' className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-red-800 transition-colors duration-200">
               Get Your Free Consultation
-            </Link>
+            </CalendlyButton>
           </div>
           <p className="text-red-100 mt-6 text-lg font-semibold">
             Your advocate through every hurdle, Dr. Jan <IconSymbol symbol='🏠' className='inline h-5 w-5 text-amber-600 align-middle' ariaLabel='Home icon' />

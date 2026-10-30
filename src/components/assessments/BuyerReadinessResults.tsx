@@ -1,5 +1,6 @@
 'use client';
 
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Link from 'next/link';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
 import type { AssessmentInsight } from '@/lib/assessment-data';
@@ -199,15 +200,12 @@ export function BuyerReadinessResults({
                   Call (702) 500-1955
                 </span>
               </Link>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+              <CalendlyButton event='buyer' className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
                 <span className='inline-flex items-center gap-2'>
                   Schedule Consultation
                   <IconSymbol symbol='→' className='h-3 w-3' ariaLabel='Arrow right' />
                 </span>
-              </Link>
+              </CalendlyButton>
             </div>
           </div>
         </div>

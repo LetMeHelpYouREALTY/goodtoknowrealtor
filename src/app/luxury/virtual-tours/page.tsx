@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -29,12 +30,9 @@ export default function LuxuryVirtualToursPage() {
               360° virtual tours and interactive walkthroughs from anywhere in the world.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors'
-              >
+              <CalendlyButton event='zoom' className='bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-amber-700 transition-colors'>
                 Start Virtual Tour
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/luxury'
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors'
@@ -154,12 +152,9 @@ export default function LuxuryVirtualToursPage() {
                     High-resolution panoramic views that allow you to look 
                     in every direction from key vantage points.
                   </p>
-                  <Link
-                    href='/contact'
-                    className='text-amber-600 font-semibold hover:text-amber-700'
-                  >
+                  <CalendlyButton event='zoom' className='text-amber-600 font-semibold hover:text-amber-700'>
                     Experience 360° Tour →
-                  </Link>
+                  </CalendlyButton>
                 </div>
               </div>
 
@@ -177,12 +172,9 @@ export default function LuxuryVirtualToursPage() {
                     Navigate through properties room by room with clickable 
                     hotspots and detailed information points.
                   </p>
-                  <Link
-                    href='/contact'
-                    className='text-amber-600 font-semibold hover:text-amber-700'
-                  >
+                  <CalendlyButton event='zoom' className='text-amber-600 font-semibold hover:text-amber-700'>
                     Start Interactive Tour →
-                  </Link>
+                  </CalendlyButton>
                 </div>
               </div>
 
@@ -200,12 +192,9 @@ export default function LuxuryVirtualToursPage() {
                     Cinematic video tours with professional narration and 
                     detailed property highlights.
                   </p>
-                  <Link
-                    href='/contact'
-                    className='text-amber-600 font-semibold hover:text-amber-700'
-                  >
+                  <CalendlyButton event='zoom' className='text-amber-600 font-semibold hover:text-amber-700'>
                     Watch Video Tour →
-                  </Link>
+                  </CalendlyButton>
                 </div>
               </div>
             </div>
@@ -386,12 +375,9 @@ export default function LuxuryVirtualToursPage() {
               of Las Vegas&apos; most exclusive luxury properties.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
-              >
+              <CalendlyButton event='zoom' className='bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
                 Schedule Virtual Tour
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/luxury'
                 className='border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-colors'

@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -83,12 +84,9 @@ export default async function BlogPage() {
                 />{' '}
                 (702) 500-1955
               </Link>
-              <Link
-                href='/contact'
-                className='border-2 border-white text-white px-6 py-2 rounded-lg font-semibold text-base hover:bg-white hover:text-blue-800 transition-colors duration-200'
-              >
+              <CalendlyButton event='strategy' className='border-2 border-white text-white px-6 py-2 rounded-lg font-semibold text-base hover:bg-white hover:text-blue-800 transition-colors duration-200'>
                 Get Free Consultation
-              </Link>
+              </CalendlyButton>
             </div>
           </div>
         </div>
@@ -233,12 +231,9 @@ export default async function BlogPage() {
                 />{' '}
                 Call (702) 500-1955
               </Link>
-              <Link
-                href='/contact'
-                className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-base hover:bg-white hover:text-blue-800 transition-colors duration-200'
-              >
+              <CalendlyButton event='strategy' className='border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-base hover:bg-white hover:text-blue-800 transition-colors duration-200'>
                 Schedule Consultation
-              </Link>
+              </CalendlyButton>
             </div>
           </div>
         </div>

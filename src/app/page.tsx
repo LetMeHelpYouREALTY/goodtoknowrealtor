@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { HeroSection } from '@/components/Home/HeroSection';
@@ -237,9 +238,9 @@ export default function HomePage() {
             <Link href='/services' className='rounded-xl bg-white px-6 py-3 font-semibold text-amber-700 shadow-md border border-amber-100 hover:shadow-lg transition-shadow'>
               All Services
             </Link>
-            <Link href='/contact' className='rounded-xl bg-amber-600 px-6 py-3 font-semibold text-white shadow-md hover:bg-amber-700 transition-colors'>
+            <CalendlyButton event='general' className='rounded-xl bg-amber-600 px-6 py-3 font-semibold text-white shadow-md hover:bg-amber-700 transition-colors'>
               Schedule Consultation
-            </Link>
+            </CalendlyButton>
           </div>
         </div>
       </section>
