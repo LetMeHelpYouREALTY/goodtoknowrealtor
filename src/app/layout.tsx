@@ -93,6 +93,18 @@ export default function RootLayout({
   return (
     <html lang='en' className={`h-full ${dmSans.variable} ${cormorant.variable}`}>
       <head>
+        {/* Follow Up Boss Widget Tracker (WT-XQHVYQWW): tracks visits and swaps phone numbers for call tracking. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,i,d,g,e,t){w["WidgetTrackerObject"]=g;(w[g]=w[g]||function()
+{(w[g].q=w[g].q||[]).push(arguments);}),(w[g].ds=1*new Date());(e="script"),
+(t=d.createElement(e)),(e=d.getElementsByTagName(e)[0]);t.async=1;t.src=i;
+e.parentNode.insertBefore(t,e);})
+(window,"https://widgetbe.com/agent",document,"widgetTracker");
+window.widgetTracker("create", "WT-XQHVYQWW");
+window.widgetTracker("send", "pageview");`,
+          }}
+        />
         <script
           src='https://em.realscout.com/widgets/realscout-web-components.umd.js'
           type='module'
