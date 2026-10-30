@@ -35,7 +35,7 @@ export default function TestimonialsPage() {
       author: "Jennifer & Luis Rodriguez",
       location: "Home Sellers",
       community: "Henderson, Nevada",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
+      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
       service: "Home Selling"
     },

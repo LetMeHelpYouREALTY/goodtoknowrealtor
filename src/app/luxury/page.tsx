@@ -50,7 +50,7 @@ export default function LuxuryPage() {
     {
       name: 'The Ridges',
       description: 'Ultra-luxury homes with Strip and valley views',
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$2M - $15M+',
       features: ['Strip views', 'Private golf', 'Gated security', 'Custom estates'],
     },
@@ -64,7 +64,7 @@ export default function LuxuryPage() {
     {
       name: 'Anthem Country Club',
       description: 'Golf course luxury with resort-style amenities',
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$700K - $4M+',
       features: ['Championship golf', 'Country club', 'Tennis courts', 'Fine dining'],
     },
@@ -117,7 +117,7 @@ export default function LuxuryPage() {
           subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Las Vegas agent specializing in high-end homes, estates, and luxury communities'
           gradientFromClassName='from-amber-900'
           gradientToClassName='to-amber-800'
-          backgroundImageUrl='https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1973&q=80'
+          backgroundImageUrl='https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1973&q=80'
         >
           <Link
             href='/contact'

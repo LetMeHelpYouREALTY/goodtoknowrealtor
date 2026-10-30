@@ -7,7 +7,9 @@ const nextConfig = {
       'via.placeholder.com',
       'www.simplifyingthemarket.com',
       'em.realscout.com',
-      'embed.homebotapp.com'
+      'embed.homebotapp.com',
+      // Dr. Jan's own profile photo (her Calendly avatar)
+      'd3v0px0pttie1i.cloudfront.net'
     ],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
