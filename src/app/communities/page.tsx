@@ -26,7 +26,7 @@ export default function CommunitiesPage() {
     {
       id: 'las-vegas',
       name: 'Las Vegas',
-      href: '/areas/las-vegas',
+      href: '/listings',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       description: 'The heart of the Las Vegas Valley with diverse neighborhoods and urban amenities.',
       avgPrice: '$450,000',
