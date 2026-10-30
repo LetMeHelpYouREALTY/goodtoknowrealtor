@@ -1,8 +1,9 @@
 'use client';
 
-import ReviewAvatar from '@/components/ui/ReviewAvatar';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
 
 interface PersonaCard {
@@ -181,9 +182,9 @@ export function TransformationSection() {
                   <div className='flex-1'>
                     <h4 className='font-bold text-gray-900'>{persona.client.name}</h4>
                     <p className='text-sm text-gray-600'>{persona.client.location}</p>
-                    <div className='flex text-amber-400 mt-1'>
+                    <div className='flex text-[#c9a962] mt-1'>
                       {[...Array(persona.client.rating)].map((_, i) => (
-                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-amber-400' />
+                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' />
                       ))}
                     </div>
                   </div>

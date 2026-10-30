@@ -234,7 +234,7 @@ export default function WhyListWithUsPage() {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-gray-50 rounded-xl p-6">
                   <div className="flex items-center mb-4">
-                    <div className="text-yellow-400 text-xl">★★★★★</div>
+                    <div className="text-[#c9a962] text-xl">★★★★★</div>
                   </div>
                   <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>

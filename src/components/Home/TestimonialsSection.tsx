@@ -116,9 +116,9 @@ export function TestimonialsSection() {
 
               {/* Key Stats */}
               <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between">
-                <div className="flex text-amber-400">
+                <div className="flex text-[#c9a962]">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-amber-400' ariaLabel='Rating star' />
+                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' ariaLabel='Rating star' />
                   ))}
                 </div>
                 {testimonial.dollarAmount && (
