@@ -9,7 +9,7 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
 } from 'react';
 import { trackMenuClick } from '@/lib/analytics';
-import { ConsultationModal } from '@/components/ui/ConsultationModal';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
 
 type MenuChild = {
@@ -191,7 +191,6 @@ function DropdownMenu({ children, isOpen }: DropdownMenuProps) {
 
 export function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isConsultModalOpen, setIsConsultModalOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const menuContainerRef = useRef<HTMLDivElement | null>(null);
@@ -432,13 +431,10 @@ export function Navigation() {
                 <span className='hidden sm:inline'>Call</span>
               </Link>
               <div className='hidden lg:flex items-center gap-2 sm:gap-3 ml-2 sm:ml-4'>
-                <button
-                  onClick={() => setIsConsultModalOpen(true)}
-                  className='flex items-center justify-center gap-2 bg-blue-600 text-white px-4 sm:px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-xs sm:text-sm whitespace-nowrap tracking-wide shadow-md hover:shadow-lg shadow-blue-500/20'
-                  aria-label='Schedule Consultation'
-                >
+                <CalendlyButton event='general' className='flex items-center justify-center gap-2 bg-blue-600 text-white px-4 sm:px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-xs sm:text-sm whitespace-nowrap tracking-wide shadow-md hover:shadow-lg shadow-blue-500/20'>
+
                   Schedule Consultation
-                </button>
+                </CalendlyButton>
                 <Link
                   href='tel:702-500-1955'
                   className='flex items-center justify-center gap-2 bg-amber-600 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors text-xs sm:text-sm whitespace-nowrap tracking-wide shadow-md hover:shadow-lg shadow-amber-500/20'
@@ -526,12 +522,6 @@ export function Navigation() {
           </div>
         </>
       )}
-
-      <ConsultationModal
-        isOpen={isConsultModalOpen}
-        onClose={() => setIsConsultModalOpen(false)}
-        source='header'
-      />
     </>
   );
 }

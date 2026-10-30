@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
@@ -369,12 +370,9 @@ export default function ServicesPage() {
               Contact Dr. Jan Duffy today for personalized real estate services in Las Vegas. With $127M+ in sales volume and 20+ years of experience, we deliver results that exceed expectations.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'
-              >
+              <CalendlyButton event='general' className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'>
                 Schedule Consultation
-              </Link>
+              </CalendlyButton>
               <Link
                 href='tel:702-500-1955'
                 className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'

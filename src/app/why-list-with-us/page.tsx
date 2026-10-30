@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -143,12 +144,9 @@ export default function WhyListWithUsPage() {
                 Join 500+ successful sellers who chose Las Vegas real estate agent for exceptional results and unmatched service
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-                >
+                <CalendlyButton event='listing' className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">
                   Get Free Home Valuation
-                </Link>
+                </CalendlyButton>
                 <Link
                   href="tel:702-500-1955"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors"
@@ -361,12 +359,9 @@ export default function WhyListWithUsPage() {
               Join the 500+ successful sellers who chose Dr. Jan Duffy for their Las Vegas real estate needs. Get your free home valuation and discover your property's true market value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
+              <CalendlyButton event='listing' className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                 Get Free Home Valuation
-              </Link>
+              </CalendlyButton>
               <Link
                 href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"

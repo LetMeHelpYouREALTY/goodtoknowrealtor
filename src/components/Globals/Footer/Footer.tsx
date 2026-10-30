@@ -2,12 +2,10 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
-import { ConsultationModal } from '@/components/ui/ConsultationModal';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export function Footer() {
-  const [isConsultModalOpen, setIsConsultModalOpen] = useState(false);
   return (
     <footer className='bg-[#0f1419] text-white' role='contentinfo' aria-label='Site footer'>
       <div className='luxury-divider' aria-hidden='true' />
@@ -306,12 +304,10 @@ export function Footer() {
               Get expert guidance tailored to your goals.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-              <button
-                onClick={() => setIsConsultModalOpen(true)}
-                className='btn btn-primary bg-white text-blue-600 hover:bg-gray-100'
-              >
+              <CalendlyButton event='general' className='btn btn-primary bg-white text-blue-600 hover:bg-gray-100'>
+
                 Schedule Your Free Consultation
-              </button>
+              </CalendlyButton>
               <Link
                 href='tel:702-500-1955'
                 className='btn btn-outline border-2 border-white text-white hover:bg-white hover:text-blue-600'
@@ -395,11 +391,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <ConsultationModal
-        isOpen={isConsultModalOpen}
-        onClose={() => setIsConsultModalOpen(false)}
-        source="footer"
-      />
     </footer>
   );
 }

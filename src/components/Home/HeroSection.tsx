@@ -1,5 +1,6 @@
 'use client';
 
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -88,10 +89,10 @@ export function HeroSection() {
                 <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
                 Call (702) 500-1955
               </a>
-              <Link href='/contact' className='btn-luxury-outline inline-flex w-full sm:w-auto gap-2'>
+              <CalendlyButton event='general' className='btn-luxury-outline inline-flex w-full sm:w-auto gap-2'>
                 <IconSymbol symbol='🛡️' className='h-5 w-5 text-[#dfc07a]' ariaLabel='Shield icon' />
                 Schedule Consultation
-              </Link>
+              </CalendlyButton>
             </div>
 
             {/* Search */}
