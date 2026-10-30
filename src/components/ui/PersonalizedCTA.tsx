@@ -156,7 +156,7 @@ export function PersonalizedCTA({ onPersonaSelect, className = '' }: Personalize
               />
 
               {/* Headline */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-opacity-90">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-900/90">
                 {persona.headline}
               </h3>
 
