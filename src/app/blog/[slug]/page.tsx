@@ -1,7 +1,7 @@
-import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { fetchBlogPost, getPostsWithCache } from '@/lib/blog/cache';
 import { generatePageMetadata, generateBreadcrumbSchema, generateArticleSchema, SEO_CONFIG } from '@/lib/seo';
