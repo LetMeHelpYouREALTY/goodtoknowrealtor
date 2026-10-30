@@ -32,7 +32,7 @@ export default function TeamPage() {
       experience: '20+ Years',
       specialties: ['Luxury Properties', 'Investment Real Estate', 'First-Time Buyers', 'Market Analysis'],
       bio: 'Dr. Jan Duffy leads Las Vegas\'s premier real estate team with $127M+ in sales volume and 500+ successful transactions. Her expertise spans luxury properties, investment real estate, and first-time buyer guidance.',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400&q=80',
+      image: 'https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/21173348/529da652.png',
       achievements: [
         'Las Vegas Real Estate Agent',
         '$127M+ Total Sales Volume',

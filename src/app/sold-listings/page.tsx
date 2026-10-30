@@ -100,7 +100,7 @@ export default function SoldListingsPage() {
       bathrooms: 3,
       sqft: '2,400',
       yearBuilt: 2016,
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80',
       neighborhood: 'Green Valley',
       propertyType: 'Single Family',
       clientTestimonial: 'Dr. Duffy\'s negotiation skills got us $25K above asking. The entire process was smooth and professional.',

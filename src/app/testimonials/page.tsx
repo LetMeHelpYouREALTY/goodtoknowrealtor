@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'Client Testimonials | Dr. Jan Duffy Group',
@@ -36,7 +37,7 @@ export default function TestimonialsPage() {
       author: "Jennifer & Luis Rodriguez",
       location: "Home Sellers",
       community: "Henderson, Nevada",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
+      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
       service: "Home Selling"
     },
@@ -146,18 +147,11 @@ export default function TestimonialsPage() {
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {testimonials.map((testimonial) => (
                   <div key={testimonial.id} className='card p-8 flex flex-col items-center text-center'>
-                    <div className='relative w-16 h-16 rounded-full overflow-hidden mb-4'>
-                      <Image
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        fill
-                        className='object-cover'
-                      />
-                    </div>
+                    <div className='mb-4'><ReviewAvatar name={testimonial.author} size={64} /></div>
                     
                     <div className='flex mb-4'>
                       {[...Array(testimonial.rating)].map((_, i) => (
-                        <svg key={i} className='w-5 h-5 text-yellow-400' fill='currentColor' viewBox='0 0 20 20' width="24" height="24">
+                        <svg key={i} className='w-5 h-5 text-[#c9a962]' fill='currentColor' viewBox='0 0 20 20' width="24" height="24">
                           <path d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z' />
                         </svg>
                       ))}

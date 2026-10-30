@@ -77,7 +77,7 @@ const mockPosts = {
       id: '5',
       title: 'Timing Your Vegas Home Sale: Convention Season vs Off-Season',
       excerpt: 'When to list your Las Vegas home for maximum exposure and profit.',
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       date: '2025-01-11',
       readTime: '6 min read'
     }
@@ -131,7 +131,7 @@ const mockPosts = {
       id: '11',
       title: 'Las Vegas Living Beyond The Strip: Local Favorites & Hidden Gems',
       excerpt: 'Discover the real Las Vegas lifestyle away from tourist areas - restaurants, parks, and activities.',
-      image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       date: '2025-01-07',
       readTime: '8 min read'
     }

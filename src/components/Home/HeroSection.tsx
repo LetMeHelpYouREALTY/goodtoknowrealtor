@@ -141,7 +141,7 @@ export function HeroSection() {
                   </div>
                   <div className='flex items-center gap-1 text-amber-300'>
                     {[...Array(5)].map((_, index) => (
-                      <IconSymbol key={index} symbol='⭐' className='h-3 w-3 text-amber-300' ariaLabel='Star rating' />
+                      <IconSymbol key={index} symbol='⭐' className='h-3 w-3 text-[#dfc07a] fill-[#dfc07a]' ariaLabel='Star rating' />
                     ))}
                   </div>
                 </div>

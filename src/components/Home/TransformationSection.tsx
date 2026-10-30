@@ -4,6 +4,7 @@ import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
 
 interface PersonaCard {
@@ -178,20 +179,13 @@ export function TransformationSection() {
               {/* Client Proof */}
               <div className='mb-6 p-4 bg-gray-50 rounded-lg'>
                 <div className='flex items-start gap-4 mb-3'>
-                  <div className='relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0'>
-                    <Image
-                      src={persona.client.image}
-                      alt={persona.client.name}
-                      fill
-                      className='object-cover'
-                    />
-                  </div>
+                  <ReviewAvatar name={persona.client.name} size={48} />
                   <div className='flex-1'>
                     <h4 className='font-bold text-gray-900'>{persona.client.name}</h4>
                     <p className='text-sm text-gray-600'>{persona.client.location}</p>
-                    <div className='flex text-amber-400 mt-1'>
+                    <div className='flex text-[#c9a962] mt-1'>
                       {[...Array(persona.client.rating)].map((_, i) => (
-                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-amber-400' />
+                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' />
                       ))}
                     </div>
                   </div>

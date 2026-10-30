@@ -314,9 +314,9 @@ export default function ServicesPage() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               <div className='bg-gray-50 rounded-xl p-6'>
                 <div className='flex items-center mb-4'>
-                  <div className='flex text-yellow-400 text-xl'>
+                  <div className='flex text-[#c9a962] text-xl'>
                     {[...Array(5)].map((_, i) => (
-                      <IconSymbol key={i} symbol='⭐' className='h-4 w-4' ariaLabel='Star rating' />
+                      <IconSymbol key={i} symbol='⭐' className='h-4 w-4 fill-[#c9a962]' ariaLabel='Star rating' />
                     ))}
                   </div>
                 </div>
@@ -329,9 +329,9 @@ export default function ServicesPage() {
 
               <div className='bg-gray-50 rounded-xl p-6'>
                 <div className='flex items-center mb-4'>
-                  <div className='flex text-yellow-400 text-xl'>
+                  <div className='flex text-[#c9a962] text-xl'>
                     {[...Array(5)].map((_, i) => (
-                      <IconSymbol key={i} symbol='⭐' className='h-4 w-4' ariaLabel='Star rating' />
+                      <IconSymbol key={i} symbol='⭐' className='h-4 w-4 fill-[#c9a962]' ariaLabel='Star rating' />
                     ))}
                   </div>
                 </div>
@@ -344,9 +344,9 @@ export default function ServicesPage() {
 
               <div className='bg-gray-50 rounded-xl p-6'>
                 <div className='flex items-center mb-4'>
-                  <div className='flex text-yellow-400 text-xl'>
+                  <div className='flex text-[#c9a962] text-xl'>
                     {[...Array(5)].map((_, i) => (
-                      <IconSymbol key={i} symbol='⭐' className='h-4 w-4' ariaLabel='Star rating' />
+                      <IconSymbol key={i} symbol='⭐' className='h-4 w-4 fill-[#c9a962]' ariaLabel='Star rating' />
                     ))}
                   </div>
                 </div>
