@@ -106,12 +106,12 @@ export const securityHeaders = {
   // overrides next.config.js headers — keep third-party widgets listed here.
   'Content-Security-Policy': [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://vercel.com https://em.realscout.com https://www.realscout.com https://embed.homebotapp.com https://www.googletagmanager.com https://www.google-analytics.com https://widgetbe.com https://*.widgetbe.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://em.realscout.com https://widgetbe.com https://*.widgetbe.com",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://vercel.com https://em.realscout.com https://www.realscout.com https://embed.homebotapp.com https://www.googletagmanager.com https://www.google-analytics.com https://widgetbe.com https://*.widgetbe.com https://assets.calendly.com",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://em.realscout.com https://widgetbe.com https://*.widgetbe.com https://assets.calendly.com",
     "font-src 'self' data: https://fonts.gstatic.com",
     "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://em.realscout.com https://www.realscout.com https://api.realscout.com https://*.vercel.app https://embed.homebotapp.com https://www.simplifyingthemarket.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://widgetbe.com https://*.widgetbe.com",
-    "frame-src 'self' https://www.simplifyingthemarket.com https://www.realscout.com https://embed.homebotapp.com https://calendly.com https://www.youtube.com https://widgetbe.com https://*.widgetbe.com",
+    "connect-src 'self' https://em.realscout.com https://www.realscout.com https://api.realscout.com https://*.vercel.app https://embed.homebotapp.com https://www.simplifyingthemarket.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://widgetbe.com https://*.widgetbe.com https://calendly.com https://*.calendly.com",
+    "frame-src 'self' https://www.simplifyingthemarket.com https://www.realscout.com https://embed.homebotapp.com https://calendly.com https://www.youtube.com https://widgetbe.com https://*.widgetbe.com https://*.calendly.com",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
