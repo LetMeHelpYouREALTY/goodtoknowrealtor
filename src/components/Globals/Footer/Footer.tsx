@@ -12,7 +12,7 @@ export function Footer() {
       <div className='container mx-auto px-4'>
         {/* Main Footer Content */}
         <div className='border-t border-[#c9a962]/20 py-8'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {/* Logo and Branding */}
             <div className='flex flex-col'>
               <Image
@@ -49,7 +49,7 @@ export function Footer() {
             </div>
 
             {/* Navigation Links */}
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 gap-8 md:col-span-2 lg:col-span-2'>
               <div>
                 <ul className='space-y-2'>
                   <li>
