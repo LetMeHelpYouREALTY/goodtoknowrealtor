@@ -148,7 +148,7 @@ const menuItems: MenuItem[] = [
     label: 'About',
     href: '/about',
     icon: '📚',
-    description: 'Get to know Dr. Jan Duffy, the team, and community involvement.',
+    description: 'Get to know Dr. Jan Duffy and her community involvement.',
     cta: { label: 'Meet Dr. Duffy', href: '/about' },
     children: [
       {

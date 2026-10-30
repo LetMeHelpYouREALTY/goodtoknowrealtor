@@ -12,10 +12,8 @@ type StaticRouteConfig = {
 export const STATIC_SITEMAP_ROUTES: readonly StaticRouteConfig[] = [
   { path: '/', changeFrequency: 'daily', priority: 1.0 },
   { path: '/about', changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/about/team', changeFrequency: 'monthly', priority: 0.7 },
   { path: '/about/partners', changeFrequency: 'monthly', priority: 0.6 },
   { path: '/contact', changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/team', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/buying', changeFrequency: 'weekly', priority: 0.9 },
   { path: '/buying/updates', changeFrequency: 'weekly', priority: 0.7 },
   { path: '/selling', changeFrequency: 'weekly', priority: 0.9 },
