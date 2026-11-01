@@ -5,6 +5,7 @@ import { HomeValueWidget } from '@/components/Home/HomeValueWidget';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/selling/luxury' },
   title: 'Sell My Luxury House Las Vegas | Luxury Home Sales | Dr. Jan Duffy',
   description: 'Sell your luxury house in Las Vegas with Dr. Jan Duffy, Real Estate Agent. Premium marketing, exclusive networks, and maximum value for luxury properties.',
   keywords: 'sell luxury house Las Vegas, luxury home sales, luxury property marketing, high-end real estate sales',

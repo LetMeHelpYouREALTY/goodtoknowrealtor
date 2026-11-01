@@ -5,7 +5,7 @@ import { fetchBlogPosts, fetchWordPressPostById } from './fetcher';
 // In production, consider using Redis or similar
 let postsCache: BlogPost[] = [];
 let lastSync: Date | null = null;
-let syncInProgress = false;
+let inflightSync: Promise<BlogPost[]> | null = null;
 
 const CACHE_DURATION = 6 * 60 * 60 * 1000; // 6 hours in milliseconds
 
@@ -64,29 +64,28 @@ export async function getPostsWithCache(): Promise<BlogPost[]> {
     return cachedPosts;
   }
 
-  // If sync is already in progress, return cached data or empty array
-  if (syncInProgress) {
-    // Sync in progress, returning cached data
-    return postsCache;
+  // If a sync is already in progress, wait for it. Returning the (possibly empty)
+  // cache here made concurrent renders see zero posts, so /blog/[slug] pages were
+  // rendered and ISR-cached as 404s (Search Console "Not found").
+  if (inflightSync) {
+    return inflightSync;
   }
 
   // Fetch new posts
-  try {
-    syncInProgress = true;
-    // Fetching fresh posts
+  inflightSync = (async () => {
+    try {
+      const posts = await fetchBlogPosts();
+      updateCache(posts);
+      return posts;
+    } catch {
+      // Failed to fetch posts: return cached data even if expired as fallback
+      return postsCache;
+    } finally {
+      inflightSync = null;
+    }
+  })();
 
-    const posts = await fetchBlogPosts();
-    updateCache(posts);
-
-    // Successfully cached posts
-    return posts;
-  } catch {
-    // Failed to fetch posts, return cached data as fallback
-    // Return cached data even if expired as fallback
-    return postsCache;
-  } finally {
-    syncInProgress = false;
-  }
+  return inflightSync;
 }
 
 /**

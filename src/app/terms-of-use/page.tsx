@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/terms-of-use' },
   title: 'Terms of Use | Dr. Jan Duffy',
   description: 'Terms of use for Dr. Jan Duffy Real Estate services.',
 };

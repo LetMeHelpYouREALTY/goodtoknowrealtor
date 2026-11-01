@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/condos' },
   title: 'Luxury Condos Las Vegas | High-Rise Condos | Dr. Jan Duffy',
   description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury condos Las Vegas, high-rise condos, luxury condominiums, Las Vegas condos, premium condos, luxury high-rise',

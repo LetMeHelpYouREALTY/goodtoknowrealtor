@@ -33,14 +33,14 @@ export function AssessmentCTA({
     'neighborhood-match': {
       title: title || 'Find Your Perfect Vegas Neighborhood',
       description: description || 'Discover which Las Vegas community matches your lifestyle and budget.',
-      link: '/assessments/neighborhood-match',
+      link: '/assessments',
       icon: 'Location',
       color: 'purple'
     },
     'investment-roi': {
       title: title || 'Is Vegas Real Estate Investing Right for You?',
       description: description || 'Calculate your investment potential and get personalized strategies.',
-      link: '/assessments/investment-roi',
+      link: '/assessments',
       icon: 'Chart',
       color: 'orange'
     }
@@ -88,12 +88,12 @@ export function AssessmentCTASmall({ type }: { type: AssessmentCTAProps['type'] 
     },
     'neighborhood-match': {
       title: 'Find Your Neighborhood',
-      link: '/assessments/neighborhood-match',
+      link: '/assessments',
       icon: 'Location'
     },
     'investment-roi': {
       title: 'Investment Ready?',
-      link: '/assessments/investment-roi',
+      link: '/assessments',
       icon: 'Chart'
     }
   };

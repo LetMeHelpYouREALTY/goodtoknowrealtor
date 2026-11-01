@@ -230,7 +230,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             )}
             {category.slug === 'finance' && (
               <p>
-                From loan programs to Nevada’s tax advantages, these posts help you translate numbers into buying power. Pair this with our <Link href="/assessments/buyer-readiness" className="text-blue-600 hover:text-blue-700 font-semibold">Buyer Readiness Assessment</Link> and <Link href="/mortgage-calculator" className="text-blue-600 hover:text-blue-700 font-semibold">Mortgage Calculator</Link>.
+                From loan programs to Nevada’s tax advantages, these posts help you translate numbers into buying power. Pair this with our <Link href="/assessments/buyer-readiness" className="text-blue-600 hover:text-blue-700 font-semibold">Buyer Readiness Assessment</Link>.
               </p>
             )}
             {category.slug === 'home-improvement' && (

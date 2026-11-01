@@ -163,7 +163,7 @@ export default function SellingPage() {
                 <li>• Market timing advice</li>
               </ul>
               <Link
-                href='/selling/tips'
+                href='/seller-guide'
                 className='btn btn-outline'
               >
                 Learn More →
@@ -195,7 +195,7 @@ export default function SellingPage() {
                 <li>• Improvement recommendations</li>
               </ul>
               <Link
-                href='/selling/valuation'
+                href='/home-value'
                 className='btn btn-outline'
               >
                 Get Your Report
@@ -222,7 +222,7 @@ export default function SellingPage() {
                 <li>• Price per square foot</li>
               </ul>
               <Link
-                href='/selling/market'
+                href='/market-insights'
                 className='btn btn-outline'
               >
                 View Market Data

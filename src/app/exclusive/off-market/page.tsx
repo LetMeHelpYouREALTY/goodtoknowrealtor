@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/exclusive/off-market' },
   title: 'Off-Market Properties Las Vegas | Exclusive Listings | Dr. Jan Duffy',
   description: 'Access exclusive off-market properties in Las Vegas. Private listings, pre-market opportunities, and exclusive real estate deals with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'off-market properties Las Vegas, exclusive listings, private real estate, pre-market properties, exclusive deals',

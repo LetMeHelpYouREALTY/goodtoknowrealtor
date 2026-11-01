@@ -8,6 +8,7 @@ import { AssessmentCTA } from '@/components/blog/AssessmentCTA';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/buying/updates' },
   title: 'Las Vegas Real Estate Market Updates | Dr. Jan Duffy',
   description: 'Stay informed with the latest Las Vegas real estate market trends, statistics, and opportunities. Expert insights from Dr. Jan Duffy.',
   keywords: ['Las Vegas real estate market', 'Vegas home prices', 'Las Vegas market trends', 'real estate Las Vegas updates'],
@@ -222,7 +223,7 @@ export default function BuyingUpdatesPage() {
                     {marketUpdates[0].excerpt}
                   </p>
                   <Link
-                    href={`/blog/market-updates/${marketUpdates[0].id}`}
+                    href='/market-insights'
                     className='inline-flex items-center text-amber-600 font-semibold hover:text-amber-700 transition-colors'
                   >
                     Read Full Report →
@@ -260,7 +261,7 @@ export default function BuyingUpdatesPage() {
                     {update.excerpt}
                   </p>
                   <Link
-                    href={`/blog/market-updates/${update.id}`}
+                    href='/market-insights'
                     className='inline-flex items-center text-amber-600 font-semibold hover:text-amber-700 transition-colors text-sm'
                   >
                     Read More →

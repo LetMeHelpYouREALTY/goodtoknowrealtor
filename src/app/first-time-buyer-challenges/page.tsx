@@ -5,6 +5,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/first-time-buyer-challenges' },
   title: 'Las Vegas First-Time Buyer Challenges & Solutions | Dr. Jan Duffy',
   description: 'Navigate Las Vegas housing affordability crisis with expert guidance. Dr. Jan Duffy helps first-time buyers overcome down payment, income gaps, and market challenges.',
   keywords: 'Las Vegas first-time buyer challenges, housing affordability crisis, down payment assistance Nevada, Home Is Possible program, Dr. Jan Duffy',

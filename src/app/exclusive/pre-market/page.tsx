@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/exclusive/pre-market' },
   title: 'Pre-Market Listings Las Vegas | Coming Soon Properties | Dr. Jan Duffy',
   description: 'Access pre-market listings in Las Vegas. Properties coming to market soon, exclusive previews, and first-look opportunities with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'pre-market listings Las Vegas, coming soon properties, first-look real estate, exclusive previews',

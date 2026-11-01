@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     image: '/images/dr-janet-duffy-blog-og.jpg',
   }),
   alternates: {
+    canonical: `${SEO_CONFIG.siteUrl}/blog`,
     types: {
       'application/rss+xml': `${SEO_CONFIG.siteUrl}/blog/rss.xml`,
     },

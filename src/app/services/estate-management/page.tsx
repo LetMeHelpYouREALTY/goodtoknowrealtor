@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/services/estate-management' },
   title: 'Luxury Estate Management Las Vegas | Property Management Services | Dr. Jan Duffy',
   description: 'Comprehensive luxury estate management services in Las Vegas. Property management, maintenance, and concierge services for luxury properties.',
   keywords: 'luxury estate management Las Vegas, property management, luxury property services, estate concierge',

@@ -54,6 +54,22 @@ export const SEO_CONFIG = {
   }
 };
 
+/**
+ * Page OG images under /images/ were never added to /public, so every og:image 404'd.
+ * Until real files exist, render the page's card with the /api/og route instead.
+ */
+const EXISTING_PUBLIC_IMAGES = new Set<string>(['/images/bhhs/logo.svg']);
+
+function resolveOgImage(image: string | undefined, title: string | undefined): string {
+  if (image && (image.startsWith('http') || !image.startsWith('/images/') || EXISTING_PUBLIC_IMAGES.has(image))) {
+    return image.startsWith('http') ? image : `${SEO_CONFIG.siteUrl}${image}`;
+  }
+  if (image && title) {
+    return `${SEO_CONFIG.siteUrl}/api/og?title=${encodeURIComponent(title)}`;
+  }
+  return `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.default}`;
+}
+
 // Generate page-specific metadata
 export function generatePageMetadata({
   title,
@@ -76,7 +92,7 @@ export function generatePageMetadata({
     
   const fullDescription = description || SEO_CONFIG.defaultDescription;
   const allKeywords = [...SEO_CONFIG.keywords, ...keywords];
-  const imageUrl = image ? `${SEO_CONFIG.siteUrl}${image}` : `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.default}`;
+  const imageUrl = resolveOgImage(image, title);
   const pageUrl = url ? `${SEO_CONFIG.siteUrl}${url}` : SEO_CONFIG.siteUrl;
 
   return {
@@ -788,11 +804,7 @@ export function generateArticleSchema({
   author?: string;
 }) {
   const pageUrl = `${SEO_CONFIG.siteUrl}${url}`;
-  const imageUrl = image
-    ? image.startsWith('http')
-      ? image
-      : `${SEO_CONFIG.siteUrl}${image}`
-    : `${SEO_CONFIG.siteUrl}${SEO_CONFIG.images.default}`;
+  const imageUrl = resolveOgImage(image, title);
 
   return {
     '@context': 'https://schema.org',

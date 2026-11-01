@@ -429,7 +429,7 @@ export default function ListingsPage() {
             </Link>
 
             {/* Featured Properties */}
-            <Link href='/listings/featured' className='group'>
+            <Link href='/exclusive' className='group'>
               <div className='bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:bg-amber-50'>
                 <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors'>
                   <IconSymbol symbol='⭐' className='h-8 w-8 text-amber-700' ariaLabel='Featured star icon' />
@@ -461,7 +461,7 @@ export default function ListingsPage() {
             </Link>
 
             {/* Luxury Collection */}
-            <Link href='/listings/luxury' className='group'>
+            <Link href='/luxury' className='group'>
               <div className='bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:bg-amber-50'>
                 <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors'>
                   <IconSymbol symbol='👑' className='h-8 w-8 text-amber-700' ariaLabel='Crown icon' />
@@ -493,7 +493,7 @@ export default function ListingsPage() {
             </Link>
 
             {/* Open Houses */}
-            <Link href='/listings/open-houses' className='group'>
+            <Link href='/exclusive/showings' className='group'>
               <div className='bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:bg-amber-50'>
                 <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors'>
                   <IconSymbol symbol='🏠' className='h-8 w-8 text-amber-700' ariaLabel='Home icon' />
@@ -525,7 +525,7 @@ export default function ListingsPage() {
             </Link>
 
             {/* For Lease */}
-            <Link href='/listings/lease' className='group'>
+            <Link href='/luxury/rentals' className='group'>
               <div className='bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:bg-amber-50'>
                 <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors'>
                   <IconSymbol symbol='🔑' className='h-8 w-8 text-amber-700' ariaLabel='Key icon' />
@@ -557,7 +557,7 @@ export default function ListingsPage() {
             </Link>
 
             {/* Our Communities */}
-            <Link href='/listings/communities' className='group'>
+            <Link href='/communities' className='group'>
               <div className='bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:bg-amber-50'>
                 <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-amber-200 transition-colors'>
                   <IconSymbol symbol='🏘️' className='h-8 w-8 text-amber-700' ariaLabel='Community icon' />

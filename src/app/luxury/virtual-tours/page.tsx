@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/virtual-tours' },
   title: 'Luxury Virtual Tours Las Vegas | 360° Property Tours | Dr. Jan Duffy',
   description: 'Experience luxury properties in Las Vegas through immersive virtual tours. 360° property tours, interactive walkthroughs, and detailed property showcases with Dr. Jan Duffy.',
   keywords: 'luxury virtual tours Las Vegas, 360 property tours, virtual walkthroughs, interactive property tours, luxury home tours',

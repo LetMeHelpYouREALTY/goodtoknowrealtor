@@ -13,6 +13,8 @@ interface BreadcrumbsProps {
   className?: string;
 }
 
+const NON_PAGE_PATHS = new Set(['/areas', '/blog/category']);
+
 export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
   const pathname = usePathname();
   
@@ -28,6 +30,8 @@ export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
     let currentPath = '';
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`;
+      // Path prefixes with no page of their own: linking them would 404.
+      if (index < pathSegments.length - 1 && NON_PAGE_PATHS.has(currentPath)) return;
       
       // Convert segment to readable name
       const name = segment

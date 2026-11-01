@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/press/speaking' },
   title: 'Speaking Engagements | Dr. Jan Duffy Real Estate Expert | Las Vegas',
   description: 'Book Dr. Jan Duffy for speaking engagements, real estate seminars, and expert presentations on Las Vegas luxury real estate market trends.',
   keywords: 'Dr. Jan Duffy speaking, real estate expert speaker, Las Vegas real estate seminars, luxury real estate presentations',

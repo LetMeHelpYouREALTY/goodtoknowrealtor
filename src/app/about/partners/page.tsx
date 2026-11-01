@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about/partners' },
   title: 'Our Partners | Las Vegas Real Estate Network | Dr. Jan Duffy',
   description: 'Meet Dr. Jan Duffy\'s trusted network of real estate partners in Las Vegas. Lenders, inspectors, contractors, and service providers.',
   keywords: 'Las Vegas real estate partners, trusted vendors, real estate network, service providers',

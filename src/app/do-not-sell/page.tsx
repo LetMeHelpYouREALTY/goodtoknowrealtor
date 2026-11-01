@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/do-not-sell' },
   title: 'Do Not Sell My Personal Information | Dr. Jan Duffy',
   description: 'Opt-out of the sale of personal information.',
 };

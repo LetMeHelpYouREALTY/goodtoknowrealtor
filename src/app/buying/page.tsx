@@ -167,7 +167,7 @@ export default function BuyingPage() {
                 <li>• Financing options</li>
               </ul>
               <Link
-                href='/buying/tips'
+                href='/buyer-guide'
                 className='btn btn-outline'
               >
                 Learn More →
@@ -199,7 +199,7 @@ export default function BuyingPage() {
                 <li>• First-time buyer programs</li>
               </ul>
               <Link
-                href='/buying/finance'
+                href='/buying/guide'
                 className='btn btn-outline'
               >
                 Learn More →

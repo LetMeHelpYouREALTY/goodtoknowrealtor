@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/press/recent' },
   title: 'Recent Press | Dr. Jan Duffy Media Coverage | Las Vegas Real Estate Expert',
   description: 'Recent press coverage and media appearances featuring Dr. Jan Duffy, Las Vegas Real Estate Agent. Expert insights on luxury real estate market.',
   keywords: 'Dr. Jan Duffy recent press, Las Vegas real estate news, luxury real estate expert, media coverage',

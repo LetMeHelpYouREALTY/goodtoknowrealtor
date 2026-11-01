@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/land' },
   title: 'Luxury Land for Sale Las Vegas | Premium Land Lots | Dr. Jan Duffy',
   description: 'Discover luxury land for sale in Las Vegas. Premium lots, custom home sites, and investment land opportunities with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury land Las Vegas, land for sale, premium lots, custom home sites, investment land, Las Vegas land',

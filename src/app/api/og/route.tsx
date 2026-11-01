@@ -74,7 +74,7 @@ export async function GET(request: Request) {
         <div style={{ marginTop: 40, flex: '1 1 auto', display: 'flex', flexDirection: 'column' }}>
           <div
             style={{
-              display: 'inline-flex',
+              display: 'flex',
               alignItems: 'center',
               padding: '10px 22px',
               borderRadius: 9999,
@@ -84,7 +84,7 @@ export async function GET(request: Request) {
               fontWeight: 600,
               letterSpacing: 1,
               textTransform: 'uppercase',
-              width: 'fit-content',
+              alignSelf: 'flex-start',
             }}
           >
             {badge}
@@ -113,7 +113,7 @@ export async function GET(request: Request) {
                   fontWeight: 600,
                 }}
               >
-                <span style={{ display: 'inline-block', width: 14, height: 14, borderRadius: '50%', backgroundColor: BRAND_COLOR }} />
+                <span style={{ display: 'flex', width: 14, height: 14, borderRadius: '50%', backgroundColor: BRAND_COLOR }} />
                 {item}
               </div>
             ))}
@@ -124,6 +124,7 @@ export async function GET(request: Request) {
           <div style={{ fontWeight: 600 }}>{urlText}</div>
           <div
             style={{
+              display: 'flex',
               padding: '12px 28px',
               borderRadius: 9999,
               border: `2px solid ${BRAND_COLOR}`,

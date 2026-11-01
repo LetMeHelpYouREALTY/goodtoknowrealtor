@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/exclusive/showings' },
   title: 'Private Showings Las Vegas | Exclusive Property Tours | Dr. Jan Duffy',
   description: 'Schedule private showings of Las Vegas luxury properties. Exclusive property tours, personalized viewing experiences, and VIP client services with Dr. Jan Duffy.',
   keywords: 'private showings Las Vegas, exclusive property tours, VIP real estate service, luxury property viewings',

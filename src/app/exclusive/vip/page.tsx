@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/exclusive/vip' },
   title: 'VIP Client Services Las Vegas | Luxury Real Estate Concierge | Dr. Jan Duffy',
   description: 'VIP client services for Las Vegas luxury real estate. Personalized concierge services, exclusive access, and white-glove treatment with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'VIP client services Las Vegas, luxury real estate concierge, white-glove service, exclusive real estate services',

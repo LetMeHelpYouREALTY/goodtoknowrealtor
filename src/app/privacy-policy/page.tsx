@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy-policy' },
   title: 'Privacy Policy | Dr. Jan Duffy',
   description: 'Privacy policy for Dr. Jan Duffy Real Estate services.',
 };

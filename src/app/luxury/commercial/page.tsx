@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/commercial' },
   title: 'Luxury Commercial Properties Las Vegas | Premium Commercial Real Estate | Dr. Jan Duffy',
   description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury commercial properties Las Vegas, commercial real estate, office buildings, retail spaces, commercial investment',

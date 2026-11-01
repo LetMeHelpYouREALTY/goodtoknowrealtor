@@ -4,6 +4,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/assessments/seller-readiness' },
   title: 'Vegas Home Seller Readiness Assessment | Dr. Jan Duffy',
   description: 'Take our free 3-minute assessment to discover if you\'re ready to sell your Las Vegas home. Get personalized insights and next steps from Premier Good To Know REALTOR® Dr. Jan Duffy.',
   keywords: 'Las Vegas home seller assessment, am I ready to sell my home, Vegas real estate selling quiz, home selling Las Vegas, Dr. Jan Duffy',

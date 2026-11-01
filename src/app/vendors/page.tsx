@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/vendors' },
   title: 'Preferred Vendors | Las Vegas Real Estate Services | Dr. Jan Duffy',
   description: 'Trusted network of preferred vendors for Las Vegas real estate services. Home inspectors, contractors, lenders, and professional services recommended by Dr. Jan Duffy.',
   keywords: 'Las Vegas real estate vendors, home inspectors, contractors, lenders, real estate services, preferred vendors',

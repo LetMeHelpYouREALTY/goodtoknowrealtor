@@ -301,7 +301,7 @@ export default function InvestingPage() {
                   </div>
                   
                   <Link
-                    href={`/areas/${area.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/areas/${area.name === 'Downtown Las Vegas' ? 'downtown' : area.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
                     <span className='inline-flex items-center gap-2'>

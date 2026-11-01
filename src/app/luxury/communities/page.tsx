@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/communities' },
   title: 'Luxury Communities Las Vegas | Premium Master-Planned Communities | Dr. Jan Duffy',
   description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury communities Las Vegas, master-planned communities, premium neighborhoods, luxury developments',

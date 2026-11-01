@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/rentals' },
   title: 'Luxury Rental Properties Las Vegas | Premium Rentals | Dr. Jan Duffy',
   description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury rental properties Las Vegas, vacation rentals, executive housing, premium rentals, luxury rentals',

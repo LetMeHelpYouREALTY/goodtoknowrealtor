@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/luxury/investment' },
   title: 'Luxury Investment Properties Las Vegas | Premium Real Estate Investments | Dr. Jan Duffy',
   description: 'Discover luxury investment properties in Las Vegas. Premium rental properties, vacation homes, and high-yield real estate investments with Dr. Jan Duffy, Real Estate Agent.',
   keywords: 'luxury investment properties Las Vegas, rental properties, vacation homes, real estate investment, high-yield properties',
