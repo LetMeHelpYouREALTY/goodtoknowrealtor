@@ -44,6 +44,14 @@ export default function NorthLasVegasPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webPage) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faq) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.speakable) }}
+      />
       <div className="min-h-screen">
         {/* Hero Section */}
         <PageHero

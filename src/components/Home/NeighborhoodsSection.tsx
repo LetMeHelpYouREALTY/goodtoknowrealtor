@@ -122,6 +122,35 @@ export function NeighborhoodsSection() {
           ))}
         </div>
 
+        <div className='mt-12 rounded-2xl border border-amber-100 bg-amber-50/60 p-6'>
+          <h3 className='text-xl font-bold text-gray-900 mb-3 text-center'>
+            Luxury neighborhoods Dr. Jan Duffy knows best
+          </h3>
+          <p className='text-center text-gray-600 mb-5 max-w-2xl mx-auto'>
+            Direct links to high-demand communities for luxury buyers and sellers
+          </p>
+          <div className='flex flex-wrap justify-center gap-3'>
+            {[
+              { name: 'The Ridges', href: '/areas/the-ridges' },
+              { name: 'MacDonald Highlands', href: '/areas/macdonald-highlands' },
+              { name: 'Southern Highlands', href: '/areas/southern-highlands' },
+              { name: 'Lake Las Vegas', href: '/areas/lake-las-vegas' },
+              { name: 'Anthem Country Club', href: '/areas/anthem-country-club' },
+              { name: 'Red Rock Country Club', href: '/areas/red-rock-country-club' },
+              { name: 'Ascaya', href: '/areas/ascaya' },
+              { name: 'Inspirada', href: '/areas/inspirada' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className='rounded-full border border-amber-200 bg-white px-4 py-2 text-sm font-semibold text-amber-900 hover:border-amber-400 hover:bg-amber-50 transition-colors'
+              >
+                Luxury homes in {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* View All Communities Button */}
         <div className='text-center mt-8'>
           <Link

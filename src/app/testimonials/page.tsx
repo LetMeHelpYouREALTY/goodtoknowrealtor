@@ -1,15 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import { generatePageMetadata, generateBreadcrumbSchema, generateReviewSchema } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Client Testimonials | Dr. Jan Duffy Group',
-  description: 'Read real testimonials from satisfied clients of Dr. Jan Duffy Group. See why we are the top choice for Las Vegas real estate.',
-  keywords: ['testimonials', 'client reviews', 'Las Vegas real estate', 'Dr. Jan Duffy'],
+  title: 'Client Testimonials',
+  description:
+    'Read client testimonials for Dr. Jan Duffy, Good To Know REALTOR® — luxury and residential real estate across Summerlin, Henderson, and Las Vegas.',
+  keywords: ['testimonials', 'client reviews', 'Las Vegas real estate', 'Dr. Jan Duffy', 'Good To Know REALTOR'],
   url: '/testimonials',
-  image: '/images/testimonials-og.jpg',
 });
 
 export default function TestimonialsPage() {
@@ -27,7 +27,8 @@ export default function TestimonialsPage() {
       community: "Summerlin, Las Vegas",
       image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
-      service: "Home Buying"
+      service: "Home Buying",
+      datePublished: '2024-03-15',
     },
     {
       id: 2,
@@ -37,7 +38,8 @@ export default function TestimonialsPage() {
       community: "Henderson, Nevada",
       image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
-      service: "Home Selling"
+      service: "Home Selling",
+      datePublished: '2024-02-20',
     },
     {
       id: 3,
@@ -47,7 +49,8 @@ export default function TestimonialsPage() {
       community: "North Las Vegas, Nevada",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
-      service: "Investment Properties"
+      service: "Investment Properties",
+      datePublished: '2024-03-10',
     },
     {
       id: 4,
@@ -57,7 +60,8 @@ export default function TestimonialsPage() {
       community: "Green Valley, Henderson",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
-      service: "Relocation Services"
+      service: "Relocation Services",
+      datePublished: '2024-04-02',
     },
     {
       id: 5,
@@ -67,7 +71,8 @@ export default function TestimonialsPage() {
       community: "Las Vegas, Nevada",
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
-      service: "Home Selling"
+      service: "Home Selling",
+      datePublished: '2024-01-28',
     },
     {
       id: 6,
@@ -77,9 +82,21 @@ export default function TestimonialsPage() {
       community: "Summerlin, Las Vegas",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
       rating: 5,
-      service: "Luxury Properties"
+      service: "Luxury Properties",
+      datePublished: '2024-05-12',
     }
   ];
+
+  const reviewSchemas = generateReviewSchema(
+    testimonials.map((t) => ({
+      author: t.author,
+      rating: t.rating,
+      reviewBody: t.quote,
+      datePublished: t.datePublished,
+      location: t.location,
+      community: t.community,
+    }))
+  );
 
   const stats = {
     totalReviews: 127,
@@ -97,11 +114,20 @@ export default function TestimonialsPage() {
           __html: JSON.stringify(breadcrumbs),
         }}
       />
+      {reviewSchemas.map((review, index) => (
+        <script
+          key={`review-${index}`}
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(review),
+          }}
+        />
+      ))}
       <div className='min-h-screen bg-white'>
         {/* Hero Section */}
         <PageHero
           title='What Our Clients Say'
-          subtitle='Real testimonials from satisfied clients who chose Dr. Jan Duffy Group for their Las Vegas real estate needs.'
+          subtitle='Real testimonials from clients who chose Dr. Jan Duffy, Good To Know REALTOR®, for Las Vegas Valley real estate.'
         />
 
         {/* Stats Section */}

@@ -499,90 +499,99 @@ export function generateReviewSchema(reviews: Array<{
   }));
 }
 
-// Generate Product schema for property listings
-export function generatePropertySchema(properties: Array<{
+/**
+ * RealEstateListing schema for verified MLS/IDX listing detail pages only.
+ * Do not pass placeholder or sample inventory — Google rejects fabricated listing markup.
+ */
+export function generateRealEstateListingSchema(listing: {
   name: string;
   description: string;
-  image: string;
+  image: string | string[];
   price: string;
-  address: string;
+  priceCurrency?: string;
+  url: string;
+  streetAddress: string;
+  addressLocality?: string;
+  addressRegion?: string;
+  postalCode?: string;
   bedrooms?: number;
   bathrooms?: number;
-  squareFeet?: number;
-  lotSize?: string;
-  yearBuilt?: number;
-  propertyType: string;
-  listingStatus: string;
-  mlsNumber?: string;
-}>) {
-  return properties.map(property => ({
+  floorSizeValue?: number;
+  floorSizeUnit?: string;
+  datePosted?: string;
+}) {
+  return {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: property.name,
-    description: property.description,
-    image: property.image,
-    brand: {
-      '@type': 'Brand',
-      name: 'Berkshire Hathaway HomeServices',
-    },
-    category: 'Real Estate',
+    '@type': 'RealEstateListing',
+    name: listing.name,
+    description: listing.description,
+    image: listing.image,
+    url: listing.url.startsWith('http') ? listing.url : `${SEO_CONFIG.siteUrl}${listing.url}`,
+    datePosted: listing.datePosted,
     offers: {
       '@type': 'Offer',
-      price: property.price,
-      priceCurrency: 'USD',
-      availability: property.listingStatus === 'For Sale' ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      price: listing.price,
+      priceCurrency: listing.priceCurrency || 'USD',
       seller: {
         '@type': 'RealEstateAgent',
+        '@id': `${SEO_CONFIG.siteUrl}/#realestateagent`,
         name: 'Dr. Jan Duffy',
         telephone: SEO_CONFIG.phone,
-        email: SEO_CONFIG.email,
       },
     },
-    additionalProperty: [
-      ...(property.bedrooms ? [{
-        '@type': 'PropertyValue',
-        name: 'Bedrooms',
-        value: property.bedrooms,
-      }] : []),
-      ...(property.bathrooms ? [{
-        '@type': 'PropertyValue',
-        name: 'Bathrooms',
-        value: property.bathrooms,
-      }] : []),
-      ...(property.squareFeet ? [{
-        '@type': 'PropertyValue',
-        name: 'Square Feet',
-        value: property.squareFeet,
-      }] : []),
-      ...(property.lotSize ? [{
-        '@type': 'PropertyValue',
-        name: 'Lot Size',
-        value: property.lotSize,
-      }] : []),
-      ...(property.yearBuilt ? [{
-        '@type': 'PropertyValue',
-        name: 'Year Built',
-        value: property.yearBuilt,
-      }] : []),
-      {
-        '@type': 'PropertyValue',
-        name: 'Property Type',
-        value: property.propertyType,
-      },
-      ...(property.mlsNumber ? [{
-        '@type': 'PropertyValue',
-        name: 'MLS Number',
-        value: property.mlsNumber,
-      }] : []),
-    ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: property.address,
-      addressLocality: 'Las Vegas',
-      addressRegion: 'Nevada',
-      addressCountry: 'United States',
+      streetAddress: listing.streetAddress,
+      addressLocality: listing.addressLocality || 'Las Vegas',
+      addressRegion: listing.addressRegion || 'NV',
+      postalCode: listing.postalCode,
+      addressCountry: 'US',
     },
-  }));
+    ...(listing.bedrooms != null && { numberOfRooms: listing.bedrooms }),
+    ...(listing.bathrooms != null && {
+      numberOfBathroomsTotal: listing.bathrooms,
+    }),
+    ...(listing.floorSizeValue != null && {
+      floorSize: {
+        '@type': 'QuantitativeValue',
+        value: listing.floorSizeValue,
+        unitCode: listing.floorSizeUnit || 'FTK',
+      },
+    }),
+  };
+}
+
+/** @deprecated Prefer generateRealEstateListingSchema with live MLS data only. */
+export function generatePropertySchema(
+  properties: Array<{
+    name: string;
+    description: string;
+    image: string;
+    price: string;
+    address: string;
+    bedrooms?: number;
+    bathrooms?: number;
+    squareFeet?: number;
+    propertyType: string;
+    listingStatus: string;
+    mlsNumber?: string;
+    url?: string;
+  }>
+) {
+  return properties.map((property) => {
+    const listing: Parameters<typeof generateRealEstateListingSchema>[0] = {
+      name: property.name,
+      description: property.description,
+      image: property.image,
+      price: property.price,
+      url: property.url || '/listings',
+      streetAddress: property.address,
+    };
+    if (property.bedrooms != null) listing.bedrooms = property.bedrooms;
+    if (property.bathrooms != null) listing.bathrooms = property.bathrooms;
+    if (property.squareFeet != null) listing.floorSizeValue = property.squareFeet;
+    return generateRealEstateListingSchema(listing);
+  });
 }
 
 // Generate VideoObject schema for videos

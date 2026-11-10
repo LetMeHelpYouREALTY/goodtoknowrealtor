@@ -2,13 +2,18 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import {
+  generatePrimaryAreaMetadata,
+  generatePrimaryAreaSchemas,
+} from '@/lib/primary-areas';
+
+const DESCRIPTION =
+  'Find your dream home in Downtown Las Vegas with Dr. Jan Duffy, Good To Know REALTOR®. Condos, lofts, and urban living properties.';
 
 export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Downtown Las Vegas',
   slug: 'downtown',
-  description:
-    'Find your dream home in Downtown Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Downtown Las Vegas condos, lofts, and urban living properties.',
+  description: DESCRIPTION,
   keywords: [
     'Downtown Las Vegas real estate',
     'Downtown Las Vegas condos',
@@ -19,7 +24,18 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
 });
 
 export default function DowntownPage() {
+  const schemas = generatePrimaryAreaSchemas({
+    areaName: 'Downtown Las Vegas',
+    slug: 'downtown',
+    description: DESCRIPTION,
+  });
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faq) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.speakable) }} />
     <div className="min-h-screen">
       {/* Hero Section */}
       <PageHero
@@ -149,5 +165,6 @@ export default function DowntownPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

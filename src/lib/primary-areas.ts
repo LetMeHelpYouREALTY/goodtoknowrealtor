@@ -3,6 +3,8 @@ import {
   generatePageMetadata,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQSchema,
+  generateSpeakableSchema,
 } from '@/lib/seo';
 
 /** Static primary area landing pages under /areas/ (not in NEIGHBORHOOD_SLUGS). */
@@ -32,12 +34,29 @@ export function generatePrimaryAreaMetadata({
   ogImage,
 }: PrimaryAreaSeoOptions): Metadata {
   return generatePageMetadata({
-    title: `${areaName} Real Estate | Dr. Jan Duffy | Good To Know REALTOR®`,
+    title: `${areaName} Real Estate`,
     description,
     keywords,
     url: `/areas/${slug}`,
     image: ogImage,
   });
+}
+
+export function buildPrimaryAreaFaqs(areaName: string) {
+  return [
+    {
+      question: `Who can help me buy or sell a home in ${areaName}?`,
+      answer: `Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, represents buyers and sellers in ${areaName}. Call or text 702-500-1955 for a consultation.`,
+    },
+    {
+      question: `Does Dr. Jan Duffy specialize in ${areaName} real estate?`,
+      answer: `Yes. ${areaName} is one of Dr. Jan Duffy's primary service areas, alongside Summerlin, Henderson, Green Valley, North Las Vegas, and Downtown Las Vegas.`,
+    },
+    {
+      question: `How do I search ${areaName} homes for sale?`,
+      answer: `Use the listings search on goodtoknowrealtor.com/listings or contact Dr. Jan Duffy at 702-500-1955 for a curated ${areaName} search, including private and off-market options when available.`,
+    },
+  ];
 }
 
 export function generatePrimaryAreaSchemas({
@@ -58,6 +77,11 @@ export function generatePrimaryAreaSchemas({
       description,
       url: `/areas/${slug}`,
       breadcrumbs,
+    }),
+    faq: generateFAQSchema(buildPrimaryAreaFaqs(areaName)),
+    speakable: generateSpeakableSchema({
+      url: `/areas/${slug}`,
+      cssSelectors: ['h1', '[data-speakable]'],
     }),
   };
 }

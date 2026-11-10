@@ -6,7 +6,12 @@ import { PageHero } from '@/components/ui/PageHero';
 import { ConsultationCTA } from '@/components/ui/ConsultationCTA';
 import { TrustBadges } from '@/components/Globals/TrustBadges/TrustBadges';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePageMetadata, generateBreadcrumbSchema, generatePropertySchema } from '@/lib/seo';
+import {
+  generatePageMetadata,
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  generateItemListSchema,
+} from '@/lib/seo';
 
 // Declare RealScout custom elements
 declare global {
@@ -18,11 +23,17 @@ declare global {
 }
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Las Vegas Property Listings | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Browse exclusive Las Vegas property listings from Premier Good To Know REALTOR® Dr. Jan Duffy. Luxury homes, investment properties, and first-time buyer homes in Summerlin, Henderson, and more.',
-  keywords: ['Las Vegas property listings', 'Las Vegas homes for sale', 'Summerlin homes', 'Henderson homes', 'Las Vegas real estate listings'],
+  title: 'Las Vegas Property Listings',
+  description:
+    'Search Las Vegas Valley homes for sale with Dr. Jan Duffy, Good To Know REALTOR®. Luxury and residential inventory across Summerlin, Henderson, Green Valley, and more. Call/Text 702-500-1955.',
+  keywords: [
+    'Las Vegas property listings',
+    'Las Vegas homes for sale',
+    'Summerlin homes',
+    'Henderson homes',
+    'Good To Know REALTOR',
+  ],
   url: '/listings',
-  image: '/images/las-vegas-listings-og.jpg',
 });
 
 export default function ListingsPage() {
@@ -30,73 +41,41 @@ export default function ListingsPage() {
     { name: 'Home', url: '/' },
     { name: 'Property Listings', url: '/listings' },
   ]);
-
-  // Sample property data for schema (replace with real data from your listings API)
-  const properties = generatePropertySchema([
-    {
-      name: 'Luxury Home in Summerlin',
-      description: 'Stunning 4-bedroom luxury home in prestigious Summerlin with mountain views, gourmet kitchen, and resort-style backyard.',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      price: '850000',
-      address: '123 Summerlin Drive, Summerlin, NV',
-      bedrooms: 4,
-      bathrooms: 3,
-      squareFeet: 3200,
-      lotSize: '0.25 acres',
-      yearBuilt: 2018,
-      propertyType: 'Single Family Residence',
-      listingStatus: 'For Sale',
-      mlsNumber: 'LV123456',
-    },
-    {
-      name: 'Modern Condo in Henderson',
-      description: 'Contemporary 2-bedroom condo in Henderson with city views, updated kitchen, and access to community amenities.',
-      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      price: '425000',
-      address: '456 Henderson Blvd, Henderson, NV',
-      bedrooms: 2,
-      bathrooms: 2,
-      squareFeet: 1450,
-      yearBuilt: 2020,
-      propertyType: 'Condominium',
-      listingStatus: 'For Sale',
-      mlsNumber: 'LV789012',
-    },
-    {
-      name: 'Investment Property in North Las Vegas',
-      description: 'Great investment opportunity! 3-bedroom home in North Las Vegas with rental potential and strong cash flow.',
-      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      price: '285000',
-      address: '789 North Vegas Way, North Las Vegas, NV',
-      bedrooms: 3,
-      bathrooms: 2,
-      squareFeet: 1850,
-      lotSize: '0.18 acres',
-      yearBuilt: 2015,
-      propertyType: 'Single Family Residence',
-      listingStatus: 'For Sale',
-      mlsNumber: 'LV345678',
-    },
-  ]);
+  const services = generateServiceSchema();
+  const areaList = generateItemListSchema({
+    name: 'Las Vegas Valley Areas to Search',
+    description: 'Primary areas Dr. Jan Duffy covers for home search and listings.',
+    items: [
+      { name: 'Summerlin homes for sale', url: '/areas/summerlin' },
+      { name: 'Henderson homes for sale', url: '/areas/henderson' },
+      { name: 'Green Valley homes for sale', url: '/areas/green-valley' },
+      { name: 'North Las Vegas homes for sale', url: '/areas/north-las-vegas' },
+      { name: 'Downtown Las Vegas homes for sale', url: '/areas/downtown' },
+      { name: 'Luxury listings', url: '/luxury' },
+    ],
+  });
 
   return (
     <>
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD — no fabricated RealEstateListing/Product markup for sample MLS rows */}
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbs),
         }}
       />
-      {properties.map((property, index) => (
-        <script
-          key={index}
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(property),
-          }}
-        />
-      ))}
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(services),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(areaList),
+        }}
+      />
       <div className='min-h-screen bg-gradient-to-br from-amber-50 to-yellow-50'>
       {/* Hero Section */}
       <PageHero
