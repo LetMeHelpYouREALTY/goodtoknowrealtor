@@ -3,27 +3,55 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { LuxuryListings } from '@/components/Home/LuxuryListings';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
-import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
-import { SEO_CONFIG } from '@/lib/seo';
+import {
+  PAGE_SEO,
+  generatePageMetadata,
+  generateBreadcrumbSchema,
+  generateFAQSchema,
+  generateServiceSchema,
+  generateSpeakableSchema,
+} from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 import { TrustBadges } from '@/components/Globals/TrustBadges/TrustBadges';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { nameToSlug } from '@/data/neighborhoods';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Luxury Real Estate Las Vegas | Dr. Jan Duffy - Premier Luxury Agent',
-  description: 'Discover exceptional luxury properties in Las Vegas with Dr. Jan Duffy, agent specializing in high-end homes, estates, and luxury communities.',
-  keywords: ['luxury real estate Las Vegas', 'luxury homes Las Vegas', 'high-end properties', 'Dr. Jan Duffy', 'luxury realtor Las Vegas', 'Summerlin luxury', 'Henderson luxury', 'Lake Las Vegas'],
+  title: PAGE_SEO.luxury.title,
+  description: PAGE_SEO.luxury.description,
+  keywords: PAGE_SEO.luxury.keywords,
   url: '/luxury',
-  image: '/images/luxury-real-estate-og.jpg',
 });
 
-export const alternates = { canonical: `${SEO_CONFIG.siteUrl}/luxury` } as const;
+const LUXURY_FAQS = [
+  {
+    question: 'Which luxury communities does Dr. Jan Duffy cover in Las Vegas?',
+    answer:
+      'Dr. Jan Duffy, Good To Know REALTOR®, represents luxury buyers and sellers in Summerlin, Henderson, Lake Las Vegas, The Ridges, MacDonald Highlands, Anthem Country Club, Southern Highlands, and related high-end Las Vegas Valley neighborhoods.',
+  },
+  {
+    question: 'How do I arrange a private luxury showing?',
+    answer:
+      'Call or text 702-500-1955 to schedule a confidential consultation. Dr. Jan Duffy coordinates private showings, off-market outreach when available, and discreet marketing for high-profile clients.',
+  },
+  {
+    question: 'What luxury services are included?',
+    answer:
+      'Services include private inventory search, listing strategy and staging guidance, negotiation, and concierge transaction management for luxury homes and estates across Summerlin, Henderson, and Las Vegas.',
+  },
+];
 
 export default function LuxuryPage() {
   const breadcrumbs = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Luxury Properties', url: '/luxury' },
   ]);
+  const faqs = generateFAQSchema(LUXURY_FAQS);
+  const services = generateServiceSchema();
+  const speakable = generateSpeakableSchema({
+    url: '/luxury',
+    cssSelectors: ['h1', '[data-speakable]'],
+  });
 
   const luxuryAreas = [
     {
@@ -31,7 +59,8 @@ export default function LuxuryPage() {
       description: 'Premier master-planned community with luxury estates',
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$800K - $5M+',
-      features: ['Golf course communities', 'Mountain views', 'Private amenities', 'Nearby public schools'],
+      features: ['Golf course communities', 'Mountain views', 'Private amenities', 'Resort-style living'],
+      href: '/areas/summerlin',
     },
     {
       name: 'Henderson',
@@ -39,6 +68,7 @@ export default function LuxuryPage() {
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$600K - $3M+',
       features: ['Resort-style living', 'Lake communities', 'Hiking trails', 'Shopping centers'],
+      href: '/areas/henderson',
     },
     {
       name: 'Lake Las Vegas',
@@ -46,6 +76,7 @@ export default function LuxuryPage() {
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$1M - $8M+',
       features: ['Waterfront properties', 'Marina access', 'Golf courses', 'Resort amenities'],
+      href: `/areas/${nameToSlug('Lake Las Vegas')}`,
     },
     {
       name: 'The Ridges',
@@ -53,6 +84,7 @@ export default function LuxuryPage() {
       image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$2M - $15M+',
       features: ['Strip views', 'Private golf', 'Gated security', 'Custom estates'],
+      href: `/areas/${nameToSlug('The Ridges')}`,
     },
     {
       name: 'MacDonald Highlands',
@@ -60,6 +92,7 @@ export default function LuxuryPage() {
       image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$1.5M - $10M+',
       features: ['Mountain views', 'Private amenities', 'Custom homes', 'Exclusive access'],
+      href: `/areas/${nameToSlug('MacDonald Highlands')}`,
     },
     {
       name: 'Anthem Country Club',
@@ -67,6 +100,7 @@ export default function LuxuryPage() {
       image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       priceRange: '$700K - $4M+',
       features: ['Championship golf', 'Country club', 'Tennis courts', 'Fine dining'],
+      href: `/areas/${nameToSlug('Anthem Country Club')}`,
     },
   ];
 
@@ -102,6 +136,24 @@ export default function LuxuryPage() {
           __html: JSON.stringify(breadcrumbs),
         }}
       />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqs),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(services),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(speakable),
+        }}
+      />
       
       <div className="min-h-screen bg-gray-50">
         {/* Breadcrumbs */}
@@ -114,7 +166,7 @@ export default function LuxuryPage() {
         {/* Hero Section */}
         <PageHero
           title='Luxury Real Estate in Las Vegas'
-          subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Las Vegas agent specializing in high-end homes, estates, and luxury communities'
+          subtitle='Dr. Jan Duffy, Good To Know REALTOR® — discreet representation for high-end homes, estates, and luxury communities across Summerlin and Henderson'
           gradientFromClassName='from-amber-900'
           gradientToClassName='to-amber-800'
           backgroundImageUrl='https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1973&q=80'
@@ -141,8 +193,8 @@ export default function LuxuryPage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Dr. Jan Duffy for Luxury Real Estate?
               </h2>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                As a Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy brings unparalleled expertise to luxury property transactions. Her deep understanding of high-end markets, discretion, and attention to detail ensures exceptional results for discerning clients.
+              <p className="text-xl text-gray-600 leading-relaxed" data-speakable>
+                As a Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties and $127M+ in sales volume, Dr. Jan Duffy brings discretion and market depth to luxury transactions across Summerlin, Henderson, and Las Vegas.
               </p>
             </div>
 
@@ -196,7 +248,7 @@ export default function LuxuryPage() {
                       ))}
                     </ul>
                     <Link
-                      href={`/areas/${area.name.toLowerCase().replace(/\s+/g, '-')}`}
+                      href={area.href}
                       className="btn btn-primary"
                     >
                       Explore {area.name}
@@ -356,14 +408,32 @@ export default function LuxuryPage() {
           </div>
         </section>
 
+        <section className="py-16 bg-white" aria-labelledby="luxury-faq-heading">
+          <div className="container max-w-3xl">
+            <h2 id="luxury-faq-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Luxury Real Estate FAQs
+            </h2>
+            <div className="space-y-4">
+              {LUXURY_FAQS.map((item) => (
+                <div key={item.question} className="rounded-xl border border-amber-100 bg-amber-50/40 p-5">
+                  <h3 className="font-semibold text-gray-900 mb-2">{item.question}</h3>
+                  <p className="text-gray-600" data-speakable>
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 text-white">
           <div className="container text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Experience Luxury Real Estate Excellence?
+              Ready for Luxury Representation with Dr. Jan Duffy?
             </h2>
             <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto font-medium">
-              Contact Dr. Jan Duffy today for personalized luxury real estate services in Las Vegas. With $127M+ in sales volume and 20+ years of experience, we deliver exceptional results for discerning clients.
+              Good To Know REALTOR® guidance for luxury buying and selling in Summerlin, Henderson, and Las Vegas. Licensed since 2008.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

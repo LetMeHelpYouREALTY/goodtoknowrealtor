@@ -11,7 +11,7 @@ export function AboutSection() {
               About Dr. Jan Duffy
             </h2>
             <p className="text-xl text-gray-600 mb-6">
-              As a top-performing agent at Berkshire Hathaway HomeServices Premier Properties, 
+              As a Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, 
               Dr. Jan Duffy has facilitated over $127 million in real estate transactions across Las Vegas.
             </p>
             <p className="text-lg text-gray-600 mb-8">
@@ -66,7 +66,7 @@ export function AboutSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Berkshire Hathaway</h4>
-                  <p className="text-sm text-gray-600">Premier Properties Agent</p>
+                  <p className="text-sm text-gray-600">Nevada Properties Agent</p>
                 </div>
               </div>
             </div>

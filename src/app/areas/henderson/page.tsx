@@ -3,7 +3,10 @@ import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import {
+  generatePrimaryAreaMetadata,
+  generatePrimaryAreaSchemas,
+} from '@/lib/primary-areas';
 
 // Declare RealScout custom elements
 declare global {
@@ -18,7 +21,7 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Henderson',
   slug: 'henderson',
   description:
-    'Find your dream home in Henderson, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Henderson luxury homes, family communities, and investment properties.',
+    'Find your dream home in Henderson, Nevada with Dr. Jan Duffy, Good To Know REALTOR®. Luxury homes and investment properties across Henderson.',
   keywords: [
     'Henderson real estate',
     'Henderson homes for sale',
@@ -30,7 +33,19 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
 });
 
 export default function HendersonPage() {
+  const schemas = generatePrimaryAreaSchemas({
+    areaName: 'Henderson',
+    slug: 'henderson',
+    description:
+      'Find your dream home in Henderson, Nevada with Dr. Jan Duffy, Good To Know REALTOR®. Luxury homes and investment properties across Henderson.',
+  });
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faq) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.speakable) }} />
     <div className="min-h-screen">
       {/* Hero Section */}
       <PageHero
@@ -180,5 +195,6 @@ export default function HendersonPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

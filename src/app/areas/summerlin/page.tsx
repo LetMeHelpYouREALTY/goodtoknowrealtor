@@ -4,7 +4,10 @@ import Image from 'next/image';
 import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import { SummerlinListings } from '@/components/Home/SummerlinListings';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import {
+  generatePrimaryAreaMetadata,
+  generatePrimaryAreaSchemas,
+} from '@/lib/primary-areas';
 
 // Declare RealScout custom elements
 declare global {
@@ -19,7 +22,7 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Summerlin',
   slug: 'summerlin',
   description:
-    'Find your dream home in Summerlin, Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Summerlin luxury homes, condos, and investment properties.',
+    'Find your dream home in Summerlin, Las Vegas with Dr. Jan Duffy, Good To Know REALTOR®. Luxury homes, condos, and investment properties in Summerlin.',
   keywords: [
     'Summerlin real estate',
     'Summerlin homes for sale',
@@ -31,7 +34,19 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
 });
 
 export default function SummerlinPage() {
+  const schemas = generatePrimaryAreaSchemas({
+    areaName: 'Summerlin',
+    slug: 'summerlin',
+    description:
+      'Find your dream home in Summerlin, Las Vegas with Dr. Jan Duffy, Good To Know REALTOR®. Luxury homes, condos, and investment properties in Summerlin.',
+  });
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faq) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.speakable) }} />
     <div className="min-h-screen">
       {/* Hero Section */}
       <PageHero
@@ -183,5 +198,6 @@ export default function SummerlinPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

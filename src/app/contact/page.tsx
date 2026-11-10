@@ -11,7 +11,6 @@ export const metadata: Metadata = generatePageMetadata({
   description: PAGE_SEO.contact.description,
   keywords: PAGE_SEO.contact.keywords,
   url: '/contact',
-  image: '/images/dr-janet-duffy-contact-og.jpg',
 });
 
 export default function ContactPage() {
@@ -86,10 +85,10 @@ export default function ContactPage() {
                 For detailed inquiries or to schedule a consultation.
               </p>
               <Link
-                href='mailto:janet@goodtoknowrealtor.com'
+                href='mailto:info@goodtoknowrealtor.com'
                 className='btn btn-primary'
               >
-                Send Email
+                info@goodtoknowrealtor.com
               </Link>
             </div>
 
@@ -314,11 +313,12 @@ export default function ContactPage() {
                     <IconSymbol symbol='📍' className='text-amber-600 mr-4 mt-1 h-5 w-5' ariaLabel='Location icon' />
                     <div>
                       <p className='font-semibold text-gray-900'>
-                        Dr. Jan Duffy Real Estate
+                        Dr. Jan Duffy | Good To Know REALTOR®
                       </p>
-                      <p className='text-gray-600'>Las Vegas, Nevada</p>
+                      <p className='text-gray-600'>9406 W Lake Mead Blvd, Suite 100</p>
+                      <p className='text-gray-600'>Las Vegas, NV 89134</p>
                       <p className='text-gray-600'>
-                        Serving all Las Vegas Valley communities
+                        Berkshire Hathaway HomeServices Nevada Properties
                       </p>
                     </div>
                   </div>
@@ -330,12 +330,12 @@ export default function ContactPage() {
                         Office Hours
                       </p>
                       <p className='text-gray-600'>
-                        Monday - Friday: 8:00 AM - 6:00 PM
+                        Monday–Friday: 9:00 AM – 6:00 PM
                       </p>
                       <p className='text-gray-600'>
-                        Saturday: 9:00 AM - 5:00 PM
+                        Saturday: 10:00 AM – 4:00 PM
                       </p>
-                      <p className='text-gray-600'>Sunday: By Appointment</p>
+                      <p className='text-gray-600'>Sunday: By appointment</p>
                     </div>
                   </div>
 
@@ -351,9 +351,32 @@ export default function ContactPage() {
                       <p className='font-semibold text-gray-900'>Contact</p>
                       <p className='text-gray-600'>Phone: (702) 500-1955</p>
                       <p className='text-gray-600'>
-                        Email: janet@goodtoknowrealtor.com
+                        Email: info@goodtoknowrealtor.com
                       </p>
+                      <p className='text-gray-600'>License S.0197614.LLC</p>
                     </div>
+                  </div>
+
+                  <div className='flex flex-wrap gap-3 pt-2'>
+                    <Link href='tel:702-500-1955' className='btn btn-primary'>
+                      Call
+                    </Link>
+                    <Link
+                      href='https://www.google.com/maps/dir/?api=1&destination=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134'
+                      className='btn btn-outline'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      Directions
+                    </Link>
+                    <Link
+                      href='https://www.google.com/maps/search/?api=1&query=Dr+Jan+Duffy+REALTOR+Las+Vegas'
+                      className='btn btn-outline'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      View Google Reviews
+                    </Link>
                   </div>
                 </div>
 
@@ -382,12 +405,14 @@ export default function ContactPage() {
             </div>
 
             <div className='relative'>
-              <div className='relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl'>
-                <Image
-                  src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80'
-                  alt='Modern Las Vegas office building where Dr. Jan Duffy provides real estate services'
-                  fill
-                  style={{ objectFit: 'cover' }}
+              <div className='relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl border border-amber-100'>
+                <iframe
+                  title='Map to Dr. Jan Duffy office at 9406 W Lake Mead Blvd, Suite 100, Las Vegas, NV 89134'
+                  src='https://www.google.com/maps?q=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134&output=embed'
+                  className='absolute inset-0 h-full w-full border-0'
+                  loading='lazy'
+                  referrerPolicy='no-referrer-when-downgrade'
+                  allowFullScreen
                 />
               </div>
             </div>

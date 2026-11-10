@@ -211,6 +211,32 @@ const nextConfig = {
         destination: '/listings',
         permanent: true,
       },
+      // GSC Coverage 2026-11-10: Not found (404) drilldown
+      {
+        source: '/listings/luxury',
+        destination: '/luxury',
+        permanent: true,
+      },
+      {
+        source: '/listings/lease',
+        destination: '/luxury/rentals',
+        permanent: true,
+      },
+      {
+        source: '/blog/market-updates',
+        destination: '/blog/category/market-updates',
+        permanent: true,
+      },
+      {
+        source: '/blog/market-updates/:page',
+        destination: '/blog/category/market-updates',
+        permanent: true,
+      },
+      {
+        source: '/cdn-cgi/:path*',
+        destination: '/',
+        permanent: true,
+      },
       {
         source: '/&',
         destination: '/',

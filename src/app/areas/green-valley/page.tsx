@@ -2,13 +2,18 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import {
+  generatePrimaryAreaMetadata,
+  generatePrimaryAreaSchemas,
+} from '@/lib/primary-areas';
+
+const DESCRIPTION =
+  'Find your dream home in Green Valley, Henderson with Dr. Jan Duffy, Good To Know REALTOR®. Luxury homes and golf-course properties.';
 
 export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Green Valley',
   slug: 'green-valley',
-  description:
-    'Find your dream home in Green Valley, Henderson. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Green Valley luxury homes, golf course properties, and family communities.',
+  description: DESCRIPTION,
   keywords: [
     'Green Valley real estate',
     'Green Valley homes for sale',
@@ -20,7 +25,18 @@ export const metadata: Metadata = generatePrimaryAreaMetadata({
 });
 
 export default function GreenValleyPage() {
+  const schemas = generatePrimaryAreaSchemas({
+    areaName: 'Green Valley',
+    slug: 'green-valley',
+    description: DESCRIPTION,
+  });
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webPage) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.faq) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.speakable) }} />
     <div className="min-h-screen">
       {/* Hero Section */}
       <PageHero
@@ -150,5 +166,6 @@ export default function GreenValleyPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

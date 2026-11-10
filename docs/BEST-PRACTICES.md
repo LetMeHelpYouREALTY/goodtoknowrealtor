@@ -3,7 +3,7 @@
 ## Branding & NAP
 
 - **Name:** Always use **Dr. Jan Duffy** (never "Janet") in copy, meta, schema, aria-labels, and alt text.
-- **Phone:** Primary CTA **702-222-1964**; use `tel:702-222-1964` and `sms:702-222-1964`. Keep in sync with `SEO_CONFIG.phone` in `src/lib/seo.ts`.
+- **Phone:** Primary CTA for this site **702-500-1955**; use `tel:702-500-1955` and `sms:702-500-1955`. Keep in sync with `SITE` in `src/config/site.ts` and `SEO_CONFIG.phone`.
 - **NAP:** Match Google Business Profile exactly (visible text + JSON-LD). Run the [NAP/GBP audit](NAP-GBP-AUDIT.md) monthly.
 
 ## SEO & schema

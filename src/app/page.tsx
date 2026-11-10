@@ -11,14 +11,14 @@ import { TrustBadges } from '@/components/Globals/TrustBadges/TrustBadges';
 import { TransformationSection } from '@/components/Home/TransformationSection';
 import { HomeFAQSection } from '@/components/Home/HomeFAQSection';
 import { ContactCTA } from '@/components/Home/ContactCTA';
-import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema, generateFAQSchema, generateReviewSchema, generateServiceSchema } from '@/lib/seo';
+import { HOME_FAQS } from '@/data/home-faqs';
+import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema, generateFAQSchema, generateReviewSchema, generateServiceSchema, generateSpeakableSchema } from '@/lib/seo';
 
 export const metadata: Metadata = generatePageMetadata({
   title: PAGE_SEO.home.title,
   description: PAGE_SEO.home.description,
   keywords: PAGE_SEO.home.keywords,
   url: '/',
-  image: '/images/dr-janet-duffy-homepage-og.jpg',
 });
 
 export default function HomePage() {
@@ -27,24 +27,11 @@ export default function HomePage() {
     { name: 'Home', url: '/' },
   ]);
 
-  const faqs = generateFAQSchema([
-    {
-      question: 'Who is Dr. Jan Duffy?',
-      answer: 'Dr. Jan Duffy is a Las Vegas real estate agent with over 20 years of experience and $127M+ in sales volume. She specializes in luxury properties, investment properties, and first-time home buyers.',
-    },
-    {
-      question: 'What areas does Dr. Jan Duffy serve?',
-      answer: 'Dr. Jan Duffy serves the greater Las Vegas area including Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, and Green Valley. She has extensive knowledge of all Las Vegas neighborhoods.',
-    },
-    {
-      question: 'How can I contact Dr. Jan Duffy?',
-      answer: 'You can contact Dr. Jan Duffy by calling (702) 500-1955 or visiting the contact page on this website. She offers personalized consultations for all your Las Vegas real estate needs.',
-    },
-    {
-      question: 'What services does Dr. Jan Duffy offer?',
-      answer: 'Dr. Jan Duffy offers comprehensive real estate services including buying homes, selling homes, luxury real estate, investment properties, home valuations, and real estate consulting throughout Las Vegas.',
-    },
-  ]);
+  const faqs = generateFAQSchema(HOME_FAQS);
+  const speakable = generateSpeakableSchema({
+    url: '/',
+    cssSelectors: ['h1', '[data-speakable]'],
+  });
 
   const reviews = generateReviewSchema([
     {
@@ -88,6 +75,12 @@ export default function HomePage() {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqs),
+        }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(speakable),
         }}
       />
       {reviews.map((review, index) => (
@@ -208,8 +201,8 @@ export default function HomePage() {
               <p className='text-lg text-gray-700'>Sales Volume</p>
             </div>
             <div>
-              <div className='text-5xl font-bold text-amber-600 mb-2'>20+</div>
-              <p className='text-lg text-gray-700'>Years Experience</p>
+              <div className='text-5xl font-bold text-amber-600 mb-2'>2008</div>
+              <p className='text-lg text-gray-700'>Licensed Since</p>
             </div>
             <div>
               <div className='text-5xl font-bold text-amber-600 mb-2'>98%</div>
@@ -224,10 +217,10 @@ export default function HomePage() {
         <div className='container mx-auto px-4'>
           <div className='text-center mb-8'>
             <h2 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-2'>
-              Premier Luxury Services
+              Dr. Jan Duffy Luxury Services
             </h2>
             <p className='text-lg text-gray-700'>
-              White-glove concierge real estate for discerning clients.
+              Good To Know REALTOR® concierge buying, selling, and investing across Las Vegas.
             </p>
           </div>
           <div className='flex flex-wrap justify-center gap-4'>
@@ -251,10 +244,10 @@ export default function HomePage() {
       <section className='py-16 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-3xl lg:text-5xl font-bold mb-4'>
-            Ready to Work with Berkshire Hathaway HomeServices?
+            Ready to Work with Dr. Jan Duffy?
           </h2>
           <p className='text-xl text-white/95 mb-8 font-medium'>
-            Whether you&apos;re buying, selling, or investing in Las Vegas real estate, Dr. Jan Duffy is here to help.
+            Good To Know REALTOR® guidance for buying, selling, or investing in Summerlin, Henderson, and Las Vegas.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <Link
