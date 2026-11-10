@@ -25,17 +25,17 @@ export async function generateMetadata({
   const name = getNeighborhoodBySlug(slug);
   if (!name) return { title: 'Not Found' };
 
-  const title = `${name} Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®`;
-  const description = `Find your dream home in ${name}, Las Vegas Valley. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in ${name} homes for sale, luxury properties, and family communities.`;
+  const title = `${name} Real Estate | Dr. Jan Duffy | Good To Know REALTOR®`;
+  const description = `Homes for sale in ${name} with Dr. Jan Duffy, Good To Know REALTOR®. Luxury and residential guidance across the Las Vegas Valley. Call/Text 702-500-1955.`;
   const canonical = `${SEO_CONFIG.siteUrl}/areas/${slug}`;
 
   return {
-    title,
+    title: { absolute: title },
     description,
-    keywords: `${name} real estate, ${name} homes for sale, Las Vegas real estate, Dr. Jan Duffy`,
+    keywords: `${name} real estate, ${name} homes for sale, Dr. Jan Duffy, Good To Know REALTOR, Las Vegas`,
     openGraph: {
-      title: `${name} Real Estate | Dr. Jan Duffy`,
-      description: `Find your dream home in ${name} with Premier Good To Know REALTOR® Dr. Jan Duffy.`,
+      title,
+      description: `Explore ${name} real estate with Dr. Jan Duffy, Good To Know REALTOR®.`,
       url: canonical,
     },
     alternates: { canonical },
@@ -51,7 +51,7 @@ export default async function NeighborhoodPage({ params }: PageProps) {
     <div className="min-h-screen">
       <PageHero
         title={`${name} Real Estate`}
-        subtitle={`Discover homes for sale in ${name}. Dr. Jan Duffy, Premier Good To Know REALTOR®, brings expert local knowledge to your ${name} search.`}
+        subtitle={`Discover homes for sale in ${name}. Dr. Jan Duffy, Good To Know REALTOR®, brings hyperlocal expertise to your ${name} search.`}
         gradientFromClassName="from-blue-900"
         gradientToClassName="to-blue-800"
       >

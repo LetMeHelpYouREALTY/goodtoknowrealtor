@@ -10,7 +10,6 @@ export const metadata: Metadata = generatePageMetadata({
   description: PAGE_SEO.about.description,
   keywords: PAGE_SEO.about.keywords,
   url: '/about',
-  image: '/images/dr-janet-duffy-about-og.jpg',
 });
 
 export default function AboutPage() {

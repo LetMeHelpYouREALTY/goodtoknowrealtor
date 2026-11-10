@@ -1,58 +1,26 @@
 'use client';
 
 import { useState } from 'react';
-
-const FAQ_ITEMS: { question: string; answer: string }[] = [
-  {
-    question: 'What areas do you serve?',
-    answer:
-      'We specialize in Las Vegas and Henderson, Nevada, including Summerlin, Green Valley, and surrounding communities. Our expertise covers residential, luxury, and investment properties throughout Southern Nevada.',
-  },
-  {
-    question: 'How long does the home buying process take?',
-    answer:
-      'Typically 30–45 days from accepted offer to closing. Timeline depends on financing, inspections, and your specific situation. We guide you through each step to keep the process on track.',
-  },
-  {
-    question: 'Do you help with home valuations?',
-    answer:
-      'Yes. We provide data-driven home valuations and equity tracking. Use our home value tools on this site or schedule a consultation for a detailed comparative market analysis.',
-  },
-  {
-    question: 'What makes you different from other real estate agents?',
-    answer:
-      'Dr. Jan Duffy combines proven performance with doctoral-level market research, 20+ years of experience, and the Berkshire Hathaway HomeServices network. You get white-glove service and proven results.',
-  },
-  {
-    question: 'Can you help with investment properties?',
-    answer:
-      'Yes. We work with investors on single-family, multifamily, and luxury investment properties across Las Vegas and Henderson, including ROI analysis and off-market opportunities.',
-  },
-  {
-    question: 'What are your fees?',
-    answer:
-      'Commission structure is discussed during your consultation and depends on the type of transaction. As a seller, you typically pay a commission at closing; buyer representation is often at no direct cost to you.',
-  },
-];
+import { HOME_FAQS } from '@/data/home-faqs';
 
 export function HomeFAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" aria-labelledby="home-faq-heading">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">
+          <h2 id="home-faq-heading" className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-600">
-            Get answers to common questions about our real estate services
+            Answers about Dr. Jan Duffy&apos;s Good To Know REALTOR® services in Las Vegas
           </p>
         </div>
         <div className="max-w-3xl mx-auto space-y-2">
-          {FAQ_ITEMS.map((item, index) => (
+          {HOME_FAQS.map((item, index) => (
             <div
-              key={index}
+              key={item.question}
               className="border border-gray-200 rounded-xl overflow-hidden bg-gray-50/50"
             >
               <button
@@ -73,7 +41,9 @@ export function HomeFAQSection() {
               </button>
               {openIndex === index && (
                 <div className="px-5 pb-4 pt-0 text-gray-600 border-t border-gray-100">
-                  <p className="pt-3">{item.answer}</p>
+                  <p className="pt-3" data-speakable>
+                    {item.answer}
+                  </p>
                 </div>
               )}
             </div>

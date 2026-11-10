@@ -4,22 +4,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { RealScoutSimpleSearch } from '@/components/PropertySearch/RealScoutSimpleSearch';
+import { SITE } from '@/config/site';
 
 const HIGHLIGHT_STATS = [
   {
-    label: 'Average Days on Market',
-    value: '6',
-    helper: 'vs. city average of 27',
+    label: 'Licensed Since',
+    value: '2008',
+    helper: 'Nevada license S.0197614.LLC',
   },
   {
-    label: 'Over Asking Achieved',
-    value: '$125K+',
-    helper: 'for luxury listings in 2024',
+    label: 'Sales Volume',
+    value: '$127M+',
+    helper: 'Closed Las Vegas Valley transactions',
   },
   {
-    label: 'Client Satisfaction',
-    value: '4.97/5',
-    helper: 'from 500+ verified reviews',
+    label: 'Client Rating',
+    value: '5.0★',
+    helper: 'Verified on Realtor.com',
   },
 ];
 
@@ -33,7 +34,6 @@ const HERO_TESTIMONIAL = {
 export function HeroSection() {
   return (
     <section className='relative overflow-hidden bg-[#0f1419] bg-gradient-to-br from-[#0a0e14] via-[#0f1419] to-[#1a2332] text-white'>
-      {/* Background overlays */}
       <div className='pointer-events-none absolute inset-0 opacity-70 mix-blend-screen'>
         <div className='absolute -left-32 top-0 h-[480px] w-[480px] rounded-full bg-[#c9a962]/25 blur-[160px]' />
         <div className='absolute right-[-180px] top-1/2 h-[520px] w-[520px] rounded-full bg-[#1a2332]/60 blur-[160px]' />
@@ -43,27 +43,34 @@ export function HeroSection() {
 
       <div className='container relative z-10 mx-auto px-4 py-16 sm:py-20 lg:py-28'>
         <div className='grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]'>
-          {/* Left rail */}
           <div className='space-y-8 text-center lg:text-left'>
             <div className='luxury-badge mx-auto lg:mx-0'>
               <IconSymbol symbol='🏆' className='h-4 w-4 text-[#dfc07a]' ariaLabel='Award icon' />
-              <span>Berkshire Hathaway HomeServices</span>
+              <span>{SITE.brand}</span>
             </div>
 
             <div className='space-y-5'>
-              <h1 className='font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight'>
-                Concierge real estate for{' '}
+              <p
+                className='font-display text-2xl font-semibold tracking-tight text-[#dfc07a] sm:text-3xl lg:text-4xl'
+                data-speakable
+              >
+                Dr. Jan Duffy
+              </p>
+              <h1
+                className='font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight'
+                data-speakable
+              >
+                Luxury homes in{' '}
                 <span className='bg-gradient-to-r from-[#dfc07a] via-[#f5f0e8] to-[#c9a962] bg-clip-text text-transparent'>
-                  Las Vegas luxury
-                </span>{' '}
-                buyers, sellers, & investors.
+                  Summerlin, Henderson &amp; Las Vegas
+                </span>
               </h1>
-              <p className='mx-auto max-w-2xl text-base text-[#e8d5a8]/80 sm:text-lg lg:text-xl font-light leading-relaxed'>
-                Unlock private inventory, command $50K–$125K over asking, and build wealth with the only Las Vegas advisor who combines doctoral market research with 20+ years of negotiation mastery.
+              <p className='mx-auto max-w-2xl text-base text-[#e8d5a8]/80 sm:text-lg lg:text-xl font-light leading-relaxed' data-speakable>
+                Concierge buying, selling, and investing with Berkshire Hathaway HomeServices Nevada Properties.
+                Hyperlocal expertise across 120+ Las Vegas Valley neighborhoods.
               </p>
             </div>
 
-            {/* Stats */}
             <dl className='grid gap-4 sm:grid-cols-3'>
               {HIGHLIGHT_STATS.map((stat) => (
                 <div
@@ -79,14 +86,13 @@ export function HeroSection() {
               ))}
             </dl>
 
-            {/* CTAs */}
             <div className='flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-start'>
               <a
-                href='tel:702-500-1955'
+                href={`tel:${SITE.phoneTel}`}
                 className='btn-luxury-primary inline-flex w-full sm:w-auto gap-2'
               >
                 <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
-                Call (702) 500-1955
+                Call {SITE.phoneDisplay}
               </a>
               <Link href='/contact' className='btn-luxury-outline inline-flex w-full sm:w-auto gap-2'>
                 <IconSymbol symbol='🛡️' className='h-5 w-5 text-[#dfc07a]' ariaLabel='Shield icon' />
@@ -94,23 +100,21 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Search */}
             <div className='mx-auto max-w-xl rounded-2xl border border-white/10 bg-white/5 p-4 shadow-2xl shadow-blue-900/30 backdrop-blur-lg lg:mx-0'>
               <div className='mb-3 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.25em] text-white/70'>
-                <span>Find your next address</span>
+                <span>Search Las Vegas luxury homes</span>
                 <span className='rounded-full bg-white/10 px-2 py-1 text-[10px] text-white/80'>Powered by RealScout</span>
               </div>
               <RealScoutSimpleSearch />
             </div>
           </div>
 
-          {/* Right rail card */}
           <div className='relative mx-auto w-full max-w-lg lg:mx-0'>
             <div className='relative overflow-hidden rounded-[28px] border border-white/15 bg-white/5 shadow-2xl shadow-blue-900/30 backdrop-blur-2xl'>
               <div className='relative h-48 w-full overflow-hidden'>
                 <Image
                   src='https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=900&q=80'
-                  alt='Las Vegas luxury skyline'
+                  alt='Luxury homes for sale in Las Vegas with Dr. Jan Duffy, Good To Know REALTOR®'
                   fill
                   className='h-full w-full object-cover'
                   priority
@@ -120,7 +124,7 @@ export function HeroSection() {
                   <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-700 text-white font-bold'>JD</span>
                   <div>
                     Dr. Jan Duffy
-                    <p className='text-xs font-medium text-blue-600'>Premier REALTOR® • CRS • CLHMS</p>
+                    <p className='text-xs font-medium text-blue-600'>Good To Know REALTOR® • CRS • CLHMS</p>
                   </div>
                 </div>
               </div>
@@ -147,22 +151,22 @@ export function HeroSection() {
 
                 <div className='grid grid-cols-2 gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left text-xs text-blue-100/90'>
                   <div>
-                    <p className='font-semibold uppercase tracking-[0.18em] text-white'>2024 Buyer Wins</p>
-                    <p className='mt-1 text-sm font-semibold text-amber-200'>$2.3M Portfolio</p>
-                    <p className='text-[11px]'>Cash flows $8.2K/mo across three units.</p>
+                    <p className='font-semibold uppercase tracking-[0.18em] text-white'>Primary Areas</p>
+                    <p className='mt-1 text-sm font-semibold text-amber-200'>Summerlin · Henderson</p>
+                    <p className='text-[11px]'>Plus Green Valley, North Las Vegas &amp; Downtown.</p>
                   </div>
                   <div>
-                    <p className='font-semibold uppercase tracking-[0.18em] text-white'>Seller Wins</p>
-                    <p className='mt-1 text-sm font-semibold text-amber-200'>$132K Over Ask</p>
-                    <p className='text-[11px]'>Summerlin estate closed in only six days.</p>
+                    <p className='font-semibold uppercase tracking-[0.18em] text-white'>Brokerage</p>
+                    <p className='mt-1 text-sm font-semibold text-amber-200'>BHHS Nevada Properties</p>
+                    <p className='text-[11px]'>License {SITE.license}</p>
                   </div>
                 </div>
 
                 <Link
-                  href='/why-list-with-us'
+                  href='/luxury'
                   className='inline-flex w-full items-center justify-between rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-white/30 hover:bg-white/20'
                 >
-                  Discover the playbook
+                  Explore luxury services
                   <IconSymbol symbol='→' className='h-4 w-4' ariaLabel='Arrow right' />
                 </Link>
               </div>

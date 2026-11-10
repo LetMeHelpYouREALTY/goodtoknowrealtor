@@ -32,7 +32,7 @@ export function generatePrimaryAreaMetadata({
   ogImage,
 }: PrimaryAreaSeoOptions): Metadata {
   return generatePageMetadata({
-    title: `${areaName} Real Estate | Dr. Jan Duffy - Premier Good To Know REALTOR®`,
+    title: `${areaName} Real Estate | Dr. Jan Duffy | Good To Know REALTOR®`,
     description,
     keywords,
     url: `/areas/${slug}`,

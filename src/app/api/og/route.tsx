@@ -67,7 +67,7 @@ export async function GET(request: Request) {
               textTransform: 'uppercase',
             }}
           >
-            Berkshire Hathaway HomeServices Premier Properties
+            Good To Know REALTOR® · BHHS Nevada Properties
           </div>
         </div>
 

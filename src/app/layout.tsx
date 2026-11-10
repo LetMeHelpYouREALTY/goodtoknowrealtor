@@ -11,7 +11,14 @@ import { MobileStickyCTA } from '@/components/ui/MobileStickyCTA';
 import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderAnnouncements';
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
 import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
-import { SEO_CONFIG, generateRealEstateAgentSchema, generateLocalBusinessSchema, generateWebSiteSchema, generateSiteNavigationElementSchema } from '@/lib/seo';
+import {
+  SEO_CONFIG,
+  generateRealEstateAgentSchema,
+  generateLocalBusinessSchema,
+  generateWebSiteSchema,
+  generateSiteNavigationElementSchema,
+  generatePersonSchema,
+} from '@/lib/seo';
 
 // Font loaders must be called at module scope
 const dmSans = DM_Sans({
@@ -87,6 +94,7 @@ export default function RootLayout({
 }) {
   const realEstateAgentSchema = generateRealEstateAgentSchema();
   const localBusinessSchema = generateLocalBusinessSchema();
+  const personSchema = generatePersonSchema();
   const webSiteSchema = generateWebSiteSchema();
   const siteNavigationSchema = generateSiteNavigationElementSchema();
 
@@ -143,6 +151,12 @@ export default function RootLayout({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
           }}
         />
         <script

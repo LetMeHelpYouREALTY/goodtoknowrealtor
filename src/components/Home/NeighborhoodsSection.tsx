@@ -78,10 +78,10 @@ export function NeighborhoodsSection() {
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-            Las Vegas Neighborhoods We Serve
+            Hyperlocal Expertise Across Las Vegas
           </h2>
           <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-            Berkshire Hathaway HomeServices Nevada Properties covers all of Southern Nevada
+            Dr. Jan Duffy, Good To Know REALTOR®, guides buyers and sellers through Summerlin, Henderson, Green Valley, and 120+ expert neighborhoods
           </p>
         </div>
 

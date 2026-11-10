@@ -19,32 +19,48 @@ export function Footer() {
             <div className='flex flex-col'>
               <Image
                 src='/images/bhhs/logo.svg'
-                alt='Berkshire Hathaway HomeServices Premier Properties'
+                alt='Berkshire Hathaway HomeServices Nevada Properties'
                 width={192}
                 height={48}
                 className='mb-2 brightness-0 invert'
               />
               <p className='text-sm text-white/60'>
-                Dr. Jan Duffy, REALTOR®
+                Dr. Jan Duffy, Good To Know REALTOR®
                 <br />
-                Las Vegas Agent
+                License S.0197614.LLC
                 <br />
-                Premier Properties Las Vegas
+                Berkshire Hathaway HomeServices Nevada Properties
               </p>
               <div className='mt-4'>
                 <p className='text-sm font-semibold text-[#dfc07a] mb-2 uppercase tracking-wider'>Contact</p>
-                <div className='flex flex-col space-y-2'>
+                <div className='flex flex-col space-y-2 text-sm text-white/70'>
+                  <p>9406 W Lake Mead Blvd, Suite 100</p>
+                  <p>Las Vegas, NV 89134</p>
                   <Link
                     href='tel:702-500-1955'
-                    className='text-sm text-white/70 hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
+                    className='hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
                   >
                     (702) 500-1955
                   </Link>
                   <Link
                     href='sms:702-500-1955'
-                    className='text-sm text-white/70 hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
+                    className='hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
                   >
                     Send Text
+                  </Link>
+                  <Link
+                    href='mailto:info@goodtoknowrealtor.com'
+                    className='hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
+                  >
+                    info@goodtoknowrealtor.com
+                  </Link>
+                  <Link
+                    href='https://www.google.com/maps/dir/?api=1&destination=9406+W+Lake+Mead+Blvd+Suite+100+Las+Vegas+NV+89134'
+                    className='hover:text-[#dfc07a] transition-colors min-h-[44px] flex items-center'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    Directions
                   </Link>
                 </div>
               </div>
