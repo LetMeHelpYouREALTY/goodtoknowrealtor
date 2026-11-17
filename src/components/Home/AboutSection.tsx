@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Image from 'next/image';
 
 export function AboutSection() {
@@ -78,12 +79,9 @@ export function AboutSection() {
               >
                 Learn More About Dr. Duffy
               </a>
-              <a 
-                href="/contact" 
-                className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200"
-              >
+              <CalendlyButton event='general' className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200">
                 Schedule Consultation
-              </a>
+              </CalendlyButton>
             </div>
           </div>
           

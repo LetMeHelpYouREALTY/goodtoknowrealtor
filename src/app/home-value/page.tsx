@@ -1,5 +1,7 @@
 'use client';
+import CalendlyInline from '@/components/Calendly/CalendlyInline';
 
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Link from 'next/link';
 import { HomeValueWidget } from '@/components/Home/HomeValueWidget';
 import { HomebotHomeowner } from '@/components/Home/HomebotHomeowner';
@@ -128,15 +130,12 @@ export default function HomeValuePage() {
               Let Dr. Jan Duffy help you maximize your home&apos;s value
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md'
-              >
+              <CalendlyButton event='listing' className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md'>
                 <span className='inline-flex items-center gap-2'>
                   Get Free Consultation
                   <IconSymbol symbol='→' className='h-3 w-3' ariaLabel='Arrow right' />
                 </span>
-              </Link>
+              </CalendlyButton>
               <Link
                 href='/selling'
                 className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
@@ -149,6 +148,7 @@ export default function HomeValuePage() {
             </div>
           </div>
         </section>
+        <CalendlyInline event='listing' title='Get your real home value' subtitle='Book 30 minutes. I pull your subdivision comps before we talk.' />
       </div>
   );
 }

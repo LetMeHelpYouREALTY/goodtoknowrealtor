@@ -1,3 +1,5 @@
+import CalendlyInline from '@/components/Calendly/CalendlyInline';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -301,13 +303,10 @@ export default function SellingPage() {
                 <li>• Open house coordination</li>
                 <li>• Agent network promotion</li>
               </ul>
-              <Link
-                href='/contact'
-                className='btn btn-outline'
-              >
+              <CalendlyButton event='listing' className='btn btn-outline'>
                 Get Started
  →
-              </Link>
+              </CalendlyButton>
             </div>
           </div>
         </div>
@@ -516,6 +515,7 @@ export default function SellingPage() {
           <ConsultationCTA variant='white' source='selling-page-cta' />
         </div>
       </section>
+      <CalendlyInline event='listing' title='Book your listing consultation' subtitle='30 minutes on your home, your timing, and three pricing strategies.' />
     </div>
   );
 }

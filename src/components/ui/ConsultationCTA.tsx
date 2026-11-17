@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import { ConsultationModal } from './ConsultationModal';
+import { usePathname } from 'next/navigation';
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
+import type { CalendlyEvent } from '@/lib/calendly';
 
 interface ConsultationCTAProps {
   variant?: 'primary' | 'outline' | 'white';
@@ -13,11 +14,16 @@ interface ConsultationCTAProps {
 
 export function ConsultationCTA({ 
   variant = 'primary', 
-  source = 'inline',
   className = '',
   showPhone = true 
 }: ConsultationCTAProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname() || '/';
+  // Booking replaces the old consultation form (Dr. Jan's rule: Calendly, not forms).
+  const event: CalendlyEvent = pathname.startsWith('/selling')
+    ? 'listing'
+    : pathname.startsWith('/buying') || pathname.startsWith('/listings')
+      ? 'buyer'
+      : 'general';
 
   const buttonClasses = {
     primary: 'btn btn-primary',
@@ -28,12 +34,9 @@ export function ConsultationCTA({
   return (
     <>
       <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${className}`}>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className={`${buttonClasses[variant]} px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 shadow-lg`}
-        >
+        <CalendlyButton event={event} className={`${buttonClasses[variant]} px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200 shadow-lg`}>
           Schedule Consultation
-        </button>
+        </CalendlyButton>
         {showPhone && (
           <Link
             href='tel:702-500-1955'
@@ -46,11 +49,6 @@ export function ConsultationCTA({
           </Link>
         )}
       </div>
-      <ConsultationModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        source={source}
-      />
     </>
   );
 }

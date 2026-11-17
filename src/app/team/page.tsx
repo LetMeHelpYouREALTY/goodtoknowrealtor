@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import { SEO_CONFIG } from '@/lib/seo';
 import Link from 'next/link';
@@ -373,12 +374,9 @@ export default function TeamPage() {
               Experience the difference that comes from working with Las Vegas's most successful real estate team. Get personalized service from specialists who understand your unique needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
+              <CalendlyButton event='general' className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                 Contact Our Team
-              </Link>
+              </CalendlyButton>
               <Link
                 href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"

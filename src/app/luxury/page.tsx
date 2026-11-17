@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -119,12 +120,9 @@ export default function LuxuryPage() {
           gradientToClassName='to-amber-800'
           backgroundImageUrl='https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1973&q=80'
         >
-          <Link
-            href='/contact'
-            className='bg-white text-amber-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition-colors'
-          >
+          <CalendlyButton event='buyer' className='bg-white text-amber-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition-colors'>
             Schedule Private Consultation
-          </Link>
+          </CalendlyButton>
           <Link
             href='tel:702-500-1955'
             className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-amber-900 transition-colors'
@@ -366,12 +364,9 @@ export default function LuxuryPage() {
               Contact Dr. Jan Duffy today for personalized luxury real estate services in Las Vegas. With $127M+ in sales volume and 20+ years of experience, we deliver exceptional results for discerning clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-amber-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition-colors"
-              >
+              <CalendlyButton event='buyer' className="bg-white text-amber-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition-colors">
                 Schedule Private Consultation
-              </Link>
+              </CalendlyButton>
               <Link
                 href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-amber-900 transition-colors"

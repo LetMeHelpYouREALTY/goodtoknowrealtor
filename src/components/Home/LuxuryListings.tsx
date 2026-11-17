@@ -1,5 +1,6 @@
 'use client';
 
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 export function LuxuryListings() {
   return (
     <section className='py-20 bg-white'>
@@ -28,12 +29,9 @@ export function LuxuryListings() {
 
         {/* Additional CTA */}
         <div className='text-center mt-12'>
-          <a
-            href='/contact'
-            className='inline-flex items-center bg-amber-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-700 transition-colors duration-200 shadow-lg'
-          >
+          <CalendlyButton event='buyer' className='inline-flex items-center bg-amber-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-700 transition-colors duration-200 shadow-lg'>
             Schedule Luxury Consultation
-          </a>
+          </CalendlyButton>
         </div>
       </div>
     </section>

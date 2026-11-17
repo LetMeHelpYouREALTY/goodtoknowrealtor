@@ -1,5 +1,6 @@
 'use client';
 
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 export function InvestmentListings() {
   return (
     <section className='py-20 bg-white'>
@@ -28,12 +29,9 @@ export function InvestmentListings() {
 
         {/* Additional CTA */}
         <div className='text-center mt-12'>
-          <a
-            href='/contact'
-            className='inline-flex items-center bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors duration-200 shadow-lg'
-          >
+          <CalendlyButton event='strategy' className='inline-flex items-center bg-green-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition-colors duration-200 shadow-lg'>
             Get Investment Analysis
-          </a>
+          </CalendlyButton>
         </div>
       </div>
     </section>

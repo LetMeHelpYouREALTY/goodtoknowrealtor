@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -151,15 +152,12 @@ export default function InvestingPage() {
           gradientFromClassName='from-green-900'
           gradientToClassName='to-emerald-800'
         >
-          <Link
-            href='/contact'
-            className='bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors'
-          >
+          <CalendlyButton event='strategy' className='bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors'>
             <span className='inline-flex items-center gap-2'>
               Schedule Investment Consultation
               <IconSymbol symbol='→' className='h-3 w-3' ariaLabel='Arrow right' />
             </span>
-          </Link>
+          </CalendlyButton>
           <Link
             href='tel:702-500-1955'
             className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-800 transition-colors'
@@ -475,15 +473,12 @@ export default function InvestingPage() {
               Contact Dr. Jan Duffy today for personalized investment guidance in Las Vegas. With $127M+ in sales volume and investment expertise, we help you build wealth through real estate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
+              <CalendlyButton event='strategy' className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                 <span className='inline-flex items-center gap-2'>
                   Schedule Investment Consultation
                   <IconSymbol symbol='→' className='h-3 w-3' ariaLabel='Arrow right' />
                 </span>
-              </Link>
+              </CalendlyButton>
               <Link
                 href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"

@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
@@ -46,12 +47,9 @@ export default function SummerlinPage() {
         >
           View Summerlin Listings
         </a>
-        <a 
-          href='/contact' 
-          className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-800 transition-colors duration-200'
-        >
+        <CalendlyButton event='strategy' className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-800 transition-colors duration-200'>
           Get Free Consultation
-        </a>
+        </CalendlyButton>
       </PageHero>
 
       {/* Property Search */}
@@ -173,12 +171,9 @@ export default function SummerlinPage() {
             >
               Call (702) 500-1955
             </a>
-            <a 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
+            <CalendlyButton event='strategy' className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors">
               Schedule Consultation
-            </a>
+            </CalendlyButton>
           </div>
         </div>
       </section>

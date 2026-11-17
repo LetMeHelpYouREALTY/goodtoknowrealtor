@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -348,12 +349,9 @@ export default function CashOfferPage() {
               Get a competitive cash offer for your Las Vegas home today. No obligations, no fees, no hassles. Dr. Jan Duffy's cash offer program provides a fast, fair alternative to traditional home selling.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                href='/contact'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'
-              >
+              <CalendlyButton event='listing' className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'>
                 Get My Cash Offer
-              </Link>
+              </CalendlyButton>
               <Link
                 href='tel:702-500-1955'
                 className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'

@@ -1,3 +1,4 @@
+import CalendlyButton from '@/components/Calendly/CalendlyButton';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -204,12 +205,9 @@ export default function ResourcesPage() {
           gradientFromClassName='from-blue-900'
           gradientToClassName='to-indigo-800'
         >
-          <Link
-            href='/contact'
-            className='bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors'
-          >
+          <CalendlyButton event='strategy' className='bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors'>
             Get Expert Consultation
-          </Link>
+          </CalendlyButton>
           <Link
             href='tel:702-500-1955'
             className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors'
@@ -392,12 +390,9 @@ export default function ResourcesPage() {
               While our resources provide valuable information, nothing beats personalized guidance from Las Vegas real estate agent. Get expert consultation tailored to your specific situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-              >
+              <CalendlyButton event='strategy' className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                 Schedule Consultation
-              </Link>
+              </CalendlyButton>
               <Link
                 href="tel:702-500-1955"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
