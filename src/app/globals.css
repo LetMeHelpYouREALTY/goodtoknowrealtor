@@ -455,7 +455,11 @@ textarea,
   background-color: #d1d5db;
 }
 
-/* Utility Classes */
+/* Utility Classes — legacy hand-written copies of Tailwind utilities.
+ * Kept in @layer components so Tailwind's own utilities (including md:/lg:
+ * responsive variants) win. Unlayered, these overrode every responsive grid
+ * and display class, collapsing desktop layouts to one column. */
+@layer components {
 .text-center {
   text-align: center;
 }
@@ -762,6 +766,7 @@ textarea,
     flex-direction: row;
   }
 }
+} /* end @layer components */
 
 /* Mobile-specific improvements */
 @media (max-width: 768px) {

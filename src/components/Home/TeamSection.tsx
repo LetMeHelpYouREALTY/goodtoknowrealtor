@@ -23,8 +23,8 @@ export function TeamSection() {
       title: 'REALTOR®',
       phone: '(702) 500-1955',
       email: 'janet@goodtoknowrealtor.com',
-      license: 'S.0192488',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      license: 'S.0197614.LLC',
+      image: 'https://d3v0px0pttie1i.cloudfront.net/uploads/user/avatar/21173348/529da652.png',
       bio: 'Premier Good To Know REALTOR® with over 15 years of experience in Las Vegas real estate.'
     },
     {

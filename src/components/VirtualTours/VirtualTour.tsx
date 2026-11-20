@@ -97,7 +97,7 @@ export function VirtualTour({ tour, className = '' }: VirtualTourProps) {
               <div className="absolute inset-0 flex items-center justify-center">
                 <button
                   onClick={handlePlay}
-                  className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-4 transition-all"
+                  className="bg-white/20 hover:bg-white/30 rounded-full p-4 transition-all"
                   aria-label="Play virtual tour video"
                 >
                   <IconSymbol symbol='🎥' className='text-white text-2xl' ariaLabel='Play icon' />
@@ -129,25 +129,25 @@ export function VirtualTour({ tour, className = '' }: VirtualTourProps) {
             {/* 360° Controls */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
               <button
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-all"
+                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all"
                 aria-label="Rotate left"
               >
                 ↶
               </button>
               <button
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-all"
+                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all"
                 aria-label="Rotate right"
               >
                 ↷
               </button>
               <button
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-all"
+                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all"
                 aria-label="Zoom in"
               >
                 +
               </button>
               <button
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-2 rounded-full transition-all"
+                className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all"
                 aria-label="Zoom out"
               >
                 −
@@ -197,7 +197,7 @@ export function VirtualTour({ tour, className = '' }: VirtualTourProps) {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2">
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2">
                     <p className="text-sm font-medium">{room}</p>
                   </div>
                 </button>
@@ -260,7 +260,7 @@ export function VirtualTour({ tour, className = '' }: VirtualTourProps) {
         
         {/* Loading Overlay */}
         {isPlaying && tour.type === 'video' && (
-          <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <div className="bg-white rounded-lg p-4 shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
@@ -395,7 +395,7 @@ export function VirtualTourGallery({ tours, propertyTitle, className = '' }: Vir
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                  <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs">
                     {tour.type.toUpperCase()}
                   </div>
                 </div>

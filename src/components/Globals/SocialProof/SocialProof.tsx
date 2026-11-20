@@ -88,7 +88,7 @@ export function SocialProof() {
             )}
             {currentItem.type === 'review' && (
               <div className='w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center'>
-                <IconSymbol symbol='⭐' className='h-4 w-4 text-yellow-600' ariaLabel='New review' />
+                <IconSymbol symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' ariaLabel='New review' />
               </div>
             )}
           </div>

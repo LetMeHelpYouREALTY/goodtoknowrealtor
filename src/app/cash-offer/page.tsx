@@ -306,9 +306,9 @@ export default function CashOfferPage() {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                 <div className='bg-white rounded-xl p-8 shadow-lg'>
                   <div className='flex items-center mb-4'>
-                    <div className='text-yellow-400 text-xl'>
+                    <div className='text-[#c9a962] text-xl'>
                       {[...Array(5)].map((_, i) => (
-                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-yellow-400' ariaLabel='Star rating' />
+                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' ariaLabel='Star rating' />
                       ))}
                     </div>
                   </div>
@@ -321,9 +321,9 @@ export default function CashOfferPage() {
                 
                 <div className='bg-white rounded-xl p-8 shadow-lg'>
                   <div className='flex items-center mb-4'>
-                    <div className='text-yellow-400 text-xl'>
+                    <div className='text-[#c9a962] text-xl'>
                       {[...Array(5)].map((_, i) => (
-                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-yellow-400' ariaLabel='Star rating' />
+                        <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' ariaLabel='Star rating' />
                       ))}
                     </div>
                   </div>

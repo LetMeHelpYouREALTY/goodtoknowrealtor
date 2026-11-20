@@ -17,7 +17,7 @@ export function ReportsSection() {
       description:
         'Explore the premium luxury market in Summerlin with insights on high-end properties, amenities, and lifestyle opportunities.',
       image:
-        'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       link: '/blog/summerlin-luxury-market',
       label: 'Luxury Guide',
     },

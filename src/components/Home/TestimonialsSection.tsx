@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import ReviewAvatar from '@/components/ui/ReviewAvatar';
 import { useState } from 'react';
 import { testimonials } from '@/data/testimonials';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -99,14 +99,7 @@ export function TestimonialsSection() {
 
               <div className="flex items-center mb-6">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  {testimonial.image && (
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      fill
-                      className="object-cover"
-                    />
-                  )}
+                  <ReviewAvatar name={testimonial.author} size={48} />
                 </div>
                 <div>
                   <h4 className="font-bold text-gray-900">{testimonial.author}</h4>
@@ -123,9 +116,9 @@ export function TestimonialsSection() {
 
               {/* Key Stats */}
               <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between">
-                <div className="flex text-amber-400">
+                <div className="flex text-[#c9a962]">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-amber-400' ariaLabel='Rating star' />
+                    <IconSymbol key={i} symbol='⭐' className='h-4 w-4 text-[#c9a962] fill-[#c9a962]' ariaLabel='Rating star' />
                   ))}
                 </div>
                 {testimonial.dollarAmount && (

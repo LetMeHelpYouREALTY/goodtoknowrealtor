@@ -88,7 +88,7 @@ export const testimonials: Testimonial[] = [
     propertyType: 'buyer',
     dollarAmount: '$1.2M (saved $200K+)',
     timeline: 'November 2023',
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
+    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
     datePublished: '2023-11-20'
   },
   {
