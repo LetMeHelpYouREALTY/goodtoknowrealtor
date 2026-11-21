@@ -3,12 +3,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
-import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
+import { PageHero } from '@/components/ui/PageHero';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Why List With Dr. Jan Duffy | Las Vegas Real Estate Agent',
-  description: 'Discover why Dr. Jan Duffy is the premier choice for selling your Las Vegas home. $127M+ sales volume, 98% client satisfaction, proven results.',
-  keywords: ['why list with us', 'Las Vegas real estate agent', 'Dr. Jan Duffy', 'sell home Las Vegas', 'top realtor', 'premier agent'],
+  title: 'Why List Luxury Homes with Dr. Jan Duffy | BHHS Nevada Properties',
+  description:
+    'Why sellers in Las Vegas, Summerlin, and Henderson list with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties—marketing, pricing, and negotiation. 702-500-1955.',
+  keywords: [
+    'why list with Dr Jan Duffy',
+    'luxury listing agent Las Vegas',
+    'Berkshire Hathaway Nevada Properties',
+    'sell home Summerlin',
+  ],
   url: '/why-list-with-us',
   image: '/images/why-list-with-us-og.jpg',
 });
@@ -131,46 +137,35 @@ export default function WhyListWithUsPage() {
           </div>
         </div>
 
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 to-indigo-800 text-white py-20">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container relative">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                Why List With Dr. Jan Duffy?
-              </h1>
-              <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed mb-8">
-                Join 500+ successful sellers who chose Las Vegas real estate agent for exceptional results and unmatched service
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
-                >
-                  Get Free Home Valuation
-                </Link>
-                <Link
-                  href="tel:702-500-1955"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors"
-                >
-                  Call (702) 500-1955
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      <RealScoutOfficeWidget compact />
-
+        <PageHero
+          title='Why List With Dr. Jan Duffy in Las Vegas?'
+          subtitle='Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties—discreet luxury marketing, data-led pricing, and negotiation for sellers across Summerlin, Henderson, and the valley. Call or text 702-500-1955.'
+          gradientFromClassName='from-blue-900'
+          gradientToClassName='to-indigo-800'
+        >
+          <Link
+            href='/home-value'
+            className='bg-white text-blue-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors'
+          >
+            Get home value estimate
+          </Link>
+          <Link
+            href='tel:702-500-1955'
+            className='border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-800 transition-colors'
+          >
+            Call 702-500-1955
+          </Link>
+        </PageHero>
 
         {/* Key Advantages */}
         <section className="py-16 bg-white">
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Dr. Jan Duffy Delivers Exceptional Results
+                What Results Do Las Vegas Sellers See With BHHS Marketing?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                As a Las Vegas real estate agent, Dr. Jan Duffy combines market expertise, proven strategies, and exceptional service to deliver outstanding results for every client.
+                Dr. Jan Duffy pairs brokerage-scale exposure with hands-on pricing and negotiation—metrics below reflect completed valley transactions, not promises.
               </p>
             </div>
 
@@ -192,10 +187,11 @@ export default function WhyListWithUsPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Comprehensive Selling Services
+                Which Listing Services Support Luxury Sellers?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From strategic pricing to expert negotiation, Dr. Jan Duffy provides complete support throughout your selling journey
+                Pricing, media, syndication, and contract strategy are coordinated in one plan—review the{' '}
+                <Link href='/seller-guide' className='text-blue-700 font-semibold hover:text-blue-800'>seller guide</Link> for each phase.
               </p>
             </div>
 
@@ -223,10 +219,10 @@ export default function WhyListWithUsPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Real Results from Real Clients
+                Who Has Listed Successfully With Dr. Jan Duffy?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See how Dr. Jan Duffy's expertise translates into exceptional outcomes for Las Vegas home sellers
+                Sellers in Summerlin, Henderson, and North Las Vegas share outcomes after listing with Berkshire Hathaway HomeServices Nevada Properties.
               </p>
             </div>
 
@@ -252,10 +248,10 @@ export default function WhyListWithUsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Deep Las Vegas Market Knowledge
+                  How Does Local Market Knowledge Affect Your List Price?
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  With 20+ years of experience in the Las Vegas real estate market, Dr. Jan Duffy understands the unique dynamics of each neighborhood, market trends, and buyer preferences that drive successful sales.
+                  Micro-market trends in Summerlin, Green Valley, and master-planned Henderson communities change weekly—Dr. Jan Duffy reads MLS absorption before recommending go-live timing.
                 </p>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
@@ -300,10 +296,11 @@ export default function WhyListWithUsPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Our Proven Selling Process
+                What Is the Step-by-Step Listing Process?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                A systematic approach that has resulted in exceptional outcomes for hundreds of Las Vegas home sellers
+                Analysis, pricing, marketing, and negotiation follow a repeatable playbook—see{' '}
+                <Link href='/selling' className='text-blue-700 font-semibold hover:text-blue-800'>luxury selling services</Link> for how each stage applies to your home.
               </p>
             </div>
 
@@ -355,10 +352,10 @@ export default function WhyListWithUsPage() {
         <section className="py-16 bg-blue-600 text-white">
           <div className="container text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Experience Exceptional Results?
+              How Do You Start Your Listing Consultation?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join the 500+ successful sellers who chose Dr. Jan Duffy for their Las Vegas real estate needs. Get your free home valuation and discover your property's true market value.
+              Request a valuation or call 702-500-1955—Dr. Jan Duffy will outline marketing, timing, and net sheet expectations before you sign listing paperwork.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

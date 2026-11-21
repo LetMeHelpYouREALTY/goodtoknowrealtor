@@ -10,9 +10,17 @@ import { generatePageMetadata } from '@/lib/seo';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Buy Luxury Las Vegas Homes | Dr. Jan Duffy - Expert Buyer Agent',
-  description: 'Buy your dream Las Vegas home with Dr. Jan Duffy. Exclusive access to off-market properties, skip bidding wars, and get expert guidance. $127M+ sales volume expertise.',
-  keywords: ['Las Vegas home buying', 'buy Las Vegas homes', 'Las Vegas buyer agent', 'off-market properties Las Vegas', 'Las Vegas luxury homes', 'first-time home buyer Las Vegas'],
+  title: 'Buy Luxury Homes in Las Vegas, Summerlin & Henderson | Dr. Jan Duffy',
+  description:
+    'Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties, helps buyers secure luxury and move-up homes across Las Vegas. Off-market access, negotiation, and local expertise. Call or text 702-500-1955.',
+  keywords: [
+    'luxury home buyer Las Vegas',
+    'buy homes Summerlin',
+    'Henderson buyer agent',
+    'off-market Las Vegas',
+    'Dr. Jan Duffy',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/buying',
   image: '/images/buying-las-vegas-homes-og.jpg',
 });
@@ -29,8 +37,8 @@ export default function BuyingPage() {
 
       {/* Hero Section */}
       <PageHero
-        title='Buy Your Luxury Las Vegas Home with Expert Guidance'
-        subtitle='Exclusive access to premier properties, off-market opportunities, and personalized service from Dr. Jan Duffy. Navigate today&apos;s competitive market with confidence.'
+        title='Luxury Home Buying in Las Vegas, Summerlin & Henderson'
+        subtitle='Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, guides buyers from search through closing—with MLS tools, off-market insight, and calm negotiation. Call or text 702-500-1955.'
         gradientFromClassName='from-amber-600'
         gradientToClassName='to-yellow-600'
       >
@@ -49,10 +57,10 @@ export default function BuyingPage() {
           <div className='max-w-4xl mx-auto'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-                Discover Exclusive Luxury Properties
+                Where Can You Search Las Vegas Luxury Listings?
               </h2>
               <p className='text-xl text-gray-600'>
-                Access premier listings including off-market opportunities not available to the public. Schedule a consultation for personalized property recommendations.
+                Use live MLS search below for Summerlin, Henderson, Green Valley, and greater Las Vegas—or ask Dr. Jan Duffy for personalized matches and off-market introductions.
               </p>
             </div>
             <div className='card p-8'>
@@ -67,11 +75,14 @@ export default function BuyingPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Your Home Buying Journey
+              How Does Buying a Home in Las Vegas Work?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              From first-time buyers to seasoned investors, I&apos;ll guide you
-              through every step of the home buying process
+              Whether you are upsizing in{' '}
+              <Link href='/areas/summerlin' className='text-amber-700 font-semibold hover:text-amber-800'>
+                Summerlin
+              </Link>{' '}
+              or buying your first home, Dr. Jan Duffy maps each milestone—from pre-approval through keys—in clear, local steps.
             </p>
           </div>
 
@@ -348,11 +359,10 @@ export default function BuyingPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Popular Las Vegas Neighborhoods
+              Which Las Vegas Areas Do Luxury Buyers Explore First?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Discover the unique character and amenities of Las Vegas&apos;s most
-              desirable neighborhoods
+              Master-planned Summerlin, lake-and-golf Henderson, and growth corridors in North Las Vegas each offer distinct inventory—browse area guides, then tour with a licensed local agent.
             </p>
           </div>
 
@@ -457,11 +467,10 @@ export default function BuyingPage() {
       <section className='py-20 bg-gradient-to-r from-amber-600 to-yellow-600 text-white'>
         <div className='container text-center'>
           <h2 className='text-3xl lg:text-4xl font-bold mb-6'>
-            Ready to Find Your Dream Home?
+            How Do You Start Your Las Vegas Home Search?
           </h2>
           <p className='text-xl text-amber-100 mb-8 max-w-3xl mx-auto'>
-            Let Dr. Jan Duffy guide you through the home buying process with
-            personalized service and expert market knowledge.
+            Schedule a buyer consultation or call <a href='tel:702-500-1955' className='underline font-semibold'>702-500-1955</a>—Dr. Jan Duffy will align showings, financing timelines, and offer strategy to your goals.
           </p>
           <ConsultationCTA variant='white' source='buying-page-cta' />
         </div>
@@ -474,10 +483,10 @@ export default function BuyingPage() {
             <div className='card p-8 bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-200'>
               <div className='text-center mb-8'>
                 <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-                  Exclusive Access to Off-Market Properties
+                  Can You Tour Homes Before They Hit Public MLS?
                 </h2>
                 <p className='text-lg text-gray-700'>
-                  In today&apos;s competitive market, the best properties often sell before hitting public listings. As your agent, I provide exclusive access to:
+                  Strong Las Vegas listings often receive interest early. Through Berkshire Hathaway HomeServices Nevada Properties and Dr. Jan Duffy&apos;s network, qualified buyers may preview pocket and pre-market homes when sellers allow.
                 </p>
               </div>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>

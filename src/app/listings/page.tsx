@@ -18,9 +18,16 @@ declare global {
 }
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Las Vegas Property Listings | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Browse exclusive Las Vegas property listings from Premier Good To Know REALTOR® Dr. Jan Duffy. Luxury homes, investment properties, and first-time buyer homes in Summerlin, Henderson, and more.',
-  keywords: ['Las Vegas property listings', 'Las Vegas homes for sale', 'Summerlin homes', 'Henderson homes', 'Las Vegas real estate listings'],
+  title: 'Luxury Las Vegas MLS Listings | Summerlin & Henderson Homes',
+  description:
+    'Search live MLS homes with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Luxury inventory across Summerlin, Henderson, Green Valley, and Las Vegas. Call or text 702-500-1955.',
+  keywords: [
+    'luxury MLS listings Las Vegas',
+    'homes for sale Summerlin',
+    'Henderson listings',
+    'Dr. Jan Duffy',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/listings',
   image: '/images/las-vegas-listings-og.jpg',
 });
@@ -100,8 +107,8 @@ export default function ListingsPage() {
       <div className='min-h-screen bg-gradient-to-br from-amber-50 to-yellow-50'>
       {/* Hero Section */}
       <PageHero
-        title='Luxury Las Vegas Property Listings'
-        subtitle={'Discover premier homes in Las Vegas\'s most prestigious neighborhoods. From luxury estates to exclusive gated communities, access exceptional properties with expert guidance.'}
+        title='Luxury Las Vegas MLS Listings & Search'
+        subtitle='Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, connects you to live MLS inventory—from Summerlin estates to Henderson golf homes—with local context on every tour. Call or text 702-500-1955.'
         backgroundImageUrl='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1973&q=80'
         gradientFromClassName='from-amber-900'
         gradientToClassName='to-amber-800'
@@ -126,10 +133,12 @@ export default function ListingsPage() {
                 Advanced Property Search
               </div>
               <h2 className='text-3xl lg:text-5xl font-bold text-gray-900 mb-4'>
-                Find Your Dream Home
+                How Do You Search Las Vegas Homes for Sale?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Use our advanced search tools to find properties that match your exact criteria in Las Vegas&apos;s most desirable neighborhoods
+                Filter RealScout MLS by price, beds, and area—then pair results with{' '}
+                <Link href='/luxury' className='text-amber-700 font-semibold hover:text-amber-800'>luxury collections</Link> or{' '}
+                <Link href='/communities' className='text-amber-700 font-semibold hover:text-amber-800'>community guides</Link> for neighborhood fit.
               </p>
             </div>
             
@@ -158,7 +167,7 @@ export default function ListingsPage() {
                   >
                     <IconSymbol symbol='🏘️' className='mx-auto mb-2 h-8 w-8 text-amber-700' ariaLabel='Community icon' />
                     <div className='font-semibold text-gray-900'>Henderson</div>
-                    <div className='text-sm text-gray-600'>Family Homes</div>
+                    <div className='text-sm text-gray-600'>Resale & New Build</div>
                   </Link>
                   <Link
                     href='/areas/north-las-vegas'
@@ -188,10 +197,10 @@ export default function ListingsPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Featured Properties
+              What Listings Highlight Las Vegas Luxury Inventory?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Handpicked properties showcasing the best of Las Vegas real estate
+              Sample featured styles illustrate market range—confirm availability, price, and MLS data on each live listing before you tour.
             </p>
           </div>
 
@@ -388,10 +397,10 @@ export default function ListingsPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Browse by Category
+              Where Should You Browse Beyond MLS Search?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Find the perfect property type for your needs and lifestyle
+              Jump to exclusive previews, luxury submarkets, or rental inventory when MLS filters alone do not capture your brief.
             </p>
           </div>
 

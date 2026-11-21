@@ -5,13 +5,24 @@ import { AssessmentCTA } from '@/components/blog/AssessmentCTA';
 import { HomeValueWidget } from '@/components/Home/HomeValueWidget';
 import { PageHero } from '@/components/ui/PageHero';
 import { ConsultationCTA } from '@/components/ui/ConsultationCTA';
-import { SEO_CONFIG } from '@/lib/seo';
+import { generatePageMetadata } from '@/lib/seo';
 import { Metadata } from 'next';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export const metadata: Metadata = {
-  alternates: { canonical: `${SEO_CONFIG.siteUrl}/selling` },
-};
+export const metadata: Metadata = generatePageMetadata({
+  title: 'Sell Luxury Homes in Las Vegas, Summerlin & Henderson | Dr. Jan Duffy',
+  description:
+    'List with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Discreet luxury marketing, pricing strategy, and negotiation across Las Vegas. Call or text 702-500-1955.',
+  keywords: [
+    'sell luxury home Las Vegas',
+    'Summerlin listing agent',
+    'Henderson home seller',
+    'Dr. Jan Duffy',
+    'Berkshire Hathaway Nevada Properties',
+  ],
+  url: '/selling',
+  image: '/images/selling-las-vegas-homes-og.jpg',
+});
 
 export default function SellingPage() {
   return (
@@ -25,8 +36,8 @@ export default function SellingPage() {
 
       {/* Hero Section */}
       <PageHero
-        title='Sell Your Luxury Las Vegas Home for Maximum Value'
-        subtitle={'Discreet marketing, luxury staging expertise, and strategic negotiation to maximize your property&apos;s value in today&apos;s market. White-glove service from $127M+ sales expert.'}
+        title='Sell Luxury Homes in Las Vegas, Summerlin & Henderson'
+        subtitle='Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, delivers discreet marketing, pricing discipline, and negotiation for luxury and move-up sellers. Call or text 702-500-1955.'
         gradientFromClassName='from-amber-600'
         gradientToClassName='to-yellow-600'
       >
@@ -45,10 +56,10 @@ export default function SellingPage() {
           <div className='max-w-4xl mx-auto'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-                Get Your Home&apos;s Current Value
+                What Is Your Las Vegas Home Worth Today?
               </h2>
               <p className='text-xl text-gray-600'>
-                Find out what your Las Vegas home is worth in today&apos;s market
+                Run an instant estimate below, then request a broker price opinion from Dr. Jan Duffy for Summerlin, Henderson, or valley-wide comps.
               </p>
             </div>
             <div className='card p-8'>
@@ -63,11 +74,10 @@ export default function SellingPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Your Home Selling Process
+              How Does Selling a Luxury Home in Las Vegas Work?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              From market analysis to closing, I&apos;ll guide you through every step
-              to maximize your home&apos;s value
+              From pricing in <Link href='/areas/summerlin' className='text-amber-700 font-semibold hover:text-amber-800'>Summerlin</Link> to closing in Henderson, Dr. Jan Duffy coordinates prep, marketing, and offers so you stay informed at every stage.
             </p>
           </div>
 
@@ -318,11 +328,11 @@ export default function SellingPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Las Vegas Market Statistics
+              What Do Las Vegas Seller Metrics Mean Right Now?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Current market conditions and trends that affect your home selling
-              strategy
+              Median price, days on market, and list-to-sale ratio shape how Dr. Jan Duffy positions your listing—see{' '}
+              <Link href='/market-insights' className='text-amber-700 font-semibold hover:text-amber-800'>Las Vegas market insights</Link> for deeper trends.
             </p>
           </div>
 
@@ -367,11 +377,10 @@ export default function SellingPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Recent Sales Success Stories
+              Who Has Dr. Jan Duffy Helped Sell in Las Vegas?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              See how I&apos;ve helped Las Vegas homeowners achieve outstanding
-              results
+              Sellers across Summerlin, Henderson, and the valley share how brokerage marketing and negotiation translated into strong outcomes.
             </p>
           </div>
 
@@ -461,10 +470,10 @@ export default function SellingPage() {
           <div className='max-w-4xl mx-auto'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-                Luxury Marketing & Exclusive Services
+                Why Use Discreet Luxury Marketing in Las Vegas?
               </h2>
               <p className='text-xl text-gray-700 font-medium'>
-                Premium marketing strategies tailored for high-end properties in today&apos;s competitive market
+                High-value homes often benefit from controlled exposure, professional staging, and qualified buyer outreach—core tools Dr. Jan Duffy uses through Berkshire Hathaway HomeServices Nevada Properties.
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mb-12'>
@@ -508,10 +517,11 @@ export default function SellingPage() {
       <section className='py-20 bg-gradient-to-r from-amber-600 to-yellow-600 text-white'>
         <div className='container text-center'>
           <h2 className='text-3xl lg:text-4xl font-bold mb-6'>
-            Maximize Your Home&apos;s Value with Luxury Marketing
+            How Do You List with Dr. Jan Duffy?
           </h2>
           <p className='text-xl text-white/95 mb-8 max-w-3xl mx-auto font-medium'>
-            Schedule a private consultation to discuss discreet marketing strategies, luxury staging, and strategic pricing to maximize your property&apos;s value in today&apos;s market.
+            Book a listing consultation or call <a href='tel:702-500-1955' className='underline font-semibold'>702-500-1955</a> to review pricing, timing, and{' '}
+            <Link href='/why-list-with-us' className='underline font-semibold text-white'>why sellers choose BHHS Nevada Properties</Link>.
           </p>
           <ConsultationCTA variant='white' source='selling-page-cta' />
         </div>
