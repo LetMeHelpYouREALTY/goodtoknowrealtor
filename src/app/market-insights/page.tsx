@@ -7,9 +7,15 @@ import { PageHero } from '@/components/ui/PageHero';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Las Vegas Real Estate Market Insights | Dr. Jan Duffy',
-  description: 'Stay informed with the latest Las Vegas real estate market trends, data, and insights from Dr. Jan Duffy, Premier Good To Know REALTOR®.',
-  keywords: ['Las Vegas real estate market', 'Las Vegas market trends', 'real estate insights', 'market data', 'Dr. Jan Duffy'],
+  title: 'Las Vegas Real Estate Market Insights & Trends | Dr. Jan Duffy',
+  description:
+    'Las Vegas, Summerlin, and Henderson market trends, inventory, and pricing context from Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
+  keywords: [
+    'Las Vegas real estate market trends',
+    'Summerlin Henderson market data',
+    'Dr. Jan Duffy market report',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/market-insights',
   image: '/images/las-vegas-market-insights-og.jpg',
 });
@@ -38,8 +44,8 @@ export default async function MarketInsightsPage() {
       <div className='min-h-screen bg-gray-50'>
         {/* Hero Section */}
         <PageHero
-          title={'Las Vegas Real Estate\nGood To Know Market Insights'}
-          subtitle={'Stay ahead with data-driven insights, trends, and analysis from Dr. Jan Duffy, your Premier Good To Know REALTOR®'}
+          title="Las Vegas Real Estate Market Insights & Data"
+          subtitle="Dr. Jan Duffy curates valley-wide and hyperlocal updates—inventory, pricing, and timing—for buyers and sellers in Summerlin, Henderson, and Las Vegas. Call or text 702-500-1955 for a personalized market read."
         >
           <Link
             href='tel:702-500-1955'
@@ -68,10 +74,10 @@ export default async function MarketInsightsPage() {
           <div className='container'>
             <div className='text-center mb-12'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-                Why Market Insights Matter
+                Why Do Las Vegas Market Insights Matter for Your Move?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Understanding market trends helps you make informed real estate decisions
+                Current inventory, days on market, and price movement tell you whether to press ahead or adjust strategy—before you list or write an offer. Dr. Jan Duffy pairs public data with on-the-ground showing feedback so your plan matches today&apos;s conditions, not last year&apos;s headlines.
               </p>
             </div>
 

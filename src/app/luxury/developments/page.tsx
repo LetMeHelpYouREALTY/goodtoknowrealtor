@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/developments' },
-  title: 'Luxury Developments Las Vegas | New Construction | Dr. Jan Duffy',
-  description: 'Discover luxury new construction developments in Las Vegas. Premium master-planned communities, custom homes, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury New Construction Las Vegas & Henderson | Dr. Jan Duffy',
+  description:
+    'New luxury builds and builder inventory in Summerlin, Henderson, and Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: 'luxury developments Las Vegas, new construction, master-planned communities, custom homes, luxury developments',
   openGraph: {
-    title: 'Luxury Developments Las Vegas | New Construction | Dr. Jan Duffy',
-    description: 'Discover luxury new construction developments in Las Vegas. Premium master-planned communities, custom homes, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury New Construction Las Vegas & Henderson | Dr. Jan Duffy',
+    description:
+      'New luxury builds and builder inventory with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryDevelopmentsPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Developments in Las Vegas
+              Luxury New Construction in Summerlin, Henderson & Las Vegas
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Be among the first to own in Las Vegas&apos; most prestigious 
-              new construction developments featuring cutting-edge design and amenities.
+              Dr. Jan Duffy negotiates builder contracts, incentive stacks, and lot premiums in active luxury developments—before you lock a reservation deposit. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -55,11 +56,10 @@ export default function LuxuryDevelopmentsPage() {
           <div className='max-w-6xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-                Why Choose New Construction Developments?
+                Why Buy New Construction in a Luxury Development?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                New construction developments offer modern design, energy efficiency, 
-                and the opportunity to customize your dream home from the ground up.
+                New builds deliver current energy codes, warranty coverage, and design packages—but timelines and upgrade pricing vary by builder. Dr. Jan Duffy reviews contracts so incentives survive to closing.
               </p>
             </div>
 

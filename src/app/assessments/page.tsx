@@ -5,9 +5,9 @@ import { PageHero } from '@/components/ui/PageHero';
 import { generatePageMetadata, generateBreadcrumbSchema, generateItemListSchema } from '@/lib/seo';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Free Real Estate Assessments | Dr. Jan Duffy — Las Vegas',
+  title: 'Free Buyer & Seller Readiness Quizzes | Dr. Jan Duffy',
   description:
-    'Free buyer and seller readiness assessments for Las Vegas home buyers and sellers. Get a personalized score and next steps from Dr. Jan Duffy in 3 minutes.',
+    'Answer-first buyer and seller readiness assessments for Las Vegas, Summerlin, and Henderson. Personalized scores and next steps from Dr. Jan Duffy in about 3 minutes. 702-500-1955.',
   keywords: [
     'buyer readiness assessment',
     'seller readiness assessment',
@@ -76,14 +76,17 @@ export default function AssessmentsPage() {
         </div>
 
         <PageHero
-          title="Free Real Estate Assessments"
-          subtitle="Personalized buyer and seller readiness tools for the Las Vegas Valley — from Dr. Jan Duffy, Good To Know REALTOR®"
+          title="Free Las Vegas Buyer & Seller Readiness Assessments"
+          subtitle="Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, offers quick quizzes that score your readiness and point you to the right guide—buying, selling, or browsing MLS listings. Questions? 702-500-1955."
           gradientFromClassName="from-emerald-900"
           gradientToClassName="to-green-800"
         />
 
         <section className="py-16">
           <div className="container max-w-5xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
+              Which Assessment Should You Take First?
+            </h2>
             <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-12">
               Not sure where to start? These quick assessments help you understand your readiness,
               then connect you with guides for{' '}

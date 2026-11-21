@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/commercial' },
-  title: 'Luxury Commercial Properties Las Vegas | Premium Commercial Real Estate | Dr. Jan Duffy',
-  description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury Commercial Real Estate Las Vegas | Dr. Jan Duffy',
+  description:
+    'Office, retail, and mixed-use commercial guidance in Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: 'luxury commercial properties Las Vegas, commercial real estate, office buildings, retail spaces, commercial investment',
   openGraph: {
-    title: 'Luxury Commercial Properties Las Vegas | Premium Commercial Real Estate | Dr. Jan Duffy',
-    description: 'Discover luxury commercial properties in Las Vegas. Premium office buildings, retail spaces, and investment opportunities with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury Commercial Real Estate Las Vegas | Dr. Jan Duffy',
+    description:
+      'Office, retail, and mixed-use commercial guidance in Las Vegas with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryCommercialPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Commercial Properties in Las Vegas
+              Luxury & Income Commercial Real Estate in Las Vegas
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Invest in premium commercial real estate with exceptional returns 
-              in Las Vegas&apos; thriving business district and entertainment corridor.
+              Dr. Jan Duffy connects investors and owner-users to office, retail, and mixed-use assets along Las Vegas&apos;s growth corridors—with cash-flow models and local tenant demand insight. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -58,8 +59,7 @@ export default function LuxuryCommercialPage() {
                 Why Invest in Las Vegas Commercial Real Estate?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Las Vegas commercial properties offer exceptional investment potential 
-                with strong tenant demand, stable cash flow, and significant appreciation opportunities.
+                Tourism, logistics, and inbound migration keep lease demand active in key Las Vegas submarkets—especially when paired with long-term tenants and realistic cap-rate assumptions. Dr. Jan Duffy helps you compare locations before you commit capital.
               </p>
             </div>
 

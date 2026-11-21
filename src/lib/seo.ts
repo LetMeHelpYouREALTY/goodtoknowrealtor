@@ -736,9 +736,16 @@ export const PAGE_SEO = {
     ],
   },
   services: {
-    title: 'Real Estate Services | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-    description: 'Comprehensive Las Vegas real estate services by Premier Good To Know REALTOR® Dr. Jan Duffy. Buying, selling, luxury properties, and investment services.',
-    keywords: ['Las Vegas real estate services', 'home buying Las Vegas', 'home selling Las Vegas', 'luxury real estate Las Vegas'],
+    title: 'Las Vegas Real Estate Services | Buy, Sell & Invest | Dr. Jan Duffy',
+    description:
+      'Buying, selling, luxury homes, and investment guidance with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, and the full valley. 702-500-1955.',
+    keywords: [
+      'Las Vegas real estate services',
+      'luxury realtor Las Vegas',
+      'Summerlin Henderson agent',
+      'Dr. Jan Duffy',
+      'Berkshire Hathaway Nevada Properties',
+    ],
   },
   buying: {
     title: 'Buying a Home in Las Vegas | Dr. Jan Duffy - Premier Good To Know REALTOR®',

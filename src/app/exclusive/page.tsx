@@ -7,12 +7,15 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/exclusive' },
-  title: 'Exclusive Access | Off-Market Properties Las Vegas | Dr. Jan Duffy',
-  description: 'Get exclusive access to off-market properties, pre-market listings, and VIP client services in Las Vegas with Dr. Jan Duffy, Real Estate Agent.',
-  keywords: 'exclusive properties Las Vegas, off-market homes, pre-market listings, VIP real estate service, luxury properties, private showings',
+  title: 'Off-Market & Pre-Market Homes Las Vegas | Dr. Jan Duffy',
+  description:
+    'Off-market and pre-MLS access in Summerlin, Henderson, and Las Vegas luxury corridors with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
+  keywords:
+    'off-market homes Las Vegas, pre-market listings Summerlin, luxury private showings, Dr. Jan Duffy, Berkshire Hathaway Nevada Properties',
   openGraph: {
-    title: 'Exclusive Access | Off-Market Properties Las Vegas | Dr. Jan Duffy',
-    description: 'Get exclusive access to off-market properties, pre-market listings, and VIP client services in Las Vegas with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Off-Market & Pre-Market Homes Las Vegas | Dr. Jan Duffy',
+    description:
+      'Off-market and pre-MLS access in Summerlin, Henderson, and Las Vegas luxury corridors with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -25,11 +28,10 @@ export default function ExclusivePage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Exclusive Access to Las Vegas&apos; Most Coveted Properties
+              Off-Market & Pre-Market Homes in Las Vegas, Summerlin & Henderson
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Discover off-market gems, pre-market opportunities, and VIP client services 
-              that give you the competitive edge in Las Vegas&apos; competitive real estate market.
+              Dr. Jan Duffy introduces qualified buyers to pocket listings and homes about to hit the MLS—often before public photos appear—so you can preview luxury properties with less competition. Call or text 702-500-1955 to join the buyer network.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -57,11 +59,10 @@ export default function ExclusivePage() {
           <div className='max-w-6xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-                Why Choose Our Exclusive Access Program?
+                How Does Exclusive Buyer Access Work?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                As a Las Vegas real estate agent, Dr. Jan Duffy provides 
-                unparalleled access to properties that never hit the public market.
+                After a short buyer consult, Dr. Jan Duffy matches your criteria to off-market and pre-market homes in Summerlin, Henderson, and select valley enclaves—with private showings and direct seller feedback when available. Equal opportunity applies; access is based on readiness and fit, not demographics.
               </p>
             </div>
 

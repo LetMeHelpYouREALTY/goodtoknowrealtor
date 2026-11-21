@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/rentals' },
-  title: 'Luxury Rental Properties Las Vegas | Premium Rentals | Dr. Jan Duffy',
-  description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury Rentals Las Vegas | Executive & Furnished | Dr. Jan Duffy',
+  description:
+    'Executive, furnished, and luxury long-term rentals in Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Equal opportunity housing. 702-500-1955.',
   keywords: 'luxury rental properties Las Vegas, vacation rentals, executive housing, premium rentals, luxury rentals',
   openGraph: {
-    title: 'Luxury Rental Properties Las Vegas | Premium Rentals | Dr. Jan Duffy',
-    description: 'Discover luxury rental properties in Las Vegas. Premium vacation rentals, executive housing, and high-end rental properties with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury Rentals Las Vegas | Dr. Jan Duffy',
+    description:
+      'Executive and furnished luxury rentals with Dr. Jan Duffy, Good To Know REALTOR®. Fair Housing compliant guidance. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryRentalsPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Rental Properties in Las Vegas
+              Luxury Rental Homes in Las Vegas, Summerlin & Henderson
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Experience the finest in Las Vegas luxury living with our curated 
-              collection of premium rental properties featuring world-class amenities.
+              Dr. Jan Duffy helps executives and relocating families find furnished and unfurnished luxury leases—with clear lease terms and equal professional service for every qualified applicant. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -58,8 +59,7 @@ export default function LuxuryRentalsPage() {
                 Why Choose Luxury Rentals in Las Vegas?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Las Vegas luxury rentals offer unparalleled convenience, amenities, 
-                and lifestyle benefits for discerning residents and visitors.
+                Premium rentals cluster near Summerlin, Henderson, and resort corridors when proximity to golf, security, and furnished turn-key matters. Dr. Jan Duffy confirms pet rules, deposits, and HOA rental caps up front.
               </p>
             </div>
 

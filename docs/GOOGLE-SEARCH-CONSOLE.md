@@ -129,3 +129,20 @@ After deploy:
 3. For HTML file verification, the site serves `https://www.goodtoknowrealtor.com/google{code}.html` automatically when the env var matches the filename.
 
 Canonical site URL is set in code: `src/lib/seo.ts` → `SEO_CONFIG.siteUrl` (`https://www.goodtoknowrealtor.com`). Keep this in sync with the property URL you add in GSC.
+
+## Optimization checklist 2026
+
+Quick launch-and-monitor pass after deploys or major SEO updates:
+
+1. **Verify property** — URL prefix `https://www.goodtoknowrealtor.com`; confirm `GOOGLE_SITE_VERIFICATION` is set in Vercel Production and the meta tag appears on the homepage.
+2. **Submit sitemap** — In GSC → Sitemaps, submit `sitemap.xml` (`https://www.goodtoknowrealtor.com/sitemap.xml`).
+3. **Request indexing** (URL Inspection) for priority paths:
+   - `/`
+   - `/listings`
+   - `/buying`
+   - `/selling`
+   - `/areas/summerlin`
+   - `/areas/henderson`
+   - `/contact`
+4. **Monitor Coverage** — Review **Pages** / indexing reports weekly; fix 404s, redirect chains, and duplicate-canonical issues noted in section 5 above.
+5. **Env check** — Ensure `GOOGLE_SITE_VERIFICATION` remains set after redeploys; re-verify in GSC if the value changes.

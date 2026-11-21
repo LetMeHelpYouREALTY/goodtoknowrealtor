@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/investment' },
-  title: 'Luxury Investment Properties Las Vegas | Premium Real Estate Investments | Dr. Jan Duffy',
-  description: 'Discover luxury investment properties in Las Vegas. Premium rental properties, vacation homes, and high-yield real estate investments with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury Investment Homes Las Vegas | Dr. Jan Duffy',
+  description:
+    'High-end rentals, short-term, and appreciation plays in Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: 'luxury investment properties Las Vegas, rental properties, vacation homes, real estate investment, high-yield properties',
   openGraph: {
-    title: 'Luxury Investment Properties Las Vegas | Premium Real Estate Investments | Dr. Jan Duffy',
-    description: 'Discover luxury investment properties in Las Vegas. Premium rental properties, vacation homes, and high-yield real estate investments with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury Investment Homes Las Vegas | Dr. Jan Duffy',
+    description:
+      'High-end rental and appreciation strategies with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryInvestmentPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Investment Properties in Las Vegas
+              Luxury Investment Properties in Las Vegas & Henderson
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Build wealth through strategic luxury real estate investments in Las Vegas&apos; 
-              thriving market with exceptional rental yields and appreciation potential.
+              Dr. Jan Duffy underwrites luxury rentals and second homes with realistic STR rules, HOA limits, and comp rents—so premium price tags still pencil out. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -58,8 +59,7 @@ export default function LuxuryInvestmentPage() {
                 Why Invest in Las Vegas Luxury Real Estate?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Las Vegas offers unique advantages for luxury real estate investors 
-                with strong tourism, business growth, and tax-friendly environment.
+                Luxury assets can combine appreciation in master-planned areas with corporate and executive rental demand—when zoning and HOA rules allow. Dr. Jan Duffy stress-tests assumptions before you offer.
               </p>
             </div>
 

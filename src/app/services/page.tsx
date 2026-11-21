@@ -74,8 +74,8 @@ export default function ServicesPage() {
       <div className='min-h-screen bg-gray-50'>
         {/* Hero Section */}
         <PageHero
-          title='Comprehensive Real Estate Services in Las Vegas'
-          subtitle='Dr. Jan Duffy delivers exceptional real estate solutions with $127M+ in sales volume and 20+ years of Las Vegas market expertise'
+          title='Las Vegas Real Estate Services for Buyers, Sellers & Investors'
+          subtitle='Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, coordinates buying, selling, luxury marketing, and investment strategy across Summerlin, Henderson, and the Las Vegas Valley. Call or text 702-500-1955.'
         />
 
         {/* Services Overview */}
@@ -83,10 +83,10 @@ export default function ServicesPage() {
           <div className='container mx-auto px-4'>
             <div className='max-w-4xl mx-auto text-center mb-16'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-6'>
-                Why Choose Dr. Jan Duffy for Your Real Estate Needs?
+                Who Helps With Buying, Selling & Investing in Las Vegas?
               </h2>
               <p className='text-xl text-gray-600 leading-relaxed'>
-                As a Las Vegas real estate agent with over 500 successful transactions, Dr. Jan Duffy provides comprehensive services tailored to your unique needs. Whether you're buying your first home, selling a luxury estate, or building an investment portfolio, our expertise ensures exceptional results.
+                Dr. Jan Duffy is your single point of contact for move-up, luxury, and investment real estate in Las Vegas—with local pricing insight, MLS search, and negotiation from first meeting through closing. Every client receives a tailored plan, whether you are purchasing in Summerlin, listing in Henderson, or growing a rental portfolio.
               </p>
             </div>
 
@@ -117,10 +117,10 @@ export default function ServicesPage() {
           <div className='container mx-auto px-4'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-6'>
-                Our Complete Range of Real Estate Services
+                What Real Estate Services Does Dr. Jan Duffy Offer?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                From first-time home buyers to luxury property investors, we provide specialized expertise for every real estate need in Las Vegas
+                You get full-service representation—buyer tours, seller marketing, luxury positioning, home valuations, and investment analysis—without juggling multiple vendors. Explore each path below or call 702-500-1955 for a direct recommendation.
               </p>
             </div>
 
@@ -363,10 +363,10 @@ export default function ServicesPage() {
         <section className='py-16 bg-blue-600 text-white'>
           <div className='container mx-auto px-4 text-center'>
             <h2 className='text-3xl lg:text-4xl font-bold mb-6'>
-              Ready to Experience Exceptional Real Estate Service?
+              Ready for a Las Vegas Real Estate Consultation?
             </h2>
             <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
-              Contact Dr. Jan Duffy today for personalized real estate services in Las Vegas. With $127M+ in sales volume and 20+ years of experience, we deliver results that exceed expectations.
+              Tell Dr. Jan Duffy your timeline and goals—buying, selling, or investing—and you will receive a clear next step, not a generic pitch. Call or text 702-500-1955 or request a consultation online.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link

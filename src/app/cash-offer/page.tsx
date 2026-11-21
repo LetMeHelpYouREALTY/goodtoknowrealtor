@@ -6,8 +6,9 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Cash Offer Program | Dr. Jan Duffy - Las Vegas Real Estate Expert',
-  description: 'Get a competitive cash offer for your Las Vegas home. Skip the traditional selling process with Dr. Jan Duffy\'s cash offer program.',
+  title: 'Las Vegas Home Cash Offer Program | Dr. Jan Duffy',
+  description:
+    'Fast cash-offer guidance for Las Vegas, Summerlin, and Henderson sellers from Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. No obligation consult. 702-500-1955.',
   keywords: ['cash offer', 'sell home fast', 'Las Vegas real estate', 'Dr. Jan Duffy', 'quick home sale'],
   url: '/cash-offer',
   image: '/images/cash-offer-og.jpg',
@@ -34,10 +35,10 @@ export default function CashOfferPage() {
           <div className='container mx-auto px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h1 className='text-4xl lg:text-6xl font-bold mb-6'>
-                Get a Cash Offer for Your Las Vegas Home
+                Las Vegas Home Cash Offer Options With Dr. Jan Duffy
               </h1>
               <p className='text-xl lg:text-2xl text-blue-100 leading-relaxed'>
-                Skip the traditional selling process. Get a competitive cash offer for your Las Vegas home in as little as 24 hours with Dr. Jan Duffy's proven cash offer program.
+                When speed or certainty matters more than retail top dollar, Dr. Jan Duffy reviews your home&apos;s condition and comps, then explains cash-offer paths—including trade-offs versus a traditional MLS listing. Many sellers receive a written range within 24 hours. Call or text 702-500-1955.
               </p>
             </div>
           </div>
@@ -50,10 +51,10 @@ export default function CashOfferPage() {
           <div className='container mx-auto px-4'>
             <div className='max-w-4xl mx-auto'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-8 text-center'>
-                Why Choose Dr. Jan Duffy's Cash Offer Program?
+                When Is a Cash Offer Right for Your Las Vegas Home?
               </h2>
               <p className='text-xl text-gray-600 mb-12 text-center leading-relaxed'>
-                As a Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy offers a unique cash offer program that provides homeowners with a fast, hassle-free alternative to traditional home selling.
+                A cash route makes sense when you need a flexible closing date, want to skip repairs, or must liquidate before a relocation or estate deadline. Dr. Jan Duffy walks you through net proceeds versus a conventional sale so you choose with full context—Fair Housing and equal professional service apply to every homeowner.
               </p>
               
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
