@@ -104,12 +104,12 @@ export const validateCSRFToken = (token: string, sessionToken: string): boolean 
 export const securityHeaders = {
   'Content-Security-Policy': [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://vercel.com",
+    "script-src https://widgetbe.com https://*.widgetbe.com 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://vercel.com",
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://api.realscout.com https://*.vercel.app",
-    "frame-src 'none'",
+    "img-src https://widgetbe.com https://*.widgetbe.com 'self' data: https: blob:",
+    "connect-src https://widgetbe.com https://*.widgetbe.com 'self' https://api.realscout.com https://*.vercel.app",
+    "frame-src https://widgetbe.com https://*.widgetbe.com 'none'",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
