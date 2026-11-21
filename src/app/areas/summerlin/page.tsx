@@ -4,7 +4,10 @@ import Image from 'next/image';
 import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import { SummerlinListings } from '@/components/Home/SummerlinListings';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import {
+  generatePrimaryAreaMetadata,
+  PRIMARY_AREA_DESCRIPTIONS,
+} from '@/lib/primary-areas';
 
 // Declare RealScout custom elements
 declare global {
@@ -18,8 +21,7 @@ declare global {
 export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Summerlin',
   slug: 'summerlin',
-  description:
-    'Find your dream home in Summerlin, Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Summerlin luxury homes, condos, and investment properties.',
+  description: PRIMARY_AREA_DESCRIPTIONS.summerlin,
   keywords: [
     'Summerlin real estate',
     'Summerlin homes for sale',
@@ -36,7 +38,7 @@ export default function SummerlinPage() {
       {/* Hero Section */}
       <PageHero
         title='Summerlin Real Estate'
-        subtitle="Discover luxury living in Summerlin, Las Vegas's premier master-planned community"
+        subtitle="Summerlin master-planned communities span 22,000+ acres of luxury estates, golf, and Red Rock views—Dr. Jan Duffy delivers MLS-backed search and negotiation across every village. Call/text 702-500-1955."
         gradientFromClassName='from-blue-900'
         gradientToClassName='to-blue-800'
       >
@@ -60,10 +62,10 @@ export default function SummerlinPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Search Summerlin Properties
+                How do you search Summerlin MLS listings?
               </h2>
               <p className="text-xl text-gray-600">
-                Find your perfect home in Summerlin with our advanced search tools
+                Filter Summerlin inventory by price, beds, baths, and property type with live MLS data below.
               </p>
             </div>
             
@@ -80,29 +82,28 @@ export default function SummerlinPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Summerlin?
+                What types of homes are for sale in Summerlin?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Summerlin is Las Vegas&apos;s premier master-planned community, offering luxury living 
-                with world-class amenities, nearby public schools, and stunning mountain views. I 
-                specialize in helping clients find their perfect home in this exceptional community.
+                Summerlin is a 22,000-acre master plan with guard-gated golf enclaves, custom estates, townhomes, and high-rise-adjacent villages. Dr. Jan Duffy helps you compare square footage, HOA structures, and amenity packages—from pools and trails to TPC and resort retail along the 215 Beltway.
               </p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Summerlin housing at a glance</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Included' />
-                  <span className="text-gray-700">Master-planned community with 22,000+ acres</span>
+                  <span className="text-gray-700">Villages from Summerlin South to The Ridges and Queensridge</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Included' />
-                  <span className="text-gray-700">Nearby schools and community amenities</span>
+                  <span className="text-gray-700">Golf, parks, Downtown Summerlin retail, and Red Rock access</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Included' />
-                  <span className="text-gray-700">Golf courses, parks, and recreational facilities</span>
+                  <span className="text-gray-700">Commute via CC 215, Charleston Blvd, and Summerlin Pkwy</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Included' />
-                  <span className="text-gray-700">Luxury homes with mountain and city views</span>
+                  <span className="text-gray-700">Luxury estates with mountain and Strip-corridor views</span>
                 </li>
               </ul>
             </div>
@@ -124,10 +125,10 @@ export default function SummerlinPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Summerlin Market Overview
+              What should you know about Summerlin pricing today?
             </h2>
             <p className="text-xl text-gray-600">
-              Current market insights for Summerlin real estate
+              Median pricing, days on market, and list-to-sale ratios vary by village and price tier—request a current read for your target address.
             </p>
           </div>
           
@@ -159,17 +160,15 @@ export default function SummerlinPage() {
       <section className="py-20 bg-blue-600 text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Find Your Summerlin Home?
+            Who helps you buy or sell in Summerlin?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let Dr. Jan Duffy help you find your perfect home in Summerlin. With $127M+ 
-            in sales volume and deep knowledge of luxury communities, I&apos;ll guide you 
-            every step of the way to your dream property.
+            Dr. Jan Duffy, Good To Know REALTOR®, has guided $127M+ in Las Vegas volume with deep Summerlin village knowledge—from offer strategy to closing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:702-500-1955" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               Call (702) 500-1955
             </a>
