@@ -22,5 +22,6 @@ export function PageEngagement() {
   }
 
   const event = calendlyIntentForPath(pathname);
-  return <LuxuryAuthorityBand calendlyEvent={event} />;
+  // Key by event so the band remounts when intent changes across client navigations.
+  return <LuxuryAuthorityBand key={event} calendlyEvent={event} />;
 }

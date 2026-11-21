@@ -7,6 +7,16 @@ import {
   type CalendlyEventKey,
 } from '@/lib/calendly';
 
+type CalendlyApi = {
+  initInlineWidget: (opts: { url: string; parentElement: HTMLElement }) => void;
+};
+
+declare global {
+  interface Window {
+    Calendly?: CalendlyApi;
+  }
+}
+
 type CalendlyInlineProps = {
   event?: CalendlyEventKey;
   /** Hide the section chrome (heading / portrait band styling). */
@@ -17,7 +27,8 @@ type CalendlyInlineProps = {
 
 /**
  * Inline Calendly embed for one of the three Choice A event types.
- * Defers script load until the section is near the viewport (LCP-safe).
+ * Defers script load until near viewport; re-inits via Calendly.initInlineWidget
+ * when the event URL changes (layout-mounted PageEngagement navigations).
  */
 export function CalendlyInline({
   event = 'market',
@@ -28,11 +39,15 @@ export function CalendlyInline({
   const config = CALENDLY_EVENTS[event];
   const embedUrl = `${config.url}?hide_gdpr_banner=1&primary_color=0f1419`;
   const sectionRef = useRef<HTMLElement | null>(null);
+  const widgetRef = useRef<HTMLDivElement | null>(null);
   const [shouldLoad, setShouldLoad] = useState(false);
+  const [scriptReady, setScriptReady] = useState(
+    () => typeof window !== 'undefined' && Boolean(window.Calendly)
+  );
 
   useEffect(() => {
     const node = sectionRef.current;
-    if (!node || shouldLoad) return;
+    if (!node) return;
 
     if (typeof IntersectionObserver === 'undefined') {
       setShouldLoad(true);
@@ -50,7 +65,18 @@ export function CalendlyInline({
     );
     observer.observe(node);
     return () => observer.disconnect();
-  }, [shouldLoad]);
+  }, []);
+
+  useEffect(() => {
+    if (!shouldLoad || !scriptReady || !widgetRef.current) return;
+
+    const parent = widgetRef.current;
+    parent.innerHTML = '';
+    window.Calendly?.initInlineWidget({
+      url: embedUrl,
+      parentElement: parent,
+    });
+  }, [shouldLoad, scriptReady, embedUrl]);
 
   return (
     <section
@@ -72,14 +98,15 @@ export function CalendlyInline({
           </div>
         ) : null}
         <div
+          ref={widgetRef}
           className="calendly-inline-widget mx-auto w-full max-w-4xl overflow-hidden rounded-sm"
-          data-url={shouldLoad ? embedUrl : undefined}
           style={{ minWidth: '320px', height: `${minHeight}px` }}
         />
         {shouldLoad ? (
           <Script
             src="https://assets.calendly.com/assets/external/widget.js"
             strategy="lazyOnload"
+            onLoad={() => setScriptReady(true)}
           />
         ) : null}
       </div>

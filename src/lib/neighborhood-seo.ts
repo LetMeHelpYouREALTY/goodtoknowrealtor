@@ -1,78 +1,103 @@
 import { Metadata } from 'next';
 import { generatePageMetadata } from '@/lib/seo';
 
+/** Exact expert-neighborhood names that sit in the Summerlin master-planned corridor. */
 const SUMMERLIN_CLUSTER = new Set([
   'Summerlin',
   'Summerlin Hills',
   'Summerlin North',
   'Summerlin South',
   'Summerlin West',
+  'Sun City Summerlin',
   'The Ridges',
   'The Willows',
   'The Vistas',
+  'The Pueblo',
+  'The Mesa',
   'Red Rock Country Club',
   'Queensridge',
   'Peccole Ranch',
   'Spanish Hill',
   'Spanish Trail',
-  'Providence',
-  'Paradise Hills',
+  'Canyon Gate',
+  'The Bluffs',
+  'The Cliffs',
 ]);
 
-const HENDERSON_MARKERS = [
+/** Exact expert-neighborhood names in Henderson / Green Valley / Anthem corridor. */
+const HENDERSON_CLUSTER = new Set([
   'Henderson',
   'Green Valley',
+  'Green Valley Ranch',
+  'Green Valley South',
   'Anthem',
+  'Anthem Country Club',
+  'Anthem Highlands',
+  'Sun City Anthem',
   'Inspirada',
   'Lake Las Vegas',
-  'MacDonald',
+  'MacDonald Highlands',
+  'MacDonald Ranch',
+  'Sun City MacDonald Ranch',
+  'Sunridge at Mac Donald Ranch',
+  'Foothills at Mac Donald Ranch',
   'Seven Hills',
   'Whitney Ranch',
   'Cadence',
   'Ascaya',
-  'Black Mountain',
+  'Black Mountain Vistas',
+  'Paradise Hills',
   'Montecito',
   'Madeira Canyon',
-  'Sunridge at Mac Donald Ranch',
-  'Foothills at Mac Donald Ranch',
   'Tuscany',
   'Riverstone',
   'Ardiente',
-];
+  'Calico Ridge',
+]);
 
-const NORTH_MARKERS = [
+/** Exact expert-neighborhood names in the North Las Vegas / northwest corridor. */
+const NORTH_CLUSTER = new Set([
   'Aliante',
+  'Sun City Aliante',
   'Skye Canyon',
   'Centennial Hills',
   'Lone Mountain',
+  'Lone Mountain West',
   'North Shores',
   'Silverstone Ranch',
   'Iron Mountain Ranch',
-  'Sun City Aliante',
-  'Desert Shores',
-  'Elkhorn',
-];
+  'Elkhorn Ranch',
+  'Elkhorn Springs',
+  'Providence',
+  'Valley Vista',
+]);
 
 /** Display corridor for meta copy and GEO context (Fair Housing–safe, factual). */
 export function getNeighborhoodCorridor(name: string): string {
-  if (SUMMERLIN_CLUSTER.has(name) || name.startsWith('Summerlin ')) {
+  if (
+    SUMMERLIN_CLUSTER.has(name) ||
+    name.startsWith('Summerlin ') ||
+    name === 'Sun City Summerlin'
+  ) {
     return 'Summerlin, Las Vegas';
   }
-  if (HENDERSON_MARKERS.some((m) => name.includes(m))) {
+  if (HENDERSON_CLUSTER.has(name) || name.includes('Green Valley') || name.includes('Mac Donald')) {
     return 'Henderson, Nevada';
   }
-  if (NORTH_MARKERS.some((m) => name.includes(m))) {
+  if (NORTH_CLUSTER.has(name) || name.startsWith('Elkhorn')) {
     return 'North Las Vegas, Nevada';
   }
   if (name === 'Downtown Las Vegas' || name.includes('Downtown')) {
     return 'Downtown Las Vegas';
   }
+  // Desert Shores and other west/central communities → valley-wide (not North LV)
   return 'Las Vegas Valley';
 }
 
 export function generateNeighborhoodMetadata(name: string, slug: string): Metadata {
   const corridor = getNeighborhoodCorridor(name);
-  const title = `${name} Real Estate | Dr. Jan Duffy - Good To Know REALTOR®`;
+  // Pass a short title — generatePageMetadata appends SEO_CONFIG.siteName once.
+  const title = `${name} Real Estate`;
   const description = `Homes and luxury listings for sale in ${name}, ${corridor}. Dr. Jan Duffy, Berkshire Hathaway HomeServices Nevada Properties, offers MLS search, pricing insight, and buyer/seller guidance. Call/text 702-500-1955.`;
 
   return generatePageMetadata({
@@ -122,7 +147,7 @@ export function getNeighborhoodSections(name: string): NeighborhoodSection[] {
     },
     {
       heading: `Who represents buyers and sellers in ${name}?`,
-      answer: `Dr. Jan Duffy, Good To Know REALTOR® (License ${'S.0197614.LLC'}), with Berkshire Hathaway HomeServices Nevada Properties, guides luxury and resale transactions in ${name} and across Las Vegas and Henderson. Call or text 702-500-1955 for a pricing conversation or showing plan.`,
+      answer: `Dr. Jan Duffy, Good To Know REALTOR® (License S.0197614.LLC), with Berkshire Hathaway HomeServices Nevada Properties, guides luxury and resale transactions in ${name} and across Las Vegas and Henderson. Call or text 702-500-1955 for a pricing conversation or showing plan.`,
     },
     {
       heading: `What should you know about the ${name} housing market?`,
