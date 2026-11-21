@@ -11,6 +11,7 @@ import { TrustBadges } from '@/components/Globals/TrustBadges/TrustBadges';
 import { TransformationSection } from '@/components/Home/TransformationSection';
 import { HomeFAQSection } from '@/components/Home/HomeFAQSection';
 import { ContactCTA } from '@/components/Home/ContactCTA';
+import { AgentPortrait } from '@/components/ui/AgentPortrait';
 import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema, generateFAQSchema, generateReviewSchema, generateServiceSchema } from '@/lib/seo';
 
 export const metadata: Metadata = generatePageMetadata({
@@ -111,6 +112,28 @@ export default function HomePage() {
       <RealScoutOfficeWidget compact />
       <HeroTestimonialCarousel />
 
+      <section className="py-14 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-8 text-center md:flex-row md:items-start md:text-left">
+            <AgentPortrait size="lg" showCaption className="shrink-0" />
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+                Who guides luxury transactions in Las Vegas?
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Dr. Jan Duffy does—Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, 20+ years in the valley, and $127M+ in closed volume across Summerlin, Henderson, and Las Vegas luxury corridors.
+              </p>
+              <p className="mt-4 text-sm text-gray-500">
+                License S.0197614.LLC · Call or text{' '}
+                <a href="tel:702-500-1955" className="text-amber-700 font-medium hover:underline">
+                  702-500-1955
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Why Choose Berkshire Hathaway HomeServices */}
       <WhyBerkshireSection />
 
@@ -122,10 +145,10 @@ export default function HomePage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-2xl mx-auto text-center'>
             <h2 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-3'>
-              Featured Properties
+              Where can you browse Las Vegas luxury listings?
             </h2>
             <p className='text-lg text-gray-600 mb-6'>
-              Discover exceptional homes in Las Vegas and Henderson.
+              Right here—MLS-backed search for Summerlin, Henderson, and Las Vegas Valley homes, updated with live inventory from Berkshire Hathaway HomeServices Nevada Properties.
             </p>
             <Link
               href='/listings'
@@ -154,10 +177,10 @@ export default function HomePage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-2xl mx-auto text-center'>
             <h2 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-3'>
-              Track Your Home&apos;s Value
+              What is your Las Vegas home worth today?
             </h2>
             <p className='text-lg text-gray-600 mb-6'>
-              Get instant valuations, equity tracking, and buyer alerts for Las Vegas properties.
+              Use Dr. Jan Duffy&apos;s valuation tools for instant estimates, equity tracking, and alerts when comparable luxury homes sell in your subdivision.
             </p>
             <Link
               href='/home-value'
@@ -172,10 +195,10 @@ export default function HomePage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-2xl mx-auto text-center'>
             <h2 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-3'>
-              Find Out If You&apos;re Ready
+              Are you ready to buy or sell in Las Vegas?
             </h2>
             <p className='text-lg text-gray-600 mb-6'>
-              Free 3-minute buyer or seller readiness assessments—personalized next steps for Las Vegas.
+              Take a free three-minute assessment and get personalized next steps for your timeline, budget, and target neighborhoods.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -224,10 +247,10 @@ export default function HomePage() {
         <div className='container mx-auto px-4'>
           <div className='text-center mb-8'>
             <h2 className='text-2xl lg:text-3xl font-bold text-gray-900 mb-2'>
-              Premier Luxury Services
+              What luxury real estate services are available?
             </h2>
             <p className='text-lg text-gray-700'>
-              White-glove concierge real estate for discerning clients.
+              Dr. Jan Duffy offers concierge buying, selling, investment strategy, and off-market access across Las Vegas and Henderson.
             </p>
           </div>
           <div className='flex flex-wrap justify-center gap-4'>
@@ -237,7 +260,7 @@ export default function HomePage() {
             <Link href='/services' className='rounded-xl bg-white px-6 py-3 font-semibold text-amber-700 shadow-md border border-amber-100 hover:shadow-lg transition-shadow'>
               All Services
             </Link>
-            <Link href='/contact' className='rounded-xl bg-amber-600 px-6 py-3 font-semibold text-white shadow-md hover:bg-amber-700 transition-colors'>
+            <Link href='#book-market' className='rounded-xl bg-amber-600 px-6 py-3 font-semibold text-white shadow-md hover:bg-amber-700 transition-colors'>
               Schedule Consultation
             </Link>
           </div>
@@ -251,10 +274,10 @@ export default function HomePage() {
       <section className='py-16 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 text-white'>
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-3xl lg:text-5xl font-bold mb-4'>
-            Ready to Work with Berkshire Hathaway HomeServices?
+            How do you start with a Las Vegas luxury REALTOR®?
           </h2>
           <p className='text-xl text-white/95 mb-8 font-medium'>
-            Whether you&apos;re buying, selling, or investing in Las Vegas real estate, Dr. Jan Duffy is here to help.
+            Call, text, or book a strategy session with Dr. Jan Duffy—Berkshire Hathaway HomeServices Nevada Properties handles your next move from first showing through close.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
             <Link
@@ -264,10 +287,10 @@ export default function HomePage() {
               Call (702) 500-1955
             </Link>
             <Link
-              href='/contact'
+              href='#book-market'
               className='bg-amber-900 text-white px-10 py-5 rounded-lg font-bold text-lg hover:bg-amber-800 transition-colors shadow-xl border-2 border-amber-800'
             >
-              Send a Message
+              Book a Strategy Call
             </Link>
           </div>
           <p className='text-white/95 font-medium'>

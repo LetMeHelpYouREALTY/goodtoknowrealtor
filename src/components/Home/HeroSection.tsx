@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { IconSymbol } from '@/components/ui/IconSymbol';
+import { AgentPortrait } from '@/components/ui/AgentPortrait';
 import { RealScoutSimpleSearch } from '@/components/PropertySearch/RealScoutSimpleSearch';
 
 const HIGHLIGHT_STATS = [
@@ -46,17 +46,15 @@ export function HeroSection() {
           {/* Left rail */}
           <div className='space-y-8 text-center lg:text-left'>
             <div className='luxury-badge mx-auto lg:mx-0'>
-              <IconSymbol symbol='🏆' className='h-4 w-4 text-[#dfc07a]' ariaLabel='Award icon' />
-              <span>Berkshire Hathaway HomeServices</span>
+              <span>Berkshire Hathaway HomeServices Nevada Properties</span>
             </div>
 
             <div className='space-y-5'>
               <h1 className='font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight'>
-                Concierge real estate for{' '}
                 <span className='bg-gradient-to-r from-[#dfc07a] via-[#f5f0e8] to-[#c9a962] bg-clip-text text-transparent'>
-                  Las Vegas luxury
+                  Las Vegas & Henderson luxury real estate
                 </span>{' '}
-                buyers, sellers, & investors.
+                with Dr. Jan Duffy, Good To Know REALTOR®
               </h1>
               <p className='mx-auto max-w-2xl text-base text-[#e8d5a8]/80 sm:text-lg lg:text-xl font-light leading-relaxed'>
                 Unlock private inventory, command $50K–$125K over asking, and build wealth with the only Las Vegas advisor who combines doctoral market research with 20+ years of negotiation mastery.
@@ -83,13 +81,11 @@ export function HeroSection() {
             <div className='flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-start'>
               <a
                 href='tel:702-500-1955'
-                className='btn-luxury-primary inline-flex w-full sm:w-auto gap-2'
+                className='btn-luxury-primary inline-flex w-full sm:w-auto'
               >
-                <IconSymbol symbol='📞' className='h-5 w-5' ariaLabel='Phone icon' />
                 Call (702) 500-1955
               </a>
-              <Link href='/contact' className='btn-luxury-outline inline-flex w-full sm:w-auto gap-2'>
-                <IconSymbol symbol='🛡️' className='h-5 w-5 text-[#dfc07a]' ariaLabel='Shield icon' />
+              <Link href='#book-market' className='btn-luxury-outline inline-flex w-full sm:w-auto'>
                 Schedule Consultation
               </Link>
             </div>
@@ -117,19 +113,18 @@ export function HeroSection() {
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-900/30 to-transparent' />
                 <div className='absolute bottom-4 left-4 flex items-center gap-3 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-blue-900 shadow-lg'>
-                  <span className='inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-700 text-white font-bold'>JD</span>
+                  <AgentPortrait size='sm' className='!inline-flex shrink-0' />
                   <div>
                     Dr. Jan Duffy
-                    <p className='text-xs font-medium text-blue-600'>Premier REALTOR® • CRS • CLHMS</p>
+                    <p className='text-xs font-medium text-blue-600'>Good To Know REALTOR® · License S.0197614.LLC</p>
                   </div>
                 </div>
               </div>
 
               <div className='space-y-6 px-6 py-7'>
-                <div className='flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-100'>
-                  <IconSymbol symbol='💬' className='h-4 w-4 text-amber-300' ariaLabel='Testimonial icon' />
-                  <span>Client spotlight</span>
-                </div>
+                <p className='text-xs font-semibold uppercase tracking-[0.2em] text-blue-100'>
+                  Client spotlight
+                </p>
                 <blockquote className='text-sm text-blue-50 md:text-base'>
                   {HERO_TESTIMONIAL.quote}
                 </blockquote>
@@ -138,11 +133,9 @@ export function HeroSection() {
                     <p className='font-semibold uppercase tracking-[0.18em]'>{HERO_TESTIMONIAL.name}</p>
                     <p className='mt-1 text-[11px]'>{HERO_TESTIMONIAL.location}</p>
                   </div>
-                  <div className='flex items-center gap-1 text-amber-300'>
-                    {[...Array(5)].map((_, index) => (
-                      <IconSymbol key={index} symbol='⭐' className='h-3 w-3 text-amber-300' ariaLabel='Star rating' />
-                    ))}
-                  </div>
+                  <p className='text-amber-300 font-medium' aria-label='5 out of 5 rating'>
+                    5/5
+                  </p>
                 </div>
 
                 <div className='grid grid-cols-2 gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 text-left text-xs text-blue-100/90'>
@@ -162,8 +155,7 @@ export function HeroSection() {
                   href='/why-list-with-us'
                   className='inline-flex w-full items-center justify-between rounded-xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-white/30 hover:bg-white/20'
                 >
-                  Discover the playbook
-                  <IconSymbol symbol='→' className='h-4 w-4' ariaLabel='Arrow right' />
+                  Discover the playbook →
                 </Link>
               </div>
             </div>

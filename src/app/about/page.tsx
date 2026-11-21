@@ -1,8 +1,14 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PAGE_SEO, generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
+import {
+  PAGE_SEO,
+  generatePageMetadata,
+  generateBreadcrumbSchema,
+  generateProfilePageSchema,
+} from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
+import { AgentPortrait } from '@/components/ui/AgentPortrait';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
@@ -18,6 +24,7 @@ export default function AboutPage() {
     { name: 'Home', url: '/' },
     { name: 'About Dr. Jan Duffy', url: '/about' },
   ]);
+  const profilePage = generateProfilePageSchema();
 
   return (
     <>
@@ -28,11 +35,17 @@ export default function AboutPage() {
           __html: JSON.stringify(breadcrumbs),
         }}
       />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(profilePage),
+        }}
+      />
       <div className='min-h-screen bg-gradient-to-br from-amber-50 to-yellow-50'>
       {/* Hero Section */}
       <PageHero
-        title='About Dr. Jan Duffy'
-        subtitle='Your trusted Las Vegas real estate expert with over 15 years of experience helping clients achieve their property goals.'
+        title='About Dr. Jan Duffy — Las Vegas luxury REALTOR®'
+        subtitle='Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. Twenty years, $127M+ in sales, and neighborhood-level strategy across Summerlin, Henderson, and Las Vegas.'
       />
 
       {/* About Section */}
@@ -41,12 +54,10 @@ export default function AboutPage() {
           <div className='max-w-4xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-6'>
-                A Passion for Real Estate Excellence
+                Who is Dr. Jan Duffy?
               </h2>
               <p className='text-xl text-gray-600 leading-relaxed'>
-                Dr. Jan Duffy brings unparalleled expertise and dedication to
-                every real estate transaction, helping clients navigate the Las
-                Vegas market with confidence and success.
+                She is a Las Vegas luxury REALTOR® (License S.0197614.LLC) who pairs doctoral-level market research with white-glove negotiation for buyers, sellers, and investors across the valley.
               </p>
             </div>
 
@@ -86,10 +97,10 @@ export default function AboutPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Experience & Expertise
+              What experience does Dr. Jan Duffy bring?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Professional qualifications and areas of specialization
+              Twenty-plus years in Las Vegas, CRS and luxury credentials, and $127M+ in closed volume backed by Berkshire Hathaway HomeServices Nevada Properties.
             </p>
           </div>
 
@@ -150,10 +161,10 @@ export default function AboutPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              My Values & Approach
+              How does Dr. Jan Duffy work with clients?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              The principles that guide every client interaction and transaction
+              Every transaction starts with your goals, clear data on comps and micro-markets, and direct communication through close—never pressure, always strategy.
             </p>
           </div>
 
@@ -207,15 +218,8 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className='relative'>
-              <div className='relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl'>
-                <Image
-                  src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80'
-                  alt='Dr. Jan Duffy working with clients'
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
+            <div className='relative flex flex-col items-center justify-center rounded-2xl border border-[#c9a962]/20 bg-gradient-to-br from-amber-50 to-white p-10 shadow-2xl'>
+              <AgentPortrait size='xl' showCaption priority={false} />
             </div>
           </div>
         </div>
@@ -226,10 +230,10 @@ export default function AboutPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Community Involvement
+              How does Dr. Jan Duffy support Las Vegas?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Giving back to the Las Vegas community that I&apos;m proud to call home
+              She volunteers and advocates for housing access, education, sustainability, and local business growth across the valley she serves.
             </p>
           </div>
 
@@ -290,11 +294,10 @@ export default function AboutPage() {
       <section className='py-20 bg-gradient-to-r from-amber-600 to-yellow-600 text-white'>
         <div className='container text-center'>
           <h2 className='text-3xl lg:text-4xl font-bold mb-6'>
-            Ready to Work Together?
+            Ready to plan your next Las Vegas move?
           </h2>
           <p className='text-xl text-amber-100 mb-8 max-w-3xl mx-auto'>
-            Let&apos;s discuss your real estate goals and how I can help you achieve
-            them in the Las Vegas market.
+            Call or text 702-500-1955 or book a consultation—Dr. Jan Duffy will outline comps, timing, and next steps for your luxury buy or sell.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
             <Link
@@ -311,7 +314,7 @@ export default function AboutPage() {
               Call (702) 500-1955
             </Link>
             <Link
-              href='/contact'
+              href='#book-market'
               className='border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-amber-800 transition-colors duration-200'
             >
               Schedule Consultation
