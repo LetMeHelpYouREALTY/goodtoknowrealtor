@@ -86,7 +86,7 @@ export default function ContactPage() {
                 Send detailed questions or documents; replies within one business day.
               </p>
               <Link
-                href='mailto:janet@goodtoknowrealtor.com'
+                href='mailto:info@drjanduffy.com'
                 className='btn btn-primary'
               >
                 Send Email
@@ -351,7 +351,7 @@ export default function ContactPage() {
                       <p className='font-semibold text-gray-900'>Contact</p>
                       <p className='text-gray-600'>Phone: (702) 500-1955</p>
                       <p className='text-gray-600'>
-                        Email: janet@goodtoknowrealtor.com
+                        Email: info@drjanduffy.com
                       </p>
                     </div>
                   </div>

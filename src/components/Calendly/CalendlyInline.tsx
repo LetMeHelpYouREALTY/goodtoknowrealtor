@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import Script from 'next/script';
 import {
   CALENDLY_EVENTS,
@@ -16,7 +17,7 @@ type CalendlyInlineProps = {
 
 /**
  * Inline Calendly embed for one of the three Choice A event types.
- * Loads assets.calendly.com once per page via next/script.
+ * Defers script load until the section is near the viewport (LCP-safe).
  */
 export function CalendlyInline({
   event = 'market',
@@ -26,9 +27,34 @@ export function CalendlyInline({
 }: CalendlyInlineProps) {
   const config = CALENDLY_EVENTS[event];
   const embedUrl = `${config.url}?hide_gdpr_banner=1&primary_color=0f1419`;
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const node = sectionRef.current;
+    if (!node || shouldLoad) return;
+
+    if (typeof IntersectionObserver === 'undefined') {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px 0px' }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [shouldLoad]);
 
   return (
     <section
+      ref={sectionRef}
       className={`calendly-engagement border-y border-[#c9a962]/20 bg-gradient-to-b from-[#f8f6f1] to-white ${className}`}
       aria-label={config.name}
       id={`book-${event}`}
@@ -47,13 +73,15 @@ export function CalendlyInline({
         ) : null}
         <div
           className="calendly-inline-widget mx-auto w-full max-w-4xl overflow-hidden rounded-sm"
-          data-url={embedUrl}
+          data-url={shouldLoad ? embedUrl : undefined}
           style={{ minWidth: '320px', height: `${minHeight}px` }}
         />
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="lazyOnload"
-        />
+        {shouldLoad ? (
+          <Script
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="lazyOnload"
+          />
+        ) : null}
       </div>
     </section>
   );
