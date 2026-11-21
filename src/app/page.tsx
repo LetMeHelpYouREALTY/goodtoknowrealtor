@@ -19,7 +19,7 @@ export const metadata: Metadata = generatePageMetadata({
   description: PAGE_SEO.home.description,
   keywords: PAGE_SEO.home.keywords,
   url: '/',
-  image: '/images/dr-janet-duffy-homepage-og.jpg',
+  image: '/images/dr-jan-duffy-headshot.png',
 });
 
 export default function HomePage() {

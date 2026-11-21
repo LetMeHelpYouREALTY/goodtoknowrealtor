@@ -11,7 +11,7 @@ export const metadata: Metadata = generatePageMetadata({
   description: PAGE_SEO.contact.description,
   keywords: PAGE_SEO.contact.keywords,
   url: '/contact',
-  image: '/images/dr-janet-duffy-contact-og.jpg',
+  image: '/images/dr-jan-duffy-headshot.png',
 });
 
 export default function ContactPage() {

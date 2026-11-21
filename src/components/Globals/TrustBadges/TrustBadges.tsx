@@ -42,7 +42,7 @@ const trustBadges: TrustBadge[] = [
   {
     id: '5',
     title: 'Berkshire Hathaway',
-    description: 'Premier Properties - Luxury Real Estate Network',
+    description: 'Berkshire Hathaway HomeServices Nevada Properties',
     icon: '🏢',
     verification: 'Official franchise member'
   },

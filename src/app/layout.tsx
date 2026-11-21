@@ -8,6 +8,7 @@ import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import { Navigation } from '@/components/Globals/Navigation/Navigation';
 import { Footer } from '@/components/Globals/Footer/Footer';
 import { MobileStickyCTA } from '@/components/ui/MobileStickyCTA';
+import { PageEngagement } from '@/components/ui/PageEngagement';
 import { ScreenReaderAnnouncementsProvider } from '@/components/ui/ScreenReaderAnnouncements';
 import { WebVitalsMonitor } from '@/components/WebVitalsMonitor';
 import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
@@ -78,6 +79,14 @@ export const metadata: Metadata = {
     canonical: SEO_CONFIG.siteUrl,
   },
   manifest: '/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
   ...getGoogleVerificationMetadata(),
 };
 
@@ -241,6 +250,7 @@ export default function RootLayout({
           </a>
         <Navigation />
         <main id="main-content" className='flex-1 content-flow'>{children}</main>
+        <PageEngagement />
         <Footer />
         <MobileStickyCTA />
         <WebVitalsMonitor />

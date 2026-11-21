@@ -332,10 +332,10 @@ export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Berkshire Hathaway HomeServices Premier Properties',
-    alternateName: 'Berkshire Hathaway HomeServices Las Vegas',
-    description: 'Premier Las Vegas real estate office providing expert guidance for buying, selling, and investing in Las Vegas properties.',
-    url: 'https://www.bhhs.com',
+    name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    alternateName: 'BHHS Nevada Properties — Dr. Jan Duffy',
+    description: 'Berkshire Hathaway HomeServices Nevada Properties office supporting Dr. Jan Duffy for buying, selling, and investing across Las Vegas, Summerlin, and Henderson.',
+    url: 'https://www.bhhsnv.com',
     telephone: SEO_CONFIG.phone,
     email: SEO_CONFIG.email,
     address: {

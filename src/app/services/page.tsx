@@ -9,7 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description: PAGE_SEO.services.description,
   keywords: PAGE_SEO.services.keywords,
   url: '/services',
-  image: '/images/dr-janet-duffy-services-og.jpg',
+  image: '/images/dr-jan-duffy-headshot.png',
 });
 
 export default function ServicesPage() {

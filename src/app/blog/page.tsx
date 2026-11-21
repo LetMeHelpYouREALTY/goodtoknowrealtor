@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: PAGE_SEO.blog.description,
     keywords: PAGE_SEO.blog.keywords,
     url: '/blog',
-    image: '/images/dr-janet-duffy-blog-og.jpg',
+    image: '/images/dr-jan-duffy-headshot.png',
   }),
   alternates: {
     canonical: `${SEO_CONFIG.siteUrl}/blog`,
