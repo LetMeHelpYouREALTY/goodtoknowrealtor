@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/communities' },
-  title: 'Luxury Communities Las Vegas | Premium Master-Planned Communities | Dr. Jan Duffy',
-  description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury Master-Planned Communities | Summerlin & Henderson | Dr. Jan Duffy',
+  description:
+    'Gated and master-planned luxury communities in Summerlin, Henderson, and Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: 'luxury communities Las Vegas, master-planned communities, premium neighborhoods, luxury developments',
   openGraph: {
-    title: 'Luxury Communities Las Vegas | Premium Master-Planned Communities | Dr. Jan Duffy',
-    description: 'Discover luxury master-planned communities in Las Vegas. Premium neighborhoods, resort-style amenities, and exclusive developments with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury Master-Planned Communities | Summerlin & Henderson | Dr. Jan Duffy',
+    description:
+      'Gated and master-planned luxury communities in Summerlin, Henderson, and Las Vegas. Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryCommunitiesPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Master-Planned Communities in Las Vegas
+              Luxury Master-Planned Communities in Summerlin, Henderson & Las Vegas
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Experience the finest in Las Vegas luxury living with our curated 
-              collection of master-planned communities featuring world-class amenities.
+              Dr. Jan Duffy tours buyers through Summerlin, Henderson, and valley guard-gated enclaves—matching HOA lifestyle, schools, and commute to your priorities. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -55,11 +56,10 @@ export default function LuxuryCommunitiesPage() {
           <div className='max-w-6xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-                Why Choose Luxury Master-Planned Communities?
+                Why Choose a Luxury Master-Planned Community?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Master-planned communities offer unparalleled lifestyle benefits 
-                with carefully designed amenities, security, and community features.
+                Planned neighborhoods bundle trails, pools, and security with consistent design standards—often supporting resale stability. Dr. Jan Duffy explains HOA costs and amenity fit before you tour.
               </p>
             </div>
 

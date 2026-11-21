@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/virtual-tours' },
-  title: 'Luxury Virtual Tours Las Vegas | 360° Property Tours | Dr. Jan Duffy',
-  description: 'Experience luxury properties in Las Vegas through immersive virtual tours. 360° property tours, interactive walkthroughs, and detailed property showcases with Dr. Jan Duffy.',
+  title: 'Luxury Home Virtual Tours Las Vegas | Dr. Jan Duffy',
+  description:
+    '3D and video walkthroughs for Las Vegas luxury listings with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: 'luxury virtual tours Las Vegas, 360 property tours, virtual walkthroughs, interactive property tours, luxury home tours',
   openGraph: {
-    title: 'Luxury Virtual Tours Las Vegas | 360° Property Tours | Dr. Jan Duffy',
-    description: 'Experience luxury properties in Las Vegas through immersive virtual tours. 360° property tours, interactive walkthroughs, and detailed property showcases with Dr. Jan Duffy.',
+    title: 'Luxury Home Virtual Tours Las Vegas | Dr. Jan Duffy',
+    description:
+      'Immersive luxury property tours with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryVirtualToursPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Virtual Tours in Las Vegas
+              Luxury Home Virtual Tours for Las Vegas Buyers
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Experience Las Vegas&apos; most exclusive properties through immersive 
-              360° virtual tours and interactive walkthroughs from anywhere in the world.
+              Dr. Jan Duffy pairs Matterport-style walkthroughs with live video tours so out-of-state buyers can shortlist Summerlin and Henderson estates before flying in. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -55,11 +56,10 @@ export default function LuxuryVirtualToursPage() {
           <div className='max-w-6xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-                Why Choose Virtual Property Tours?
+                Why Use Virtual Tours Before a Luxury Showing?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Virtual tours revolutionize the property viewing experience, 
-                offering convenience, accessibility, and detailed property insights.
+                You filter floor plans and finishes remotely, then reserve in-person time for finalists—saving travel for serious contenders. Dr. Jan Duffy hosts live tours when a listing requires discretion or rapid feedback.
               </p>
             </div>
 

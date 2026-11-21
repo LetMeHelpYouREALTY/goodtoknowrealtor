@@ -10,9 +10,17 @@ import { TrustBadges } from '@/components/Globals/TrustBadges/TrustBadges';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Luxury Real Estate Las Vegas | Dr. Jan Duffy - Premier Luxury Agent',
-  description: 'Discover exceptional luxury properties in Las Vegas with Dr. Jan Duffy, agent specializing in high-end homes, estates, and luxury communities.',
-  keywords: ['luxury real estate Las Vegas', 'luxury homes Las Vegas', 'high-end properties', 'Dr. Jan Duffy', 'luxury realtor Las Vegas', 'Summerlin luxury', 'Henderson luxury', 'Lake Las Vegas'],
+  title: 'Luxury Homes Las Vegas, Summerlin & Henderson | Dr. Jan Duffy',
+  description:
+    'Luxury estates, golf homes, and high-rise residences with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, Lake Las Vegas. 702-500-1955.',
+  keywords: [
+    'luxury homes Las Vegas',
+    'Summerlin luxury real estate',
+    'Henderson estates',
+    'Lake Las Vegas homes',
+    'Dr. Jan Duffy',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/luxury',
   image: '/images/luxury-real-estate-og.jpg',
 });
@@ -113,8 +121,8 @@ export default function LuxuryPage() {
 
         {/* Hero Section */}
         <PageHero
-          title='Luxury Real Estate in Las Vegas'
-          subtitle='Discover exceptional luxury properties with Dr. Jan Duffy, Las Vegas agent specializing in high-end homes, estates, and luxury communities'
+          title='Luxury Real Estate in Las Vegas, Summerlin & Henderson'
+          subtitle='Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, guides discreet buyers and sellers through premier golf, guard-gated, and Strip-adjacent inventory. Call or text 702-500-1955.'
           gradientFromClassName='from-amber-900'
           gradientToClassName='to-amber-800'
           backgroundImageUrl='https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1973&q=80'
@@ -139,10 +147,10 @@ export default function LuxuryPage() {
           <div className="container">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Dr. Jan Duffy for Luxury Real Estate?
+                Why Work With Dr. Jan Duffy on Luxury Closings?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                As a Las Vegas real estate agent with $127M+ in sales volume, Dr. Jan Duffy brings unparalleled expertise to luxury property transactions. Her deep understanding of high-end markets, discretion, and attention to detail ensures exceptional results for discerning clients.
+                High-net-worth transactions demand discretion, accurate comps, and contract precision—services delivered through BHHS Nevada Properties and decades of valley luxury sales.
               </p>
             </div>
 
@@ -163,10 +171,11 @@ export default function LuxuryPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Premier Luxury Communities in Las Vegas
+                Which Las Vegas Communities Define Luxury Living?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Explore Las Vegas's most luxury neighborhoods, each offering unique luxury amenities and lifestyle experiences
+                From The Ridges and MacDonald Highlands to Lake Las Vegas and Anthem Country Club—browse area pages, then tour active{' '}
+                <Link href='/listings' className='text-amber-700 font-semibold hover:text-amber-800'>MLS luxury listings</Link>.
               </p>
             </div>
 
@@ -213,10 +222,10 @@ export default function LuxuryPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Luxury Property Types We Specialize In
+                What Luxury Property Types Are Common in the Valley?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From custom estates to luxury condos, Dr. Jan Duffy has expertise in all types of high-end Las Vegas properties
+                Custom estates, tower residences, golf villas, and investment-grade rentals each follow different comp sets—match property type to financing and exit strategy early.
               </p>
             </div>
 
@@ -285,10 +294,10 @@ export default function LuxuryPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Featured Luxury Properties
+                Where Can You Browse Live Luxury MLS Inventory?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover exceptional luxury homes currently available in Las Vegas's most prestigious communities
+                Featured widgets pull current brokerage listings—confirm availability and attribution on each record before scheduling a private showing.
               </p>
             </div>
             <LuxuryListings />
@@ -300,10 +309,10 @@ export default function LuxuryPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                What Our Luxury Clients Say
+                What Do Luxury Buyers and Sellers Say About Dr. Jan Duffy?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Testimonials from satisfied luxury property clients who experienced exceptional service and results
+                Client stories reflect individual outcomes—your results depend on market conditions, pricing, and property condition at listing.
               </p>
             </div>
 
@@ -360,10 +369,11 @@ export default function LuxuryPage() {
         <section className="py-16 bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-600 text-white">
           <div className="container text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Experience Luxury Real Estate Excellence?
+              How Do You Schedule a Private Luxury Consultation?
             </h2>
             <p className="text-xl text-white/95 mb-8 max-w-3xl mx-auto font-medium">
-              Contact Dr. Jan Duffy today for personalized luxury real estate services in Las Vegas. With $127M+ in sales volume and 20+ years of experience, we deliver exceptional results for discerning clients.
+              Call 702-500-1955 or book online—Dr. Jan Duffy will align showings, valuation, and{' '}
+              <Link href='/buying' className='underline font-semibold text-white'>buyer representation</Link> with your timeline.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

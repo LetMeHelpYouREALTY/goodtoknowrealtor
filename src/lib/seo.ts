@@ -5,8 +5,8 @@ import { getGoogleVerificationMetadata } from '@/lib/google-search-console';
 export const SEO_CONFIG = {
   siteName: 'Dr. Jan Duffy - Las Vegas Real Estate Expert',
   siteUrl: 'https://www.goodtoknowrealtor.com',
-  defaultTitle: 'Dr. Jan Duffy - Las Vegas Real Estate Expert | 5.0★ on Realtor.com',
-  defaultDescription: 'Top-performing Las Vegas real estate agent Dr. Jan Duffy delivers exceptional results with $127M+ in sales volume. Expert guidance for buying, selling, and investing in Las Vegas properties.',
+  defaultTitle: 'Dr. Jan Duffy | Las Vegas Luxury REALTOR® | Summerlin & Henderson',
+  defaultDescription: 'Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties, guides luxury buyers and sellers across Las Vegas, Summerlin, and Henderson. $127M+ sales. Call/Text 702-500-1955.',
   keywords: [
     'Las Vegas real estate',
     'Dr. Jan Duffy',
@@ -50,7 +50,7 @@ export const SEO_CONFIG = {
     default:
       '/api/og?title=Las%20Vegas%20Luxury%20Real%20Estate&subtitle=Data-backed%20strategy%20from%20Dr.%20Jan%20Duffy&badge=Summerlin%20%E2%80%A2%20Henderson%20%E2%80%A2%20Strip%20Corridor&highlight=Top%201%25%20Las%20Vegas%20REALTOR%C2%AE&highlight=%24127M%2B%20Sales%20Volume',
     logo: '/images/bhhs/logo.svg',
-    agent: '/images/dr-janet-duffy-profile.jpg'
+    agent: '/images/dr-jan-duffy-headshot.png'
   }
 };
 
@@ -58,7 +58,11 @@ export const SEO_CONFIG = {
  * Page OG images under /images/ were never added to /public, so every og:image 404'd.
  * Until real files exist, render the page's card with the /api/og route instead.
  */
-const EXISTING_PUBLIC_IMAGES = new Set<string>(['/images/bhhs/logo.svg']);
+const EXISTING_PUBLIC_IMAGES = new Set<string>([
+  '/images/bhhs/logo.svg',
+  '/images/dr-jan-duffy-headshot.png',
+  '/images/dr-jan-duffy-profile.png',
+]);
 
 function resolveOgImage(image: string | undefined, title: string | undefined): string {
   if (image && (image.startsWith('http') || !image.startsWith('/images/') || EXISTING_PUBLIC_IMAGES.has(image))) {
@@ -150,10 +154,11 @@ export function generateRealEstateAgentSchema() {
     '@type': 'RealEstateAgent',
     name: 'Dr. Jan Duffy',
     alternateName: 'Las Vegas Real Estate Expert',
-    description: 'Las Vegas real estate agent Dr. Jan Duffy delivers exceptional results with $127M+ in sales volume. Expert guidance for buying, selling, and investing in Las Vegas properties.',
+    description: 'Dr. Jan Duffy is a Las Vegas luxury REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. $127M+ sales volume across Summerlin, Henderson, and the Las Vegas Valley. License S.0197614.LLC.',
     url: SEO_CONFIG.siteUrl,
     telephone: SEO_CONFIG.phone,
     email: SEO_CONFIG.email,
+    identifier: 'S.0197614.LLC',
     address: {
       '@type': 'PostalAddress',
       streetAddress: SEO_CONFIG.address.street,
@@ -211,17 +216,17 @@ export function generateRealEstateAgentSchema() {
     ],
     worksFor: {
       '@type': 'RealEstateAgent',
-      name: 'Berkshire Hathaway HomeServices Premier Properties',
-      url: 'https://www.bhhs.com',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      url: 'https://www.bhhsnv.com',
     },
     hasCredential: [
       {
         '@type': 'EducationalOccupationalCredential',
         credentialCategory: 'license',
-        name: 'REALTOR® License',
+        name: 'Nevada Real Estate License S.0197614.LLC',
         recognizedBy: {
           '@type': 'Organization',
-          name: 'National Association of Realtors',
+          name: 'Nevada Real Estate Division',
         },
       },
       {
@@ -269,15 +274,68 @@ export function generateRealEstateAgentSchema() {
   };
 }
 
+/** Person entity for ProfilePage mainEntity and standalone JSON-LD. */
+export function generatePersonSchema() {
+  return {
+    '@type': 'Person',
+    name: 'Dr. Jan Duffy',
+    alternateName: 'Good To Know REALTOR®',
+    jobTitle: 'Luxury Real Estate Agent',
+    description:
+      'Dr. Jan Duffy is a Las Vegas luxury REALTOR® with Berkshire Hathaway HomeServices Nevada Properties. $127M+ sales across Summerlin, Henderson, and the Las Vegas Valley.',
+    url: `${SEO_CONFIG.siteUrl}/about`,
+    telephone: SEO_CONFIG.phone,
+    email: SEO_CONFIG.email,
+    image: `${SEO_CONFIG.siteUrl}/images/dr-jan-duffy-headshot.png`,
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    },
+    knowsAbout: [
+      'Las Vegas luxury real estate',
+      'Summerlin homes',
+      'Henderson real estate',
+      'Investment properties',
+    ],
+    identifier: {
+      '@type': 'PropertyValue',
+      name: 'Nevada Real Estate License',
+      value: 'S.0197614.LLC',
+    },
+    sameAs: Object.values(SEO_CONFIG.social),
+  };
+}
+
+/** ProfilePage wrapper for /about. */
+export function generateProfilePageSchema() {
+  const person = generatePersonSchema();
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    name: 'About Dr. Jan Duffy',
+    description: person.description as string,
+    url: `${SEO_CONFIG.siteUrl}/about`,
+    mainEntity: person,
+  };
+}
+
+/** Standalone Person JSON-LD with @context. */
+export function generatePersonJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    ...generatePersonSchema(),
+  };
+}
+
 // Generate JSON-LD structured data for Local Business (Berkshire Hathaway Office)
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Berkshire Hathaway HomeServices Premier Properties',
-    alternateName: 'Berkshire Hathaway HomeServices Las Vegas',
-    description: 'Premier Las Vegas real estate office providing expert guidance for buying, selling, and investing in Las Vegas properties.',
-    url: 'https://www.bhhs.com',
+    name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    alternateName: 'BHHS Nevada Properties — Dr. Jan Duffy',
+    description: 'Berkshire Hathaway HomeServices Nevada Properties office supporting Dr. Jan Duffy for buying, selling, and investing across Las Vegas, Summerlin, and Henderson.',
+    url: 'https://www.bhhsnv.com',
     telephone: SEO_CONFIG.phone,
     email: SEO_CONFIG.email,
     address: {
@@ -644,24 +702,50 @@ export function generateServiceSchema() {
 // Page-specific SEO configurations
 export const PAGE_SEO = {
   home: {
-    title: 'Dr. Jan Duffy - Premier Good To Know REALTOR® | Las Vegas Real Estate Expert',
-    description: 'Premier Good To Know REALTOR® Dr. Jan Duffy provides expert Las Vegas real estate services. Buy, sell, or invest in Las Vegas properties with personalized guidance and local market expertise.',
-    keywords: ['Las Vegas real estate', 'Dr. Jan Duffy', 'Premier Good To Know REALTOR', 'Las Vegas realtor', 'Las Vegas homes for sale'],
+    title: 'Las Vegas Luxury Real Estate | Dr. Jan Duffy, Good To Know REALTOR®',
+    description:
+      'Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties, guides luxury buyers and sellers in Summerlin, Henderson, and Las Vegas. $127M+ volume. Call or text 702-500-1955.',
+    keywords: [
+      'Las Vegas luxury real estate',
+      'Dr. Jan Duffy',
+      'Good To Know REALTOR',
+      'Summerlin luxury homes',
+      'Henderson luxury homes',
+    ],
   },
   about: {
-    title: 'About Dr. Jan Duffy - Premier Good To Know REALTOR® | Las Vegas Real Estate Expert',
-    description: 'Learn about Dr. Jan Duffy, Premier Good To Know REALTOR® with over 15 years of Las Vegas real estate experience. Expert guidance for buying and selling properties.',
-    keywords: ['Dr. Jan Duffy biography', 'Las Vegas real estate agent', 'Premier Good To Know REALTOR', 'Las Vegas realtor experience'],
+    title: 'About Dr. Jan Duffy | Las Vegas Luxury REALTOR®',
+    description:
+      'Dr. Jan Duffy is a Las Vegas luxury REALTOR® with 20+ years and $127M+ in sales at Berkshire Hathaway HomeServices Nevada Properties. License S.0197614.LLC. Call 702-500-1955.',
+    keywords: [
+      'Dr. Jan Duffy biography',
+      'Las Vegas luxury realtor',
+      'Good To Know REALTOR',
+      'Berkshire Hathaway HomeServices Nevada Properties',
+    ],
   },
   contact: {
-    title: 'Contact Dr. Jan Duffy - Premier Good To Know REALTOR® | Las Vegas Real Estate',
-    description: 'Contact Premier Good To Know REALTOR® Dr. Jan Duffy for expert Las Vegas real estate services. Call (702) 500-1955 for personalized assistance.',
-    keywords: ['contact Dr. Jan Duffy', 'Las Vegas real estate contact', 'Premier Good To Know REALTOR contact', 'Las Vegas realtor phone'],
+    title: 'Contact Dr. Jan Duffy | Las Vegas Luxury REALTOR®',
+    description:
+      'Call or text Dr. Jan Duffy at 702-500-1955 for Las Vegas and Henderson luxury real estate. Berkshire Hathaway HomeServices Nevada Properties. License S.0197614.LLC.',
+    keywords: [
+      'contact Dr. Jan Duffy',
+      'Las Vegas luxury realtor phone',
+      'Good To Know REALTOR contact',
+      '702-500-1955',
+    ],
   },
   services: {
-    title: 'Real Estate Services | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-    description: 'Comprehensive Las Vegas real estate services by Premier Good To Know REALTOR® Dr. Jan Duffy. Buying, selling, luxury properties, and investment services.',
-    keywords: ['Las Vegas real estate services', 'home buying Las Vegas', 'home selling Las Vegas', 'luxury real estate Las Vegas'],
+    title: 'Las Vegas Real Estate Services | Buy, Sell & Invest | Dr. Jan Duffy',
+    description:
+      'Buying, selling, luxury homes, and investment guidance with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Summerlin, Henderson, and the full valley. 702-500-1955.',
+    keywords: [
+      'Las Vegas real estate services',
+      'luxury realtor Las Vegas',
+      'Summerlin Henderson agent',
+      'Dr. Jan Duffy',
+      'Berkshire Hathaway Nevada Properties',
+    ],
   },
   buying: {
     title: 'Buying a Home in Las Vegas | Dr. Jan Duffy - Premier Good To Know REALTOR®',

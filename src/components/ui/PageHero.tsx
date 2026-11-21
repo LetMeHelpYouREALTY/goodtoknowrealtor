@@ -1,5 +1,6 @@
 import React from 'react';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
+import { AgentPortrait } from '@/components/ui/AgentPortrait';
 
 export type PageHeroProps = {
   title: string;
@@ -10,6 +11,8 @@ export type PageHeroProps = {
   backgroundImageUrl?: string;
   /** When false, skips the office listings band below the hero. Default: true */
   showOfficeListings?: boolean;
+  /** When false, hides the agent headshot above the H1. Default: true */
+  showAgentPortrait?: boolean;
 };
 
 export function PageHero({
@@ -20,6 +23,7 @@ export function PageHero({
   children,
   backgroundImageUrl,
   showOfficeListings = true,
+  showAgentPortrait = true,
 }: PageHeroProps) {
   return (
     <>
@@ -39,6 +43,9 @@ export function PageHero({
         ) : null}
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center">
+            {showAgentPortrait ? (
+              <AgentPortrait size="lg" priority className="mb-6" />
+            ) : null}
             <span className="luxury-accent-line mx-auto" aria-hidden="true" />
             <h1 className="font-display text-4xl lg:text-6xl font-semibold mb-6 tracking-tight">
               {title}

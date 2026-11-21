@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/land' },
-  title: 'Luxury Land for Sale Las Vegas | Premium Land Lots | Dr. Jan Duffy',
-  description: 'Discover luxury land for sale in Las Vegas. Premium lots, custom home sites, and investment land opportunities with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury Land & Custom Lots Summerlin & Las Vegas | Dr. Jan Duffy',
+  description:
+    'Premium custom-home lots and land investments in Summerlin, Henderson, and Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: 'luxury land Las Vegas, land for sale, premium lots, custom home sites, investment land, Las Vegas land',
   openGraph: {
-    title: 'Luxury Land for Sale Las Vegas | Premium Land Lots | Dr. Jan Duffy',
-    description: 'Discover luxury land for sale in Las Vegas. Premium lots, custom home sites, and investment land opportunities with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury Land & Custom Lots Las Vegas | Dr. Jan Duffy',
+    description:
+      'Custom-home lots and land guidance with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryLandPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Land for Sale in Las Vegas
+              Luxury Land & Custom Home Lots in Summerlin & Las Vegas
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Build your dream custom home on premium land lots in Las Vegas&apos; 
-              most prestigious communities and exclusive developments.
+              Dr. Jan Duffy vets zoning, utility access, and slope before you buy dirt for a custom estate—common in Summerlin, MacDonald Highlands, and select valley enclaves. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -58,8 +59,7 @@ export default function LuxuryLandPage() {
                 Why Invest in Las Vegas Luxury Land?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Las Vegas land offers exceptional investment potential with growing 
-                population, limited supply, and prime locations for custom home development.
+                Scarce view lots can appreciate as build costs rise—but entitlement risk matters. Dr. Jan Duffy coordinates with builders and civil engineers so you know timeline and all-in budget early.
               </p>
             </div>
 

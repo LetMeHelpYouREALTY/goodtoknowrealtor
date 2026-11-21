@@ -1,12 +1,20 @@
 import { Metadata } from 'next';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { PageHero } from '@/components/ui/PageHero';
+import Link from 'next/link';
 import { generatePageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Home Seller Guide | Dr. Jan Duffy - Premier Good To Know REALTOR®',
-  description: 'Complete guide for selling your home in Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy provides expert tips, pricing strategies, and step-by-step guidance.',
-  keywords: ['home seller guide', 'Las Vegas home selling', 'home selling tips', 'Dr. Jan Duffy'],
+  title: 'Las Vegas Home Seller Guide | Luxury Listings | Dr. Jan Duffy',
+  description:
+    'Seller guide for Las Vegas, Summerlin, and Henderson from Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties—pricing, marketing, and closing. 702-500-1955.',
+  keywords: [
+    'Las Vegas seller guide',
+    'sell home Summerlin',
+    'luxury listing Henderson',
+    'Dr. Jan Duffy',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/seller-guide',
   image: '/images/seller-guide-og.jpg',
 });
@@ -23,8 +31,8 @@ export default function SellerGuidePage() {
 
       {/* Hero Section */}
       <PageHero
-        title='Home Seller Guide'
-        subtitle='Your complete guide to selling your home in Las Vegas'
+        title='Las Vegas Home Seller Guide'
+        subtitle='Dr. Jan Duffy, Good To Know REALTOR® with Berkshire Hathaway HomeServices Nevada Properties, walks luxury and move-up sellers through pricing, marketing, and Nevada closing steps.'
         gradientFromClassName='from-blue-900'
         gradientToClassName='to-blue-800'
       />
@@ -34,15 +42,20 @@ export default function SellerGuidePage() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Step-by-Step Home Selling Process</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Should Las Vegas Sellers Do First?</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Follow these steps in sequence and request a{' '}
+                <Link href="/home-value" className="text-blue-700 font-semibold hover:text-blue-800">home value review</Link>{' '}
+                or{' '}
+                <Link href="/selling" className="text-blue-700 font-semibold hover:text-blue-800">listing consultation</Link> with Dr. Jan Duffy when you are ready to go live.
+              </p>
               
               <div className="space-y-8">
                 {/* Step 1 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Prepare Your Home for Sale</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">How Do You Prepare a Las Vegas Home for Market?</h2>
                   <p className="text-gray-600 mb-4">
-                    First impressions matter. Preparing your home properly can significantly 
-                    impact how quickly it sells and for how much.
+                    Clean, repair, and stage to showcase light, flow, and curb appeal—preparation often shortens days on market in Summerlin and Henderson.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Deep clean every room and declutter</li>
@@ -54,10 +67,9 @@ export default function SellerGuidePage() {
 
                 {/* Step 2 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">2. Determine Your Home&apos;s Value</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">How Should You Price a Luxury or Move-Up Home?</h2>
                   <p className="text-gray-600 mb-4">
-                    Pricing your home correctly is crucial. Too high and it won&apos;t sell; 
-                    too low and you&apos;ll lose money.
+                    Use a broker price opinion anchored in recent MLS comps—not online estimates alone—so your list price matches buyer activity.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Get a professional comparative market analysis (CMA)</li>
@@ -69,10 +81,10 @@ export default function SellerGuidePage() {
 
                 {/* Step 3 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">3. Choose the Right Real Estate Agent</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Why List with Dr. Jan Duffy at BHHS Nevada Properties?</h2>
                   <p className="text-gray-600 mb-4">
-                    A skilled real estate agent will help you navigate the selling process 
-                    and maximize your home&apos;s value.
+                    A local listing agent should bring MLS marketing, negotiation discipline, and brokerage reach—see{' '}
+                    <Link href="/why-list-with-us" className="text-blue-700 font-semibold hover:text-blue-800">why sellers choose this team</Link>.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Look for agents with local market expertise</li>
@@ -84,9 +96,9 @@ export default function SellerGuidePage() {
 
                 {/* Step 4 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">4. Market Your Home</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">How Is Your Home Marketed in Las Vegas MLS?</h2>
                   <p className="text-gray-600 mb-4">
-                    Effective marketing is key to attracting qualified buyers and selling quickly.
+                    Professional media, syndication, and targeted outreach put your listing in front of qualified buyers while respecting privacy when needed.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>List on multiple online platforms and MLS</li>
@@ -98,10 +110,9 @@ export default function SellerGuidePage() {
 
                 {/* Step 5 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">5. Review and Negotiate Offers</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">How Do You Compare Multiple Offers?</h2>
                   <p className="text-gray-600 mb-4">
-                    When offers come in, your agent will help you evaluate and negotiate 
-                    the best terms.
+                    Weigh price, financing strength, contingencies, and closing date—Dr. Jan Duffy explains net proceeds, not just headline price.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Consider offer price, contingencies, and closing timeline</li>
@@ -113,10 +124,9 @@ export default function SellerGuidePage() {
 
                 {/* Step 6 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">6. Handle Inspections and Appraisals</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">What Happens During Inspection and Appraisal?</h2>
                   <p className="text-gray-600 mb-4">
-                    Buyers will likely request a home inspection and their lender will 
-                    require an appraisal.
+                    Buyers inspect condition; lenders confirm value—respond promptly to repair requests and keep appraisal support data ready.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Be prepared for inspection findings</li>
@@ -128,9 +138,9 @@ export default function SellerGuidePage() {
 
                 {/* Step 7 */}
                 <div className="border-l-4 border-blue-600 pl-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">7. Closing Day</h3>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">What Occurs on Nevada Seller Closing Day?</h2>
                   <p className="text-gray-600 mb-4">
-                    The final step is closing day, where you&apos;ll transfer ownership to the buyer.
+                    Sign deed transfer documents at title, confirm proceeds wiring, and hand off keys per contract—escrow timelines are tracked by your agent.
                   </p>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Review all closing documents carefully</li>
@@ -149,12 +159,10 @@ export default function SellerGuidePage() {
       <section className="py-20 bg-blue-600 text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Sell Your Home?
+            How Do You Request a Listing Consultation?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let Dr. Jan Duffy, the Premier Good To Know REALTOR®, help you sell your 
-            home for top dollar. With 15+ years of experience and proven marketing strategies, 
-            I&apos;ll guide you through every step of the process.
+            Call or text 702-500-1955 for pricing and marketing tailored to your Las Vegas, Summerlin, or Henderson property.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

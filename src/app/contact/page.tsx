@@ -11,7 +11,7 @@ export const metadata: Metadata = generatePageMetadata({
   description: PAGE_SEO.contact.description,
   keywords: PAGE_SEO.contact.keywords,
   url: '/contact',
-  image: '/images/dr-janet-duffy-contact-og.jpg',
+  image: '/images/dr-jan-duffy-headshot.png',
 });
 
 export default function ContactPage() {
@@ -32,8 +32,8 @@ export default function ContactPage() {
       <div className='min-h-screen bg-gradient-to-br from-amber-50 to-yellow-50'>
       {/* Hero Section */}
       <PageHero
-        title='Contact Dr. Jan Duffy'
-        subtitle={"Ready to start your Las Vegas real estate journey? I'm here to help you achieve your property goals with personalized service and expert guidance."}
+        title='Contact Dr. Jan Duffy — Las Vegas luxury REALTOR®'
+        subtitle='Call or text 702-500-1955 for Berkshire Hathaway HomeServices Nevada Properties representation across Summerlin, Henderson, and Las Vegas. License S.0197614.LLC.'
       />
 
       {/* Contact Methods */}
@@ -41,10 +41,10 @@ export default function ContactPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Get In Touch
+              How can you reach Dr. Jan Duffy?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Multiple ways to reach me for your real estate needs
+              Phone, text, and email go directly to Dr. Jan Duffy—same-day response for active Las Vegas luxury buyers and sellers.
             </p>
           </div>
 
@@ -83,10 +83,10 @@ export default function ContactPage() {
                 Send an Email
               </h3>
               <p className='text-gray-600 mb-6'>
-                For detailed inquiries or to schedule a consultation.
+                Send detailed questions or documents; replies within one business day.
               </p>
               <Link
-                href='mailto:janet@goodtoknowrealtor.com'
+                href='mailto:info@drjanduffy.com'
                 className='btn btn-primary'
               >
                 Send Email
@@ -121,10 +121,10 @@ export default function ContactPage() {
           <div className='max-w-4xl mx-auto'>
             <div className='text-center mb-16'>
               <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-                Send a Message
+                Prefer a written message?
               </h2>
               <p className='text-xl text-gray-600'>
-                Fill out the form below and I&apos;ll get back to you within 24 hours
+                Submit the form below and Dr. Jan Duffy responds within 24 hours with next steps for your Las Vegas real estate goals.
               </p>
             </div>
 
@@ -296,10 +296,10 @@ export default function ContactPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Office Information
+              Where is Dr. Jan Duffy based?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Visit my office or learn more about my services
+              Las Vegas, Nevada—serving the full valley with Berkshire Hathaway HomeServices Nevada Properties and in-person meetings by appointment.
             </p>
           </div>
 
@@ -351,7 +351,7 @@ export default function ContactPage() {
                       <p className='font-semibold text-gray-900'>Contact</p>
                       <p className='text-gray-600'>Phone: (702) 500-1955</p>
                       <p className='text-gray-600'>
-                        Email: janet@goodtoknowrealtor.com
+                        Email: info@drjanduffy.com
                       </p>
                     </div>
                   </div>
@@ -400,10 +400,10 @@ export default function ContactPage() {
         <div className='container'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl lg:text-4xl font-bold text-gray-900 mb-4'>
-              Areas I Serve
+              Which Las Vegas areas does Dr. Jan Duffy serve?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Comprehensive real estate services throughout the Las Vegas Valley
+              Summerlin, Henderson, North Las Vegas, Downtown Las Vegas, Green Valley, and luxury communities valley-wide.
             </p>
           </div>
 
@@ -422,7 +422,7 @@ export default function ContactPage() {
               <div className='w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <Image
                   src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=32&h=32&q=80'
-                  alt='Family home in Henderson neighborhood'
+                  alt='Residence in Henderson, Nevada'
                   width={32}
                   height={32}
                   className='w-8 h-8'
@@ -481,11 +481,18 @@ export default function ContactPage() {
       <section className='py-20 bg-gradient-to-r from-amber-600 to-yellow-600 text-white'>
         <div className='container text-center'>
           <h2 className='text-3xl lg:text-4xl font-bold mb-6'>
-            Need Immediate Assistance?
+            Need a same-day response?
           </h2>
           <p className='text-xl text-amber-100 mb-8 max-w-3xl mx-auto'>
-            For urgent real estate matters or time-sensitive transactions, don&apos;t
-            hesitate to call me directly.
+            Call or text 702-500-1955 for time-sensitive offers, showings, or contract questions—Dr. Jan Duffy is available seven days a week.
+          </p>
+          <p className='mb-6'>
+            <Link
+              href='#book-market'
+              className='text-white font-semibold underline underline-offset-4 hover:text-amber-100'
+            >
+              Or schedule a free market strategy call
+            </Link>
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
             <Link

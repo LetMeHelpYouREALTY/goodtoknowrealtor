@@ -67,7 +67,7 @@ export async function GET(request: Request) {
               textTransform: 'uppercase',
             }}
           >
-            Berkshire Hathaway HomeServices Premier Properties
+            Berkshire Hathaway HomeServices Nevada Properties
           </div>
         </div>
 

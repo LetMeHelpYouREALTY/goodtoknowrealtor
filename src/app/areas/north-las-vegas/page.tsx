@@ -3,15 +3,16 @@ import Link from 'next/link';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import {
   generatePrimaryAreaMetadata,
   generatePrimaryAreaSchemas,
+  PRIMARY_AREA_DESCRIPTIONS,
 } from '@/lib/primary-areas';
 
 const AREA_NAME = 'North Las Vegas';
 const SLUG = 'north-las-vegas' as const;
-const DESCRIPTION =
-  'Find your dream home in North Las Vegas, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in North Las Vegas homes, new construction, and investment properties.';
+const DESCRIPTION = PRIMARY_AREA_DESCRIPTIONS['north-las-vegas'];
 
 export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: AREA_NAME,
@@ -48,7 +49,7 @@ export default function NorthLasVegasPage() {
         {/* Hero Section */}
         <PageHero
           title="North Las Vegas Real Estate"
-          subtitle="Discover affordable living and new construction in North Las Vegas"
+          subtitle="North Las Vegas offers new-build inventory in Aliante and Skye Canyon plus resale along the CC 215 corridor—Dr. Jan Duffy compares square footage, builder incentives, and commute routes. 702-500-1955."
           gradientFromClassName="from-blue-900"
           gradientToClassName="to-blue-800"
         >
@@ -66,37 +67,50 @@ export default function NorthLasVegasPage() {
           </Link>
         </PageHero>
 
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 text-center">
+                How do you search North Las Vegas MLS listings?
+              </h2>
+              <p className="text-xl text-gray-600 mb-10 text-center">
+                Filter North Las Vegas, Aliante, and Skye Canyon homes by price, beds, and property type.
+              </p>
+              <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
+                <SimpleSearch />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* About North Las Vegas */}
         <section className="py-20 bg-white">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Why Choose North Las Vegas?
+                  What housing is available in North Las Vegas?
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  North Las Vegas offers excellent value with new construction communities,
-                  affordable housing options, and convenient access to the Las Vegas Strip.
-                  As the Premier Good To Know REALTOR®, Dr. Jan Duffy helps buyers find great
-                  deals and investment opportunities in Aliante, Skye Canyon, and other
-                  North Las Vegas master-planned communities.
+                  North Las Vegas combines resale neighborhoods with builder inventory in Aliante, Skye Canyon, and Centennial Hills. Dr. Jan Duffy tracks price-per-square-foot, lot premiums, and drive times to the Strip, Nellis, and logistics hubs along I-15 and the 215 Beltway.
                 </p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">North Las Vegas highlights</h3>
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
-                    <span className="text-gray-700">New construction communities and master-planned developments</span>
+                    <span className="text-gray-700">Master-planned communities including Aliante and Skye Canyon</span>
                   </li>
                   <li className="flex items-center">
                     <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
-                    <span className="text-gray-700">Affordable housing options for first-time buyers</span>
+                    <span className="text-gray-700">New construction and resale across varied price points</span>
                   </li>
                   <li className="flex items-center">
                     <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
-                    <span className="text-gray-700">Close proximity to Las Vegas Strip and entertainment</span>
+                    <span className="text-gray-700">Commute access via CC 215, US-95, and Las Vegas Blvd</span>
                   </li>
                   <li className="flex items-center">
                     <IconSymbol symbol="✓" className="text-green-500 mr-3 h-5 w-5" ariaLabel="Benefit" />
-                    <span className="text-gray-700">Growing job market and business opportunities</span>
+                    <span className="text-gray-700">Investment and owner-occupied opportunities near Apex and Craig Road employment</span>
                   </li>
                 </ul>
                 <p className="mt-6 text-gray-600">
@@ -129,10 +143,10 @@ export default function NorthLasVegasPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                North Las Vegas Market Overview
+                How is North Las Vegas pricing trending?
               </h2>
               <p className="text-xl text-gray-600">
-                Current market insights for North Las Vegas real estate
+                Use the snapshot metrics below and request builder-incentive or resale comps from Dr. Jan Duffy.
               </p>
             </div>
 
@@ -161,12 +175,10 @@ export default function NorthLasVegasPage() {
         <section className="py-20 bg-blue-600 text-white">
           <div className="container text-center">
             <h2 className="text-4xl font-bold mb-6">
-              Ready to Find Your North Las Vegas Home?
+              Who helps you buy or sell in North Las Vegas?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Let Dr. Jan Duffy, the Premier Good To Know REALTOR®, help you find
-              your perfect home in North Las Vegas. With expertise in new construction
-              and investment properties, she&apos;ll help you make the right choice.
+              Dr. Jan Duffy, Good To Know REALTOR®, negotiates North Las Vegas resale and new-build contracts with Berkshire Hathaway HomeServices Nevada Properties.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -19,7 +19,7 @@ export function Footer() {
             <div className='flex flex-col'>
               <Image
                 src='/images/bhhs/logo.svg'
-                alt='Berkshire Hathaway HomeServices Premier Properties'
+                alt='Berkshire Hathaway HomeServices Nevada Properties'
                 width={192}
                 height={48}
                 className='mb-2 brightness-0 invert'
@@ -29,7 +29,7 @@ export function Footer() {
                 <br />
                 Las Vegas Agent
                 <br />
-                Premier Properties Las Vegas
+                BHHS Nevada Properties
               </p>
               <div className='mt-4'>
                 <p className='text-sm font-semibold text-[#dfc07a] mb-2 uppercase tracking-wider'>Contact</p>

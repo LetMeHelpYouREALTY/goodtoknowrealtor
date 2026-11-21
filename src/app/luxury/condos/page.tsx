@@ -5,12 +5,14 @@ import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWid
 
 export const metadata: Metadata = {
   alternates: { canonical: '/luxury/condos' },
-  title: 'Luxury Condos Las Vegas | High-Rise Condos | Dr. Jan Duffy',
-  description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Real Estate Agent.',
+  title: 'Luxury Condos & High-Rises Las Vegas Strip & Valley | Dr. Jan Duffy',
+  description:
+    'Las Vegas luxury condos and high-rise residences with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. Strip and valley towers. 702-500-1955.',
   keywords: 'luxury condos Las Vegas, high-rise condos, luxury condominiums, Las Vegas condos, premium condos, luxury high-rise',
   openGraph: {
-    title: 'Luxury Condos Las Vegas | High-Rise Condos | Dr. Jan Duffy',
-    description: 'Discover luxury condos and high-rise condominiums in Las Vegas. Premium amenities, stunning views, and exclusive locations with Dr. Jan Duffy, Real Estate Agent.',
+    title: 'Luxury Condos & High-Rises Las Vegas | Dr. Jan Duffy',
+    description:
+      'Las Vegas luxury condos and high-rise residences with Dr. Jan Duffy, Good To Know REALTOR®. 702-500-1955.',
     type: 'website',
   },
 };
@@ -23,11 +25,10 @@ export default function LuxuryCondosPage() {
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto text-center'>
             <h1 className='text-5xl font-bold mb-6'>
-              Luxury Condos & High-Rise Living in Las Vegas
+              Luxury Condos & High-Rise Living on the Las Vegas Strip & Valley
             </h1>
             <p className='text-xl text-gray-300 mb-8'>
-              Experience the pinnacle of urban luxury with our curated collection of 
-              high-rise condos featuring world-class amenities and breathtaking views.
+              Dr. Jan Duffy helps buyers compare tower amenities, HOA reserves, and view premiums—on the Strip, in Summerlin-adjacent towers, and select Henderson addresses. Call or text 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
@@ -58,8 +59,7 @@ export default function LuxuryCondosPage() {
                 Why Choose Luxury Condo Living in Las Vegas?
               </h2>
               <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-                Las Vegas luxury condos offer unparalleled convenience, security, 
-                and amenities that redefine urban living standards.
+                High-rise living trades yard work for concierge services, pools, and skyline views—ideal when lock-and-leave matters. Dr. Jan Duffy clarifies rental restrictions and resale history building by building.
               </p>
             </div>
 

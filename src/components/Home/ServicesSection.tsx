@@ -52,7 +52,7 @@ export function ServicesSection() {
       link: '/blog',
     },
     {
-      title: 'Premier Properties Showcase',
+      title: 'BHHS Nevada Properties Showcase',
       description:
         'Explore featured luxury properties and exclusive listings in the Las Vegas area with detailed virtual tours and professional photography.',
       category: 'Showcase',

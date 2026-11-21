@@ -7,8 +7,9 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { RealScoutOfficeWidget } from '@/components/RealScout/RealScoutOfficeWidget';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Sold Listings | Dr. Jan Duffy - Recent Sales Success Stories',
-  description: 'View Dr. Jan Duffy\'s recent sold listings and success stories. $127M+ in sales volume with exceptional results across Las Vegas.',
+  title: 'Recent Las Vegas Home Sales | Dr. Jan Duffy Sold Listings',
+  description:
+    'Representative sold homes in Summerlin, Henderson, Green Valley, and Las Vegas from Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
   keywords: ['sold listings Las Vegas', 'recent sales', 'Dr. Jan Duffy sales', 'Las Vegas real estate sales', 'success stories'],
   url: '/sold-listings',
   image: '/images/sold-listings-og.jpg',
@@ -172,10 +173,10 @@ export default function SoldListingsPage() {
           <div className="container relative">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-                Recent Sales Success Stories
+                Recent Las Vegas Home Sales by Dr. Jan Duffy
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed mb-8">
-                See how Dr. Jan Duffy delivers exceptional results for Las Vegas home sellers
+                These sample closings across Summerlin, Henderson, The Ridges, and Green Valley show how pricing, marketing, and negotiation performed for recent sellers. Ask Dr. Jan Duffy how similar strategies apply to your home—702-500-1955.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -202,10 +203,10 @@ export default function SoldListingsPage() {
           <div className="container">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Our Sales Performance
+                What Results Do Las Vegas Sellers See?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Proven results that demonstrate our expertise and commitment to client success
+                Volume, days on market, and list-to-sale ratios vary by neighborhood and season; Dr. Jan Duffy tracks those benchmarks so your listing price and prep match current buyer demand.
               </p>
             </div>
 

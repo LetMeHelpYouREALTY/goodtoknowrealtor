@@ -5,9 +5,15 @@ import { generatePageMetadata, generateBreadcrumbSchema } from '@/lib/seo';
 import { PageHero } from '@/components/ui/PageHero';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Client Testimonials | Dr. Jan Duffy Group',
-  description: 'Read real testimonials from satisfied clients of Dr. Jan Duffy Group. See why we are the top choice for Las Vegas real estate.',
-  keywords: ['testimonials', 'client reviews', 'Las Vegas real estate', 'Dr. Jan Duffy'],
+  title: 'Client Reviews & Testimonials | Dr. Jan Duffy Las Vegas',
+  description:
+    'Buyer and seller stories from Summerlin, Henderson, and Las Vegas with Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. 702-500-1955.',
+  keywords: [
+    'Dr. Jan Duffy reviews',
+    'Las Vegas realtor testimonials',
+    'Summerlin Henderson agent reviews',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/testimonials',
   image: '/images/testimonials-og.jpg',
 });
@@ -100,8 +106,8 @@ export default function TestimonialsPage() {
       <div className='min-h-screen bg-white'>
         {/* Hero Section */}
         <PageHero
-          title='What Our Clients Say'
-          subtitle='Real testimonials from satisfied clients who chose Dr. Jan Duffy Group for their Las Vegas real estate needs.'
+          title='Las Vegas Client Reviews for Dr. Jan Duffy'
+          subtitle='Buyers and sellers across Summerlin, Henderson, Green Valley, and Las Vegas share how Dr. Jan Duffy guided their transactions. Call or text 702-500-1955 to discuss your goals.'
         />
 
         {/* Stats Section */}
@@ -109,7 +115,7 @@ export default function TestimonialsPage() {
           <div className='container mx-auto px-4'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl font-bold text-gray-900 mb-12 text-center'>
-                Client Satisfaction Metrics
+                What Do Clients Say About Results?
               </h2>
               
               <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
@@ -224,7 +230,7 @@ export default function TestimonialsPage() {
               Ready to Become Our Next Success Story?
             </h2>
             <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-              Join hundreds of satisfied clients who chose Dr. Jan Duffy Group for their Las Vegas real estate needs.
+              Dr. Jan Duffy welcomes buyers and sellers throughout the Las Vegas Valley—tell us your timeline and neighborhood targets at 702-500-1955.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link

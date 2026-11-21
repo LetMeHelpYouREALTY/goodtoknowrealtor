@@ -3,7 +3,10 @@ import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import {
+  generatePrimaryAreaMetadata,
+  PRIMARY_AREA_DESCRIPTIONS,
+} from '@/lib/primary-areas';
 
 // Declare RealScout custom elements
 declare global {
@@ -17,8 +20,7 @@ declare global {
 export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Henderson',
   slug: 'henderson',
-  description:
-    'Find your dream home in Henderson, Nevada. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Henderson luxury homes, family communities, and investment properties.',
+  description: PRIMARY_AREA_DESCRIPTIONS.henderson,
   keywords: [
     'Henderson real estate',
     'Henderson homes for sale',
@@ -35,7 +37,7 @@ export default function HendersonPage() {
       {/* Hero Section */}
       <PageHero
         title='Henderson Real Estate'
-        subtitle={"Discover living in Henderson, Nevada's second-largest city"}
+        subtitle="Henderson spans master-planned villages, lakefront enclaves, and executive housing south of the Strip—Dr. Jan Duffy aligns MLS search with your commute and amenity priorities. 702-500-1955."
         gradientFromClassName='from-blue-900'
         gradientToClassName='to-blue-800'
       >
@@ -59,10 +61,10 @@ export default function HendersonPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Search Henderson Properties
+                How do you search Henderson MLS listings?
               </h2>
               <p className="text-xl text-gray-600">
-                Find your perfect home in Henderson with our advanced search tools
+                Narrow Henderson and Green Valley inventory by price, square footage, beds, and baths with the MLS search below.
               </p>
             </div>
             
@@ -79,30 +81,28 @@ export default function HendersonPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Henderson?
+                What housing is available across Henderson?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Henderson offers the perfect blend of suburban tranquility and urban convenience. 
-                As Nevada&apos;s second-largest city, it provides nearby public schools, beautiful parks, 
-                and a strong sense of community. As the Premier Good To Know REALTOR®, I help 
-                families and investors find their ideal properties in this thriving city.
+                Henderson neighborhoods—from Inspirada and Anthem to Lake Las Vegas and MacDonald Highlands—offer varied square footage, HOA profiles, and recreation access. Dr. Jan Duffy compares commute times on I-515, Saint Rose Parkway, and Eastern Avenue with the amenities you want onsite.
               </p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Henderson market highlights</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Nearby schools and master-planned neighborhoods</span>
+                  <span className="text-gray-700">Master-planned communities such as Anthem, Cadence, and Whitney Ranch</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Beautiful parks and recreational facilities</span>
+                  <span className="text-gray-700">Parks, trails, and lakefront recreation at Lake Las Vegas</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Growing business district and job opportunities</span>
+                  <span className="text-gray-700">Water Street District employment and retail corridors</span>
                 </li>
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
-                  <span className="text-gray-700">Diverse housing options from starter homes to luxury estates</span>
+                  <span className="text-gray-700">Resale, new construction, and luxury estates across price tiers</span>
                 </li>
               </ul>
             </div>
@@ -124,10 +124,10 @@ export default function HendersonPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Henderson Market Overview
+              How is the Henderson market performing now?
             </h2>
             <p className="text-xl text-gray-600">
-              Current market insights for Henderson real estate
+              Track median price, days on market, and active listing counts below—then request comps for your Henderson address.
             </p>
           </div>
           
@@ -156,17 +156,15 @@ export default function HendersonPage() {
       <section className="py-20 bg-blue-600 text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Find Your Henderson Home?
+            Who represents buyers and sellers in Henderson?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let Dr. Jan Duffy, the Premier Good To Know REALTOR®, help you find 
-            your perfect home in Henderson. With deep knowledge of the Nevada market 
-            and 15+ years of experience, I&apos;ll guide you to the right neighborhood and property.
+            Dr. Jan Duffy, Good To Know REALTOR®, negotiates across Henderson villages with Berkshire Hathaway HomeServices Nevada Properties representation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:702-500-1955" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               Call (702) 500-1955
             </a>

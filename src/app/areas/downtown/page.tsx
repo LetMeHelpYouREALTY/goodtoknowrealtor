@@ -2,13 +2,17 @@ import { Metadata } from 'next';
 import { PageHero } from '@/components/ui/PageHero';
 import Image from 'next/image';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { generatePrimaryAreaMetadata } from '@/lib/primary-areas';
+import Link from 'next/link';
+import { SimpleSearch } from '@/components/PropertySearch/SimpleSearch';
+import {
+  generatePrimaryAreaMetadata,
+  PRIMARY_AREA_DESCRIPTIONS,
+} from '@/lib/primary-areas';
 
 export const metadata: Metadata = generatePrimaryAreaMetadata({
   areaName: 'Downtown Las Vegas',
   slug: 'downtown',
-  description:
-    'Find your dream home in Downtown Las Vegas. Premier Good To Know REALTOR® Dr. Jan Duffy specializes in Downtown Las Vegas condos, lofts, and urban living properties.',
+  description: PRIMARY_AREA_DESCRIPTIONS.downtown,
   keywords: [
     'Downtown Las Vegas real estate',
     'Downtown Las Vegas condos',
@@ -24,7 +28,7 @@ export default function DowntownPage() {
       {/* Hero Section */}
       <PageHero
         title='Downtown Las Vegas Real Estate'
-        subtitle='Experience urban living in the heart of Las Vegas'
+        subtitle="Downtown Las Vegas condos and lofts put Fremont Street, the Arts District, and employment centers within a short commute—Dr. Jan Duffy compares HOA reserves, square footage, and parking with every tour. 702-500-1955."
         gradientFromClassName='from-blue-900'
         gradientToClassName='to-blue-800'
       >
@@ -42,20 +46,34 @@ export default function DowntownPage() {
         </a>
       </PageHero>
 
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 text-center">
+              How do you search Downtown Las Vegas MLS listings?
+            </h2>
+            <p className="text-xl text-gray-600 mb-10 text-center">
+              Filter high-rise condos, loft conversions, and townhomes by price and square footage.
+            </p>
+            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 border border-gray-100">
+              <SimpleSearch />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Downtown */}
       <section className="py-20 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Downtown Las Vegas?
+                What urban homes are listed in Downtown Las Vegas?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Downtown Las Vegas offers the ultimate urban living experience with luxury 
-                condos, modern lofts, and high-rise living. As the Premier Good To Know 
-                REALTOR®, I specialize in helping clients find their perfect urban oasis 
-                in the heart of the city.
+                Inventory spans high-rise condos, adaptive-reuse lofts, and townhomes near Fremont Street and the Arts District. Dr. Jan Duffy reviews HOA budgets, monthly fees, deeded parking, and interior square footage so you can compare buildings—not broad lifestyle generalizations.
               </p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Features buyers evaluate</h3>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <IconSymbol symbol='✓' className="text-green-500 mr-3 h-5 w-5" ariaLabel='Highlight' />
@@ -93,10 +111,10 @@ export default function DowntownPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Downtown Las Vegas Market Overview
+              How competitive is the Downtown condo market?
             </h2>
             <p className="text-xl text-gray-600">
-              Current market insights for Downtown Las Vegas real estate
+              Review median pricing and days on market below, then request building-level comps from Dr. Jan Duffy.
             </p>
           </div>
           
@@ -125,17 +143,20 @@ export default function DowntownPage() {
       <section className="py-20 bg-blue-600 text-white">
         <div className="container text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Find Your Downtown Las Vegas Home?
+            Who guides Downtown Las Vegas buyers and sellers?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let Dr. Jan Duffy, the Premier Good To Know REALTOR®, help you find 
-            your perfect urban home in Downtown Las Vegas. With expertise in luxury 
-            condos and high-rise living, I&apos;ll help you discover the best the city has to offer.
+            Dr. Jan Duffy negotiates urban listings with Berkshire Hathaway HomeServices Nevada Properties and coordinates inspections in historic and high-rise buildings.
+          </p>
+          <p className="text-lg mb-8">
+            <Link href="/listings" className="underline hover:text-blue-100">
+              Browse all Las Vegas MLS listings
+            </Link>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:702-500-1955" 
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors"
             >
               Call (702) 500-1955
             </a>

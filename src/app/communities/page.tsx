@@ -7,9 +7,18 @@ import { PageHero } from '@/components/ui/PageHero';
 import { EXPERT_NEIGHBORHOODS, nameToSlug } from '@/data/neighborhoods';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Las Vegas Communities | Dr. Jan Duffy Group',
-  description: 'Explore Las Vegas communities with Dr. Jan Duffy Group. Find your perfect neighborhood in Summerlin, Henderson, North Las Vegas, and more.',
-  keywords: ['Las Vegas communities', 'Las Vegas neighborhoods', 'Summerlin', 'Henderson', 'North Las Vegas'],
+  title: 'Las Vegas & Henderson Communities | Dr. Jan Duffy',
+  description:
+    'Browse 117+ Las Vegas Valley neighborhoods with Dr. Jan Duffy, Good To Know REALTOR®. Luxury and resale homes in Summerlin, Henderson, Green Valley, Downtown, and North Las Vegas. MLS search. 702-500-1955.',
+  keywords: [
+    'Las Vegas communities',
+    'Las Vegas neighborhoods',
+    'Summerlin',
+    'Henderson',
+    'North Las Vegas',
+    'luxury homes Las Vegas',
+    'Dr. Jan Duffy',
+  ],
   url: '/communities',
   image: '/images/las-vegas-communities-og.jpg',
 });
@@ -28,60 +37,60 @@ export default function CommunitiesPage() {
       name: 'Las Vegas',
       href: '/listings',
       image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'The heart of the Las Vegas Valley with diverse neighborhoods and urban amenities.',
+      description: 'Urban condos, older subdivisions, and infill lots with Strip and freeway commute options.',
       avgPrice: '$450,000',
       propertiesCount: 1250,
-      highlights: ['Downtown Entertainment', 'Arts District', 'Historic Neighborhoods']
+      highlights: ['Fremont corridor access', 'Arts District lofts', 'Mixed square-footage housing stock']
     },
     {
       id: 'summerlin',
       name: 'Summerlin',
       href: '/areas/summerlin',
       image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Premier master-planned community with luxury homes and world-class amenities.',
+      description: '22,000-acre master plan with golf villages, custom estates, and Red Rock views.',
       avgPrice: '$750,000',
       propertiesCount: 890,
-      highlights: ['Red Rock Canyon Views', 'Nearby Public Schools', 'Golf Courses']
+      highlights: ['Red Rock Canyon views', 'TPC and village golf', 'Downtown Summerlin retail']
     },
     {
       id: 'henderson',
       name: 'Henderson',
       href: '/areas/henderson',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Community with nearby schools and recreational facilities.',
+      description: 'Master-planned villages, lakefront homes, and executive housing south of the Strip.',
       avgPrice: '$525,000',
       propertiesCount: 1100,
-      highlights: ['Lake Mead Access', 'Family Amenities', 'Growing Tech Sector']
+      highlights: ['Lake Mead recreation', 'Water Street employment', 'I-515 commute links']
     },
     {
       id: 'north-las-vegas',
       name: 'North Las Vegas',
       href: '/areas/north-las-vegas',
       image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Growing community with new developments and affordable housing options.',
+      description: 'Builder inventory in Aliante and Skye Canyon plus resale along the 215 Beltway.',
       avgPrice: '$350,000',
       propertiesCount: 750,
-      highlights: ['New Construction', 'Affordable Options', 'Business Development']
+      highlights: ['Aliante & Skye Canyon', 'CC 215 access', 'Nellis-adjacent employment']
     },
     {
       id: 'downtown',
       name: 'Downtown Las Vegas',
       href: '/areas/downtown',
       image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Urban living in the city center with modern condos and historic charm.',
+      description: 'High-rise and mid-rise condos with Fremont Street and Arts District walkability.',
       avgPrice: '$400,000',
       propertiesCount: 450,
-      highlights: ['Urban Lifestyle', 'Historic Buildings', 'Entertainment District']
+      highlights: ['HOA-controlled amenities', 'Historic loft conversions', 'Fremont entertainment']
     },
     {
       id: 'green-valley',
       name: 'Green Valley',
       href: '/areas/green-valley',
       image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      description: 'Older neighborhood in Henderson with mature trees and community amenities.',
+      description: 'Established Henderson addresses with golf access and District at Green Valley Ranch retail.',
       avgPrice: '$600,000',
       propertiesCount: 680,
-      highlights: ['Older Neighborhoods', 'Community Parks', 'Established Schools']
+      highlights: ['Golf-course lots', 'Mature landscaping', '215 Beltway commute']
     }
   ];
 
@@ -104,17 +113,20 @@ export default function CommunitiesPage() {
 
         {/* Hero Section */}
         <PageHero
-          title='Las Vegas Communities'
-          subtitle='Discover the perfect Las Vegas neighborhood for your lifestyle. From luxury Summerlin to Henderson.'
+          title="Las Vegas Valley Communities"
+          subtitle="Dr. Jan Duffy maps 117 expert neighborhoods across Summerlin, Henderson, North Las Vegas, and Downtown—compare square footage, amenities, and commute time before you tour. Call/text 702-500-1955."
         />
 
         {/* Communities Grid */}
         <section className='py-16 bg-gray-50'>
           <div className='container mx-auto px-4'>
             <div className='max-w-6xl mx-auto'>
-              <h2 className='text-3xl font-bold text-gray-900 mb-12 text-center'>
-                Explore Our Communities
+              <h2 className='text-3xl font-bold text-gray-900 mb-4 text-center'>
+                Which major Las Vegas market fits your search?
               </h2>
+              <p className='text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto'>
+                Start with a primary corridor—each links to luxury and resale MLS inventory, market snapshots, and hyperlocal guides from Dr. Jan Duffy.
+              </p>
               
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {communities.map((community) => (
@@ -156,7 +168,7 @@ export default function CommunitiesPage() {
                       </div>
                       
                       <div className='space-y-1'>
-                        <div className='text-sm font-medium text-gray-900'>Highlights:</div>
+                        <h3 className='text-sm font-medium text-gray-900'>Amenities & commute:</h3>
                         {community.highlights.map((highlight, index) => (
                           <div key={index} className='text-sm text-gray-600'>
                             • {highlight}
@@ -176,10 +188,10 @@ export default function CommunitiesPage() {
           <div className='container mx-auto px-4'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl font-bold text-gray-900 mb-4 text-center'>
-                All Las Vegas Valley Neighborhoods
+                Where can you browse all 117 expert neighborhoods?
               </h2>
               <p className='text-center text-gray-600 mb-10 max-w-2xl mx-auto'>
-                Dr. Jan Duffy has expert knowledge of these Las Vegas and Henderson communities. Browse by neighborhood for local market insights and listings.
+                Each link opens a hyperlocal guide with question-led market copy, MLS search, and RealScout office listings for that exact community name.
               </p>
               <div className='flex flex-wrap justify-center gap-x-4 gap-y-2'>
                 {EXPERT_NEIGHBORHOODS.map((name) => (
@@ -201,10 +213,10 @@ export default function CommunitiesPage() {
           <div className='container mx-auto px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl font-bold text-gray-900 mb-8'>
-                Las Vegas Market Overview
+                What do valley-wide market stats look like today?
               </h2>
               <p className='text-lg text-gray-600 mb-8'>
-                The Las Vegas real estate market offers diverse opportunities for buyers and sellers across all price ranges and neighborhoods.
+                Median pricing, days on market, and list-to-sale ratios shift by corridor—use these benchmarks, then request neighborhood-level comps from Dr. Jan Duffy.
               </p>
               
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -229,17 +241,17 @@ export default function CommunitiesPage() {
         <section className='py-16 bg-blue-600 text-white'>
           <div className='container mx-auto px-4 text-center'>
             <h2 className='text-3xl font-bold mb-4'>
-              Ready to Find Your Perfect Community?
+              How do you start a Las Vegas neighborhood search?
             </h2>
             <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-              Let Dr. Jan Duffy Group help you discover the Las Vegas neighborhood that&apos;s perfect for your lifestyle and budget.
+              Call or text Dr. Jan Duffy at 702-500-1955 for MLS alerts, showing plans, and pricing strategy tailored to your target community.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
-                href='/contact'
-                className='bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors'
+                href='/listings'
+                className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors'
               >
-                Start Your Search
+                Search MLS Listings
               </Link>
               <Link
                 href='tel:702-500-1955'

@@ -8,9 +8,16 @@ import { PageHero } from '@/components/ui/PageHero';
 import { IconSymbol, type IconSymbolKey } from '@/components/ui/IconSymbol';
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Las Vegas Real Estate Investment | Dr. Jan Duffy - Investment Expert',
-  description: 'Expert guidance for Las Vegas real estate investment opportunities with Dr. Jan Duffy. Build wealth through rental properties, fix & flip, and commercial investments.',
-  keywords: ['Las Vegas real estate investment', 'investment properties Las Vegas', 'rental properties', 'fix and flip', 'commercial real estate', 'Dr. Jan Duffy', 'real estate investor'],
+  title: 'Las Vegas Real Estate Investment Properties | Dr. Jan Duffy',
+  description:
+    'Rental, fix-and-flip, and commercial investment guidance from Dr. Jan Duffy, Good To Know REALTOR® at Berkshire Hathaway HomeServices Nevada Properties. ROI analysis across Summerlin, Henderson, and the valley. 702-500-1955.',
+  keywords: [
+    'Las Vegas real estate investment',
+    'rental properties Las Vegas',
+    'investment agent Summerlin',
+    'Dr. Jan Duffy',
+    'Berkshire Hathaway Nevada Properties',
+  ],
   url: '/investing',
   image: '/images/investment-properties-og.jpg',
 });
@@ -146,8 +153,8 @@ export default function InvestingPage() {
 
         {/* Hero Section */}
         <PageHero
-          title='Las Vegas Real Estate Investment'
-          subtitle='Build wealth through strategic real estate investments with Dr. Jan Duffy, Las Vegas agent with proven investment expertise'
+          title='Las Vegas Real Estate Investment Guidance'
+          subtitle='Dr. Jan Duffy helps investors evaluate rentals, flips, and commercial assets with local cash-flow models and off-market leads across Summerlin, Henderson, and greater Las Vegas. Call or text 702-500-1955.'
           gradientFromClassName='from-green-900'
           gradientToClassName='to-emerald-800'
         >
@@ -176,10 +183,10 @@ export default function InvestingPage() {
           <div className="container">
             <div className="max-w-4xl mx-auto text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Invest in Las Vegas Real Estate?
+                Why Invest in Las Vegas Real Estate Now?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Las Vegas offers exceptional investment opportunities with no state income tax, growing population, diverse economy, and strong rental demand. Dr. Jan Duffy's expertise helps investors capitalize on these advantages.
+                Nevada has no state income tax, steady population growth, and strong long-term rental demand—factors that support both cash flow and appreciation. Dr. Jan Duffy maps those macro trends to specific neighborhoods so you know where yield and risk align with your goals.
               </p>
             </div>
 
